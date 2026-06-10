@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useSyncExternalStore } from "react";
 import { useBookingMachine } from "@/components/widget/useBookingMachine";
 import { WidgetFrame } from "@/components/widget/WidgetFrame";
 import { WidgetProgress } from "@/components/widget/WidgetProgress";
@@ -49,6 +49,22 @@ export function BookingWidget({
     () => (state.dateKey ? getSlots(state.dateKey, theme) : []),
     [state.dateKey, theme],
   );
+
+  // Widget telemetry: opened once per mount, then each step reached.
+  const opened = useRef(false);
+  useEffect(() => {
+    if (state.step === "date" && state.dateKey === null) return;
+    if (!opened.current) {
+      opened.current = true;
+      track("widget_opened", { theme: state.themeId });
+    }
+  }, [state.step, state.dateKey, state.themeId]);
+
+  useEffect(() => {
+    if (state.step !== "date" && state.step !== "confirmed") {
+      track("widget_step", { step: state.step });
+    }
+  }, [state.step]);
 
   // The fake "confirming" beat — long enough to feel real.
   useEffect(() => {

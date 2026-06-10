@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { Input, Select, Textarea } from "@/components/ui/Field";
@@ -9,7 +9,7 @@ import {
   demoRequestSchema,
   demoWindows,
 } from "@/lib/validations";
-import { track } from "@/lib/analytics";
+import { setFormTelemetry, track } from "@/lib/analytics";
 import { cn, formatDayShort, formatWeekday, toDateKey } from "@/lib/utils";
 import { DemoFormSuccess } from "./DemoFormSuccess";
 
@@ -47,6 +47,62 @@ export function DemoForm() {
   // Dates are computed once on the client; this component only renders
   // client-side state so there's no SSR mismatch concern for chips.
   const dates = useMemo(() => upcomingWeekdays(), []);
+
+  // Field-level telemetry: start-of-form, per-field completion with
+  // hesitation time, and abandonment state read by the analytics
+  // provider on pagehide.
+  const telemetry = useRef({
+    started: false,
+    submitted: false,
+    lastField: "",
+    completed: new Set<string>(),
+    focusedAt: new Map<string, number>(),
+  });
+
+  useEffect(() => () => setFormTelemetry(null), []);
+
+  const syncTelemetry = () => {
+    const t = telemetry.current;
+    setFormTelemetry({
+      started: t.started,
+      submitted: t.submitted,
+      lastField: t.lastField,
+      fieldsCompleted: t.completed.size,
+    });
+  };
+
+  // Stable handlers reading the field name off the event target, so the
+  // ref is only touched at event time.
+  const handleFieldFocus = (
+    e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
+    const field = e.currentTarget.name;
+    const t = telemetry.current;
+    t.focusedAt.set(field, Date.now());
+    t.lastField = field;
+    if (!t.started) {
+      t.started = true;
+      track("demo_form_started");
+    }
+    syncTelemetry();
+  };
+
+  const handleFieldBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
+    const field = e.currentTarget.name;
+    const value = e.currentTarget.value;
+    const t = telemetry.current;
+    if (value.trim() && !t.completed.has(field)) {
+      t.completed.add(field);
+      const focusedAt = t.focusedAt.get(field);
+      track("form_field_completed", {
+        field,
+        hesitation_ms: focusedAt ? Date.now() - focusedAt : 0,
+      });
+    }
+    syncTelemetry();
+  };
 
   const set = (field: keyof typeof values) => (value: string) => {
     setValues((v) => ({ ...v, [field]: value }));
@@ -89,12 +145,22 @@ export function DemoForm() {
       });
       const data = (await res.json()) as { ok: boolean; error?: string };
       if (!res.ok || !data.ok) {
+        track("demo_form_error", {
+          status: res.status,
+          message: data.error ?? "unknown",
+        });
         throw new Error(data.error ?? "Something went wrong.");
       }
+      telemetry.current.submitted = true;
+      syncTelemetry();
       track("demo_form_submitted", { businessType: values.businessType });
       setStatus("success");
     } catch (err) {
       setStatus("idle");
+      if (err instanceof TypeError) {
+        // Network-level failure — the lead never reached the server.
+        track("demo_form_error", { status: 0, message: "network" });
+      }
       setServerError(
         err instanceof Error
           ? err.message
@@ -123,6 +189,8 @@ export function DemoForm() {
         autoComplete="name"
         value={values.name}
         onChange={(e) => set("name")(e.target.value)}
+        onFocus={handleFieldFocus}
+        onBlur={handleFieldBlur}
         error={errors.name}
       />
       <Input
@@ -132,6 +200,8 @@ export function DemoForm() {
         autoComplete="email"
         value={values.email}
         onChange={(e) => set("email")(e.target.value)}
+        onFocus={handleFieldFocus}
+        onBlur={handleFieldBlur}
         error={errors.email}
       />
       <Input
@@ -140,6 +210,8 @@ export function DemoForm() {
         autoComplete="organization"
         value={values.businessName}
         onChange={(e) => set("businessName")(e.target.value)}
+        onFocus={handleFieldFocus}
+        onBlur={handleFieldBlur}
         error={errors.businessName}
       />
       <Select
@@ -147,6 +219,8 @@ export function DemoForm() {
         name="businessType"
         value={values.businessType}
         onChange={(e) => set("businessType")(e.target.value)}
+        onFocus={handleFieldFocus}
+        onBlur={handleFieldBlur}
         error={errors.businessType}
       >
         <option value="" disabled>

@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { demoRequestSchema } from "@/lib/validations";
-import { getSupabase } from "@/lib/supabase";
+import { getDb } from "@/lib/db";
 
 export const runtime = "nodejs";
 
@@ -119,11 +119,12 @@ export async function POST(request: NextRequest) {
     status: "new",
   };
 
-  const supabase = getSupabase();
-  if (supabase) {
-    const { error } = await supabase.from("leads").insert(lead);
-    if (error) {
-      console.error("[demo-request] Supabase insert failed:", error.message);
+  const sql = getDb();
+  if (sql) {
+    try {
+      await sql`insert into leads ${sql(lead)}`;
+    } catch (err) {
+      console.error("[demo-request] Lead insert failed:", err);
       return NextResponse.json(
         { ok: false, error: "Something went wrong. Please email us instead." },
         { status: 500 },
@@ -131,7 +132,7 @@ export async function POST(request: NextRequest) {
     }
   } else {
     // No database configured (local dev): keep the lead visible in logs.
-    console.log("[demo-request] Lead received (no Supabase configured):", lead);
+    console.log("[demo-request] Lead received (no DATABASE_URL):", lead);
   }
 
   // The lead is saved — email failures must never surface as a form error.
