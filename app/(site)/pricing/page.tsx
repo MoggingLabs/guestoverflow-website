@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/sections/shared/PageHero";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { FooterCta } from "@/components/layout/FooterCta";
@@ -66,6 +67,17 @@ export default function PricingPage() {
                   {foundingPartner.cta}
                 </Button>
               </div>
+              <p className="mt-5 text-xs text-cream-faint">
+                Subject to eligibility and a separate written agreement. See
+                the{" "}
+                <Link
+                  href="/terms"
+                  className="underline underline-offset-2 hover:text-cream"
+                >
+                  Terms of Service
+                </Link>
+                .
+              </p>
             </div>
           </Reveal>
 
