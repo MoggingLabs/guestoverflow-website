@@ -83,6 +83,30 @@ export const industriesPreview = {
     "Whether you take table reservations, room bookings, treatments, or tour departures, GuestFlow adapts to how your business actually works.",
 };
 
+export const noWebsite = {
+  eyebrow: "No website yet?",
+  title: "You can still take bookings.",
+  subhead:
+    "Plenty of great venues run on word of mouth and a Google listing. That's a fine place to start, and we meet you there.",
+  paths: [
+    {
+      title: "Start with your Google Business Profile",
+      body: "We optimize your Google Business Profile so people searching for a place like yours actually find you, see the right photos and hours, and book you directly. It's the fastest and most affordable way to get online bookings working.",
+      badge: "The starting point",
+    },
+    {
+      title: "Ready for more? We build your website",
+      body: "When you want a home of your own on the web, we design and build a full website with booking built in from day one. It's our higher-level offering, and most venues grow into it after seeing what an optimized profile alone brings in.",
+      badge: "The full picture",
+    },
+  ],
+};
+
+export const promiseStrip = {
+  title: "Our promise: complete transparency.",
+  body: "Start with three months at half price. If you don't see real return or real usage through your website or your Google Business Profile in that time, you can end the relationship cleanly — no questions asked, no hard feelings. We'd rather part as friends than keep a client who isn't winning.",
+};
+
 export const builtFor = {
   line: "Built for independent restaurants, boutique hotels, spas, and tour operators.",
   credibility:

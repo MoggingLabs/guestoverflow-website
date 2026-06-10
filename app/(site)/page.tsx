@@ -3,6 +3,8 @@ import { ProblemStrip } from "@/components/sections/home/ProblemStrip";
 import { WidgetShowcase } from "@/components/sections/shared/WidgetShowcase";
 import { HowItWorks } from "@/components/sections/home/HowItWorks";
 import { Differentiators } from "@/components/sections/home/Differentiators";
+import { NoWebsitePath } from "@/components/sections/home/NoWebsitePath";
+import { PromiseStrip } from "@/components/sections/home/PromiseStrip";
 import { IndustriesPreview } from "@/components/sections/home/IndustriesPreview";
 import { BuiltForStrip } from "@/components/sections/home/BuiltForStrip";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
@@ -23,6 +25,8 @@ export default function HomePage() {
       />
       <HowItWorks />
       <Differentiators />
+      <NoWebsitePath />
+      <PromiseStrip />
       <IndustriesPreview />
       <BuiltForStrip />
       <FaqSection items={homeFaq} />

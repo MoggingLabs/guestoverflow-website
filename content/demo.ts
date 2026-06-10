@@ -20,5 +20,6 @@ export const demoPage = {
       },
     ],
   },
-  reassurance: "No commitment. We'll confirm your slot within one business day.",
+  reassurance:
+    "No commitment — and if we do work together, you start with three months at half price and a clean way out if it isn't earning its keep. We'll confirm your slot within one business day.",
 };

@@ -68,6 +68,7 @@ export type Lead = {
   business_type: string;
   preferred_date: string | null;
   preferred_window: string | null;
+  web_presence: string | null;
   message: string | null;
   page_source: string | null;
   status: "new" | "contacted" | "closed";

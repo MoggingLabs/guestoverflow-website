@@ -57,8 +57,25 @@ export const comparison = {
 };
 
 export const foundingPartner = {
-  badge: "Founding partner offer",
-  title: "Be one of the first venues on GuestFlow",
-  body: "Our first cohort of venues gets hands-on onboarding directly with the founding team and pricing locked for two years. In exchange, we ask for honest feedback as we shape the roadmap.",
-  cta: "Claim a founding spot",
+  badge: "Founding offer",
+  title: "Three months at half price — and a clean way out",
+  body: "Join as a founding venue and pay half price for your first three months. If you don't see real return or real usage through your website or your Google Business Profile in that time, you can end the relationship cleanly. No questions asked, no exit fees, and everything stays good between us. We only want clients who are genuinely winning with this.",
+  cta: "Claim the founding offer",
+};
+
+export const noWebsiteOffer = {
+  eyebrow: "No website yet?",
+  title: "Start with your Google Business Profile",
+  body: "If you don't have a website, we begin by optimizing your Google Business Profile so people can actually find and book you. When you're ready for more, we design and build a full website with booking built in — that's our higher-level offering, and there's no pressure to get there on day one.",
+  points: [
+    "Google Business Profile optimization as the affordable starting point",
+    "Bookings working without a website of your own",
+    "A full custom website with built-in booking when you're ready to level up",
+  ],
+};
+
+export const transparency = {
+  eyebrow: "How we work",
+  title: "Complete transparency, in writing",
+  body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, what we changed, and whether it worked. If the numbers don't justify the relationship after the three-month pilot, ending it is one sentence in an email — no questions, no hard feelings.",
 };

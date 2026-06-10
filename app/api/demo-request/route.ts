@@ -114,6 +114,7 @@ export async function POST(request: NextRequest) {
     business_type: businessType,
     preferred_date: parsed.data.preferredDate || null,
     preferred_window: parsed.data.preferredWindow || null,
+    web_presence: parsed.data.webPresence || null,
     message: parsed.data.message || null,
     page_source: parsed.data.pageSource || null,
     status: "new",

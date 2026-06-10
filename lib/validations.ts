@@ -11,6 +11,13 @@ export const businessTypes = [
 
 export const demoWindows = ["Morning", "Afternoon"] as const;
 
+export const webPresences = [
+  "Website I'm happy with",
+  "Website that needs work",
+  "Google Business Profile only",
+  "Starting from scratch",
+] as const;
+
 /** Shared by the client form and the API route handler. */
 export const demoRequestSchema = z.object({
   name: z
@@ -31,6 +38,7 @@ export const demoRequestSchema = z.object({
     .optional()
     .or(z.literal("")),
   preferredWindow: z.enum(demoWindows).optional().or(z.literal("")),
+  webPresence: z.enum(webPresences).optional().or(z.literal("")),
   message: z.string().max(2000, "Please keep it under 2000 characters").optional(),
   pageSource: z.string().max(200).optional(),
   /** Honeypot — humans never fill this; bots that do get a fake success. */

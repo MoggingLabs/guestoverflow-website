@@ -8,6 +8,7 @@ import {
   businessTypes,
   demoRequestSchema,
   demoWindows,
+  webPresences,
 } from "@/lib/validations";
 import { setFormTelemetry, track } from "@/lib/analytics";
 import { cn, formatDayShort, formatWeekday, toDateKey } from "@/lib/utils";
@@ -34,6 +35,7 @@ export function DemoForm() {
     email: "",
     businessName: "",
     businessType: "",
+    webPresence: "",
     message: "",
   });
   const [preferredDate, setPreferredDate] = useState("");
@@ -229,6 +231,20 @@ export function DemoForm() {
         {businessTypes.map((type) => (
           <option key={type} value={type}>
             {type}
+          </option>
+        ))}
+      </Select>
+      <Select
+        label="Where do guests find you today?"
+        name="webPresence"
+        optional
+        value={values.webPresence}
+        onChange={(e) => set("webPresence")(e.target.value)}
+      >
+        <option value="">Choose one…</option>
+        {webPresences.map((presence) => (
+          <option key={presence} value={presence}>
+            {presence}
           </option>
         ))}
       </Select>

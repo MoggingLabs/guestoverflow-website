@@ -7,7 +7,14 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { cn } from "@/lib/utils";
-import { comparison, foundingPartner, pricingHero, tiers } from "@/content/pricing";
+import {
+  comparison,
+  foundingPartner,
+  noWebsiteOffer,
+  pricingHero,
+  tiers,
+  transparency,
+} from "@/content/pricing";
 import { pricingFaq } from "@/content/faq";
 import { site } from "@/content/site";
 
@@ -113,6 +120,52 @@ export default function PricingPage() {
                   {foundingPartner.cta}
                 </Button>
               </div>
+            </div>
+          </Reveal>
+
+          <Reveal className="mt-16 grid gap-5 lg:grid-cols-2">
+            <div className="rounded-lg border border-line bg-surface p-8 shadow-card">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-amber">
+                {noWebsiteOffer.eyebrow}
+              </p>
+              <h2 className="mt-4 font-display text-2xl font-medium text-cream">
+                {noWebsiteOffer.title}
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-cream-dim">
+                {noWebsiteOffer.body}
+              </p>
+              <ul className="mt-6 space-y-3">
+                {noWebsiteOffer.points.map((point) => (
+                  <li
+                    key={point}
+                    className="flex items-start gap-2.5 text-sm text-cream-dim"
+                  >
+                    <span aria-hidden className="mt-1 text-amber">
+                      <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                        <path
+                          d="m3.5 8.5 3 3 6-7"
+                          stroke="currentColor"
+                          strokeWidth="1.75"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-lg border border-line bg-surface p-8 shadow-card">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-amber">
+                {transparency.eyebrow}
+              </p>
+              <h2 className="mt-4 font-display text-2xl font-medium text-cream">
+                {transparency.title}
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-cream-dim">
+                {transparency.body}
+              </p>
             </div>
           </Reveal>
         </Container>

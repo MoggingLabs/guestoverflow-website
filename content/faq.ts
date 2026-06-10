@@ -27,6 +27,16 @@ export const homeFaq: FaqItem[] = [
       "Yes — that's the heart of what we do. Colors, typography, copy, and flow are tailored to each venue. Try the live demo above and switch venue types to see how different the same system can look.",
   },
   {
+    question: "I don't have a website. Can I still use GuestFlow?",
+    answer:
+      "Yes. We start by optimizing your Google Business Profile so people can find and book you straight from Google. When you're ready for a website of your own, we design and build one with booking built in — but there's no pressure to start there.",
+  },
+  {
+    question: "What if it doesn't work for us?",
+    answer:
+      "Then you walk away cleanly. Our founding offer is three months at half price, and if you don't see real return or usage through your website or Google profile in that time, you can end the relationship with no questions asked. We track the numbers together, so you'll never have to take our word for it.",
+  },
+  {
     question: "What happens after I book a demo?",
     answer:
       "A 20-minute call where we show GuestFlow running on a site like yours and scope what your setup would involve. No commitment, and no setup-fee talk unless you want it.",
@@ -68,9 +78,14 @@ export const pricingFaq: FaqItem[] = [
       "Monthly plans cancel anytime. Your guest data remains exportable for 90 days after cancellation.",
   },
   {
-    question: "What does the founding partner offer include?",
+    question: "What does the founding offer include?",
     answer:
-      "Early venues get hands-on onboarding directly with our founding team and their pricing locked for two years. The offer is limited to a small first cohort.",
+      "Half price for your first three months, hands-on onboarding directly with the founding team, and a clean exit if it isn't working: if you see no return or usage through your website or Google profile in that time, you can end it, no questions asked.",
+  },
+  {
+    question: "I only have a Google Business Profile. Where do I start?",
+    answer:
+      "Right there. We optimize your profile so people find and book you from Google — it's the affordable entry point. A full website with built-in booking is our higher-level offering, for when you're ready.",
   },
 ];
 

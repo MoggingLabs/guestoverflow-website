@@ -80,8 +80,13 @@ export default async function AdminLeadsPage({
                       {lead.email}
                     </a>
                   </td>
-                  <td className="px-5 py-3 text-cream-dim">
-                    {lead.business_name}
+                  <td className="px-5 py-3">
+                    <p className="text-cream-dim">{lead.business_name}</p>
+                    {lead.web_presence && (
+                      <p className="text-xs text-cream-faint">
+                        {lead.web_presence}
+                      </p>
+                    )}
                   </td>
                   <td className="px-5 py-3 text-cream-dim">
                     {lead.business_type}
