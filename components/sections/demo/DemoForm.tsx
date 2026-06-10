@@ -262,7 +262,7 @@ export function DemoForm() {
 
       <fieldset>
         <legend className="mb-2 flex w-full items-baseline justify-between text-sm font-medium text-cream">
-          Where do guests find you today?
+          Where can guests find you today?
           <span className="text-xs font-normal text-cream-faint">
             Optional — select all that apply
           </span>
@@ -292,10 +292,13 @@ export function DemoForm() {
       </fieldset>
 
       <fieldset>
-        <legend className="mb-2 flex w-full items-baseline justify-between text-sm font-medium text-cream">
-          When works for a 20-minute call?
+        <legend className="mb-1 flex w-full items-baseline justify-between text-sm font-medium text-cream">
+          When would you like your demo call?
           <span className="text-xs font-normal text-cream-faint">Optional</span>
         </legend>
+        <p className="mb-2.5 text-xs text-cream-faint">
+          Pick a day that suits you. It&apos;s a relaxed 20-minute video call.
+        </p>
         <div className="flex flex-wrap gap-1.5">
           {dates.map((date) => {
             const key = toDateKey(date);
@@ -328,8 +331,8 @@ export function DemoForm() {
         {preferredDate && (
           <>
             <p className="mt-3 mb-2 text-xs text-cream-faint">
-              Pick as many 30-minute windows as suit you — available from 3 to
-              4? Select 15:00 and 15:30.
+              Now select every time that works for you, as many as you like.
+              Free from 3 to 4? Pick 15:00 and 15:30.
             </p>
             <div className="grid grid-cols-4 gap-1.5 sm:grid-cols-6">
               {demoSlots.map((slot) => {
