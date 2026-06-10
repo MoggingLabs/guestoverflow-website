@@ -10,7 +10,7 @@ import { aboutHero, principles, story } from "@/content/about";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "GuestFlow is built by MoggingLabs — a studio with years of experience crafting high-converting hospitality websites.",
+    "GuestFlow is built by MoggingLabs, a studio with years of experience crafting high-converting hospitality websites.",
 };
 
 export default function AboutPage() {

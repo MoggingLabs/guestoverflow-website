@@ -11,7 +11,7 @@ import { productFaq } from "@/content/faq";
 export const metadata: Metadata = {
   title: "Product",
   description:
-    "The full reservation lifecycle: a branded booking widget, real-time availability, guest CRM, deposits, reminders, and analytics — on your own website.",
+    "The full reservation lifecycle: a branded booking widget, real-time availability, guest CRM, deposits, reminders, and analytics, all on your own website.",
 };
 
 export default function ProductPage() {

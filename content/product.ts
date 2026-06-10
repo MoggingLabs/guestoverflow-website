@@ -47,6 +47,6 @@ export const ownYourData = {
   points: [
     "Full data export, any time, no questions",
     "No marketing to your guests, ever",
-    "No cross-venue marketplace — your guests see only you",
+    "No cross-venue marketplace, so your guests only ever see you",
   ],
 };

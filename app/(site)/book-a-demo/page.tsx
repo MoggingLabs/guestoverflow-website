@@ -61,7 +61,7 @@ export default function BookADemoPage() {
                   Try it while you&apos;re here
                 </h2>
                 <p className="mt-2 mb-6 text-sm text-cream-dim">
-                  This is the widget we&apos;ll theme for your venue — make a
+                  This is the widget we&apos;ll theme for your venue. Make a
                   booking, switch the style.
                 </p>
                 <BookingWidget caption="One booking system, styled to match each venue." />

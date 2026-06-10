@@ -35,7 +35,7 @@ export default function PrivacyPage() {
 
       <h2>The interactive demo widget</h2>
       <p>
-        The booking demo on this site is exactly that — a demo. Names or
+        The booking demo on this site is exactly that: a demo. Names or
         emails typed into it are processed only in your browser and are never
         transmitted or stored.
       </p>

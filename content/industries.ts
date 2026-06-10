@@ -38,7 +38,7 @@ export const industries: IndustryContent[] = [
       },
       {
         title: "A guest book you own",
-        body: "Regulars, allergies, anniversaries — it all stays in your hands, and you can export it whenever you like.",
+        body: "Regulars, allergies, anniversaries. It all stays in your hands, and you can export it whenever you like.",
       },
     ],
     metaDescription:
@@ -50,7 +50,7 @@ export const industries: IndustryContent[] = [
     themeId: "hotel",
     icon: "bed",
     cardBlurb:
-      "Direct bookings for boutique hotels — keep the OTA commission and own the guest relationship.",
+      "Direct bookings for boutique hotels, so you keep the OTA commission and own the guest relationship.",
     hero: {
       headline: "Make direct booking the obvious choice.",
       subhead:
@@ -59,7 +59,7 @@ export const industries: IndustryContent[] = [
     painPoints: [
       {
         title: "OTAs take a fifth of every stay",
-        body: "Online travel agencies charge commissions that dwarf any software cost — and they own the guest's email forever.",
+        body: "Online travel agencies charge commissions that dwarf any software cost, and they keep the guest's email forever.",
       },
       {
         title: "Clunky booking engines lose guests",
@@ -124,11 +124,11 @@ export const industries: IndustryContent[] = [
       },
       {
         title: "Intake built into booking",
-        body: "Collect preferences and health notes at booking time — clients arrive ready, sessions start on time.",
+        body: "Collect preferences and health notes at booking time, so clients arrive ready and sessions start on time.",
       },
     ],
     metaDescription:
-      "White-label spa and wellness booking on your own website. Services, practitioners, deposits, and intake — in a flow as calm as your brand.",
+      "White-label spa and wellness booking on your own website. Services, practitioners, deposits, and intake, in a flow as calm as your brand.",
   },
   {
     slug: "tours-experiences",
@@ -140,7 +140,7 @@ export const industries: IndustryContent[] = [
     hero: {
       headline: "Sell out departures from your own site.",
       subhead:
-        "Wineries, tour operators, and experience hosts get capacity-aware scheduling and direct sales — without marketplace commissions eating the margin.",
+        "Wineries, tour operators, and experience hosts get capacity-aware scheduling and direct sales, without marketplace commissions eating into the margin.",
     },
     painPoints: [
       {

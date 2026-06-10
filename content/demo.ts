@@ -8,7 +8,7 @@ export const demoPage = {
     items: [
       {
         title: "The widget, live",
-        body: "We walk through a real booking flow themed to a venue like yours — and show how yours would differ.",
+        body: "We walk through a real booking flow themed to a venue like yours, then talk through what your own version would look like.",
       },
       {
         title: "Your setup, scoped",
@@ -21,5 +21,5 @@ export const demoPage = {
     ],
   },
   reassurance:
-    "No commitment — and if we do work together, you start with three months at half price and a clean way out if it isn't earning its keep. We'll confirm your slot within one business day.",
+    "There's no commitment. If we do work together, you start with three months at half price and a clean way out if it isn't earning its keep. We'll confirm your slot within one business day.",
 };

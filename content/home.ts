@@ -27,7 +27,7 @@ export const problems = {
 
 export const widgetShowcase = {
   eyebrow: "Live demo",
-  title: "See for yourself — try booking a table.",
+  title: "See for yourself. Try booking a table.",
   subhead:
     "This is a real GuestFlow widget running right here on the page. Switch the venue type to see how the same system looks when it's styled for a different business.",
   caption: "One booking system, styled to match each venue.",
@@ -104,11 +104,11 @@ export const noWebsite = {
 
 export const promiseStrip = {
   title: "Our promise: complete transparency.",
-  body: "Start with three months at half price. If you don't see real return or real usage through your website or your Google Business Profile in that time, you can end the relationship cleanly — no questions asked, no hard feelings. We'd rather part as friends than keep a client who isn't winning.",
+  body: "Start with three months at half price. If you don't see real return or real usage through your website or your Google Business Profile in that time, you can end the relationship cleanly, no questions asked and no hard feelings. We'd rather part as friends than keep a client who isn't winning.",
 };
 
 export const builtFor = {
   line: "Built for independent restaurants, boutique hotels, spas, and tour operators.",
   credibility:
-    "From the team at MoggingLabs — we've spent years building high-converting websites for hospitality businesses. GuestFlow is everything our clients kept asking for.",
+    "We're the team at MoggingLabs, and we've spent years building high-converting websites for hospitality businesses. GuestFlow is everything our clients kept asking for.",
 };

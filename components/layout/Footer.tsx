@@ -41,7 +41,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-line pt-7 text-xs text-cream-faint md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.name} — a {site.company}{" "}
+            © {new Date().getFullYear()} {site.name}, a {site.company}{" "}
             product.
           </p>
           <a

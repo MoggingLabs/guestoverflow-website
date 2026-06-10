@@ -10,7 +10,7 @@ import { industries, industriesIndex } from "@/content/industries";
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "GuestFlow powers custom online booking for restaurants, hotels, spas, and tour operators — one engine, shaped to each business.",
+    "GuestFlow powers custom online booking for restaurants, hotels, spas, and tour operators, with one system shaped to each business.",
 };
 
 export default function IndustriesPage() {

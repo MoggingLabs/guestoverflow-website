@@ -95,7 +95,7 @@ export default async function ClientDetailPage({
         <div className="space-y-6">
           <section className="rounded-lg border border-line bg-surface p-5 shadow-card">
             <h2 className="mb-4 text-xs font-medium uppercase tracking-wider text-cream-faint">
-              Bookings per month — implementation ship dates marked
+              Bookings per month, with implementation ship dates marked
             </h2>
             <BarChart
               bars={figures.map((f) => ({
@@ -108,7 +108,7 @@ export default async function ClientDetailPage({
 
           <section className="rounded-lg border border-line bg-surface p-5 shadow-card">
             <h2 className="mb-4 text-xs font-medium uppercase tracking-wider text-cream-faint">
-              Implementations — is it working?
+              Implementations: is it working?
             </h2>
             {implementations.length === 0 ? (
               <p className="text-sm text-cream-faint">
@@ -175,7 +175,7 @@ export default async function ClientDetailPage({
                           className="w-40"
                         >
                           <option value="planned">Planned</option>
-                          <option value="shipped">Shipped — measuring</option>
+                          <option value="shipped">Shipped, measuring</option>
                           <option value="working">Working</option>
                           <option value="not_working">Not working</option>
                           <option value="needs_changes">Needs changes</option>
@@ -291,7 +291,7 @@ export default async function ClientDetailPage({
         <div className="space-y-6">
           <section className="rounded-lg border border-line bg-surface p-5 shadow-card">
             <h2 className="mb-4 text-xs font-medium uppercase tracking-wider text-cream-faint">
-              Health — log an assessment
+              Log a health assessment
             </h2>
             <form action={logAssessment} className="grid gap-3">
               <input type="hidden" name="client_id" value={id} />

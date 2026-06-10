@@ -24,7 +24,7 @@ export async function generateMetadata({
   const industry = getIndustry((await params).slug);
   if (!industry) return {};
   return {
-    title: `${industry.label} — booking on your own website`,
+    title: `Online booking for ${industry.label.toLowerCase()}`,
     description: industry.metaDescription,
   };
 }

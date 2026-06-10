@@ -88,7 +88,7 @@ export default async function AdminFrictionPage({
         </h2>
         {rage.length === 0 ? (
           <p className="text-sm text-cream-faint">
-            None recorded — nothing is visibly frustrating visitors.
+            None recorded. Nothing is visibly frustrating visitors.
           </p>
         ) : (
           <table className="w-full text-left text-sm">
@@ -118,7 +118,7 @@ export default async function AdminFrictionPage({
 
       <div className="rounded-lg border border-line bg-surface p-5 shadow-card">
         <h2 className="mb-4 text-xs font-medium uppercase tracking-wider text-cream-faint">
-          Errors — is anything being lost?
+          Errors: is anything being lost?
         </h2>
         {errors.length === 0 ? (
           <p className="text-sm text-cream-faint">

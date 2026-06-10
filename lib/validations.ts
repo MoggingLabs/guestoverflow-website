@@ -25,7 +25,7 @@ export const webPresences = [
   "TripAdvisor",
   "Phone / WhatsApp",
   "Walk-ins & word of mouth",
-  "Nothing yet — starting from scratch",
+  "Nothing yet, starting from scratch",
 ] as const;
 
 /** Shared by the client form and the API route handler. */

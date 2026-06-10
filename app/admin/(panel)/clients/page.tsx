@@ -57,7 +57,7 @@ export default async function AdminClientsPage() {
       <div className="rounded-lg border border-line bg-surface shadow-card">
         {portfolio.length === 0 ? (
           <p className="p-8 text-center text-sm text-cream-faint">
-            No clients yet — add your first one below.
+            No clients yet. Add your first one below.
           </p>
         ) : (
           <table className="w-full text-left text-sm">

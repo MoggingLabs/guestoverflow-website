@@ -35,7 +35,7 @@ export function Differentiators() {
             variant="secondary"
             analyticsLabel="differentiators_book_demo"
           >
-            See it on your website — {site.cta.primary.label.toLowerCase()}
+            Book a demo and see it on your website
           </Button>
         </Reveal>
       </Container>

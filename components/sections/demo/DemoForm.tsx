@@ -264,7 +264,7 @@ export function DemoForm() {
         <legend className="mb-2 flex w-full items-baseline justify-between text-sm font-medium text-cream">
           Where can guests find you today?
           <span className="text-xs font-normal text-cream-faint">
-            Optional — select all that apply
+            Optional, select all that apply
           </span>
         </legend>
         <div className="flex flex-wrap gap-1.5">

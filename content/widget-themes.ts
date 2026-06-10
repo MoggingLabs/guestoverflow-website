@@ -75,7 +75,7 @@ export const venueThemes: VenueTheme[] = [
     unitLabel: "Seats",
     unitOptions: [1, 2, 3, 4, 5, 6],
     ctaLabel: "Reserve seats",
-    confirmationNote: "Walk-ins welcome at the bar — reserved seats are at the tasting counter.",
+    confirmationNote: "Walk-ins are welcome at the bar. Reserved seats are at the tasting counter.",
     colors: {
       bg: "#150c10",
       surface: "#201217",

@@ -4,7 +4,7 @@ export const pricingHero = {
   eyebrow: "Pricing",
   headline: "Flat pricing. No per-cover commission.",
   subhead:
-    "Whatever your volume, your price doesn't move. Final quotes depend on your setup — every plan below starts with a demo.",
+    "Whatever your volume, your price doesn't move. Final quotes depend on your setup, so every plan below starts with a demo.",
 };
 
 // Placeholder price points — confirm real numbers before launch.
@@ -58,7 +58,7 @@ export const comparison = {
 
 export const foundingPartner = {
   badge: "Founding offer",
-  title: "Three months at half price — and a clean way out",
+  title: "Three months at half price, and a clean way out",
   body: "Join as a founding venue and pay half price for your first three months. If you don't see real return or real usage through your website or your Google Business Profile in that time, you can end the relationship cleanly. No questions asked, no exit fees, and everything stays good between us. We only want clients who are genuinely winning with this.",
   cta: "Claim the founding offer",
 };
@@ -66,7 +66,7 @@ export const foundingPartner = {
 export const noWebsiteOffer = {
   eyebrow: "No website yet?",
   title: "Start with your Google Business Profile",
-  body: "If you don't have a website, we begin by optimizing your Google Business Profile so people can actually find and book you. When you're ready for more, we design and build a full website with booking built in — that's our higher-level offering, and there's no pressure to get there on day one.",
+  body: "If you don't have a website, we begin by optimizing your Google Business Profile so people can actually find and book you. When you're ready for more, we design and build a full website with booking built in. That's our higher-level offering, and there's no pressure to get there on day one.",
   points: [
     "Google Business Profile optimization as the affordable starting point",
     "Bookings working without a website of your own",
@@ -77,5 +77,5 @@ export const noWebsiteOffer = {
 export const transparency = {
   eyebrow: "How we work",
   title: "Complete transparency, in writing",
-  body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, what we changed, and whether it worked. If the numbers don't justify the relationship after the three-month pilot, ending it is one sentence in an email — no questions, no hard feelings.",
+  body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, what we changed, and whether it worked. If the numbers don't justify the relationship after the three-month pilot, ending it takes one sentence in an email. No questions, no hard feelings.",
 };

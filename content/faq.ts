@@ -4,17 +4,17 @@ export const homeFaq: FaqItem[] = [
   {
     question: "How is GuestFlow priced?",
     answer:
-      "A flat monthly subscription — no per-cover or per-booking commission, ever. Pricing depends on the plan and how much customization your venue needs; see the pricing page for tiers, or book a demo for an exact quote.",
+      "A flat monthly subscription, with no per-cover or per-booking commission, ever. Pricing depends on the plan and how much customization your venue needs; see the pricing page for tiers, or book a demo for an exact quote.",
   },
   {
     question: "How long does setup take?",
     answer:
-      "Most venues go live within days of kickoff. Our team handles design, build, and installation on your existing website — you review and approve, we ship it.",
+      "Most venues go live within days of kickoff. Our team handles design, build, and installation on your existing website. You review and approve, and we ship it.",
   },
   {
     question: "Does it work with my existing website?",
     answer:
-      "Yes. GuestFlow installs on any modern website platform — custom-built sites, WordPress, Squarespace, Webflow, and more. If you can edit your site, we can install GuestFlow on it.",
+      "Yes. GuestFlow installs on any modern website platform, including custom-built sites, WordPress, Squarespace, and Webflow. If you can edit your site, we can install GuestFlow on it.",
   },
   {
     question: "Who owns the guest data?",
@@ -24,12 +24,12 @@ export const homeFaq: FaqItem[] = [
   {
     question: "Can it match my brand exactly?",
     answer:
-      "Yes — that's the heart of what we do. Colors, typography, copy, and flow are tailored to each venue. Try the live demo above and switch venue types to see how different the same system can look.",
+      "Yes, that's the heart of what we do. Colors, typography, copy, and flow are tailored to each venue. Try the live demo above and switch venue types to see how different the same system can look.",
   },
   {
     question: "I don't have a website. Can I still use GuestFlow?",
     answer:
-      "Yes. We start by optimizing your Google Business Profile so people can find and book you straight from Google. When you're ready for a website of your own, we design and build one with booking built in — but there's no pressure to start there.",
+      "Yes. We start by optimizing your Google Business Profile so people can find and book you straight from Google. When you're ready for a website of your own, we design and build one with booking built in, but there's no pressure to start there.",
   },
   {
     question: "What if it doesn't work for us?",
@@ -47,12 +47,12 @@ export const productFaq: FaqItem[] = [
   {
     question: "Does GuestFlow handle deposits and no-shows?",
     answer:
-      "Yes — you can require card details or take deposits for specific services, party sizes, or dates, with automated reminders that cut no-shows dramatically.",
+      "Yes. You can require card details or take deposits for specific services, party sizes, or dates, with automated reminders that cut no-shows dramatically.",
   },
   {
     question: "Can I manage availability myself?",
     answer:
-      "Fully. Open and close slots, set per-service durations, block dates, and adjust capacity in a dashboard built for busy operators — changes go live on your site instantly.",
+      "Fully. Open and close slots, set per-service durations, block dates, and adjust capacity in a dashboard built for busy operators, and changes go live on your site instantly.",
   },
   {
     question: "Does it support multiple locations?",
@@ -70,7 +70,7 @@ export const pricingFaq: FaqItem[] = [
   {
     question: "Is there a setup fee?",
     answer:
-      "Setup is included in Premium. For Essential, a one-time installation fee may apply depending on your website platform — we'll tell you exactly before you commit.",
+      "Setup is included in Premium. For Essential, a one-time installation fee may apply depending on your website platform. We'll tell you exactly what it is before you commit.",
   },
   {
     question: "Can I cancel anytime?",
@@ -85,7 +85,7 @@ export const pricingFaq: FaqItem[] = [
   {
     question: "I only have a Google Business Profile. Where do I start?",
     answer:
-      "Right there. We optimize your profile so people find and book you from Google — it's the affordable entry point. A full website with built-in booking is our higher-level offering, for when you're ready.",
+      "Right there. We optimize your profile so people find and book you from Google. It's the affordable entry point. A full website with built-in booking is our higher-level offering, for when you're ready.",
   },
 ];
 
@@ -93,7 +93,7 @@ export const demoFaq: FaqItem[] = [
   {
     question: "How long is the demo?",
     answer:
-      "About 20 minutes. We show the booking flow, the dashboard, and what your branded version would look like — and answer anything you throw at us.",
+      "About 20 minutes. We show the booking flow, the dashboard, and what your branded version would look like, and we'll answer anything you throw at us.",
   },
   {
     question: "Do I need anything prepared?",

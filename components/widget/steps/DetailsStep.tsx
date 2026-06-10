@@ -31,7 +31,7 @@ export function DetailsStep({
       </button>
       <div className="flex items-baseline justify-between gap-4">
         <p className={WG.heading}>Your details</p>
-        <p className={WG.hint}>Demo only — nothing is sent anywhere.</p>
+        <p className={WG.hint}>Demo only. Nothing is sent anywhere.</p>
       </div>
       <div className="mt-4 space-y-3">
         <input
