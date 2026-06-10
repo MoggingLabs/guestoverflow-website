@@ -82,9 +82,9 @@ export default async function AdminLeadsPage({
                   </td>
                   <td className="px-5 py-3">
                     <p className="text-cream-dim">{lead.business_name}</p>
-                    {lead.web_presence && (
-                      <p className="text-xs text-cream-faint">
-                        {lead.web_presence}
+                    {lead.web_presence && lead.web_presence.length > 0 && (
+                      <p className="max-w-48 text-xs text-cream-faint">
+                        {lead.web_presence.join(" · ")}
                       </p>
                     )}
                   </td>

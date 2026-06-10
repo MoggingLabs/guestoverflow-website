@@ -36,9 +36,9 @@ export function DemoForm() {
     businessName: "",
     businessType: "",
     businessTypeOther: "",
-    webPresence: "",
     message: "",
   });
+  const [webPresence, setWebPresence] = useState<string[]>([]);
   const [preferredDate, setPreferredDate] = useState("");
   const [preferredWindow, setPreferredWindow] = useState("");
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -122,6 +122,7 @@ export function DemoForm() {
       ...values,
       preferredDate,
       preferredWindow,
+      webPresence,
       pageSource: pathname,
       website: honeypot,
     };
@@ -251,20 +252,41 @@ export function DemoForm() {
           error={errors.businessTypeOther}
         />
       )}
-      <Select
-        label="Where do guests find you today?"
-        name="webPresence"
-        optional
-        value={values.webPresence}
-        onChange={(e) => set("webPresence")(e.target.value)}
-      >
-        <option value="">Choose one…</option>
-        {webPresences.map((presence) => (
-          <option key={presence} value={presence}>
-            {presence}
-          </option>
-        ))}
-      </Select>
+      <fieldset>
+        <legend className="mb-2 flex w-full items-baseline justify-between text-sm font-medium text-cream">
+          Where do guests find you today?
+          <span className="text-xs font-normal text-cream-faint">
+            Optional — select all that apply
+          </span>
+        </legend>
+        <div className="flex flex-wrap gap-2">
+          {webPresences.map((presence) => {
+            const selected = webPresence.includes(presence);
+            return (
+              <button
+                key={presence}
+                type="button"
+                aria-pressed={selected}
+                onClick={() =>
+                  setWebPresence((current) =>
+                    selected
+                      ? current.filter((p) => p !== presence)
+                      : [...current, presence],
+                  )
+                }
+                className={cn(
+                  "rounded-md border px-3.5 py-2 text-xs transition-colors",
+                  selected
+                    ? "border-amber bg-amber/10 text-amber"
+                    : "border-line text-cream-dim hover:border-amber-deep",
+                )}
+              >
+                {presence}
+              </button>
+            );
+          })}
+        </div>
+      </fieldset>
 
       <fieldset>
         <legend className="mb-2 flex w-full items-baseline justify-between text-sm font-medium text-cream">
