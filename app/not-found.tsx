@@ -1,10 +1,15 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { site } from "@/content/site";
 
 export default function NotFound() {
   return (
-    <section className="flex min-h-[70vh] items-center pt-24">
+    <>
+      <Header />
+      <main className="flex-1">
+        <section className="flex min-h-[70vh] items-center pt-24">
       <Container className="text-center">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-amber">
           404
@@ -23,6 +28,9 @@ export default function NotFound() {
           </Button>
         </div>
       </Container>
-    </section>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
