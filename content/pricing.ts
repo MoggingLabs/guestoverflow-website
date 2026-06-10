@@ -11,7 +11,7 @@ export const pricingHero = {
 export const tiers: PricingTier[] = [
   {
     name: "Essential",
-    price: "from €99/mo",
+    monthlyEur: 99,
     priceNote: "For a single venue getting started",
     blurb: "The branded booking widget on your site, with the core toolkit.",
     features: [
@@ -24,7 +24,7 @@ export const tiers: PricingTier[] = [
   },
   {
     name: "Premium",
-    price: "from €249/mo",
+    monthlyEur: 249,
     priceNote: "For venues that live on bookings",
     blurb: "Everything in Essential, plus protection and intelligence.",
     featured: true,
@@ -39,7 +39,7 @@ export const tiers: PricingTier[] = [
   },
   {
     name: "Custom",
-    price: "Let's talk",
+    monthlyEur: null,
     priceNote: "Groups & multi-location",
     blurb: "Multiple venues, custom integrations, or something we haven't thought of yet.",
     features: [
@@ -50,6 +50,13 @@ export const tiers: PricingTier[] = [
     ],
   },
 ];
+
+export const billingToggle = {
+  monthlyLabel: "Monthly",
+  annualLabel: "Annual",
+  annualBadge: "a third off",
+  annualNote: "billed annually",
+};
 
 export const comparison = {
   title: "What commission really costs",

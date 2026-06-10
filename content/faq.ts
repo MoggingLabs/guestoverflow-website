@@ -73,6 +73,11 @@ export const pricingFaq: FaqItem[] = [
       "Setup is included in Premium. For Essential, a one-time installation fee may apply depending on your website platform. We'll tell you exactly what it is before you commit.",
   },
   {
+    question: "Is there a discount for paying annually?",
+    answer:
+      "Yes. Choose annual billing and you pay a third less than the monthly price, so Essential drops from €99 to €66 a month. Use the toggle above the plans to compare both.",
+  },
+  {
     question: "Can I cancel anytime?",
     answer:
       "Monthly plans cancel anytime. Your guest data remains exportable for 90 days after cancellation.",

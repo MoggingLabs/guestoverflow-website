@@ -41,7 +41,8 @@ export type IndustryContent = {
 
 export type PricingTier = {
   name: string;
-  price: string;
+  /** Monthly price in euros; null renders the custom "Let's talk" tier. */
+  monthlyEur: number | null;
   priceNote: string;
   blurb: string;
   features: string[];
