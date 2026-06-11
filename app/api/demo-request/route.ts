@@ -63,14 +63,14 @@ async function sendEmails(lead: {
   await resend.emails.send({
     from,
     to: lead.email,
-    subject: "Your GuestFlow demo request",
+    subject: "Your Guest Overflow demo request",
     text: `Hi ${lead.name.split(" ")[0]},
 
-Thanks for requesting a GuestFlow demo for ${lead.businessName}. We'll confirm your slot within one business day.
+Thanks for requesting a Guest Overflow demo for ${lead.businessName}. We'll confirm your slot within one business day.
 
 In the meantime, feel free to reply to this email with anything you'd like us to cover.
 
-— The GuestFlow team`,
+— The Guest Overflow team`,
   });
 }
 

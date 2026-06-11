@@ -72,7 +72,7 @@ function hostnameOnly(referrer: string | null | undefined): string | null {
   try {
     const host = new URL(referrer).hostname;
     // Self-referrals carry no acquisition signal.
-    return host.includes("localhost") || host.includes("guestflow") ? null : host;
+    return host.includes("localhost") || host.includes("guestflow") || host.includes("guestoverflow") ? null : host;
   } catch {
     return null;
   }

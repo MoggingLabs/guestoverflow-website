@@ -14,7 +14,7 @@ type FaqContent = {
 const en: FaqContent = {
   home: [
     {
-      question: "How is GuestFlow priced?",
+      question: "How is Guest Overflow priced?",
       answer:
         "A flat monthly subscription, with no per-cover or per-booking commission, ever. Pricing depends on the plan and how much customization your venue needs; see the pricing page for tiers, or book a demo for an exact quote.",
     },
@@ -26,7 +26,7 @@ const en: FaqContent = {
     {
       question: "Does it work with my existing website?",
       answer:
-        "Yes. GuestFlow installs on any modern website platform, including custom-built sites, WordPress, Squarespace, and Webflow. If you can edit your site, we can install GuestFlow on it.",
+        "Yes. Guest Overflow installs on any modern website platform, including custom-built sites, WordPress, Squarespace, and Webflow. If you can edit your site, we can install Guest Overflow on it.",
     },
     {
       question: "Who owns the guest data?",
@@ -39,7 +39,7 @@ const en: FaqContent = {
         "Yes, that's the heart of what we do. Colors, typography, copy, and flow are tailored to each venue. Try the live demo above and switch venue types to see how different the same system can look.",
     },
     {
-      question: "I don't have a website. Can I still use GuestFlow?",
+      question: "I don't have a website. Can I still use Guest Overflow?",
       answer:
         "Yes. We start by optimizing your Google Business Profile so people can find and book you straight from Google. When you're ready for a website of your own, we design and build one with booking built in, but there's no pressure to start there.",
     },
@@ -51,12 +51,12 @@ const en: FaqContent = {
     {
       question: "What happens after I book a demo?",
       answer:
-        "A 20-minute call where we show GuestFlow running on a site like yours and scope what your setup would involve. No commitment, and no setup-fee talk unless you want it.",
+        "A 20-minute call where we show Guest Overflow running on a site like yours and scope what your setup would involve. No commitment, and no setup-fee talk unless you want it.",
     },
   ],
   product: [
     {
-      question: "Does GuestFlow handle deposits and no-shows?",
+      question: "Does Guest Overflow handle deposits and no-shows?",
       answer:
         "Yes. You can require card details or take deposits for specific services, party sizes, or dates, with automated reminders that cut no-shows dramatically.",
     },
@@ -127,7 +127,7 @@ const en: FaqContent = {
     {
       question: "Is this a sales call?",
       answer:
-        "It's a working session. If GuestFlow isn't right for your venue, we'll say so and point you somewhere better.",
+        "It's a working session. If Guest Overflow isn't right for your venue, we'll say so and point you somewhere better.",
     },
   ],
   productTitle: "Product questions",
@@ -138,7 +138,7 @@ const en: FaqContent = {
 const pt: FaqContent = {
   home: [
     {
-      question: "Como funciona o preço do GuestFlow?",
+      question: "Como funciona o preço do Guest Overflow?",
       answer:
         "Uma subscrição mensal fixa, sem comissão por reserva, nunca. O valor depende do plano e do nível de personalização que o seu espaço precisa; veja os planos na página de preços ou marque uma demonstração para um orçamento exato.",
     },
@@ -150,7 +150,7 @@ const pt: FaqContent = {
     {
       question: "Funciona com o meu site atual?",
       answer:
-        "Sim. O GuestFlow instala-se em qualquer plataforma moderna, incluindo sites à medida, WordPress, Squarespace e Webflow. Se consegue editar o seu site, conseguimos instalar lá o GuestFlow.",
+        "Sim. O Guest Overflow instala-se em qualquer plataforma moderna, incluindo sites à medida, WordPress, Squarespace e Webflow. Se consegue editar o seu site, conseguimos instalar lá o Guest Overflow.",
     },
     {
       question: "De quem são os dados dos clientes?",
@@ -163,7 +163,7 @@ const pt: FaqContent = {
         "Sim, é esse o coração do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada espaço. Experimente a demo ao vivo acima e mude o tipo de espaço para ver como o mesmo sistema pode ficar diferente.",
     },
     {
-      question: "Não tenho site. Ainda assim posso usar o GuestFlow?",
+      question: "Não tenho site. Ainda assim posso usar o Guest Overflow?",
       answer:
         "Sim. Começamos por otimizar o seu Perfil de Empresa no Google para que as pessoas o encontrem e reservem diretamente a partir do Google. Quando quiser um site próprio, desenhamos e construímos um com reservas integradas, mas sem qualquer pressão para começar por aí.",
     },
@@ -175,12 +175,12 @@ const pt: FaqContent = {
     {
       question: "O que acontece depois de marcar a demonstração?",
       answer:
-        "Uma chamada de 20 minutos em que mostramos o GuestFlow a funcionar num site como o seu e definimos o que a sua instalação envolveria. Sem compromisso, e sem conversa de custos de instalação a menos que a queira ter.",
+        "Uma chamada de 20 minutos em que mostramos o Guest Overflow a funcionar num site como o seu e definimos o que a sua instalação envolveria. Sem compromisso, e sem conversa de custos de instalação a menos que a queira ter.",
     },
   ],
   product: [
     {
-      question: "O GuestFlow trata de sinais e faltas (no-shows)?",
+      question: "O Guest Overflow trata de sinais e faltas (no-shows)?",
       answer:
         "Sim. Pode pedir dados de cartão ou cobrar sinais para serviços, tamanhos de grupo ou datas específicos, com lembretes automáticos que reduzem drasticamente as faltas.",
     },
@@ -251,7 +251,7 @@ const pt: FaqContent = {
     {
       question: "Isto é uma chamada de vendas?",
       answer:
-        "É uma sessão de trabalho. Se o GuestFlow não fizer sentido para o seu espaço, dizemos-lhe isso e indicamos-lhe um caminho melhor.",
+        "É uma sessão de trabalho. Se o Guest Overflow não fizer sentido para o seu espaço, dizemos-lhe isso e indicamos-lhe um caminho melhor.",
     },
   ],
   productTitle: "Perguntas sobre o produto",

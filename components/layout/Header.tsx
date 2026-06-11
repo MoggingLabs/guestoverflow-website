@@ -45,7 +45,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-8">
-        <Link href="/" aria-label="GuestFlow home">
+        <Link href="/" aria-label="Guest Overflow home">
           <Logo />
         </Link>
 

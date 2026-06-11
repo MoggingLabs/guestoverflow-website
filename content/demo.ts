@@ -11,7 +11,7 @@ type DemoContent = {
 
 const en: DemoContent = {
   eyebrow: "Book a demo",
-  headline: "See GuestFlow on a site like yours, in 20 minutes.",
+  headline: "See Guest Overflow on a site like yours, in 20 minutes.",
   subhead:
     "A working session, not a sales pitch. We'll show you the booking flow, the dashboard, and what your branded version would look like.",
   expectations: {
@@ -23,7 +23,7 @@ const en: DemoContent = {
       },
       {
         title: "Your setup, scoped",
-        body: "We look at your current website and tell you exactly what installing GuestFlow would involve, and how fast.",
+        body: "We look at your current website and tell you exactly what installing Guest Overflow would involve, and how fast.",
       },
       {
         title: "Straight answers",
@@ -42,7 +42,7 @@ const en: DemoContent = {
 
 const pt: DemoContent = {
   eyebrow: "Marcar demonstração",
-  headline: "Veja o GuestFlow num site como o seu, em 20 minutos.",
+  headline: "Veja o Guest Overflow num site como o seu, em 20 minutos.",
   subhead:
     "Uma sessão de trabalho, não um discurso de vendas. Mostramos-lhe o fluxo de reservas, o painel e como ficaria a sua versão com a sua marca.",
   expectations: {
@@ -54,7 +54,7 @@ const pt: DemoContent = {
       },
       {
         title: "A sua instalação, definida",
-        body: "Olhamos para o seu site atual e dizemos-lhe exatamente o que a instalação do GuestFlow envolveria, e em quanto tempo.",
+        body: "Olhamos para o seu site atual e dizemos-lhe exatamente o que a instalação do Guest Overflow envolveria, e em quanto tempo.",
       },
       {
         title: "Respostas diretas",

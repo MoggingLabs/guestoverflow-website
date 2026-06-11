@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * GuestFlow mark: three flowing place-setting lines converging into a
+ * Guest Overflow mark: three flowing place-setting lines converging into a
  * point — "guests flowing in". Wordmark set in the display serif.
  */
 export function Logo({ className }: { className?: string }) {
@@ -30,8 +30,8 @@ export function Logo({ className }: { className?: string }) {
         />
         <circle cx="24" cy="14" r="1.75" fill="currentColor" />
       </svg>
-      <span className="font-display text-xl font-medium tracking-tight text-cream">
-        GuestFlow
+      <span className="whitespace-nowrap font-display text-xl font-medium tracking-tight text-cream">
+        Guest Overflow
       </span>
     </span>
   );

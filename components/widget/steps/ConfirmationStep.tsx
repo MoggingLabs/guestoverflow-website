@@ -13,7 +13,7 @@ function confirmationCode(state: BookingState): string {
   const seed = `${state.dateKey}:${state.time}:${state.partySize}`;
   let h = 0;
   for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
-  return `GF-${String(1000 + (h % 9000))}`;
+  return `GO-${String(1000 + (h % 9000))}`;
 }
 
 export function ConfirmationStep({

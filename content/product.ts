@@ -18,7 +18,7 @@ const en: ProductContent = {
     eyebrow: "Product",
     headline: "Everything you need to take bookings on your own website.",
     subhead:
-      "GuestFlow handles the whole reservation journey, from the moment a guest lands on your site to the moment they come back to book again.",
+      "Guest Overflow handles the whole reservation journey, from the moment a guest lands on your site to the moment they come back to book again.",
   },
   features: [
     {
@@ -55,7 +55,7 @@ const en: ProductContent = {
   ownYourData: {
     eyebrow: "The principle",
     title: "Your guest data is yours, and it stays that way.",
-    body: "Marketplace platforms built very large businesses on data that restaurants and hotels generated for them. GuestFlow is set up so that can't happen here: your bookings and your guests live in your account, and you can export everything at any time. We charge for the software, nothing more.",
+    body: "Marketplace platforms built very large businesses on data that restaurants and hotels generated for them. Guest Overflow is set up so that can't happen here: your bookings and your guests live in your account, and you can export everything at any time. We charge for the software, nothing more.",
     points: [
       "You own everything: your site, your domain, your guest data, your Stripe account",
       "Full data export, any time, no questions",
@@ -77,7 +77,7 @@ const pt: ProductContent = {
     eyebrow: "Produto",
     headline: "Tudo o que precisa para receber reservas no seu próprio site.",
     subhead:
-      "O GuestFlow trata de todo o percurso da reserva, desde o momento em que o cliente chega ao seu site até ao momento em que volta para reservar de novo.",
+      "O Guest Overflow trata de todo o percurso da reserva, desde o momento em que o cliente chega ao seu site até ao momento em que volta para reservar de novo.",
   },
   features: [
     {
@@ -114,7 +114,7 @@ const pt: ProductContent = {
   ownYourData: {
     eyebrow: "O princípio",
     title: "Os dados dos seus clientes são seus, e assim ficam.",
-    body: "As plataformas-marketplace construíram negócios enormes com dados que restaurantes e hotéis geraram para elas. O GuestFlow foi montado para que isso não possa acontecer aqui: as suas reservas e os seus clientes vivem na sua conta, e pode exportar tudo a qualquer momento. Cobramos pelo software, nada mais.",
+    body: "As plataformas-marketplace construíram negócios enormes com dados que restaurantes e hotéis geraram para elas. O Guest Overflow foi montado para que isso não possa acontecer aqui: as suas reservas e os seus clientes vivem na sua conta, e pode exportar tudo a qualquer momento. Cobramos pelo software, nada mais.",
     points: [
       "É dono de tudo: o seu site, o seu domínio, os dados dos clientes, a sua conta Stripe",
       "Exportação completa dos dados, a qualquer momento, sem perguntas",

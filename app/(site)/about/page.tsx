@@ -11,7 +11,7 @@ import { getLocale } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "GuestFlow is built by MoggingLabs, a studio with years of experience crafting high-converting hospitality websites.",
+    "Guest Overflow is built by MoggingLabs, a studio with years of experience crafting high-converting hospitality websites.",
 };
 
 export default async function AboutPage() {

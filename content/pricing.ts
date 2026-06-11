@@ -86,7 +86,7 @@ const en: PricingContent = {
   },
   comparison: {
     title: "What commission really costs",
-    body: "A restaurant seating 1,000 covers a month at €2–3 commission per cover pays €24,000–36,000 a year, for a booking page that isn't even theirs. GuestFlow replaces that with a flat subscription that stays the same even in your busiest month.",
+    body: "A restaurant seating 1,000 covers a month at €2–3 commission per cover pays €24,000–36,000 a year, for a booking page that isn't even theirs. Guest Overflow replaces that with a flat subscription that stays the same even in your busiest month.",
   },
   foundingPartner: {
     badge: "Founding offer",
@@ -179,7 +179,7 @@ const pt: PricingContent = {
   },
   comparison: {
     title: "O que a comissão custa realmente",
-    body: "Um restaurante com 1.000 reservas por mês a 2–3 € de comissão por pessoa paga 24.000 a 36.000 € por ano, por uma página de reservas que nem sequer é sua. O GuestFlow substitui isso por uma subscrição fixa que não muda nem no seu mês mais cheio.",
+    body: "Um restaurante com 1.000 reservas por mês a 2–3 € de comissão por pessoa paga 24.000 a 36.000 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que não muda nem no seu mês mais cheio.",
   },
   foundingPartner: {
     badge: "Oferta de lançamento",

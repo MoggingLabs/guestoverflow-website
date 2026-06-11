@@ -12,7 +12,7 @@ export async function Footer() {
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>
-            <Link href="/" aria-label="GuestFlow home">
+            <Link href="/" aria-label="Guest Overflow home">
               <Logo />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream-faint">

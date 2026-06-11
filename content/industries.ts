@@ -29,7 +29,7 @@ const en: IndustriesStrings = {
       hero: {
         headline: "Take reservations on your own website.",
         subhead:
-          "GuestFlow gives restaurants a reservation flow that lives on their own site, carries their brand, and never charges per cover.",
+          "Guest Overflow gives restaurants a reservation flow that lives on their own site, carries their brand, and never charges per cover.",
       },
       painPoints: [
         {
@@ -72,7 +72,7 @@ const en: IndustriesStrings = {
       hero: {
         headline: "Make direct booking the obvious choice.",
         subhead:
-          "Boutique hotels lose 15-25% of every OTA stay. GuestFlow puts a beautiful, brand-true booking flow on your own site so guests book direct.",
+          "Boutique hotels lose 15-25% of every OTA stay. Guest Overflow puts a beautiful, brand-true booking flow on your own site so guests book direct.",
       },
       painPoints: [
         {
@@ -205,11 +205,11 @@ const en: IndustriesStrings = {
     liveDemoEyebrow: "Live demo",
     liveDemoTitle: (venue) => `Try a booking at ${venue}.`,
     liveDemoSubhead:
-      "The venue is fictional, but the widget is real. This is how GuestFlow would feel themed for your business.",
+      "The venue is fictional, but the widget is real. This is how Guest Overflow would feel themed for your business.",
     builtInEyebrow: "Built in",
-    builtInTitle: (label) => `GuestFlow for ${label.toLowerCase()}`,
+    builtInTitle: (label) => `Guest Overflow for ${label.toLowerCase()}`,
     footerHeadline: "Bring booking home to your website.",
-    footerSubhead: "See GuestFlow themed for a venue like yours in a 20-minute demo.",
+    footerSubhead: "See Guest Overflow themed for a venue like yours in a 20-minute demo.",
   },
 };
 
@@ -225,7 +225,7 @@ const pt: IndustriesStrings = {
       hero: {
         headline: "Receba reservas no seu próprio site.",
         subhead:
-          "O GuestFlow dá aos restaurantes um fluxo de reservas que vive no seu próprio site, veste a sua marca e nunca cobra por reserva.",
+          "O Guest Overflow dá aos restaurantes um fluxo de reservas que vive no seu próprio site, veste a sua marca e nunca cobra por reserva.",
       },
       painPoints: [
         {
@@ -268,7 +268,7 @@ const pt: IndustriesStrings = {
       hero: {
         headline: "Faça da reserva direta a escolha óbvia.",
         subhead:
-          "Os hotéis boutique perdem 15 a 25% de cada estadia vendida por OTA. O GuestFlow coloca um fluxo de reserva bonito e fiel à marca no seu próprio site, para que os hóspedes reservem diretamente.",
+          "Os hotéis boutique perdem 15 a 25% de cada estadia vendida por OTA. O Guest Overflow coloca um fluxo de reserva bonito e fiel à marca no seu próprio site, para que os hóspedes reservem diretamente.",
       },
       painPoints: [
         {
@@ -401,12 +401,12 @@ const pt: IndustriesStrings = {
     liveDemoEyebrow: "Demo ao vivo",
     liveDemoTitle: (venue) => `Experimente reservar no ${venue}.`,
     liveDemoSubhead:
-      "O espaço é fictício, mas o widget é real. É assim que o GuestFlow se sentiria com o tema do seu negócio.",
+      "O espaço é fictício, mas o widget é real. É assim que o Guest Overflow se sentiria com o tema do seu negócio.",
     builtInEyebrow: "Incluído",
-    builtInTitle: (label) => `GuestFlow para ${label.toLowerCase()}`,
+    builtInTitle: (label) => `Guest Overflow para ${label.toLowerCase()}`,
     footerHeadline: "Traga as reservas de volta para o seu site.",
     footerSubhead:
-      "Veja o GuestFlow com o tema de um espaço como o seu numa demonstração de 20 minutos.",
+      "Veja o Guest Overflow com o tema de um espaço como o seu numa demonstração de 20 minutos.",
   },
 };
 

@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Terms of service",
   description:
-    "The terms that govern the use of the GuestFlow website, the interactive demo, and our promotional offers.",
+    "The terms that govern the use of the Guest Overflow website, the interactive demo, and our promotional offers.",
 };
 
 const UL = "list-disc space-y-1.5 pl-5";
@@ -30,7 +30,7 @@ export default async function TermsPage() {
         This website is operated by [LEGAL ENTITY NAME], a company registered
         in Portugal, commercial registry and NIPC number [NUMBER], with
         registered office at [REGISTERED ADDRESS] (&quot;we&quot;,
-        &quot;us&quot;, &quot;MoggingLabs&quot;). GuestFlow is our trade name
+        &quot;us&quot;, &quot;MoggingLabs&quot;). Guest Overflow is our trade name
         for the services described on this website. Contact:{" "}
         <a href={`mailto:${site.email}`} className="text-amber underline underline-offset-2">
           {site.email}
@@ -132,7 +132,7 @@ export default async function TermsPage() {
 
       <h2>8. Intellectual property</h2>
       <p>
-        The website and everything on it, including the GuestFlow name, logo,
+        The website and everything on it, including the Guest Overflow name, logo,
         design, text, the demo widget and its code, and the fictional venue
         content, belong to us or our licensors. We grant you a limited,
         revocable, non-exclusive, non-transferable licence to access and view

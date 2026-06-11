@@ -1,6 +1,6 @@
-# GuestFlow — sales website
+# Guest Overflow — sales website
 
-Marketing and lead-generation website for **GuestFlow**, a white-label
+Marketing and lead-generation website for **Guest Overflow**, a white-label
 online booking platform for restaurants, hotels, spas, and experience
 businesses. Built by [MoggingLabs](https://github.com/MoggingLabs).
 

@@ -3,12 +3,12 @@ import type { Locale } from "@/lib/i18n-shared";
 
 /** Locale-independent site facts (URLs, identity, default metadata). */
 export const site = {
-  name: "GuestFlow",
+  name: "Guest Overflow",
   tagline: "Booking that belongs on your website.",
   description:
-    "GuestFlow is a white-label reservation system for restaurants, hotels, spas, and experiences. We design it into your own website, matched to your brand, and every guest relationship stays yours.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestflow-website.vercel.app",
-  email: "hello@guestflow.app",
+    "Guest Overflow is a white-label reservation system for restaurants, hotels, spas, and experiences. We design it into your own website, matched to your brand, and every guest relationship stays yours.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow-website.vercel.app",
+  email: "hello@guestoverflow.app",
   company: "MoggingLabs",
   cta: {
     primary: { label: "Book a demo", href: "/book-a-demo" },

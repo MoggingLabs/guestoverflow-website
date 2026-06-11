@@ -6,7 +6,7 @@ const en = {
     eyebrow: "White-label online booking",
     headline: "Booking that belongs on your website.",
     subhead:
-      "GuestFlow is a reservation system we design into your own website, so it looks and feels like your brand. Guests book directly with you, and every guest relationship stays yours.",
+      "Guest Overflow is a reservation system we design into your own website, so it looks and feels like your brand. Guests book directly with you, and every guest relationship stays yours.",
   },
   problems: {
     title: "Why send your guests somewhere else to book?",
@@ -29,7 +29,7 @@ const en = {
     eyebrow: "Live demo",
     title: "See for yourself. Try booking a table.",
     subhead:
-      "This is a real GuestFlow widget running right here on the page. Switch the venue type to see how the same system looks when it's styled for a different business.",
+      "This is a real Guest Overflow widget running right here on the page. Switch the venue type to see how the same system looks when it's styled for a different business.",
     caption: "One booking system, styled to match each venue.",
   },
   howItWorks: {
@@ -51,13 +51,13 @@ const en = {
     ] as HowItWorksStep[],
   },
   differentiators: {
-    title: "Why venues choose GuestFlow.",
+    title: "Why venues choose Guest Overflow.",
     ctaLine: "Book a demo and see it on your website",
     items: [
       {
         icon: "brand",
         title: "Truly yours",
-        body: "GuestFlow lives on your domain and wears your brand. Guests book without ever leaving your site, and they never see our name.",
+        body: "Guest Overflow lives on your domain and wears your brand. Guests book without ever leaving your site, and they never see our name.",
       },
       {
         icon: "commission",
@@ -79,7 +79,7 @@ const en = {
   industriesPreview: {
     title: "Built for the way you host.",
     subhead:
-      "Whether you take table reservations, room bookings, treatments, or tour departures, GuestFlow adapts to how your business actually works.",
+      "Whether you take table reservations, room bookings, treatments, or tour departures, Guest Overflow adapts to how your business actually works.",
     explore: "Explore →",
   },
   noWebsite: {
@@ -109,18 +109,18 @@ const en = {
   builtFor: {
     line: "Built for independent restaurants, boutique hotels, spas, and tour operators.",
     credibility:
-      "We're the team at MoggingLabs, and we've spent years building high-converting websites for hospitality businesses. GuestFlow is everything our clients kept asking for.",
+      "We're the team at MoggingLabs, and we've spent years building high-converting websites for hospitality businesses. Guest Overflow is everything our clients kept asking for.",
   },
   faqTitle: "Questions, answered.",
   problemsEyebrow: "The problem",
   liveDemoEyebrow: "Live demo",
   howItWorksEyebrow: "How it works",
-  whyEyebrow: "Why GuestFlow",
+  whyEyebrow: "Why Guest Overflow",
   industriesEyebrow: "Industries",
   footerCta: {
     headline: "Ready to take bookings on your own website?",
     subhead:
-      "See GuestFlow running on a site like yours. The demo takes 20 minutes, and there's no commitment.",
+      "See Guest Overflow running on a site like yours. The demo takes 20 minutes, and there's no commitment.",
   },
 };
 
@@ -129,7 +129,7 @@ const pt: typeof en = {
     eyebrow: "Reservas online white-label",
     headline: "Reservas que pertencem ao seu site.",
     subhead:
-      "O GuestFlow é um sistema de reservas que desenhamos dentro do seu próprio site, com o aspeto e a voz da sua marca. Os clientes reservam diretamente consigo, e cada relação fica sua.",
+      "O Guest Overflow é um sistema de reservas que desenhamos dentro do seu próprio site, com o aspeto e a voz da sua marca. Os clientes reservam diretamente consigo, e cada relação fica sua.",
   },
   problems: {
     title: "Porquê enviar os seus clientes para outro lado para reservar?",
@@ -152,7 +152,7 @@ const pt: typeof en = {
     eyebrow: "Demo ao vivo",
     title: "Veja por si mesmo. Experimente reservar uma mesa.",
     subhead:
-      "Este é um widget GuestFlow real, a funcionar aqui na página. Mude o tipo de espaço para ver como o mesmo sistema fica com outra marca.",
+      "Este é um widget Guest Overflow real, a funcionar aqui na página. Mude o tipo de espaço para ver como o mesmo sistema fica com outra marca.",
     caption: "Um único sistema de reservas, à medida de cada espaço.",
   },
   howItWorks: {
@@ -174,13 +174,13 @@ const pt: typeof en = {
     ] as HowItWorksStep[],
   },
   differentiators: {
-    title: "Porque é que os espaços escolhem o GuestFlow.",
+    title: "Porque é que os espaços escolhem o Guest Overflow.",
     ctaLine: "Marque uma demonstração e veja-o no seu site",
     items: [
       {
         icon: "brand",
         title: "Verdadeiramente seu",
-        body: "O GuestFlow vive no seu domínio e veste a sua marca. Os clientes reservam sem sair do seu site, e nunca veem o nosso nome.",
+        body: "O Guest Overflow vive no seu domínio e veste a sua marca. Os clientes reservam sem sair do seu site, e nunca veem o nosso nome.",
       },
       {
         icon: "commission",
@@ -202,7 +202,7 @@ const pt: typeof en = {
   industriesPreview: {
     title: "Feito para a forma como recebe.",
     subhead:
-      "Quer trabalhe com reservas de mesa, quartos, tratamentos ou partidas de tours, o GuestFlow adapta-se à forma como o seu negócio realmente funciona.",
+      "Quer trabalhe com reservas de mesa, quartos, tratamentos ou partidas de tours, o Guest Overflow adapta-se à forma como o seu negócio realmente funciona.",
     explore: "Explorar →",
   },
   noWebsite: {
@@ -232,18 +232,18 @@ const pt: typeof en = {
   builtFor: {
     line: "Feito para restaurantes independentes, hotéis boutique, spas e operadores de tours.",
     credibility:
-      "Somos a equipa da MoggingLabs e passámos anos a construir sites de alta conversão para negócios de hotelaria e restauração. O GuestFlow é tudo o que os nossos clientes nos pediam.",
+      "Somos a equipa da MoggingLabs e passámos anos a construir sites de alta conversão para negócios de hotelaria e restauração. O Guest Overflow é tudo o que os nossos clientes nos pediam.",
   },
   faqTitle: "Perguntas, respondidas.",
   problemsEyebrow: "O problema",
   liveDemoEyebrow: "Demo ao vivo",
   howItWorksEyebrow: "Como funciona",
-  whyEyebrow: "Porquê o GuestFlow",
+  whyEyebrow: "Porquê o Guest Overflow",
   industriesEyebrow: "Setores",
   footerCta: {
     headline: "Pronto para receber reservas no seu próprio site?",
     subhead:
-      "Veja o GuestFlow a funcionar num site como o seu. A demonstração demora 20 minutos e não tem qualquer compromisso.",
+      "Veja o Guest Overflow a funcionar num site como o seu. A demonstração demora 20 minutos e não tem qualquer compromisso.",
   },
 };
 

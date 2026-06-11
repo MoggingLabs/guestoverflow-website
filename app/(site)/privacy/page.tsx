@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Privacy policy",
   description:
-    "How GuestFlow collects, uses, and protects personal data, including our cookieless analytics and your rights under the GDPR.",
+    "How Guest Overflow collects, uses, and protects personal data, including our cookieless analytics and your rights under the GDPR.",
 };
 
 const UL = "list-disc space-y-1.5 pl-5";
@@ -27,7 +27,7 @@ export default async function PrivacyPage() {
       )}
       <h2>1. Who we are</h2>
       <p>
-        GuestFlow is a service operated by [LEGAL ENTITY NAME], a company
+        Guest Overflow is a service operated by [LEGAL ENTITY NAME], a company
         registered in Portugal with registered office at [REGISTERED ADDRESS]
         and commercial registry / NIPC number [NUMBER] (&quot;we&quot;,
         &quot;us&quot;). We are the controller of the personal data described
