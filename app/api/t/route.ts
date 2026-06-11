@@ -63,7 +63,7 @@ function rateLimited(ip: string, count: number): boolean {
 /** Daily-rotating salt derived from the secret — never stored anywhere. */
 function dailySalt(): string {
   const day = new Date().toISOString().slice(0, 10);
-  const secret = process.env.ADMIN_SESSION_SECRET ?? "guestflow-dev-secret";
+  const secret = process.env.ADMIN_SESSION_SECRET ?? "guestoverflow-dev-secret";
   return createHash("sha256").update(`${secret}:${day}`).digest("hex");
 }
 
@@ -72,7 +72,7 @@ function hostnameOnly(referrer: string | null | undefined): string | null {
   try {
     const host = new URL(referrer).hostname;
     // Self-referrals carry no acquisition signal.
-    return host.includes("localhost") || host.includes("guestflow") || host.includes("guestoverflow") ? null : host;
+    return host.includes("localhost") || host.includes("guestoverflow") ? null : host;
   } catch {
     return null;
   }

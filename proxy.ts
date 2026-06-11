@@ -9,7 +9,7 @@ async function verify(value: string | undefined): Promise<boolean> {
   const exp = value.slice(0, dot);
   const sig = value.slice(dot + 1);
 
-  const secret = process.env.ADMIN_SESSION_SECRET ?? "guestflow-dev-secret";
+  const secret = process.env.ADMIN_SESSION_SECRET ?? "guestoverflow-dev-secret";
   const key = await crypto.subtle.importKey(
     "raw",
     new TextEncoder().encode(secret),

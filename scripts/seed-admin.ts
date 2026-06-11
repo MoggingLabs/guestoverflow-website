@@ -9,7 +9,7 @@
 import postgres from "postgres";
 import { randomUUID, createHash } from "node:crypto";
 
-const url = process.env.DATABASE_URL ?? "postgres://postgres:postgres@localhost:5432/guestflow";
+const url = process.env.DATABASE_URL ?? "postgres://postgres:postgres@localhost:5432/guestoverflow";
 const sql = postgres(url, { max: 4, prepare: false });
 
 if (!process.argv.includes("--yes")) {

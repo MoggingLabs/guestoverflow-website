@@ -37,8 +37,8 @@ defined by the SQL files in `supabase/migrations/`, which apply
 unchanged to local PostgreSQL and to a Supabase project.
 
 - **Local development:** native PostgreSQL, e.g.
-  `postgres://postgres:postgres@localhost:5432/guestflow`. Apply
-  migrations with `psql -d guestflow -f supabase/migrations/<file>.sql`
+  `postgres://postgres:postgres@localhost:5432/guestoverflow`. Apply
+  migrations with `psql -d guestoverflow -f supabase/migrations/<file>.sql`
   (in order).
 - **Demo data:** `npm run seed -- --yes` fills the dashboard with 45
   days of realistic events, leads, and clients. Seeded events carry

@@ -7,7 +7,7 @@ export const ADMIN_COOKIE = "gf_admin";
 const SESSION_DAYS = 7;
 
 function secret(): string {
-  return process.env.ADMIN_SESSION_SECRET ?? "guestflow-dev-secret";
+  return process.env.ADMIN_SESSION_SECRET ?? "guestoverflow-dev-secret";
 }
 
 export function adminUser(): string {
