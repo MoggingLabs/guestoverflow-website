@@ -16,6 +16,9 @@ FROM node:24-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+# public/ may be absent (git doesn't track empty dirs); ensure it exists so the
+# runner stage's COPY of it never fails.
+RUN mkdir -p public
 # NEXT_PUBLIC_* values are inlined at build time, so the public site URL is
 # baked per-image here (prod image vs staging image differ by branch anyway).
 ARG NEXT_PUBLIC_SITE_URL
