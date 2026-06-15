@@ -75,8 +75,12 @@ In the meantime, feel free to reply to this email with anything you'd like us to
 }
 
 export async function POST(request: NextRequest) {
+  // Behind Cloudflare → Nginx, CF-Connecting-IP carries the true client IP;
+  // fall back to the first X-Forwarded-For hop, then unknown.
   const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+    request.headers.get("cf-connecting-ip")?.trim() ||
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    "unknown";
   if (rateLimited(ip)) {
     return NextResponse.json(
       { ok: false, error: "Too many requests. Please try again later." },

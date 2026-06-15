@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/next";
 import { LenisProvider } from "@/lib/lenis-provider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -46,7 +45,6 @@ export default async function SiteLayout({
         <Footer />
       </LenisProvider>
       <AnalyticsProvider />
-      <Analytics />
     </LocaleProvider>
   );
 }

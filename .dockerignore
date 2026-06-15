@@ -1,0 +1,15 @@
+# Keep the build context small and avoid leaking local artifacts/secrets.
+node_modules
+.next
+.git
+.github
+.env
+.env.*
+npm-debug.log*
+.DS_Store
+README.md
+Dockerfile
+.dockerignore
+coverage
+.vercel
+*.tsbuildinfo

@@ -93,7 +93,9 @@ export async function POST(request: NextRequest) {
   if (!parsed.success) return NO_CONTENT;
 
   const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+    request.headers.get("cf-connecting-ip")?.trim() ||
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    "unknown";
   if (rateLimited(ip, parsed.data.events.length)) return NO_CONTENT;
 
   const visitorId = createHash("sha256")
@@ -106,7 +108,8 @@ export async function POST(request: NextRequest) {
     deviceType === "mobile" || deviceType === "tablet" ? deviceType : "desktop";
   const browser = parser.getBrowser().name ?? null;
   const os = parser.getOS().name ?? null;
-  const country = request.headers.get("x-vercel-ip-country");
+  // Cloudflare sets CF-IPCountry on proxied requests (ISO-3166-1 alpha-2).
+  const country = request.headers.get("cf-ipcountry");
   const referrer = hostnameOnly(parsed.data.referrer);
   const utm =
     parsed.data.utm && Object.keys(parsed.data.utm).length > 0
