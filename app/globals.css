@@ -50,6 +50,32 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Lenis smooth scroll (see lib/lenis-provider.tsx). Required for Lenis to
+   size and drive the page: without `height: auto` the root html `h-full`
+   (height: 100%) breaks scroll measurement and scrolling misbehaves. These
+   rules only apply while Lenis is active, so reduced-motion / native scroll
+   is left untouched. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 ::selection {
   background: var(--color-amber);
   color: #ffffff;
