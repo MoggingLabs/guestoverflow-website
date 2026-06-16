@@ -25,12 +25,17 @@ type ButtonProps = {
 };
 
 const VARIANTS = {
-  primary: "bg-navy text-white hover:bg-navy-soft font-medium",
-  secondary: "border border-navy text-navy hover:bg-navy/5",
-  tertiary: "bg-mint text-mint-deep hover:bg-mint/80 font-medium",
+  primary:
+    "bg-[linear-gradient(180deg,#213145,#0f1c2c)] text-white font-medium shadow-[0_2px_10px_-2px_rgb(15_28_44/0.45)] hover:bg-[linear-gradient(180deg,#27384f,#13243a)] hover:-translate-y-px hover:shadow-[0_9px_24px_-6px_rgb(15_28_44/0.55)] active:translate-y-0 active:scale-[0.98]",
+  secondary:
+    "border border-navy/80 text-navy shadow-[0_1px_2px_rgb(15_28_44/0.08)] hover:-translate-y-px hover:bg-navy hover:text-white hover:shadow-[0_9px_22px_-8px_rgb(15_28_44/0.4)] active:translate-y-0",
+  tertiary:
+    "bg-mint text-mint-deep font-medium shadow-[0_2px_10px_-2px_rgb(134_211_213/0.5)] hover:-translate-y-px hover:bg-mint/85 hover:shadow-[0_9px_22px_-6px_rgb(134_211_213/0.6)] active:translate-y-0 active:scale-[0.98]",
   ghost: "text-cream-dim hover:text-amber",
-  inverse: "bg-white text-navy hover:bg-white/90 font-medium",
-  inverseSecondary: "border border-white/30 text-white hover:bg-white/10",
+  inverse:
+    "bg-white text-navy font-medium shadow-[0_4px_14px_-2px_rgb(0_0_0/0.25)] hover:-translate-y-px hover:shadow-[0_10px_26px_-4px_rgb(0_0_0/0.35)] active:translate-y-0 active:scale-[0.98]",
+  inverseSecondary:
+    "border border-white/40 text-white hover:-translate-y-px hover:border-white/70 hover:bg-white/10 active:translate-y-0",
 } as const;
 
 const SIZES = {
@@ -50,8 +55,8 @@ export function Button({
   analyticsLabel,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded transition-colors duration-200",
-    "disabled:cursor-not-allowed disabled:opacity-50",
+    "inline-flex items-center justify-center gap-2 rounded-md transition-all duration-200 ease-out will-change-transform",
+    "disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:hover:translate-y-0",
     VARIANTS[variant],
     SIZES[size],
     className,

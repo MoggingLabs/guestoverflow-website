@@ -15,15 +15,19 @@ function subscribeToScroll(callback: () => void) {
   return () => window.removeEventListener("scroll", callback);
 }
 
+// Shared expo-out easing for the island morph, premium and unhurried.
+const EASE = "ease-[cubic-bezier(0.22,1,0.36,1)]";
+
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const locale = useLocale();
   const t = siteStrings[locale];
 
-  const scrolled = useSyncExternalStore(
+  // Past a short threshold the full-width bar condenses into a floating island.
+  const island = useSyncExternalStore(
     subscribeToScroll,
-    () => window.scrollY > 50,
+    () => window.scrollY > 24,
     () => false,
   );
 
@@ -36,90 +40,120 @@ export function Header() {
   }, [open]);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled || open
-          ? "border-b border-line bg-ink/85 backdrop-blur-md shadow-card"
-          : "border-b border-line bg-ink/80 backdrop-blur-md",
-      )}
-    >
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-8">
-        <Link href="/" aria-label="Guest Overflow home">
-          <Logo />
-        </Link>
-
-        <nav aria-label="Main" className="hidden items-center gap-7 md:flex">
-          {t.navLinks.map((link) => (
+    <>
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 flex justify-center transition-[padding] duration-[450ms]",
+          EASE,
+          island ? "px-3 pt-3 md:px-4 md:pt-4" : "px-0 pt-0",
+        )}
+      >
+        <div
+          className={cn(
+            "w-full backdrop-blur-md transition-all duration-[450ms]",
+            EASE,
+            island
+              ? "max-w-5xl rounded-2xl border border-line bg-ink/90 shadow-[0_12px_44px_-12px_rgb(11_28_48/0.28)] backdrop-blur-xl"
+              : "max-w-[120rem] rounded-none border-x-0 border-t-0 border-b border-line bg-ink/70 shadow-none",
+          )}
+        >
+          <div
+            className={cn(
+              "flex items-center justify-between gap-4 px-5 transition-[height] duration-[450ms] md:grid md:grid-cols-[1fr_auto_1fr] md:px-6",
+              EASE,
+              island ? "h-14" : "h-16",
+            )}
+          >
             <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-sm transition-colors hover:text-cream",
-                pathname.startsWith(link.href)
-                  ? "text-cream"
-                  : "text-cream-dim",
-              )}
+              href="/"
+              aria-label="Guest Overflow home"
+              className="justify-self-start"
             >
-              {link.label}
+              <Logo />
             </Link>
-          ))}
-          <LanguageToggle />
-          <Button
-            href={t.cta.tertiary.href}
-            variant="tertiary"
-            analyticsLabel="header_start_free"
-          >
-            {t.cta.tertiary.label}
-          </Button>
-          <Button href={t.cta.primary.href} analyticsLabel="header_book_demo">
-            {t.cta.primary.label}
-          </Button>
-        </nav>
 
-        <div className="flex items-center gap-3 md:hidden">
-          <Button
-            href={t.cta.primary.href}
-            size="md"
-            className="px-4 py-2"
-            analyticsLabel="header_book_demo_mobile"
-          >
-            {t.navDemoShort}
-          </Button>
-          <button
-            type="button"
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center text-cream"
-          >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              {open ? (
-                <path
-                  d="m4 4 12 12M16 4 4 16"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              ) : (
-                <path
-                  d="M3 5.5h14M3 10h14M3 14.5h14"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              )}
-            </svg>
-          </button>
+            <nav
+              aria-label="Main"
+              className="hidden items-center gap-1 md:flex"
+            >
+              {t.navLinks.map((link) => {
+                const active = pathname.startsWith(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      "rounded-md px-3 py-2 text-sm transition-colors duration-200",
+                      active
+                        ? "text-cream"
+                        : "text-cream-dim hover:bg-raised/70 hover:text-cream",
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            <div className="hidden items-center gap-3 justify-self-end md:flex">
+              <LanguageToggle />
+              <Button
+                href={t.cta.tertiary.href}
+                variant="tertiary"
+                analyticsLabel="header_start_free"
+              >
+                {t.cta.tertiary.label}
+              </Button>
+              <Button href={t.cta.primary.href} analyticsLabel="header_book_demo">
+                {t.cta.primary.label}
+              </Button>
+            </div>
+
+            <div className="flex items-center gap-2 md:hidden">
+              <Button
+                href={t.cta.primary.href}
+                size="md"
+                className="px-4 py-2"
+                analyticsLabel="header_book_demo_mobile"
+              >
+                {t.navDemoShort}
+              </Button>
+              <button
+                type="button"
+                aria-expanded={open}
+                aria-controls="mobile-nav"
+                aria-label={open ? "Close menu" : "Open menu"}
+                onClick={() => setOpen((v) => !v)}
+                className="flex h-10 w-10 items-center justify-center rounded-md text-cream transition-colors hover:bg-raised/70"
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  {open ? (
+                    <path
+                      d="m4 4 12 12M16 4 4 16"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  ) : (
+                    <path
+                      d="M3 5.5h14M3 10h14M3 14.5h14"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  )}
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
 
       {open && (
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="h-screen border-t border-line bg-ink px-6 pt-6 md:hidden"
+          className="fixed inset-0 top-0 z-40 flex flex-col bg-ink px-6 pb-10 pt-24 md:hidden"
         >
           <ul className="space-y-1">
             {t.navLinks.map((link) => (
@@ -160,6 +194,6 @@ export function Header() {
           </div>
         </nav>
       )}
-    </header>
+    </>
   );
 }
