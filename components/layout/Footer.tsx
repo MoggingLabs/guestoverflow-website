@@ -27,7 +27,7 @@ export async function Footer() {
               </h3>
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={`${link.href}-${link.label}`}>
                     <Link
                       href={link.href}
                       className="text-sm text-cream-dim transition-colors hover:text-cream"
