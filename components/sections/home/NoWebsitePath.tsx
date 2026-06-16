@@ -5,7 +5,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { homeContent } from "@/content/home";
-import { siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
 
 export async function NoWebsitePath() {
@@ -33,9 +32,9 @@ export async function NoWebsitePath() {
         </Reveal>
         <Reveal className="mt-10 text-center">
           <Button
-            href={siteStrings[locale].cta.primary.href}
+            href="/services"
             variant="secondary"
-            analyticsLabel="no_website_book_demo"
+            analyticsLabel="no_website_services"
           >
             {t.ctaLine}
           </Button>

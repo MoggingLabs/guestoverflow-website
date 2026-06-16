@@ -3,10 +3,10 @@ import type { Locale } from "@/lib/i18n-shared";
 
 const en = {
   hero: {
-    eyebrow: "White-label online booking",
-    headline: "Booking that belongs on your website.",
+    eyebrow: "Booking software you own",
+    headline: "Your own booking page, built around how you operate.",
     subhead:
-      "Guest Overflow is a reservation system we design into your own website, so it looks and feels like your brand. Guests book directly with you, and every guest relationship stays yours.",
+      "We design a booking page around your services, your hours, and your rules, on your brand and your domain. Guests book direct, you pay one flat price with no commission, and every guest relationship stays yours.",
   },
   problems: {
     title: "Why send your guests somewhere else to book?",
@@ -16,8 +16,8 @@ const en = {
         body: "Booking platforms sit between you and the people you host. They keep the guest emails and the booking history, and you end up paying to reach your own customers.",
       },
       {
-        title: "You pay commission per cover",
-        body: "With per-booking fees, the busier you are, the more you pay. It adds up fast, especially on the nights you work hardest.",
+        title: "You pay commission on your own regulars",
+        body: "Marketplaces bill you every time a guest books, including the regulars you already earned. The busier you are, the more you pay, and your most valuable guests become your most expensive channel.",
       },
       {
         title: "The booking page isn't yours",
@@ -27,10 +27,10 @@ const en = {
   },
   widgetShowcase: {
     eyebrow: "Live demo",
-    title: "See for yourself. Try booking a table.",
+    title: "This is your booking page. Try it.",
     subhead:
-      "This is a real Guest Overflow widget running right here on the page. Switch the venue type to see how the same system looks when it's styled for a different business.",
-    caption: "One booking system, styled to match each venue.",
+      "A real, working booking page running right here. Switch the venue type to watch the same system tailor itself to each operation, then put it live as its own branded page or embedded right on your site.",
+    caption: "One booking engine, tailored to each operation. Live as a page, or embedded on your site.",
   },
   howItWorks: {
     title: "Up and running in days.",
@@ -66,37 +66,37 @@ const en = {
       },
       {
         icon: "data",
-        title: "Own your guest data",
-        body: "Every booking, preference, and email address is yours, and you can export it all whenever you like. There's no marketplace between you and your guests.",
+        title: "Own your guests, bring them back",
+        body: "Every booking, preference, and contact is yours to keep and export. You keep the relationship and bring guests back yourself, without paying commission again to reach the people you already won.",
       },
       {
         icon: "concierge",
         title: "Concierge setup, personal results",
-        body: "We design, build, and install everything, and you get a founder as your direct contact, design revisions until the widget truly matches your brand, and a quarterly sit-down going over your bookings, no-shows, and repeat guests.",
+        body: "We design, build, and install everything, and you get a founder as your direct contact, design revisions until the booking page truly matches your brand, and a quarterly sit-down going over your bookings, no-shows, and repeat guests.",
       },
     ] as Differentiator[],
   },
   industriesPreview: {
     title: "Built for the way you host.",
     subhead:
-      "Whether you take table reservations, room bookings, treatments, appointments, or tour departures, Guest Overflow adapts to how your business actually works.",
+      "Table reservations, room bookings, treatments, appointments, tour departures. Guest Overflow adapts to how your business actually works.",
     explore: "Explore →",
   },
   noWebsite: {
-    eyebrow: "No website yet?",
-    title: "You can still take bookings.",
+    eyebrow: "Getting found",
+    title: "How guests find you.",
     subhead:
-      "Plenty of great venues run on word of mouth and a Google listing. That's a fine place to start, and we meet you there.",
-    ctaLine: "Not sure where you fit? Let's talk it through",
+      "Marketplaces sell you discovery, then tax every booking for it. We help you get found on your own terms, and you keep the booking and the guest. These sit alongside the booking page, never in front of it.",
+    ctaLine: "Explore our services",
     paths: [
       {
-        title: "Start with your Google Business Profile",
-        body: "We optimize your Google Business Profile so people searching for a place like yours actually find you, see the right photos and hours, and book you directly. It's the fastest and most affordable way to get online bookings working.",
+        title: "Google Business Profile",
+        body: "We optimize your Google profile and switch on Reserve with Google, so people searching nearby find you and book direct from Google and Maps, with no marketplace in between.",
         badge: "The starting point",
       },
       {
-        title: "Ready for more? We build your website",
-        body: "When you want a home of your own on the web, we design and build a full website with booking built in from day one. It's our higher-level offering, and most venues grow into it after seeing what an optimized profile alone brings in.",
+        title: "A website with booking built in",
+        body: "When you want a home of your own on the web, we design and build a full website with your booking page built in from day one.",
         badge: "The full picture",
       },
     ],
@@ -110,6 +110,19 @@ const en = {
     line: "Built for independent restaurants, boutique hotels, spas, salons, and tour operators.",
     credibility:
       "We've spent years building high-converting websites for guest-facing businesses. Guest Overflow is everything our clients kept asking for.",
+  },
+  rateParity: {
+    eyebrow: "Direct booking",
+    title:
+      "By law, you can already sell cheaper on your own site than on Booking.com.",
+    body: "Portugal banned rate-parity clauses, so your own site can undercut the OTA. We give you that site, and the booking page that takes the reservation with no commission.",
+  },
+  homePricing: {
+    eyebrow: "Pricing",
+    title: "Flat pricing. Your regulars stay free.",
+    subhead:
+      "See what a marketplace would bill you as you grow, against one flat price that never moves. Keep every cover after that.",
+    cta: "See pricing by sector",
   },
   faqTitle: "Questions, answered.",
   problemsEyebrow: "The problem",
@@ -126,10 +139,10 @@ const en = {
 
 const pt: typeof en = {
   hero: {
-    eyebrow: "Reservas online white-label",
-    headline: "Reservas que pertencem ao seu site.",
+    eyebrow: "Software de reservas que é seu",
+    headline: "A sua própria página de reservas, à medida de como trabalha.",
     subhead:
-      "O Guest Overflow é um sistema de reservas que desenhamos dentro do seu próprio site, com o aspeto e a voz da sua marca. Os clientes reservam diretamente consigo, e cada relação fica sua.",
+      "Desenhamos uma página de reservas à volta dos seus serviços, horários e regras, com a sua marca e no seu domínio. Os clientes reservam diretamente, paga um valor fixo sem comissões, e cada relação com o cliente fica sua.",
   },
   problems: {
     title: "Porquê enviar os seus clientes para outro lado para reservar?",
@@ -139,8 +152,8 @@ const pt: typeof en = {
         body: "As plataformas de reservas colocam-se entre si e as pessoas que recebe. Ficam com os emails e o histórico de reservas, e acaba a pagar para chegar aos seus próprios clientes.",
       },
       {
-        title: "Paga comissão por reserva",
-        body: "Com taxas por reserva, quanto mais trabalha, mais paga. A conta cresce depressa, sobretudo nas noites em que mais se esforça.",
+        title: "Paga comissão até pelos seus habituais",
+        body: "Os marketplaces cobram-lhe sempre que um cliente reserva, incluindo os habituais que já conquistou. Quanto mais trabalha, mais paga, e os seus clientes mais valiosos tornam-se o seu canal mais caro.",
       },
       {
         title: "A página de reservas não é sua",
@@ -150,10 +163,10 @@ const pt: typeof en = {
   },
   widgetShowcase: {
     eyebrow: "Demo ao vivo",
-    title: "Veja por si mesmo. Experimente reservar uma mesa.",
+    title: "Esta é a sua página de reservas. Experimente.",
     subhead:
-      "Este é um widget Guest Overflow real, a funcionar aqui na página. Mude o tipo de espaço para ver como o mesmo sistema fica com outra marca.",
-    caption: "Um único sistema de reservas, à medida de cada espaço.",
+      "Uma página de reservas real, a funcionar aqui mesmo. Mude o tipo de espaço para ver o mesmo sistema adaptar-se a cada operação, e depois coloque-a no ar como página própria com a sua marca ou integrada no seu site.",
+    caption: "Um único motor de reservas, à medida de cada operação. No ar como página, ou integrado no seu site.",
   },
   howItWorks: {
     title: "A funcionar em poucos dias.",
@@ -189,37 +202,37 @@ const pt: typeof en = {
       },
       {
         icon: "data",
-        title: "Os dados dos clientes são seus",
-        body: "Cada reserva, preferência e email é seu, e pode exportar tudo quando quiser. Não há nenhum marketplace entre si e os seus clientes.",
+        title: "Os clientes são seus, e voltam",
+        body: "Cada reserva, preferência e contacto é seu para guardar e exportar. Fica com a relação e traz os clientes de volta por si, sem voltar a pagar comissão para chegar a quem já conquistou.",
       },
       {
         icon: "concierge",
         title: "Instalação concierge, resultados pessoais",
-        body: "Desenhamos, construímos e instalamos tudo, e tem um fundador como contacto direto, revisões de design até o widget ficar mesmo com a sua marca, e uma reunião trimestral sobre reservas, faltas e clientes habituais.",
+        body: "Desenhamos, construímos e instalamos tudo, e tem um fundador como contacto direto, revisões de design até a página de reservas ficar mesmo com a sua marca, e uma reunião trimestral sobre reservas, faltas e clientes habituais.",
       },
     ] as Differentiator[],
   },
   industriesPreview: {
     title: "Feito para a forma como recebe.",
     subhead:
-      "Quer trabalhe com reservas de mesa, quartos, tratamentos, marcações ou partidas de tours, o Guest Overflow adapta-se à forma como o seu negócio realmente funciona.",
+      "Reservas de mesa, quartos, tratamentos, marcações, partidas de tours. O Guest Overflow adapta-se à forma como o seu negócio realmente funciona.",
     explore: "Explorar →",
   },
   noWebsite: {
-    eyebrow: "Ainda sem site?",
-    title: "Mesmo assim pode receber reservas.",
+    eyebrow: "Ser encontrado",
+    title: "Como os clientes o encontram.",
     subhead:
-      "Muitos espaços excelentes vivem do passa-palavra e de uma ficha no Google. É um ótimo ponto de partida, e nós vamos ter consigo aí.",
-    ctaLine: "Não sabe onde encaixa? Falamos sobre isso",
+      "Os marketplaces vendem-lhe descoberta e depois cobram comissão por cada reserva. Nós ajudamo-lo a ser encontrado nos seus próprios termos, e fica com a reserva e com o cliente. Isto acompanha a página de reservas, nunca fica à frente dela.",
+    ctaLine: "Explorar os nossos serviços",
     paths: [
       {
-        title: "Comece pelo seu Perfil de Empresa no Google",
-        body: "Otimizamos o seu Perfil de Empresa no Google para que quem procura um espaço como o seu o encontre de facto, veja as fotos e horários certos, e reserve diretamente. É a forma mais rápida e acessível de pôr as reservas online a funcionar.",
+        title: "Perfil de Empresa no Google",
+        body: "Otimizamos o seu perfil no Google e ativamos o Reservar com o Google, para que quem procura por perto o encontre e reserve diretamente no Google e no Maps, sem marketplace pelo meio.",
         badge: "O ponto de partida",
       },
       {
-        title: "Pronto para mais? Construímos o seu site",
-        body: "Quando quiser uma casa própria na internet, desenhamos e construímos um site completo com reservas integradas desde o primeiro dia. É a nossa oferta de nível superior, e a maioria dos espaços chega lá depois de ver o que um perfil otimizado consegue sozinho.",
+        title: "Um site com reservas integradas",
+        body: "Quando quiser uma casa própria na internet, desenhamos e construímos um site completo com a sua página de reservas integrada desde o primeiro dia.",
         badge: "O quadro completo",
       },
     ],
@@ -233,6 +246,19 @@ const pt: typeof en = {
     line: "Feito para restaurantes independentes, hotéis boutique, spas, cabeleireiros e operadores de tours.",
     credibility:
       "Passámos anos a construir sites de alta conversão para negócios que vivem de reservas. O Guest Overflow é tudo o que os nossos clientes nos pediam.",
+  },
+  rateParity: {
+    eyebrow: "Reserva direta",
+    title:
+      "Por lei, já pode vender mais barato no seu site do que na Booking.com.",
+    body: "Portugal proibiu as cláusulas de paridade, por isso o seu próprio site pode ficar abaixo da OTA. Nós damos-lhe esse site, e a página de reservas que recebe a reserva sem comissão.",
+  },
+  homePricing: {
+    eyebrow: "Preços",
+    title: "Preço fixo. Os seus habituais ficam de graça.",
+    subhead:
+      "Veja o que um marketplace lhe cobraria à medida que cresce, face a um preço fixo que não mexe. A partir daí, fica com todas as reservas.",
+    cta: "Ver preços por setor",
   },
   faqTitle: "Perguntas, respondidas.",
   problemsEyebrow: "O problema",

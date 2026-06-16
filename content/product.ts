@@ -15,16 +15,16 @@ type ProductContent = {
 
 const en: ProductContent = {
   hero: {
-    eyebrow: "Product",
-    headline: "Everything you need to take bookings on your own website.",
+    eyebrow: "Booking page",
+    headline: "Your booking page does the whole job.",
     subhead:
-      "Guest Overflow handles the whole reservation journey, from the moment a guest lands on your site to the moment they come back to book again.",
+      "One booking page, built around how your venue operates, handles the whole reservation journey, from the moment a guest lands on it to the moment they come back to book again.",
   },
   features: [
     {
       icon: "widget",
-      title: "A widget designed into your site",
-      body: "Typography, colors, copy, and flow tailored to your venue by people who build websites for a living. It's a designed part of your site, not a themed iframe, with availability, capacity, and blackout dates updating in real time.",
+      title: "Your booking page, two ways to go live",
+      body: "Run it as its own branded page, the link for your Google profile, Instagram bio, and ads, or embedded right on your site, by people who build websites for a living. It's a designed part of your brand, not a themed iframe, with availability, capacity, and blackout dates updating in real time.",
     },
     {
       icon: "compass",
@@ -39,7 +39,7 @@ const en: ProductContent = {
     {
       icon: "shield",
       title: "Deposits & no-show protection",
-      body: "Card guarantees and deposits for the bookings that hurt most to lose, paid into your own Stripe account, with policies you control per service and party size. Deposits show up on the final bill, not in a side spreadsheet.",
+      body: "Card guarantees and deposits for the bookings that hurt most to lose, paid into your own Stripe account, with policies you control per service and party size. Guests pay the way they already do, with MB WAY, Multibanco, and card, and deposits show up on the final bill, not in a side spreadsheet.",
     },
     {
       icon: "bell",
@@ -65,25 +65,25 @@ const en: ProductContent = {
   },
   liveDemo: {
     eyebrow: "Live demo",
-    title: "Try it for yourself.",
+    title: "Try your booking page.",
     subhead:
-      "This is the same widget your guests would use. Make a booking, then switch venue types to see it restyled.",
-    caption: "One booking system, styled to match each venue.",
+      "This is the same booking page your guests would use. Make a booking, then switch venue types to see it tailor itself to each operation.",
+    caption: "One booking engine, tailored to each operation.",
   },
 };
 
 const pt: ProductContent = {
   hero: {
-    eyebrow: "Produto",
-    headline: "Tudo o que precisa para receber reservas no seu próprio site.",
+    eyebrow: "Página de reservas",
+    headline: "A sua página de reservas faz o trabalho todo.",
     subhead:
-      "O Guest Overflow trata de todo o percurso da reserva, desde o momento em que o cliente chega ao seu site até ao momento em que volta para reservar de novo.",
+      "Uma página de reservas, construída à volta de como o seu espaço funciona, trata de todo o percurso da reserva, desde o momento em que o cliente chega até ao momento em que volta para reservar de novo.",
   },
   features: [
     {
       icon: "widget",
-      title: "Um widget desenhado dentro do seu site",
-      body: "Tipografia, cores, textos e fluxo à medida do seu espaço, feitos por quem constrói sites profissionalmente. É uma parte desenhada do seu site, não um iframe com um tema, com disponibilidade, capacidade e datas bloqueadas a atualizar em tempo real.",
+      title: "A sua página de reservas, duas formas de a pôr no ar",
+      body: "No ar como página própria com a sua marca, o link para o seu perfil no Google, a bio do Instagram e os anúncios, ou integrada no seu site, por quem constrói sites profissionalmente. É uma parte desenhada da sua marca, não um iframe com um tema, com disponibilidade, capacidade e datas bloqueadas a atualizar em tempo real.",
     },
     {
       icon: "compass",
@@ -98,7 +98,7 @@ const pt: ProductContent = {
     {
       icon: "shield",
       title: "Sinais e proteção contra faltas",
-      body: "Garantias de cartão e sinais para as reservas que mais custam a perder, pagos diretamente na sua conta Stripe, com regras que controla por serviço e tamanho de grupo. Os sinais aparecem na conta final, não numa folha à parte.",
+      body: "Garantias de cartão e sinais para as reservas que mais custam a perder, pagos diretamente na sua conta Stripe, com regras que controla por serviço e tamanho de grupo. Os clientes pagam como já estão habituados, com MB WAY, Multibanco e cartão, e os sinais aparecem na conta final, não numa folha à parte.",
     },
     {
       icon: "bell",
@@ -124,10 +124,10 @@ const pt: ProductContent = {
   },
   liveDemo: {
     eyebrow: "Demo ao vivo",
-    title: "Experimente por si mesmo.",
+    title: "Experimente a sua página de reservas.",
     subhead:
-      "Este é o mesmo widget que os seus clientes usariam. Faça uma reserva e depois mude o tipo de espaço para o ver com outra imagem.",
-    caption: "Um único sistema de reservas, à medida de cada espaço.",
+      "Esta é a mesma página de reservas que os seus clientes usariam. Faça uma reserva e depois mude o tipo de espaço para a ver adaptar-se a cada operação.",
+    caption: "Um único motor de reservas, à medida de cada operação.",
   },
 };
 

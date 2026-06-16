@@ -12,13 +12,13 @@ type QuandooContent = {
 const en: QuandooContent = {
   hero: {
     eyebrow: "Quandoo is closing",
-    headline: "Quandoo shuts down in December 2026. Keep your bookings — and your guest data.",
+    headline: "Quandoo shuts down in December 2026. Keep your bookings, and your guest data.",
     subhead:
-      "New bookings on Quandoo end in September 2026. When it closes, its terms mean your diner data goes with it. We'll move you across for free — onto a booking widget you own, with no commission, ever.",
+      "New bookings on Quandoo end in September 2026. When it closes, its terms mean your diner data goes with it. We'll move you across for free, onto a booking widget you own, with no commission, ever.",
   },
   stakes: {
     title: "What happens when Quandoo closes",
-    body: "Quandoo is winding down with no buyer. After it shuts, the guest history you built there is gone for good. Restaurants that did everything right still lose their list — unless they export it first.",
+    body: "Quandoo is winding down with no buyer. After it shuts, the guest history you built there is gone for good. Restaurants that did everything right still lose their list, unless they export it first.",
   },
   stepsTitle: "How the free migration works",
   steps: [
@@ -45,13 +45,13 @@ const en: QuandooContent = {
 const pt: QuandooContent = {
   hero: {
     eyebrow: "O Quandoo vai fechar",
-    headline: "O Quandoo encerra em dezembro de 2026. Fique com as suas reservas — e com os dados dos seus clientes.",
+    headline: "O Quandoo encerra em dezembro de 2026. Fique com as suas reservas e com os dados dos seus clientes.",
     subhead:
-      "As novas reservas no Quandoo terminam em setembro de 2026. Quando fechar, os seus termos significam que os dados dos clientes vão com ele. Mudamo-lo de graça — para um widget de reservas que é seu, sem comissão, nunca.",
+      "As novas reservas no Quandoo terminam em setembro de 2026. Quando fechar, os seus termos significam que os dados dos clientes vão com ele. Mudamo-lo de graça para um widget de reservas que é seu, sem comissão, nunca.",
   },
   stakes: {
     title: "O que acontece quando o Quandoo fechar",
-    body: "O Quandoo está a encerrar sem comprador. Depois de fechar, o histórico de clientes que construiu lá desaparece para sempre. Restaurantes que fizeram tudo certo perdem na mesma a sua lista — a menos que a exportem primeiro.",
+    body: "O Quandoo está a encerrar sem comprador. Depois de fechar, o histórico de clientes que construiu lá desaparece para sempre. Restaurantes que fizeram tudo certo perdem na mesma a sua lista, a menos que a exportem primeiro.",
   },
   stepsTitle: "Como funciona a migração gratuita",
   steps: [

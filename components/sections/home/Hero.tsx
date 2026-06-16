@@ -36,14 +36,20 @@ export async function Hero() {
               {cta.primary.label}
             </Button>
             <Button
-              href={cta.secondary.href}
+              href={cta.tertiary.href}
               variant="inverseSecondary"
               size="lg"
-              analyticsLabel="hero_try_demo"
+              analyticsLabel="hero_start_free"
             >
-              {cta.secondary.label}
+              {cta.tertiary.label}
             </Button>
           </div>
+          <a
+            href={cta.secondary.href}
+            className="mt-6 inline-block text-sm text-white/60 transition-colors hover:text-white"
+          >
+            {cta.secondary.label} ↓
+          </a>
         </Reveal>
       </Container>
     </section>

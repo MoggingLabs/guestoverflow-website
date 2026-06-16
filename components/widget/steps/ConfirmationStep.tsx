@@ -56,7 +56,7 @@ export function ConfirmationStep({
         <div className="flex justify-between gap-4">
           <dt className="[color:var(--wg-muted)]">{ui.dateWord}</dt>
           <dd className="[color:var(--wg-text)]">
-            {date ? formatDateFull(date, locale) : "—"}
+            {date ? formatDateFull(date, locale) : "-"}
           </dd>
         </div>
         <div className="flex justify-between gap-4">

@@ -1,6 +1,6 @@
 import type { Locale } from "@/lib/i18n-shared";
 
-/** Calculator sectors — keyed by the industry slugs so `?sector=` deep-links. */
+/** Calculator sectors, keyed by the industry slugs so `?sector=` deep-links. */
 export type FeeSector =
   | "restaurants"
   | "hotels"
@@ -11,14 +11,14 @@ export type FeeSector =
 /**
  * A competitor's fee model. Either a per-unit € fee (`perUnit*`) or a
  * %-of-ticket commission (`pct*`). Ranges (low/high) drive a savings range.
- * Locale-independent — only the display `name` and the math live here.
+ * Locale-independent: only the display `name` and the math live here.
  */
 export type CommissionModel = {
   id: string;
   name: string;
   perUnitLow?: number;
   perUnitHigh?: number;
-  /** Fraction 0–1 of the average ticket. */
+  /** Fraction 0-1 of the average ticket. */
   pctLow?: number;
   pctHigh?: number;
   /** Flat monthly € on top, if any. */
@@ -33,7 +33,7 @@ export type SectorCalc = {
   volumeMax: number;
   volumeStep: number;
   volumeDefault: number;
-  /** Average ticket € — converts % models to € and is editable in the UI. */
+  /** Average ticket €. Converts % models to € and is editable in the UI. */
   avgTicketEur: number;
   competitors: CommissionModel[];
 };
@@ -163,11 +163,11 @@ export const calculatorContent: Record<Locale, CalculatorStrings> = {
     savesPerYear: (amount, c) => `You'd keep ${amount} a year vs ${c}`,
     costsPerYear: (amount, c) => `${c} would bill you ${amount}/year`,
     repeatTax: (amount) =>
-      `≈ ${amount} of that is the repeat-guest tax — charging you for guests who already chose you.`,
+      `≈ ${amount} of that is the repeat-guest tax: a charge for guests who already chose you.`,
     breakEven: (tier, n, unit) => `${tier} pays for itself at ~${n} ${unit}/mo.`,
     perUnitFee: (amount, unit) => `${amount} per ${unit}`,
     pctFee: (pct) => `${pct} per booking`,
-    flatYou: (amount) => `${amount}/mo flat — at any volume`,
+    flatYou: (amount) => `${amount}/mo flat, at any volume`,
     disclaimer:
       "Estimates based on typical Portuguese ticket values and published competitor fees. Your numbers may vary.",
   },
@@ -208,11 +208,11 @@ export const calculatorContent: Record<Locale, CalculatorStrings> = {
     savesPerYear: (amount, c) => `Ficaria com ${amount} por ano face à ${c}`,
     costsPerYear: (amount, c) => `A ${c} cobrar-lhe-ia ${amount}/ano`,
     repeatTax: (amount) =>
-      `≈ ${amount} disso é a taxa sobre habituais — a cobrar-lhe por clientes que já o escolheram.`,
+      `≈ ${amount} disso é a taxa sobre habituais: a cobrar-lhe por clientes que já o escolheram.`,
     breakEven: (tier, n, unit) => `O ${tier} paga-se a partir de ~${n} ${unit}/mês.`,
     perUnitFee: (amount, unit) => `${amount} por ${unit}`,
     pctFee: (pct) => `${pct} por reserva`,
-    flatYou: (amount) => `${amount}/mês fixo — em qualquer volume`,
+    flatYou: (amount) => `${amount}/mês fixo, em qualquer volume`,
     disclaimer:
       "Estimativas com base em tickets médios típicos em Portugal e nas taxas publicadas dos concorrentes. Os seus números podem variar.",
   },

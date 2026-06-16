@@ -25,7 +25,7 @@ const pricingLadder = {
     eyebrow: "Pricing",
     starter: {
       name: "Starter",
-      note: "Self-serve — you set it up",
+      note: "Self-serve. You set it up",
       blurb: "The branded booking widget on your own site, live today. No setup call.",
       features: [
         "White-label booking widget on your website",
@@ -38,10 +38,10 @@ const pricingLadder = {
     essential: {
       name: "Essential",
       note: "We build, install & optimise it for you",
-      blurb: "A partner who sets the whole thing up — not just software you wire up alone.",
+      blurb: "A partner who sets the whole thing up, instead of software you wire up alone.",
       features: [
         "Everything in Starter",
-        "Concierge setup — we build & install it",
+        "Concierge setup: we build & install it",
         "SMS reminders (allowance included)",
         "Quarterly review with us",
         "Email support",
@@ -67,7 +67,7 @@ const pricingLadder = {
       blurb: "Multiple venues, custom integrations, or something we haven't thought of yet.",
       features: [
         "Everything in Premium",
-        "Multiple locations — flat per venue, no per-location penalty",
+        "Multiple locations: flat per venue, no per-location penalty",
         "Custom integrations (PMS, POS, CRM)",
         "Dedicated account manager",
       ],
@@ -76,14 +76,14 @@ const pricingLadder = {
       name: "SMS reminders",
       priceNote: "from €0.09 / SMS",
       included:
-        "Monthly allowance included on Essential & Premium, then transparent per-SMS — never a per-booking fee. Email reminders are always free.",
+        "Monthly allowance included on Essential & Premium, then transparent per-SMS. Never a per-booking fee. Email reminders are always free.",
     },
   },
   pt: {
     eyebrow: "Preços",
     starter: {
       name: "Starter",
-      note: "Self-service — instala você",
+      note: "Self-service. Instala você",
       blurb: "O widget de reservas com a sua marca, no seu site, a funcionar hoje. Sem chamada de instalação.",
       features: [
         "Widget de reservas white-label no seu site",
@@ -96,10 +96,10 @@ const pricingLadder = {
     essential: {
       name: "Essential",
       note: "Construímos, instalamos e otimizamos por si",
-      blurb: "Um parceiro que monta tudo — não apenas software que configura sozinho.",
+      blurb: "Um parceiro que monta tudo, em vez de software que configura sozinho.",
       features: [
         "Tudo o que está no Starter",
-        "Instalação concierge — montamos e instalamos por si",
+        "Instalação concierge: montamos e instalamos por si",
         "Lembretes por SMS (com plafond incluído)",
         "Revisão trimestral connosco",
         "Suporte por email",
@@ -125,7 +125,7 @@ const pricingLadder = {
       blurb: "Vários espaços, integrações à medida, ou algo em que ainda não pensámos.",
       features: [
         "Tudo o que está no Premium",
-        "Várias localizações — preço fixo por espaço, sem penalização",
+        "Várias localizações: preço fixo por espaço, sem penalização",
         "Integrações à medida (PMS, POS, CRM)",
         "Gestor de conta dedicado",
       ],
@@ -134,7 +134,7 @@ const pricingLadder = {
       name: "Lembretes por SMS",
       priceNote: "desde 0,09 € / SMS",
       included:
-        "Plafond mensal incluído no Essential e no Premium, depois SMS a preço transparente — nunca uma taxa por reserva. Os lembretes por email são sempre gratuitos.",
+        "Plafond mensal incluído no Essential e no Premium, depois SMS a preço transparente. Nunca uma taxa por reserva. Os lembretes por email são sempre gratuitos.",
     },
   },
 } as const;
@@ -153,101 +153,101 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
   en: {
     restaurants: {
       valueUnit: "cover",
-      heroHeadline: "Pricing for restaurants — flat, never per cover.",
+      heroHeadline: "Pricing for restaurants. Flat, never per cover.",
       heroSubhead:
-        "Whatever your volume, your price doesn't move. No commission on covers — not even on the regulars who already know you.",
+        "Whatever your volume, your price doesn't move. No commission on covers, not even on the regulars who already know you.",
       premiumFlow: "Table & turn management with pacing controls",
       comparison: {
         title: "What TheFork really costs",
-        body: "TheFork bills around €2–4 a cover — including the regulars who already book with you. A busy month can run well over €1,000. Guest Overflow is one flat price that doesn't move on your busiest night, and never charges per cover.",
+        body: "TheFork bills around €2-4 a cover, including the regulars who already book with you. A busy month can run well over €1,000. Guest Overflow is one flat price that doesn't move on your busiest night, and never charges per cover.",
       },
     },
     hotels: {
       valueUnit: "room-night",
-      heroHeadline: "Pricing for hotels — flat, and you keep the OTA cut.",
+      heroHeadline: "Pricing for hotels. Flat, and you keep the OTA cut.",
       heroSubhead:
-        "Booking.com takes 15–18% of every stay. Recover a handful of direct bookings a month and Guest Overflow has already paid for itself.",
+        "Booking.com takes 15-18% of every stay. Recover a handful of direct bookings a month and Guest Overflow has already paid for itself. In Portugal, you can price your own site below Booking by law.",
       premiumFlow: "Room types, occupancy rules & seasonal rates",
       comparison: {
         title: "What OTA commission really costs",
-        body: "A 20-room hotel at €120 a night hands Booking €50,000–63,000 a year in commission. Shift even a fifth of those stays to direct and you keep over €10,000 — for a flat fee that never moves and runs on your own Stripe, with no payment take-rate.",
+        body: "A 20-room hotel at €120 a night hands Booking €50,000-63,000 a year in commission. Shift even a fifth of those stays to direct and you keep over €10,000. All for a flat fee that never moves and runs on your own Stripe, with no payment take-rate.",
       },
-      starterNote: "For Alojamento Local — 1–3 units",
+      starterNote: "For Alojamento Local, 1-3 units",
       starterBlurb: "A white-label direct-booking widget for your AL, so guests book you, not the OTA.",
     },
     "spas-wellness": {
       valueUnit: "treatment",
-      heroHeadline: "Pricing for spas & wellness — flat per venue, never per chair.",
+      heroHeadline: "Pricing for spas & wellness. Flat per venue, never per chair.",
       heroSubhead:
         "One flat price however many rooms or practitioners you run. No commission on new clients, ever.",
       premiumFlow: "Service, duration & per-practitioner scheduling",
       comparison: {
         title: "What the marketplaces really cost",
-        body: "Fresha takes ~20% of a new client's first booking, Treatwell 25%, Booksy 30% — and per-seat tools charge more with every practitioner you add. Guest Overflow is one flat price per venue, with no cut of your clients and no per-seat penalty.",
+        body: "Fresha takes ~20% of a new client's first booking, Treatwell 25%, Booksy 30%. And per-seat tools charge more with every practitioner you add. Guest Overflow is one flat price per venue, with no cut of your clients and no per-seat penalty.",
       },
     },
     "salons-barbers": {
       valueUnit: "appointment",
-      heroHeadline: "Pricing for salons & barbers — flat per venue, not per chair.",
+      heroHeadline: "Pricing for salons & barbers. Flat per venue, not per chair.",
       heroSubhead:
         "A two-chair shop and a ten-chair salon pay the same. No commission on a first visit, no per-booking fee.",
       premiumFlow: "Per-stylist scheduling, buffers & chair management",
       comparison: {
         title: "What per-chair pricing really costs",
-        body: "A four-chair shop on Booksy pays around €80–110 a month in seat fees alone, plus 30% of every new client's first visit. Guest Overflow is one flat price per venue, whatever your chair count, and never takes a cut of a booking.",
+        body: "A four-chair shop on Booksy pays around €80-110 a month in seat fees alone, plus 30% of every new client's first visit. Guest Overflow is one flat price per venue, whatever your chair count, and never takes a cut of a booking.",
       },
     },
     "tours-experiences": {
       valueUnit: "ticket",
-      heroHeadline: "Pricing for tours & experiences — flat, never per ticket.",
+      heroHeadline: "Pricing for tours & experiences. Flat, never per ticket.",
       heroSubhead:
         "Sell direct at a flat cost, whatever your volume. No commission, no cancellation fees, and a rate we never raise out from under you.",
       premiumFlow: "Capacity-aware sessions, manifests & group buyouts",
       comparison: {
         title: "What marketplace commission really costs",
-        body: "Civitatis, GetYourGuide and Viator take 20–30% of every ticket and keep the customer for the next trip; FareHarbor adds 6% to your guests' price. An operator selling 500 tickets a month at €60 hands a marketplace €90,000+ a year. Guest Overflow is one flat price that doesn't move — and we never bill you for a cancellation.",
+        body: "Civitatis, GetYourGuide and Viator take 20-30% of every ticket and keep the customer for the next trip; FareHarbor adds 6% to your guests' price. An operator selling 500 tickets a month at €60 hands a marketplace €90,000+ a year. Guest Overflow is one flat price that doesn't move, and we never bill you for a cancellation.",
       },
     },
   },
   pt: {
     restaurants: {
       valueUnit: "reserva",
-      heroHeadline: "Preços para restaurantes — fixo, nunca por reserva.",
+      heroHeadline: "Preços para restaurantes. Fixo, nunca por reserva.",
       heroSubhead:
-        "Seja qual for o volume, o preço não mexe. Sem comissão por pessoa — nem sequer nos habituais que já reservam consigo.",
+        "Seja qual for o volume, o preço não mexe. Sem comissão por pessoa, nem sequer nos habituais que já reservam consigo.",
       premiumFlow: "Gestão de mesas e rotação com controlo de ritmo",
       comparison: {
         title: "O que o TheFork custa de verdade",
-        body: "O TheFork cobra cerca de 2 a 4 € por pessoa — incluindo os habituais que já reservam consigo. Um mês cheio passa facilmente dos 1.000 €. O Guest Overflow é um preço fixo que não muda no seu mês mais cheio, e nunca cobra por reserva.",
+        body: "O TheFork cobra cerca de 2 a 4 € por pessoa, incluindo os habituais que já reservam consigo. Um mês cheio passa facilmente dos 1.000 €. O Guest Overflow é um preço fixo que não muda no seu mês mais cheio, e nunca cobra por reserva.",
       },
     },
     hotels: {
       valueUnit: "dormida",
-      heroHeadline: "Preços para hotéis — fixo, e a comissão das OTAs fica consigo.",
+      heroHeadline: "Preços para hotéis. Fixo, e a comissão das OTAs fica consigo.",
       heroSubhead:
-        "A Booking leva 15 a 18% de cada estadia. Recupere um punhado de reservas diretas por mês e o Guest Overflow já se pagou.",
+        "A Booking leva 15 a 18% de cada estadia. Recupere um punhado de reservas diretas por mês e o Guest Overflow já se pagou. Em Portugal, por lei, pode pôr o seu site abaixo da Booking.",
       premiumFlow: "Tipos de quarto, regras de ocupação e tarifas sazonais",
       comparison: {
         title: "O que a comissão das OTAs custa de verdade",
-        body: "Um hotel de 20 quartos a 120 € por noite entrega à Booking 50.000 a 63.000 € por ano em comissão. Passe apenas um quinto dessas estadias para reserva direta e fica com mais de 10.000 € — por um valor fixo que não muda e corre no seu próprio Stripe, sem margem nos pagamentos.",
+        body: "Um hotel de 20 quartos a 120 € por noite entrega à Booking 50.000 a 63.000 € por ano em comissão. Passe apenas um quinto dessas estadias para reserva direta e fica com mais de 10.000 €. É um valor fixo que não muda e corre no seu próprio Stripe, sem margem nos pagamentos.",
       },
-      starterNote: "Para Alojamento Local — 1 a 3 unidades",
+      starterNote: "Para Alojamento Local, 1 a 3 unidades",
       starterBlurb: "Um widget de reserva direta white-label para o seu AL, para que os hóspedes reservem consigo, não na OTA.",
     },
     "spas-wellness": {
       valueUnit: "tratamento",
-      heroHeadline: "Preços para spas e bem-estar — fixo por espaço, nunca por cadeira.",
+      heroHeadline: "Preços para spas e bem-estar. Fixo por espaço, nunca por cadeira.",
       heroSubhead:
         "Um preço fixo, sejam quantas salas ou terapeutas tiver. Sem comissão sobre novos clientes, nunca.",
       premiumFlow: "Agenda por serviço, duração e por terapeuta",
       comparison: {
         title: "O que os marketplaces custam de verdade",
-        body: "A Fresha leva ~20% da primeira marcação de um novo cliente, a Treatwell 25%, a Booksy 30% — e as ferramentas por lugar cobram mais a cada terapeuta que acrescenta. O Guest Overflow é um preço fixo por espaço, sem comissão sobre os seus clientes e sem penalização por lugar.",
+        body: "A Fresha leva ~20% da primeira marcação de um novo cliente, a Treatwell 25%, a Booksy 30%. E as ferramentas por lugar cobram mais a cada terapeuta que acrescenta. O Guest Overflow é um preço fixo por espaço, sem comissão sobre os seus clientes e sem penalização por lugar.",
       },
     },
     "salons-barbers": {
       valueUnit: "marcação",
-      heroHeadline: "Preços para cabeleireiros e barbearias — fixo por espaço, não por cadeira.",
+      heroHeadline: "Preços para cabeleireiros e barbearias. Fixo por espaço, não por cadeira.",
       heroSubhead:
         "Um espaço de duas cadeiras e um de dez pagam o mesmo. Sem comissão na primeira visita, sem taxa por marcação.",
       premiumFlow: "Agenda por profissional, intervalos e gestão de cadeiras",
@@ -258,13 +258,13 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
     },
     "tours-experiences": {
       valueUnit: "bilhete",
-      heroHeadline: "Preços para tours e experiências — fixo, nunca por bilhete.",
+      heroHeadline: "Preços para tours e experiências. Fixo, nunca por bilhete.",
       heroSubhead:
         "Venda direto a um custo fixo, seja qual for o volume. Sem comissão, sem taxas de cancelamento, e uma tarifa que nunca aumentamos sem o avisar.",
       premiumFlow: "Sessões com gestão de lotação, manifestos e reservas exclusivas",
       comparison: {
         title: "O que a comissão dos marketplaces custa de verdade",
-        body: "A Civitatis, a GetYourGuide e a Viator levam 20 a 30% de cada bilhete e ficam com o cliente para a próxima viagem; a FareHarbor acrescenta 6% ao preço dos seus clientes. Um operador que vende 500 bilhetes por mês a 60 € entrega a um marketplace mais de 90.000 € por ano. O Guest Overflow é um preço fixo que não muda — e nunca lhe cobramos por um cancelamento.",
+        body: "A Civitatis, a GetYourGuide e a Viator levam 20 a 30% de cada bilhete e ficam com o cliente para a próxima viagem; a FareHarbor acrescenta 6% ao preço dos seus clientes. Um operador que vende 500 bilhetes por mês a 60 € entrega a um marketplace mais de 90.000 € por ano. O Guest Overflow é um preço fixo que não muda, e nunca lhe cobramos por um cancelamento.",
       },
     },
   },
@@ -519,7 +519,7 @@ const en: IndustriesStrings = {
       themeId: "salon",
       icon: "scissors",
       cardBlurb:
-        "Appointments that look like your salon, not a booking app — with deposits and rebooking that keep chairs full.",
+        "Appointments that look like your salon, not a booking app, with deposits and rebooking that keep chairs full.",
       hero: {
         headline: "Booking that fits your chair.",
         subhead:
@@ -577,7 +577,7 @@ const en: IndustriesStrings = {
     pricingEyebrow: "Pricing",
     pricingAddOnsTitle: "Optional add-ons",
     pricingCalcCta: "Calculate your savings",
-    comparisonFlat: "Flat, no commission — ever.",
+    comparisonFlat: "Flat, no commission, ever.",
     seePricing: "See pricing",
     footerHeadline: "Bring booking home to your website.",
     footerSubhead: "See Guest Overflow themed for a venue like yours in a 20-minute demo.",
@@ -768,7 +768,7 @@ const pt: IndustriesStrings = {
       themeId: "salon",
       icon: "scissors",
       cardBlurb:
-        "Marcações com o aspeto do seu salão, não de uma app — com sinais e remarcação que mantêm as cadeiras cheias.",
+        "Marcações com o aspeto do seu salão, não de uma app, com sinais e remarcação que mantêm as cadeiras cheias.",
       hero: {
         headline: "Marcações à medida da sua cadeira.",
         subhead:
@@ -826,7 +826,7 @@ const pt: IndustriesStrings = {
     pricingEyebrow: "Preços",
     pricingAddOnsTitle: "Extras opcionais",
     pricingCalcCta: "Calcule a sua poupança",
-    comparisonFlat: "Fixo, sem comissão — nunca.",
+    comparisonFlat: "Fixo, sem comissão, nunca.",
     seePricing: "Ver preços",
     footerHeadline: "Traga as reservas de volta para o seu site.",
     footerSubhead:

@@ -4,9 +4,9 @@ import type { Locale } from "@/lib/i18n-shared";
 /** Locale-independent site facts (URLs, identity, default metadata). */
 export const site = {
   name: "Guest Overflow",
-  tagline: "Booking that belongs on your website.",
+  tagline: "Your own booking page, built around how you operate.",
   description:
-    "Guest Overflow is a white-label reservation system for restaurants, hotels, spas, salons, and experiences. We design it into your own website, matched to your brand, and every guest relationship stays yours.",
+    "Guest Overflow gives each venue its own booking page, built around how they operate, on their brand and domain. Flat pricing, no commission, and every guest relationship stays yours. For restaurants, hotels, spas, salons, and experiences.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow.com",
   email: "hello@guestoverflow.com",
   cta: {
@@ -27,6 +27,7 @@ type SiteStrings = {
   footerColumns: { heading: string; links: NavLink[] }[];
   footerBlurb: string;
   footerProductOf: string;
+  footerNote: string;
 };
 
 const en: SiteStrings = {
@@ -36,8 +37,9 @@ const en: SiteStrings = {
     tertiary: { label: "Start free", href: "/book-a-demo?intent=trial" },
   },
   navLinks: [
-    { label: "Product", href: "/product" },
+    { label: "Booking page", href: "/product" },
     { label: "Industries", href: "/industries" },
+    { label: "Services", href: "/services" },
     { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
   ],
@@ -46,11 +48,18 @@ const en: SiteStrings = {
     {
       heading: "Product",
       links: [
-        { label: "Features", href: "/product" },
+        { label: "Booking page", href: "/product" },
         { label: "Live demo", href: "/#live-demo" },
         { label: "Pricing", href: "/pricing" },
         { label: "Savings calculator", href: "/pricing/calculator" },
         { label: "Our promises", href: "/promises" },
+      ],
+    },
+    {
+      heading: "Services",
+      links: [
+        { label: "Google Business Profile", href: "/services" },
+        { label: "Website build", href: "/services" },
       ],
     },
     {
@@ -83,6 +92,7 @@ const en: SiteStrings = {
   footerBlurb:
     "White-label online booking for restaurants, hotels, spas, salons, and experiences.",
   footerProductOf: "all rights reserved",
+  footerNote: "No lock-in · No commission · Cancel anytime.",
 };
 
 const pt: SiteStrings = {
@@ -92,8 +102,9 @@ const pt: SiteStrings = {
     tertiary: { label: "Começar grátis", href: "/book-a-demo?intent=trial" },
   },
   navLinks: [
-    { label: "Produto", href: "/product" },
+    { label: "Página de reservas", href: "/product" },
     { label: "Setores", href: "/industries" },
+    { label: "Serviços", href: "/services" },
     { label: "Preços", href: "/pricing" },
     { label: "Sobre nós", href: "/about" },
   ],
@@ -102,11 +113,18 @@ const pt: SiteStrings = {
     {
       heading: "Produto",
       links: [
-        { label: "Funcionalidades", href: "/product" },
+        { label: "Página de reservas", href: "/product" },
         { label: "Demo ao vivo", href: "/#live-demo" },
         { label: "Preços", href: "/pricing" },
         { label: "Calculadora de poupança", href: "/pricing/calculator" },
         { label: "As nossas promessas", href: "/promises" },
+      ],
+    },
+    {
+      heading: "Serviços",
+      links: [
+        { label: "Perfil de Empresa no Google", href: "/services" },
+        { label: "Construção de site", href: "/services" },
       ],
     },
     {
@@ -139,6 +157,7 @@ const pt: SiteStrings = {
   footerBlurb:
     "Reservas online white-label para restaurantes, hotéis, spas, cabeleireiros e experiências.",
   footerProductOf: "todos os direitos reservados",
+  footerNote: "Sem fidelização · Sem comissões · Cancele quando quiser.",
 };
 
 export const siteStrings: Record<Locale, SiteStrings> = { en, pt };

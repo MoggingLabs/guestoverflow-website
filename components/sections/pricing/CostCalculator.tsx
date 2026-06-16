@@ -282,7 +282,7 @@ export function CostCalculator({
                   className="accent-amber"
                 />
                 <span className="text-cream">{m.name}</span>
-                <span className="text-cream-faint">— {feeLabel(m)}</span>
+                <span className="text-cream-faint">({feeLabel(m)})</span>
               </label>
             ))}
           </div>

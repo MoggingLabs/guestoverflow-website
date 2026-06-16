@@ -21,7 +21,7 @@ const en: AboutContent = {
     title: "Why Guest Overflow exists",
     paragraphs: [
       "We kept shipping beautiful websites that fell apart at the most important moment: the booking. Owners were paying commissions to platforms that hid their brand, kept hold of their guest lists, and looked nothing like the sites we'd built for them.",
-      "Guest Overflow is our answer. It's a reservation system designed to blend into the venue's own website, so the guest experiences your brand from the first click to the confirmation email, and you keep every relationship the booking creates.",
+      "Guest Overflow is our answer. It's a reservation system that blends into the venue's own website, so the guest experiences your brand from the first click to the confirmation email, and you keep every relationship the booking creates.",
       "We're starting deliberately small, with a founding group of venues we can onboard personally. We'd rather have the product shaped by the people who run venues than by a feature checklist.",
     ],
   },

@@ -10,7 +10,7 @@ export async function Footer() {
   return (
     <footer className="border-t border-line bg-surface/40">
       <Container className="py-16">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(5,1fr)]">
           <div>
             <Link href="/" aria-label="Guest Overflow home">
               <Logo />
@@ -41,16 +41,21 @@ export async function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-line pt-7 text-xs text-cream-faint md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} {site.name}, {t.footerProductOf}.
+        <div className="mt-14 border-t border-line pt-7">
+          <p className="text-center text-xs font-medium tracking-wide text-amber">
+            {t.footerNote}
           </p>
-          <a
-            href={`mailto:${site.email}`}
-            className="transition-colors hover:text-cream"
-          >
-            {site.email}
-          </a>
+          <div className="mt-4 flex flex-col gap-3 text-xs text-cream-faint md:flex-row md:items-center md:justify-between">
+            <p>
+              © {new Date().getFullYear()} {site.name}, {t.footerProductOf}.
+            </p>
+            <a
+              href={`mailto:${site.email}`}
+              className="transition-colors hover:text-cream"
+            >
+              {site.email}
+            </a>
+          </div>
         </div>
       </Container>
     </footer>

@@ -24,7 +24,7 @@ type PricingContent = {
   calc: { title: string; subhead: string };
 };
 
-// Placeholder price points — confirm real numbers before launch.
+// Placeholder price points. Confirm real numbers before launch.
 const en: PricingContent = {
   hero: {
     eyebrow: "Pricing",
@@ -102,7 +102,7 @@ const en: PricingContent = {
     after: ".",
   },
   noWebsiteOffer: {
-    eyebrow: "No website yet?",
+    eyebrow: "Getting found",
     title: "Start with your Google Business Profile",
     body: "If you don't have a website, we begin by optimizing your Google Business Profile so people can actually find and book you. Don't rent your visibility on Google, own it. When you're ready for more, we design and build a full website with booking built in. That's our higher-level offering, and there's no pressure to get there on day one.",
     points: [
@@ -206,7 +206,7 @@ const pt: PricingContent = {
     after: ".",
   },
   noWebsiteOffer: {
-    eyebrow: "Ainda sem site?",
+    eyebrow: "Ser encontrado",
     title: "Comece pelo seu Perfil de Empresa no Google",
     body: "Se não tem site, começamos por otimizar o seu Perfil de Empresa no Google para que as pessoas o encontrem e reservem de facto. Não alugue a sua visibilidade no Google, seja dono dela. Quando quiser mais, desenhamos e construímos um site completo com reservas integradas. É a nossa oferta de nível superior, e não há pressa de lá chegar no primeiro dia.",
     points: [

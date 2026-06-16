@@ -49,7 +49,7 @@ async function sendEmails(lead: {
       from,
       to: notify,
       replyTo: lead.email,
-      subject: `New demo request — ${lead.businessName} (${lead.businessType})`,
+      subject: `New demo request: ${lead.businessName} (${lead.businessType})`,
       text: [
         `Name: ${lead.name}`,
         `Email: ${lead.email}`,
@@ -73,7 +73,7 @@ Thanks for requesting a Guest Overflow demo for ${lead.businessName}. We'll conf
 
 In the meantime, feel free to reply to this email with anything you'd like us to cover.
 
-— The Guest Overflow team`,
+The Guest Overflow team`,
   });
 }
 

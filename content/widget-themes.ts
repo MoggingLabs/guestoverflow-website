@@ -43,7 +43,7 @@ const COLORS: Record<VenueThemeId, VenueTheme["colors"]> = {
     muted: "#8b9bab",
     line: "#1c2c3b",
   },
-  // Cool soft-white with a navy accent — the modern, monochrome light theme.
+  // Cool soft-white with a navy accent, the modern monochrome light theme.
   salon: {
     bg: "#f4f6fa",
     surface: "#ffffff",

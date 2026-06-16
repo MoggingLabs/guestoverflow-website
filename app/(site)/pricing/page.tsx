@@ -156,6 +156,15 @@ export default async function PricingPage() {
                   </li>
                 ))}
               </ul>
+              <Link
+                href="/services"
+                className="mt-6 inline-block text-sm text-amber transition-colors hover:text-amber-bright"
+              >
+                {locale === "pt"
+                  ? "Explorar os nossos serviços"
+                  : "Explore our services"}{" "}
+                →
+              </Link>
             </div>
             <div className="rounded-lg border border-line bg-surface p-8 shadow-card">
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-amber">

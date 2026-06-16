@@ -18,19 +18,19 @@ const en: PromisesContent = {
     eyebrow: "Our promises",
     headline: "In writing, and mapped to where the others fail.",
     subhead:
-      "Every one of these is a contractual commitment, not a slogan — each answers a real thing a rival does to its customers.",
+      "Every one of these is a contractual commitment, not a slogan. Each answers a real thing a rival does to its customers.",
   },
   stripTitle: "Promises we put in writing",
   promises: [
     {
-      title: "Your guest data is yours — one-click export",
+      title: "Your guest data is yours, with one-click export",
       body: "Export your full guest list any time, in a clean file you own. It's written into the agreement.",
       vs: "OpenTable amended its contract to block exporting your guests to a rival.",
     },
     {
-      title: "No commission, no payment take-rate — ever",
+      title: "No commission, no payment take-rate, ever",
       body: "One flat price. Deposits run through your own Stripe, so you keep your processor and your full rate.",
-      vs: "TheFork bills per cover, Fresha/Treatwell take 20–35%, and many 'flat' tools skim 1–3.6% on payments.",
+      vs: "TheFork bills per cover, Fresha/Treatwell take 20-35%, and many 'flat' tools skim 1-3.6% on payments.",
     },
     {
       title: "No surprise add-ons",
@@ -48,7 +48,7 @@ const en: PromisesContent = {
       vs: "Mews locks in two years; one platform billed a hotel ~€1,900 for 14 months after it had cancelled.",
     },
     {
-      title: "Our price is public — no sales call to see it",
+      title: "Our price is public, no sales call to see it",
       body: "Every plan is on the site. You'll never have to sit through a demo just to learn what it costs.",
       vs: "TheFork, Mews, Cloudbeds and most incumbents hide pricing behind a quote.",
     },
@@ -60,19 +60,19 @@ const pt: PromisesContent = {
     eyebrow: "As nossas promessas",
     headline: "Por escrito, e ligadas ao ponto onde os outros falham.",
     subhead:
-      "Cada uma destas é um compromisso contratual, não um slogan — e responde a algo real que um concorrente faz aos seus clientes.",
+      "Cada uma destas é um compromisso contratual, não um slogan. Responde a algo real que um concorrente faz aos seus clientes.",
   },
   stripTitle: "Promessas que pomos por escrito",
   promises: [
     {
-      title: "Os dados dos seus clientes são seus — exportação num clique",
+      title: "Os dados dos seus clientes são seus, com exportação num clique",
       body: "Exporte a lista completa de clientes quando quiser, num ficheiro limpo que é seu. Está escrito no contrato.",
       vs: "A OpenTable alterou o contrato para bloquear a exportação dos seus clientes para um rival.",
     },
     {
-      title: "Sem comissão, sem margem nos pagamentos — nunca",
+      title: "Sem comissão, sem margem nos pagamentos, nunca",
       body: "Um preço fixo. Os sinais correm pelo seu próprio Stripe, por isso fica com o seu processador e a tarifa inteira.",
-      vs: "O TheFork cobra por pessoa, a Fresha/Treatwell levam 20–35%, e muitas ferramentas 'fixas' tiram 1–3,6% nos pagamentos.",
+      vs: "O TheFork cobra por pessoa, a Fresha/Treatwell levam 20 a 35%, e muitas ferramentas 'fixas' tiram 1 a 3,6% nos pagamentos.",
     },
     {
       title: "Sem extras-surpresa",
@@ -90,7 +90,7 @@ const pt: PromisesContent = {
       vs: "A Mews prende por dois anos; uma plataforma cobrou a um hotel ~1.900 € por 14 meses depois de ter cancelado.",
     },
     {
-      title: "O nosso preço é público — sem chamada de vendas para o ver",
+      title: "O nosso preço é público, sem chamada de vendas para o ver",
       body: "Todos os planos estão no site. Nunca terá de assistir a uma demonstração só para saber quanto custa.",
       vs: "O TheFork, a Mews, a Cloudbeds e a maioria dos incumbentes escondem o preço atrás de um orçamento.",
     },
