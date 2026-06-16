@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
+  // Disable browser auto-translate site-wide: language is controlled by the
+  // in-app toggle (and Accept-Language on first visit). See lib/i18n.ts.
+  other: { google: "notranslate" },
 };
 
 export default async function RootLayout({
@@ -46,6 +49,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale === "pt" ? "pt-PT" : "en"}
+      translate="no"
       className={`${satoshi.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>
