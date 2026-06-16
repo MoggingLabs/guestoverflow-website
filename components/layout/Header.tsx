@@ -53,13 +53,13 @@ export function Header() {
             "w-full backdrop-blur-md transition-all duration-[450ms]",
             EASE,
             island
-              ? "max-w-5xl rounded-2xl border border-line bg-ink/90 shadow-[0_12px_44px_-12px_rgb(11_28_48/0.28)] backdrop-blur-xl"
+              ? "max-w-6xl rounded-2xl border border-line bg-ink/90 shadow-[0_12px_44px_-12px_rgb(11_28_48/0.28)] backdrop-blur-xl"
               : "max-w-[120rem] rounded-none border-x-0 border-t-0 border-b border-line bg-ink/70 shadow-none",
           )}
         >
           <div
             className={cn(
-              "flex items-center justify-between gap-4 px-5 transition-[height] duration-[450ms] md:grid md:grid-cols-[1fr_auto_1fr] md:px-6",
+              "flex items-center gap-3 px-4 transition-[height] duration-[450ms] md:px-6",
               EASE,
               island ? "h-14" : "h-16",
             )}
@@ -67,14 +67,14 @@ export function Header() {
             <Link
               href="/"
               aria-label="Guest Overflow home"
-              className="justify-self-start"
+              className="shrink-0"
             >
               <Logo />
             </Link>
 
             <nav
               aria-label="Main"
-              className="hidden items-center gap-1 md:flex"
+              className="hidden flex-1 items-center justify-center gap-0.5 lg:flex"
             >
               {t.navLinks.map((link) => {
                 const active = pathname.startsWith(link.href);
@@ -83,7 +83,7 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "rounded-md px-3 py-2 text-sm transition-colors duration-200",
+                      "whitespace-nowrap rounded-md px-2.5 py-1.5 text-sm transition-colors duration-200",
                       active
                         ? "text-cream"
                         : "text-cream-dim hover:bg-raised/70 hover:text-cream",
@@ -95,25 +95,29 @@ export function Header() {
               })}
             </nav>
 
-            <div className="hidden items-center gap-3 justify-self-end md:flex">
+            <div className="hidden shrink-0 items-center gap-2 lg:flex">
               <LanguageToggle />
               <Button
                 href={t.cta.tertiary.href}
                 variant="tertiary"
+                size="sm"
                 analyticsLabel="header_start_free"
               >
                 {t.cta.tertiary.label}
               </Button>
-              <Button href={t.cta.primary.href} analyticsLabel="header_book_demo">
+              <Button
+                href={t.cta.primary.href}
+                size="sm"
+                analyticsLabel="header_book_demo"
+              >
                 {t.cta.primary.label}
               </Button>
             </div>
 
-            <div className="flex items-center gap-2 md:hidden">
+            <div className="ml-auto flex shrink-0 items-center gap-2 lg:hidden">
               <Button
                 href={t.cta.primary.href}
-                size="md"
-                className="px-4 py-2"
+                size="sm"
                 analyticsLabel="header_book_demo_mobile"
               >
                 {t.navDemoShort}
@@ -153,7 +157,7 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="fixed inset-0 top-0 z-40 flex flex-col bg-ink px-6 pb-10 pt-24 md:hidden"
+          className="fixed inset-0 top-0 z-40 flex flex-col bg-ink px-6 pb-10 pt-24 lg:hidden"
         >
           <ul className="space-y-1">
             {t.navLinks.map((link) => (

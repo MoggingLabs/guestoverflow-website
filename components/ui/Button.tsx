@@ -17,7 +17,7 @@ type ButtonProps = {
     | "tertiary"
     | "inverse"
     | "inverseSecondary";
-  size?: "md" | "lg";
+  size?: "sm" | "md" | "lg";
   className?: string;
   disabled?: boolean;
   /** When set, clicking fires a cta_clicked analytics event with this label. */
@@ -39,6 +39,7 @@ const VARIANTS = {
 } as const;
 
 const SIZES = {
+  sm: "px-4 py-2 text-sm",
   md: "px-5 py-2.5 text-sm",
   lg: "px-7 py-3.5 text-base",
 } as const;
