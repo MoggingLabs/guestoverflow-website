@@ -142,7 +142,6 @@ export default async function PrivacyPage() {
         process data on our instructions under data processing agreements:
       </p>
       <ul className={UL}>
-        <li>Vercel Inc. (website hosting and delivery)</li>
         <li>Resend (transactional email delivery)</li>
       </ul>
       <p>
@@ -154,8 +153,8 @@ export default async function PrivacyPage() {
       <p>
         Our lead database is hosted in the European Union. Where our providers
         process data in the United States, the transfer is protected by the
-        EU-US Data Privacy Framework for certified providers (Vercel and
-        Resend are certified) and by the European Commission&apos;s Standard
+        EU-US Data Privacy Framework for certified providers (Resend is
+        certified) and by the European Commission&apos;s Standard
         Contractual Clauses, supplemented by technical measures.
       </p>
 

@@ -7,7 +7,7 @@ export const site = {
   tagline: "Booking that belongs on your website.",
   description:
     "Guest Overflow is a white-label reservation system for restaurants, hotels, spas, and experiences. We design it into your own website, matched to your brand, and every guest relationship stays yours.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow-website.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow.com",
   email: "hello@guestoverflow.app",
   company: "MoggingLabs",
   cta: {

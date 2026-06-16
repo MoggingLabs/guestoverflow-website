@@ -14,7 +14,6 @@ with four venue themes demonstrating the white-label pitch.
 - Tailwind CSS v4 (design tokens in `app/globals.css` `@theme`)
 - GSAP + ScrollTrigger, Lenis smooth scroll (reduced-motion aware)
 - Postgres (lead storage) + Resend (notifications) — both optional/env-gated
-- Vercel Analytics
 
 ## Development
 
