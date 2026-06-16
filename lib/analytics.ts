@@ -12,6 +12,8 @@ export type AnalyticsEvent =
   | "demo_form_abandoned"
   | "demo_form_submitted"
   | "demo_form_error"
+  | "calculator_opened"
+  | "calculator_changed"
   | "rage_click"
   | "js_error";
 

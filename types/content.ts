@@ -37,16 +37,41 @@ export type IndustryContent = {
   painPoints: { title: string; body: string }[];
   highlights: { title: string; body: string }[];
   metaDescription: string;
+  /** Per-sector published pricing (PT-calibrated). Drives /pricing/[sector]. */
+  pricing: SectorPricing;
 };
 
 export type PricingTier = {
   name: string;
-  /** Monthly price in euros; null renders the custom "Let's talk" tier. */
+  /** Monthly price in euros; null renders the custom tier. */
   monthlyEur: number | null;
+  /** For the custom tier: a published "from €X/mo" starting price. */
+  fromEur?: number;
   priceNote: string;
   blurb: string;
   features: string[];
   featured?: boolean;
+};
+
+/** An optional, transparently-priced add-on shown beneath a sector's tiers. */
+export type PricingAddOn = {
+  name: string;
+  /** e.g. "from €0.09 / SMS" — kept honest, never a per-booking surcharge. */
+  priceNote: string;
+  /** What's bundled before overage, e.g. "100 SMS/mo included on Premium". */
+  included?: string;
+};
+
+/** Per-sector pricing content; reuses PricingTier, authored per locale. */
+export type SectorPricing = {
+  hero: { eyebrow: string; headline: string; subhead: string };
+  tiers: PricingTier[];
+  /** Localized value-unit noun for copy/calculator ("cover", "treatment"…). */
+  valueUnit: string;
+  /** Sector-framed "what commission really costs" block. */
+  comparison: { title: string; body: string };
+  /** Optional metered add-ons (e.g. SMS reminders). */
+  addOns?: PricingAddOn[];
 };
 
 export type VenueThemeId = "fine-dining" | "hotel" | "spa" | "wine-bar" | "salon";

@@ -22,6 +22,7 @@ export const webPresences = [
   "Facebook",
   "TikTok",
   "Booking platforms (TheFork, OpenTable, Booking.com…)",
+  "Quandoo (closing in 2026)",
   "TripAdvisor",
   "Phone / WhatsApp",
   "Walk-ins & word of mouth",

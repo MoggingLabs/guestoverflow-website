@@ -65,6 +65,13 @@ export function Header() {
             </Link>
           ))}
           <LanguageToggle />
+          <Button
+            href={t.cta.tertiary.href}
+            variant="tertiary"
+            analyticsLabel="header_start_free"
+          >
+            {t.cta.tertiary.label}
+          </Button>
           <Button href={t.cta.primary.href} analyticsLabel="header_book_demo">
             {t.cta.primary.label}
           </Button>
@@ -130,7 +137,17 @@ export function Header() {
           <div className="mt-6">
             <LanguageToggle />
           </div>
-          <div className="mt-6">
+          <div className="mt-6 space-y-3">
+            <Button
+              href={t.cta.tertiary.href}
+              size="lg"
+              variant="tertiary"
+              className="w-full"
+              onClick={() => setOpen(false)}
+              analyticsLabel="mobile_nav_start_free"
+            >
+              {t.cta.tertiary.label}
+            </Button>
             <Button
               href={t.cta.primary.href}
               size="lg"

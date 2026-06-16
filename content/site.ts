@@ -8,10 +8,11 @@ export const site = {
   description:
     "Guest Overflow is a white-label reservation system for restaurants, hotels, spas, salons, and experiences. We design it into your own website, matched to your brand, and every guest relationship stays yours.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow.com",
-  email: "hello@guestoverflow.app",
+  email: "hello@guestoverflow.com",
   cta: {
     primary: { label: "Book a demo", href: "/book-a-demo" },
     secondary: { label: "Try the live demo", href: "/#live-demo" },
+    tertiary: { label: "Start free", href: "/book-a-demo?intent=trial" },
   },
 } as const;
 
@@ -19,6 +20,7 @@ type SiteStrings = {
   cta: {
     primary: { label: string; href: string };
     secondary: { label: string; href: string };
+    tertiary: { label: string; href: string };
   };
   navLinks: NavLink[];
   navDemoShort: string;
@@ -31,6 +33,7 @@ const en: SiteStrings = {
   cta: {
     primary: { label: "Book a demo", href: "/book-a-demo" },
     secondary: { label: "Try the live demo", href: "/#live-demo" },
+    tertiary: { label: "Start free", href: "/book-a-demo?intent=trial" },
   },
   navLinks: [
     { label: "Product", href: "/product" },
@@ -46,6 +49,8 @@ const en: SiteStrings = {
         { label: "Features", href: "/product" },
         { label: "Live demo", href: "/#live-demo" },
         { label: "Pricing", href: "/pricing" },
+        { label: "Savings calculator", href: "/pricing/calculator" },
+        { label: "Our promises", href: "/promises" },
       ],
     },
     {
@@ -62,6 +67,8 @@ const en: SiteStrings = {
       heading: "Company",
       links: [
         { label: "About", href: "/about" },
+        { label: "Compare", href: "/compare" },
+        { label: "Switch from Quandoo", href: "/quandoo" },
         { label: "Book a demo", href: "/book-a-demo" },
       ],
     },
@@ -82,6 +89,7 @@ const pt: SiteStrings = {
   cta: {
     primary: { label: "Marcar demonstração", href: "/book-a-demo" },
     secondary: { label: "Experimentar a demo", href: "/#live-demo" },
+    tertiary: { label: "Começar grátis", href: "/book-a-demo?intent=trial" },
   },
   navLinks: [
     { label: "Produto", href: "/product" },
@@ -97,6 +105,8 @@ const pt: SiteStrings = {
         { label: "Funcionalidades", href: "/product" },
         { label: "Demo ao vivo", href: "/#live-demo" },
         { label: "Preços", href: "/pricing" },
+        { label: "Calculadora de poupança", href: "/pricing/calculator" },
+        { label: "As nossas promessas", href: "/promises" },
       ],
     },
     {
@@ -113,6 +123,8 @@ const pt: SiteStrings = {
       heading: "Empresa",
       links: [
         { label: "Sobre nós", href: "/about" },
+        { label: "Comparar", href: "/compare" },
+        { label: "Mudar do Quandoo", href: "/quandoo" },
         { label: "Marcar demonstração", href: "/book-a-demo" },
       ],
     },

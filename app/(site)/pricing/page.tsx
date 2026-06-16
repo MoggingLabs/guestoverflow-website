@@ -3,12 +3,15 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/shared/PageHero";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { FooterCta } from "@/components/layout/FooterCta";
-import { PricingTiers } from "@/components/sections/pricing/PricingTiers";
+import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { pricingContent } from "@/content/pricing";
+import { industriesContent, sectorPrices } from "@/content/industries";
 import { faqContent } from "@/content/faq";
 import { siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
@@ -16,7 +19,7 @@ import { getLocale } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Flat monthly pricing with no per-cover commission. Essential, Premium, and custom plans for restaurants, hotels, spas, and experiences.",
+    "Flat monthly pricing with no per-cover commission, calibrated for each sector. Restaurants, hotels, spas, salons, and tours & experiences.",
 };
 
 export default async function PricingPage() {
@@ -24,6 +27,7 @@ export default async function PricingPage() {
   const t = pricingContent[locale];
   const faq = faqContent[locale];
   const cta = siteStrings[locale].cta.primary;
+  const industries = industriesContent[locale].industries;
 
   return (
     <>
@@ -34,22 +38,62 @@ export default async function PricingPage() {
         showCta={false}
       />
 
+      {/* Sector picker */}
+      <section className="pb-8">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow={t.sectorPicker.eyebrow}
+              title={t.sectorPicker.title}
+              subhead={t.sectorPicker.subhead}
+            />
+          </Reveal>
+          <Reveal stagger className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {industries.map((industry) => (
+              <Link
+                key={industry.slug}
+                href={`/pricing/${industry.slug}`}
+                className="group"
+              >
+                <Card className="h-full transition-colors group-hover:border-amber-deep/60">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="font-display text-lg font-medium text-cream">
+                      {industry.label}
+                    </h3>
+                    <span className="shrink-0 text-sm font-medium text-amber">
+                      {t.sectorPicker.from(sectorPrices[industry.slug].starter)}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-cream-dim">
+                    {industry.cardBlurb}
+                  </p>
+                </Card>
+              </Link>
+            ))}
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* Savings calculator */}
+      <section className="py-20 md:py-28">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow={t.sectorPicker.eyebrow}
+              title={t.calc.title}
+              subhead={t.calc.subhead}
+            />
+          </Reveal>
+          <Reveal className="mt-12">
+            <CostCalculator compact />
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* Founding offer */}
       <section className="pb-24 md:pb-32">
         <Container>
           <Reveal>
-            <PricingTiers />
-          </Reveal>
-
-          <Reveal className="mx-auto mt-16 max-w-2xl text-center">
-            <h2 className="font-display text-2xl font-medium text-cream">
-              {t.comparison.title}
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-cream-dim">
-              {t.comparison.body}
-            </p>
-          </Reveal>
-
-          <Reveal className="mt-16">
             <div className="relative overflow-hidden rounded-lg border border-amber-deep/60 bg-surface p-9 text-center shadow-glow md:p-12">
               <Badge>{t.foundingPartner.badge}</Badge>
               <h2 className="mt-5 font-display text-2xl font-medium text-cream md:text-3xl">

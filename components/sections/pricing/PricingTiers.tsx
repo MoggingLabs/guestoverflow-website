@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import type { PricingTier } from "@/types/content";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { pricingContent } from "@/content/pricing";
@@ -10,10 +11,19 @@ import { cn } from "@/lib/utils";
 
 const ANNUAL_FACTOR = 2 / 3; // annual billing takes a third off
 
-export function PricingTiers() {
+export function PricingTiers({
+  tiers,
+  analyticsPrefix = "pricing",
+}: {
+  /** Sector tiers; defaults to the global pricing tiers when omitted.
+   *  Only plain data crosses the boundary — tierUi stays sourced internally. */
+  tiers?: PricingTier[];
+  analyticsPrefix?: string;
+} = {}) {
   const locale = useLocale();
   const t = pricingContent[locale];
   const cta = siteStrings[locale].cta.primary;
+  const tierList = tiers ?? t.tiers;
   const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
   const annual = billing === "annual";
 
@@ -59,15 +69,16 @@ export function PricingTiers() {
         </div>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-3">
-        {t.tiers.map((tier) => {
+      <div
+        className={cn(
+          "grid gap-5",
+          tierList.length >= 4
+            ? "sm:grid-cols-2 lg:grid-cols-4"
+            : "lg:grid-cols-3",
+        )}
+      >
+        {tierList.map((tier) => {
           const monthly = tier.monthlyEur;
-          const shown =
-            monthly === null
-              ? null
-              : annual
-                ? Math.round(monthly * ANNUAL_FACTOR)
-                : monthly;
           return (
             <div
               key={tier.name}
@@ -84,16 +95,29 @@ export function PricingTiers() {
                 {tier.featured && <Badge>{t.tierUi.mostPopular}</Badge>}
               </div>
 
-              {/* Price block: fixed height across all three cards */}
+              {/* Price block: fixed height across all cards */}
               <div className="mt-5 min-h-16">
-                {shown === null ? (
-                  <p className="font-display text-3xl font-medium text-cream">
-                    {t.tierUi.letsTalk}
-                  </p>
+                {monthly === null ? (
+                  tier.fromEur != null ? (
+                    <>
+                      <p className="font-display text-3xl font-medium text-cream">
+                        {t.tierUi.fromPerMonth(tier.fromEur)}
+                      </p>
+                      <p className="mt-1 text-xs text-cream-faint">
+                        {t.tierUi.letsTalk}
+                      </p>
+                    </>
+                  ) : (
+                    <p className="font-display text-3xl font-medium text-cream">
+                      {t.tierUi.letsTalk}
+                    </p>
+                  )
                 ) : (
                   <>
                     <p className="font-display text-3xl font-medium text-cream">
-                      {t.tierUi.fromPerMonth(shown)}
+                      {t.tierUi.fromPerMonth(
+                        annual ? Math.round(monthly * ANNUAL_FACTOR) : monthly,
+                      )}
                     </p>
                     <p className="mt-1 text-xs text-cream-faint">
                       {annual ? (
@@ -103,7 +127,7 @@ export function PricingTiers() {
                           {t.tierUi.monthlyWord}
                         </>
                       ) : (
-                        <>{t.tierUi.orAnnually(Math.round(monthly! * ANNUAL_FACTOR))}</>
+                        <>{t.tierUi.orAnnually(Math.round(monthly * ANNUAL_FACTOR))}</>
                       )}
                     </p>
                   </>
@@ -145,7 +169,7 @@ export function PricingTiers() {
                   href={cta.href}
                   variant={tier.featured ? "primary" : "secondary"}
                   className="h-11 w-full"
-                  analyticsLabel={`pricing_${tier.name.toLowerCase()}_${billing}`}
+                  analyticsLabel={`${analyticsPrefix}_${tier.name.toLowerCase()}_${billing}`}
                 >
                   {cta.label}
                 </Button>

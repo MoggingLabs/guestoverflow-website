@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { industrySlugs } from "@/content/industries";
+import { competitorSlugs } from "@/content/compare";
 import { site } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,6 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/product",
     "/industries",
     "/pricing",
+    "/pricing/calculator",
+    "/compare",
+    "/promises",
+    "/quandoo",
     "/about",
     "/book-a-demo",
     "/privacy",
@@ -24,5 +29,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...industryRoutes];
+  const sectorPricingRoutes = industrySlugs.map((slug) => ({
+    url: `${site.url}/pricing/${slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const compareRoutes = competitorSlugs.map((slug) => ({
+    url: `${site.url}/compare/${slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...industryRoutes,
+    ...sectorPricingRoutes,
+    ...compareRoutes,
+  ];
 }

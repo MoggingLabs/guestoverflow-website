@@ -20,6 +20,8 @@ type PricingContent = {
   offerDisclaimer: { before: string; linkLabel: string; after: string };
   noWebsiteOffer: { eyebrow: string; title: string; body: string; points: string[] };
   transparency: { eyebrow: string; title: string; body: string };
+  sectorPicker: { eyebrow: string; title: string; subhead: string; from: (eur: number) => string };
+  calc: { title: string; subhead: string };
 };
 
 // Placeholder price points — confirm real numbers before launch.
@@ -114,6 +116,17 @@ const en: PricingContent = {
     title: "Complete transparency, in writing",
     body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, what we changed, and whether it worked. If the numbers don't justify the relationship after the three-month pilot, ending it takes one sentence in an email. No questions, no hard feelings.",
   },
+  sectorPicker: {
+    eyebrow: "Pricing by sector",
+    title: "Pricing built for your sector",
+    subhead:
+      "Pick your business to see plans and prices framed for how you actually take bookings.",
+    from: (eur) => `from €${eur}/mo`,
+  },
+  calc: {
+    title: "See what commission really costs you",
+    subhead: "A flat price against the rising fee a marketplace bills as you grow.",
+  },
 };
 
 const pt: PricingContent = {
@@ -206,6 +219,17 @@ const pt: PricingContent = {
     eyebrow: "Como trabalhamos",
     title: "Transparência total, por escrito",
     body: "Medimos tudo em conjunto. Todos os meses vê exatamente o que chegou através do seu site ou do seu perfil no Google, o que alterámos e se resultou. Se os números não justificarem a relação no fim do piloto de três meses, terminá-la é uma frase num email. Sem perguntas, sem ressentimentos.",
+  },
+  sectorPicker: {
+    eyebrow: "Preços por setor",
+    title: "Preços feitos para o seu setor",
+    subhead:
+      "Escolha o seu negócio para ver planos e preços pensados para a forma como recebe reservas.",
+    from: (eur) => `desde ${eur} €/mês`,
+  },
+  calc: {
+    title: "Veja o que a comissão lhe custa de verdade",
+    subhead: "Um preço fixo face à taxa crescente que um marketplace cobra à medida que cresce.",
   },
 };
 

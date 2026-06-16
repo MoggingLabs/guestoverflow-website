@@ -39,6 +39,11 @@ const en: FaqContent = {
         "Yes, that's the heart of what we do. Colors, typography, copy, and flow are tailored to each venue. Try the live demo above and switch venue types to see how different the same system can look.",
     },
     {
+      question: "Will Guest Overflow bring me new customers?",
+      answer:
+        "We're honest about this: we don't replace the discovery a marketplace gives you. If you need new strangers to find you, that's what Reserve with Google, your Google Business Profile, and a great website do, and we set all three up. What we replace is paying commission on the guests who already chose you, the regulars, the direct traffic, and word of mouth.",
+    },
+    {
       question: "I don't have a website. Can I still use Guest Overflow?",
       answer:
         "Yes. We start by optimizing your Google Business Profile so people can find and book you straight from Google. When you're ready for a website of your own, we design and build one with booking built in, but there's no pressure to start there.",
@@ -161,6 +166,11 @@ const pt: FaqContent = {
       question: "Consegue ficar exatamente com a minha marca?",
       answer:
         "Sim, é esse o coração do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada espaço. Experimente a demo ao vivo acima e mude o tipo de espaço para ver como o mesmo sistema pode ficar diferente.",
+    },
+    {
+      question: "O Guest Overflow traz-me novos clientes?",
+      answer:
+        "Somos honestos: não substituímos a descoberta que um marketplace dá. Se precisa que novos desconhecidos o encontrem, é para isso que servem o Reservar com o Google, o seu Perfil de Empresa no Google e um bom site, e configuramos os três. O que substituímos é pagar comissão sobre os clientes que já o escolheram: os habituais, o tráfego direto e o passa-a-palavra.",
     },
     {
       question: "Não tenho site. Ainda assim posso usar o Guest Overflow?",

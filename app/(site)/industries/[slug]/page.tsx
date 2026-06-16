@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/sections/shared/PageHero";
 import { WidgetShowcase } from "@/components/sections/shared/WidgetShowcase";
+import { ComparisonCallout } from "@/components/sections/shared/ComparisonCallout";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
@@ -72,6 +73,8 @@ export default async function IndustryPage({
           </Reveal>
         </Container>
       </section>
+
+      <ComparisonCallout slug={industry.slug} />
 
       <WidgetShowcase
         eyebrow={t.liveDemoEyebrow}

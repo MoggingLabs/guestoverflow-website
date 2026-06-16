@@ -75,6 +75,7 @@ const en: FormStrings = {
     TikTok: "TikTok",
     "Booking platforms (TheFork, OpenTable, Booking.com…)":
       "Booking platforms (TheFork, OpenTable, Booking.com…)",
+    "Quandoo (closing in 2026)": "Quandoo (closing in 2026)",
     TripAdvisor: "TripAdvisor",
     "Phone / WhatsApp": "Phone / WhatsApp",
     "Walk-ins & word of mouth": "Walk-ins & word of mouth",
@@ -132,6 +133,7 @@ const pt: FormStrings = {
     TikTok: "TikTok",
     "Booking platforms (TheFork, OpenTable, Booking.com…)":
       "Plataformas de reservas (TheFork, OpenTable, Booking.com…)",
+    "Quandoo (closing in 2026)": "Quandoo (encerra em 2026)",
     TripAdvisor: "TripAdvisor",
     "Phone / WhatsApp": "Telefone / WhatsApp",
     "Walk-ins & word of mouth": "Passa-palavra e clientes de porta",
