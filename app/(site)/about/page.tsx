@@ -11,7 +11,7 @@ import { getLocale } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Guest Overflow is built by a team with years of experience crafting high-converting hospitality websites.",
+    "Guest Overflow is built by a team with years of experience crafting high-converting guest-facing websites.",
 };
 
 export default async function AboutPage() {

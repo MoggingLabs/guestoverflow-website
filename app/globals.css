@@ -1,38 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand color system — warm near-black with a single amber accent.
-     Amber is reserved for CTAs, eyebrows, highlights, and interactive
-     states. It is never used as a large background fill. */
-  --color-ink: #0c0a09;
-  --color-surface: #15110e;
-  --color-raised: #1e1815;
-  --color-line: #2b241f;
+  /* Deep Harbour — a light, deep-sea palette. Navy is the primary (buttons,
+     deep bands, emphasis); Rich Teal is the interactive accent (links,
+     eyebrows, focus, selection); Mint and Champagne are used sparingly.
+     NOTE: token names are kept from the old dark theme to avoid churn, so a
+     few read oddly now — `amber` is teal, `ink` is the soft-white page bg,
+     `cream` is the dark text. */
+  --color-ink: #f8f9ff;
+  --color-surface: #ffffff;
+  --color-raised: #eff4ff;
+  --color-line: #d3dbe8;
 
-  --color-amber: #d9a05b;
-  --color-amber-bright: #ecb979;
-  --color-amber-deep: #8c6233;
+  --color-amber: #08696b;
+  --color-amber-bright: #0a8a8c;
+  --color-amber-deep: #04494b;
 
-  --color-cream: #f4efe7;
-  --color-cream-dim: #a89f93;
-  --color-cream-faint: #6b6359;
+  --color-cream: #0b1c30;
+  --color-cream-dim: #44474c;
+  --color-cream-faint: #74777d;
 
-  --color-success: #7fa66b;
-  --color-error: #c96a5b;
+  --color-navy: #0f1c2c;
+  --color-navy-soft: #213145;
+  --color-mint: #a2f0f1;
+  --color-mint-deep: #166f71;
+  --color-champagne: #cdb487;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --color-success: #2f7d57;
+  --color-error: #ba1a1a;
 
-  --shadow-glow: 0 0 40px -12px rgb(217 160 91 / 0.25);
-  --shadow-card:
-    0 1px 0 0 rgb(255 255 255 / 0.04) inset,
-    0 8px 30px -12px rgb(0 0 0 / 0.6);
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  --shadow-glow: 0 0 30px -10px rgb(8 105 107 / 0.3);
+  --shadow-card: 0 4px 20px -2px rgb(11 28 48 / 0.06);
 }
 
 @theme inline {
-  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-satoshi), "Plus Jakarta Sans", system-ui, sans-serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
 }
 
@@ -45,7 +52,7 @@ body {
 
 ::selection {
   background: var(--color-amber);
-  color: var(--color-ink);
+  color: #ffffff;
 }
 
 :focus-visible {
@@ -53,18 +60,18 @@ body {
   outline-offset: 2px;
 }
 
-/* Slow amber drift behind the home hero. Pure decoration — pauses
-   entirely under reduced motion. */
+/* Soft teal / sea-glass glow behind the navy home hero. Pure decoration —
+   pauses entirely under reduced motion. */
 .hero-glow {
   background:
     radial-gradient(
       ellipse 60% 50% at 50% 110%,
-      rgb(217 160 91 / 0.14),
+      rgb(8 105 107 / 0.35),
       transparent 70%
     ),
     radial-gradient(
       ellipse 40% 35% at 80% 100%,
-      rgb(140 98 51 / 0.12),
+      rgb(134 211 213 / 0.18),
       transparent 70%
     );
   animation: hero-drift 14s ease-in-out infinite alternate;

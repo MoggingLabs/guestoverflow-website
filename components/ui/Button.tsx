@@ -10,7 +10,13 @@ type ButtonProps = {
   href?: string;
   onClick?: () => void;
   type?: "button" | "submit";
-  variant?: "primary" | "secondary" | "ghost";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "ghost"
+    | "tertiary"
+    | "inverse"
+    | "inverseSecondary";
   size?: "md" | "lg";
   className?: string;
   disabled?: boolean;
@@ -19,11 +25,12 @@ type ButtonProps = {
 };
 
 const VARIANTS = {
-  primary:
-    "bg-amber text-ink hover:bg-amber-bright shadow-glow font-medium",
-  secondary:
-    "border border-line text-cream hover:border-amber-deep hover:text-amber-bright",
-  ghost: "text-cream-dim hover:text-cream",
+  primary: "bg-navy text-white hover:bg-navy-soft font-medium",
+  secondary: "border border-navy text-navy hover:bg-navy/5",
+  tertiary: "bg-mint text-mint-deep hover:bg-mint/80 font-medium",
+  ghost: "text-cream-dim hover:text-amber",
+  inverse: "bg-white text-navy hover:bg-white/90 font-medium",
+  inverseSecondary: "border border-white/30 text-white hover:bg-white/10",
 } as const;
 
 const SIZES = {
@@ -43,7 +50,7 @@ export function Button({
   analyticsLabel,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-md transition-colors duration-200",
+    "inline-flex items-center justify-center gap-2 rounded transition-colors duration-200",
     "disabled:cursor-not-allowed disabled:opacity-50",
     VARIANTS[variant],
     SIZES[size],

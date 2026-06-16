@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const AMBER = "217, 160, 91";
+const TEAL = "125, 211, 214";
 const LINK_DISTANCE = 130;
 const MOUSE_RADIUS = 160;
 const MAX_PARTICLES = 150;
@@ -17,7 +17,7 @@ type Particle = {
 
 /**
  * Interactive particle constellation behind the home hero: slow-drifting
- * amber points linked by faint lines, gently repelled by the cursor.
+ * teal points linked by faint lines, gently repelled by the cursor.
  * Decorative only: pointer-events pass through, rendering pauses when
  * the hero leaves the viewport, and reduced-motion gets nothing at all.
  */
@@ -83,7 +83,7 @@ export function HeroParticles() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${AMBER}, 0.55)`;
+        ctx.fillStyle = `rgba(${TEAL}, 0.55)`;
         ctx.fill();
       }
 
@@ -95,7 +95,7 @@ export function HeroParticles() {
           const dist = Math.hypot(dx, dy);
           if (dist < LINK_DISTANCE) {
             const alpha = (1 - dist / LINK_DISTANCE) * 0.18;
-            ctx.strokeStyle = `rgba(${AMBER}, ${alpha})`;
+            ctx.strokeStyle = `rgba(${TEAL}, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particles[a].x, particles[a].y);

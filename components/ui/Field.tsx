@@ -6,7 +6,7 @@ import type {
 import { cn } from "@/lib/utils";
 
 const FIELD_CLASSES =
-  "w-full rounded-md border border-line bg-raised px-4 py-3 text-sm text-cream placeholder:text-cream-faint transition-colors focus:border-amber-deep focus:outline-none";
+  "w-full rounded-md border border-line bg-surface px-4 py-3 text-sm text-cream placeholder:text-cream-faint transition-colors focus:border-amber focus:shadow-[0_0_0_3px_rgb(8_105_107/0.15)] focus:outline-none";
 
 type WrapperProps = {
   label: string;

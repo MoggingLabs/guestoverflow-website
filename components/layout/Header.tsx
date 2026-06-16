@@ -40,8 +40,8 @@ export function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
         scrolled || open
-          ? "border-b border-line bg-ink/90 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
+          ? "border-b border-line bg-ink/85 backdrop-blur-md shadow-card"
+          : "border-b border-line bg-ink/80 backdrop-blur-md",
       )}
     >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-8">

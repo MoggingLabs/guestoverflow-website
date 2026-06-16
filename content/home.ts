@@ -109,7 +109,7 @@ const en = {
   builtFor: {
     line: "Built for independent restaurants, boutique hotels, spas, salons, and tour operators.",
     credibility:
-      "We've spent years building high-converting websites for hospitality businesses. Guest Overflow is everything our clients kept asking for.",
+      "We've spent years building high-converting websites for guest-facing businesses. Guest Overflow is everything our clients kept asking for.",
   },
   faqTitle: "Questions, answered.",
   problemsEyebrow: "The problem",
@@ -232,7 +232,7 @@ const pt: typeof en = {
   builtFor: {
     line: "Feito para restaurantes independentes, hotéis boutique, spas, cabeleireiros e operadores de tours.",
     credibility:
-      "Passámos anos a construir sites de alta conversão para negócios de hotelaria e restauração. O Guest Overflow é tudo o que os nossos clientes nos pediam.",
+      "Passámos anos a construir sites de alta conversão para negócios que vivem de reservas. O Guest Overflow é tudo o que os nossos clientes nos pediam.",
   },
   faqTitle: "Perguntas, respondidas.",
   problemsEyebrow: "O problema",

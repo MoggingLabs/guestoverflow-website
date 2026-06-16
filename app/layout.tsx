@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import { site } from "@/content/site";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  axes: ["opsz"],
-  weight: "variable",
+const satoshi = localFont({
+  variable: "--font-satoshi",
   display: "swap",
+  src: [
+    { path: "./fonts/Satoshi-Regular.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/Satoshi-Medium.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/Satoshi-Bold.woff2", weight: "700", style: "normal" },
+  ],
 });
 
 const inter = Inter({
@@ -43,7 +46,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale === "pt" ? "pt-PT" : "en"}
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      className={`${satoshi.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>

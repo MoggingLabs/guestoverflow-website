@@ -12,27 +12,32 @@ export async function Hero() {
   const cta = siteStrings[locale].cta;
 
   return (
-    <section className="relative flex min-h-[92vh] items-center overflow-hidden pt-28 pb-20 md:pt-32 md:pb-24">
+    <section className="relative flex min-h-[92vh] items-center overflow-hidden bg-navy pt-28 pb-20 md:pt-32 md:pb-24">
       <div aria-hidden className="hero-glow absolute inset-0" />
       <HeroParticles />
       <Container className="relative text-center">
         <Reveal>
-          <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-amber">
+          <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-mint">
             {t.hero.eyebrow}
           </p>
-          <h1 className="mx-auto max-w-3xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-cream md:text-7xl text-balance">
+          <h1 className="mx-auto max-w-3xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-white md:text-7xl text-balance">
             {t.hero.headline}
           </h1>
-          <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-cream-dim md:text-lg">
+          <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
             {t.hero.subhead}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href={cta.primary.href} size="lg" analyticsLabel="hero_book_demo">
+            <Button
+              href={cta.primary.href}
+              variant="inverse"
+              size="lg"
+              analyticsLabel="hero_book_demo"
+            >
               {cta.primary.label}
             </Button>
             <Button
               href={cta.secondary.href}
-              variant="secondary"
+              variant="inverseSecondary"
               size="lg"
               analyticsLabel="hero_try_demo"
             >

@@ -13,14 +13,14 @@ type AboutContent = {
 const en: AboutContent = {
   hero: {
     eyebrow: "About",
-    headline: "Built by the people who build hospitality websites.",
+    headline: "Built by the people who build guest-facing websites.",
     subhead:
       'Guest Overflow comes from a team that has spent years crafting high-converting websites for restaurants, contractors, and local businesses. Every client conversation ended the same way: "can the booking look like the rest of the site?" Now it can.',
   },
   story: {
     title: "Why Guest Overflow exists",
     paragraphs: [
-      "We kept shipping beautiful hospitality websites that fell apart at the most important moment: the booking. Owners were paying commissions to platforms that hid their brand, kept hold of their guest lists, and looked nothing like the sites we'd built for them.",
+      "We kept shipping beautiful websites that fell apart at the most important moment: the booking. Owners were paying commissions to platforms that hid their brand, kept hold of their guest lists, and looked nothing like the sites we'd built for them.",
       "Guest Overflow is our answer. It's a reservation system designed to blend into the venue's own website, so the guest experiences your brand from the first click to the confirmation email, and you keep every relationship the booking creates.",
       "We're starting deliberately small, with a founding group of venues we can onboard personally. We'd rather have the product shaped by the people who run venues than by a feature checklist.",
     ],
@@ -48,14 +48,14 @@ const en: AboutContent = {
 const pt: AboutContent = {
   hero: {
     eyebrow: "Sobre nós",
-    headline: "Feito por quem constrói sites para hotelaria e restauração.",
+    headline: "Feito por quem constrói sites para negócios que vivem de reservas.",
     subhead:
       "O Guest Overflow nasce de uma equipa que passou anos a criar sites de alta conversão para restaurantes e negócios locais. Todas as conversas com clientes acabavam da mesma forma: “a reserva pode ficar com o aspeto do resto do site?” Agora pode.",
   },
   story: {
     title: "Porque é que o Guest Overflow existe",
     paragraphs: [
-      "Entregávamos sites bonitos para restauração e hotelaria que se desmanchavam no momento mais importante: a reserva. Os donos pagavam comissões a plataformas que escondiam a sua marca, guardavam as suas listas de clientes e não se pareciam nada com os sites que tínhamos construído.",
+      "Entregávamos sites bonitos que se desmanchavam no momento mais importante: a reserva. Os donos pagavam comissões a plataformas que escondiam a sua marca, guardavam as suas listas de clientes e não se pareciam nada com os sites que tínhamos construído.",
       "O Guest Overflow é a nossa resposta. É um sistema de reservas desenhado para se fundir com o site do próprio espaço, para que o cliente viva a sua marca do primeiro clique ao email de confirmação, e cada relação criada pela reserva fique consigo.",
       "Estamos a começar deliberadamente pequenos, com um grupo fundador de espaços que conseguimos acompanhar pessoalmente. Preferimos um produto moldado por quem gere espaços do que por uma lista de funcionalidades.",
     ],
