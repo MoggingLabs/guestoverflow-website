@@ -8,7 +8,7 @@ Saas module is documented separately later.
 
 - **Stack:** Next.js 16 (App Router), React 19, Tailwind v4, GSAP, Zod, `postgres` driver.
 - **Output:** `output: "standalone"` → containerized via the repo `Dockerfile`.
-- **Database:** direct Postgres via `DATABASE_URL` (schema in `supabase/migrations/`). Degrades gracefully to console logging when unset.
+- **Database:** direct Postgres via `DATABASE_URL` (schema in `db/migrations/`). Degrades gracefully to console logging when unset.
 - **Email:** Resend (optional) for demo-request notifications.
 - **Auth:** stateless HMAC-signed cookie (`gf_admin`), no session store.
 - **Cloudflare-aware:** the analytics route already reads `cf-connecting-ip` and `cf-ipcountry`, and rate-limits on real client IP. This matters for the proxy/edge config (see deploy README).
@@ -114,8 +114,7 @@ Shared content/domain types (NavLink, FaqItem, IndustryContent, PricingTier, Ven
 ## `scripts/seed-admin.ts`
 Seeds demo analytics/leads/clients with deterministic PRNG. dev; `DATABASE_URL`
 
-## `supabase/`
-- `config.toml` — local Supabase dev ports. dev
+## `db/`
 - `migrations/` (apply in order against the stack's Postgres):
   1. `…0001_leads.sql` — `leads` table.
   2. `…0002_events.sql` — `events` table (+ indexes) for analytics.
@@ -123,5 +122,5 @@ Seeds demo analytics/leads/clients with deterministic PRNG. dev; `DATABASE_URL`
   4. `…0004_admin_queries.sql` — SQL aggregation functions powering the dashboards.
   5. `…0005`–`0008` — `leads` column evolution (web_presence, business_type_other, web_presence→array, preferred_window→preferred_slots array).
 
-> Note: migrations are written as Supabase SQL but are plain Postgres DDL — they
-> apply identically to the self-hosted Postgres container.
+> Note: migrations are plain Postgres DDL — they apply identically to the
+> self-hosted Postgres container.

@@ -13,7 +13,7 @@ with four venue themes demonstrating the white-label pitch.
 - Next.js 16 (App Router, Turbopack) · React 19 · TypeScript
 - Tailwind CSS v4 (design tokens in `app/globals.css` `@theme`)
 - GSAP + ScrollTrigger, Lenis smooth scroll (reduced-motion aware)
-- Supabase (lead storage) + Resend (notifications) — both optional/env-gated
+- Postgres (lead storage) + Resend (notifications) — both optional/env-gated
 - Vercel Analytics
 
 ## Development
@@ -33,12 +33,12 @@ copy `.env.example` to `.env.local` and set `DATABASE_URL`.
 
 Everything (leads, first-party analytics events, the client tracker)
 lives in one Postgres database reached via `DATABASE_URL`. The schema is
-defined by the SQL files in `supabase/migrations/`, which apply
-unchanged to local PostgreSQL and to a Supabase project.
+defined by the SQL files in `db/migrations/`, which apply
+unchanged to any PostgreSQL database.
 
 - **Local development:** native PostgreSQL, e.g.
   `postgres://postgres:postgres@localhost:5432/guestoverflow`. Apply
-  migrations with `psql -d guestoverflow -f supabase/migrations/<file>.sql`
+  migrations with `psql -d guestoverflow -f db/migrations/<file>.sql`
   (in order).
 - **Demo data:** `npm run seed -- --yes` fills the dashboard with 45
   days of realistic events, leads, and clients. Seeded events carry
@@ -49,11 +49,11 @@ unchanged to local PostgreSQL and to a Supabase project.
 
 ## Going live checklist
 
-1. Create a Supabase project and apply the migrations in order
-   (SQL editor or `supabase db push`).
-2. On the host (e.g. Vercel), set `DATABASE_URL` to the Supabase
-   **transaction pooler** connection string (port 6543) — required for
-   serverless, and the client already runs with `prepare: false`.
+1. Provision the production Postgres and apply the migrations in
+   `db/migrations/` in order (`psql -f`).
+2. On the host, set `DATABASE_URL` to the production Postgres connection
+   string — the client runs with `prepare: false`, so transaction-pooled
+   connections work too.
 3. Set `ADMIN_USER`, `ADMIN_PASSWORD`, `ADMIN_SESSION_SECRET` (the
    admin/admin defaults must never reach production; the panel shows a
    warning until these are set).

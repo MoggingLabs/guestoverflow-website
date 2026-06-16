@@ -3,8 +3,8 @@ import { getDb } from "@/lib/db";
 
 /**
  * Read layer for the admin dashboards. Aggregations live as SQL
- * functions in supabase/migrations/20260610000004_admin_queries.sql so
- * the exact same logic runs locally and on Supabase. Every query
+ * functions in db/migrations/20260610000004_admin_queries.sql so the
+ * exact same logic runs everywhere. Every query
  * returns [] when DATABASE_URL is unset so pages render an empty state.
  */
 

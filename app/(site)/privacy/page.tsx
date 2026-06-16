@@ -143,7 +143,6 @@ export default async function PrivacyPage() {
       </p>
       <ul className={UL}>
         <li>Vercel Inc. (website hosting and delivery)</li>
-        <li>Supabase (database hosting for demo requests, in the EU)</li>
         <li>Resend (transactional email delivery)</li>
       </ul>
       <p>

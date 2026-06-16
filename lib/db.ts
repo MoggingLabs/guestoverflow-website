@@ -2,9 +2,9 @@ import "server-only";
 import postgres from "postgres";
 
 /**
- * Direct Postgres connection via DATABASE_URL. Works identically against
- * local PostgreSQL and a Supabase project's connection string — the
- * migrations in supabase/migrations/ define the same schema either way.
+ * Direct Postgres connection via DATABASE_URL. Works against any
+ * PostgreSQL database — the migrations in db/migrations/ define the
+ * schema.
  * Returns null when unconfigured so the public site degrades gracefully.
  */
 declare global {
@@ -18,7 +18,7 @@ export function getDb(): Sql | null {
   if (!url) return null;
   globalThis.__gfSql ??= postgres(url, {
     max: 5,
-    // Supabase's pooled connection strings require this off; harmless locally.
+    // Pooled/transaction-mode connection strings require this off; harmless locally.
     prepare: false,
   });
   return globalThis.__gfSql;

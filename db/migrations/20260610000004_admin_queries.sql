@@ -1,5 +1,5 @@
--- Aggregation functions powering the admin dashboards. Called via
--- supabase-js .rpc() with the service role; revoked from public roles.
+-- Aggregation functions powering the admin dashboards. Called with the
+-- service role's RPC interface; revoked from public roles.
 
 create or replace function public.admin_daily_visitors(p_from timestamptz, p_to timestamptz)
 returns table (day date, visitors bigint, sessions bigint, page_views bigint)
@@ -197,8 +197,8 @@ language sql stable security definer set search_path = public as $$
            c.mrr_cents desc;
 $$;
 
--- Service-role only. The anon/authenticated roles exist on Supabase but
--- not on plain Postgres, so revoke conditionally.
+-- Service-role only. The anon/authenticated roles may not exist on this
+-- Postgres instance, so revoke conditionally.
 do $$
 begin
   if exists (select 1 from pg_roles where rolname = 'anon') then
