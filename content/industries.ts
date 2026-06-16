@@ -191,6 +191,49 @@ const en: IndustriesStrings = {
       metaDescription:
         "Direct booking for tours, tastings, and experiences on your own website. Capacity-aware sessions without marketplace commissions.",
     },
+    {
+      slug: "salons-barbers",
+      label: "Salons & barbers",
+      themeId: "salon",
+      icon: "scissors",
+      cardBlurb:
+        "Appointments that look like your salon, not a booking app — with deposits and rebooking that keep chairs full.",
+      hero: {
+        headline: "Booking that fits your chair.",
+        subhead:
+          "Salons and barbershops get an appointment flow on their own site, themed to their brand, with deposits, per-stylist scheduling, and no commission or per-booking fees.",
+      },
+      painPoints: [
+        {
+          title: "Booking apps own your clients",
+          body: "Marketplace apps list your shop next to every competitor, take a cut of each booking, and keep the client's details for themselves.",
+        },
+        {
+          title: "No-shows leave the chair empty",
+          body: "An empty chair is time you can't sell twice. Without deposits and reminders, a missed appointment is gone for good.",
+        },
+        {
+          title: "The phone rings mid-cut",
+          body: "Taking bookings by phone means stopping mid-service, and calls that come in after hours often go unanswered.",
+        },
+      ],
+      highlights: [
+        {
+          title: "Per-stylist scheduling",
+          body: "Service durations, individual stylist and chair availability, and buffer time, all handled cleanly behind the scenes.",
+        },
+        {
+          title: "Deposits & no-show protection",
+          body: "Take a deposit or card hold on booking, with cancellation windows that keep your column earning.",
+        },
+        {
+          title: "Rebooking & client history",
+          body: "Preferred stylist, colour formulas, and visit history stay with you, so the next appointment is one tap away.",
+        },
+      ],
+      metaDescription:
+        "White-label booking for hair salons and barbershops on your own website. Per-stylist scheduling, deposits for no-show protection, and client history you own.",
+    },
   ],
   index: {
     eyebrow: "Industries",
@@ -386,6 +429,49 @@ const pt: IndustriesStrings = {
       ],
       metaDescription:
         "Reserva direta de tours, provas e experiências no seu próprio site. Sessões com gestão de lotação, sem comissões de marketplace.",
+    },
+    {
+      slug: "salons-barbers",
+      label: "Cabeleireiros e barbearias",
+      themeId: "salon",
+      icon: "scissors",
+      cardBlurb:
+        "Marcações com o aspeto do seu salão, não de uma app — com sinais e remarcação que mantêm as cadeiras cheias.",
+      hero: {
+        headline: "Marcações à medida da sua cadeira.",
+        subhead:
+          "Salões e barbearias recebem um fluxo de marcações no seu próprio site, com a sua marca, sinais, agenda por profissional e sem comissões nem taxas por marcação.",
+      },
+      painPoints: [
+        {
+          title: "As apps ficam com os seus clientes",
+          body: "As apps de marcações colocam o seu espaço ao lado de todos os concorrentes, levam uma fatia de cada marcação e guardam os dados do cliente para si.",
+        },
+        {
+          title: "As faltas deixam a cadeira vazia",
+          body: "Uma cadeira vazia é tempo que não se vende duas vezes. Sem sinais e lembretes, uma falta é receita perdida.",
+        },
+        {
+          title: "O telefone toca a meio do corte",
+          body: "Aceitar marcações por telefone obriga a parar a meio do serviço, e as chamadas fora de horas ficam muitas vezes sem resposta.",
+        },
+      ],
+      highlights: [
+        {
+          title: "Agenda por profissional",
+          body: "Durações de serviço, disponibilidade por profissional e por cadeira e tempos de intervalo, tudo gerido de forma limpa nos bastidores.",
+        },
+        {
+          title: "Sinais e proteção contra faltas",
+          body: "Receba um sinal ou garantia de cartão na marcação, com janelas de cancelamento que mantêm a sua agenda a render.",
+        },
+        {
+          title: "Remarcação e histórico de cliente",
+          body: "Profissional preferido, fórmulas de cor e histórico de visitas ficam consigo, para que a próxima marcação fique a um toque.",
+        },
+      ],
+      metaDescription:
+        "Marcações white-label para cabeleireiros e barbearias no seu próprio site. Agenda por profissional, sinais contra faltas e histórico de cliente que é seu.",
     },
   ],
   index: {

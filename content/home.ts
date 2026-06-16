@@ -79,7 +79,7 @@ const en = {
   industriesPreview: {
     title: "Built for the way you host.",
     subhead:
-      "Whether you take table reservations, room bookings, treatments, or tour departures, Guest Overflow adapts to how your business actually works.",
+      "Whether you take table reservations, room bookings, treatments, appointments, or tour departures, Guest Overflow adapts to how your business actually works.",
     explore: "Explore →",
   },
   noWebsite: {
@@ -107,9 +107,9 @@ const en = {
     body: "Start with three months at half price. If you don't see real return or real usage through your website or your Google Business Profile in that time, you can end the relationship cleanly, no questions asked and no hard feelings. We'd rather part as friends than keep a client who isn't winning.",
   },
   builtFor: {
-    line: "Built for independent restaurants, boutique hotels, spas, and tour operators.",
+    line: "Built for independent restaurants, boutique hotels, spas, salons, and tour operators.",
     credibility:
-      "We're the team at MoggingLabs, and we've spent years building high-converting websites for hospitality businesses. Guest Overflow is everything our clients kept asking for.",
+      "We've spent years building high-converting websites for hospitality businesses. Guest Overflow is everything our clients kept asking for.",
   },
   faqTitle: "Questions, answered.",
   problemsEyebrow: "The problem",
@@ -202,7 +202,7 @@ const pt: typeof en = {
   industriesPreview: {
     title: "Feito para a forma como recebe.",
     subhead:
-      "Quer trabalhe com reservas de mesa, quartos, tratamentos ou partidas de tours, o Guest Overflow adapta-se à forma como o seu negócio realmente funciona.",
+      "Quer trabalhe com reservas de mesa, quartos, tratamentos, marcações ou partidas de tours, o Guest Overflow adapta-se à forma como o seu negócio realmente funciona.",
     explore: "Explorar →",
   },
   noWebsite: {
@@ -230,9 +230,9 @@ const pt: typeof en = {
     body: "Comece com três meses a metade do preço. Se nesse período não vir retorno nem utilização reais através do seu site ou do seu Perfil de Empresa no Google, pode terminar a relação de forma limpa, sem perguntas e sem ressentimentos. Preferimos despedir-nos como amigos a manter um cliente que não está a ganhar.",
   },
   builtFor: {
-    line: "Feito para restaurantes independentes, hotéis boutique, spas e operadores de tours.",
+    line: "Feito para restaurantes independentes, hotéis boutique, spas, cabeleireiros e operadores de tours.",
     credibility:
-      "Somos a equipa da MoggingLabs e passámos anos a construir sites de alta conversão para negócios de hotelaria e restauração. O Guest Overflow é tudo o que os nossos clientes nos pediam.",
+      "Passámos anos a construir sites de alta conversão para negócios de hotelaria e restauração. O Guest Overflow é tudo o que os nossos clientes nos pediam.",
   },
   faqTitle: "Perguntas, respondidas.",
   problemsEyebrow: "O problema",

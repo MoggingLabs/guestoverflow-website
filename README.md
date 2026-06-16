@@ -1,12 +1,12 @@
 # Guest Overflow — sales website
 
 Marketing and lead-generation website for **Guest Overflow**, a white-label
-online booking platform for restaurants, hotels, spas, and experience
-businesses. Built by [MoggingLabs](https://github.com/MoggingLabs).
+online booking platform for restaurants, hotels, spas, salons, and experience
+businesses.
 
 The centerpiece is a **live interactive booking widget** (`components/widget/`)
 — a fully client-side mock of the product that prospects can try on the page,
-with four venue themes demonstrating the white-label pitch.
+with five venue themes demonstrating the white-label pitch.
 
 ## Stack
 

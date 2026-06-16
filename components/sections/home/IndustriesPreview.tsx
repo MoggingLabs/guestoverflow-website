@@ -22,7 +22,7 @@ export async function IndustriesPreview() {
             subhead={t.industriesPreview.subhead}
           />
         </Reveal>
-        <Reveal stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {industries.map((industry) => (
             <Link
               key={industry.slug}

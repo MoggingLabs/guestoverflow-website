@@ -6,10 +6,9 @@ export const site = {
   name: "Guest Overflow",
   tagline: "Booking that belongs on your website.",
   description:
-    "Guest Overflow is a white-label reservation system for restaurants, hotels, spas, and experiences. We design it into your own website, matched to your brand, and every guest relationship stays yours.",
+    "Guest Overflow is a white-label reservation system for restaurants, hotels, spas, salons, and experiences. We design it into your own website, matched to your brand, and every guest relationship stays yours.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow.com",
   email: "hello@guestoverflow.app",
-  company: "MoggingLabs",
   cta: {
     primary: { label: "Book a demo", href: "/book-a-demo" },
     secondary: { label: "Try the live demo", href: "/#live-demo" },
@@ -56,6 +55,7 @@ const en: SiteStrings = {
         { label: "Hotels", href: "/industries/hotels" },
         { label: "Spas & wellness", href: "/industries/spas-wellness" },
         { label: "Tours & experiences", href: "/industries/tours-experiences" },
+        { label: "Salons & barbers", href: "/industries/salons-barbers" },
       ],
     },
     {
@@ -74,8 +74,8 @@ const en: SiteStrings = {
     },
   ],
   footerBlurb:
-    "White-label online booking for restaurants, hotels, spas, and experiences.",
-  footerProductOf: "a MoggingLabs product",
+    "White-label online booking for restaurants, hotels, spas, salons, and experiences.",
+  footerProductOf: "all rights reserved",
 };
 
 const pt: SiteStrings = {
@@ -106,6 +106,7 @@ const pt: SiteStrings = {
         { label: "Hotéis", href: "/industries/hotels" },
         { label: "Spas e bem-estar", href: "/industries/spas-wellness" },
         { label: "Tours e experiências", href: "/industries/tours-experiences" },
+        { label: "Cabeleireiros e barbearias", href: "/industries/salons-barbers" },
       ],
     },
     {
@@ -124,8 +125,8 @@ const pt: SiteStrings = {
     },
   ],
   footerBlurb:
-    "Reservas online white-label para restaurantes, hotéis, spas e experiências.",
-  footerProductOf: "um produto MoggingLabs",
+    "Reservas online white-label para restaurantes, hotéis, spas, cabeleireiros e experiências.",
+  footerProductOf: "todos os direitos reservados",
 };
 
 export const siteStrings: Record<Locale, SiteStrings> = { en, pt };

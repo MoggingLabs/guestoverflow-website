@@ -2,7 +2,7 @@ import type { VenueTheme, VenueThemeId } from "@/types/content";
 import type { Locale } from "@/lib/i18n-shared";
 
 /**
- * The four fictional venues that power the white-label demo. Each theme
+ * The five fictional venues that power the white-label demo. Each theme
  * restyles the same widget via CSS custom properties. The spa theme is
  * deliberately light to prove the engine isn't dark-only.
  */
@@ -43,6 +43,16 @@ const COLORS: Record<VenueThemeId, VenueTheme["colors"]> = {
     muted: "#a08b91",
     line: "#332128",
   },
+  // Slate / steel-blue, tuned cooler & greyer than the hotel theme so the two demos stay distinct.
+  salon: {
+    bg: "#12161b",
+    surface: "#1b212a",
+    accent: "#6f97ad",
+    accentText: "#0c1116",
+    text: "#e9eef2",
+    muted: "#8a96a3",
+    line: "#283039",
+  },
 };
 
 const SLOTS: Record<VenueThemeId, VenueTheme["slots"]> = {
@@ -50,6 +60,7 @@ const SLOTS: Record<VenueThemeId, VenueTheme["slots"]> = {
   hotel: { open: 14, close: 20, intervalMin: 60 },
   spa: { open: 9, close: 19, intervalMin: 60 },
   "wine-bar": { open: 17, close: 24, intervalMin: 30 },
+  salon: { open: 9, close: 19, intervalMin: 30 },
 };
 
 const en: VenueTheme[] = [
@@ -101,6 +112,18 @@ const en: VenueTheme[] = [
     colors: COLORS["wine-bar"],
     slots: SLOTS["wine-bar"],
   },
+  {
+    id: "salon",
+    label: "Salon",
+    venueName: "Fade & Bloom",
+    tagline: "Cuts, colour & classic shaves",
+    unitLabel: "Guests",
+    unitOptions: [1, 2],
+    ctaLabel: "Book appointment",
+    confirmationNote: "Please arrive 5 minutes early. Let us know if you're running late and we'll hold your chair.",
+    colors: COLORS.salon,
+    slots: SLOTS.salon,
+  },
 ];
 
 const pt: VenueTheme[] = [
@@ -151,6 +174,18 @@ const pt: VenueTheme[] = [
     confirmationNote: "Sem reserva é no balcão. Os lugares reservados são no balcão de provas.",
     colors: COLORS["wine-bar"],
     slots: SLOTS["wine-bar"],
+  },
+  {
+    id: "salon",
+    label: "Cabeleireiro",
+    venueName: "Fade & Bloom",
+    tagline: "Cortes, cor e barbas clássicas",
+    unitLabel: "Pessoas",
+    unitOptions: [1, 2],
+    ctaLabel: "Marcar hora",
+    confirmationNote: "Chegue 5 minutos antes. Avise-nos se se atrasar e guardamos a sua vez.",
+    colors: COLORS.salon,
+    slots: SLOTS.salon,
   },
 ];
 

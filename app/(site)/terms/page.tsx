@@ -30,7 +30,7 @@ export default async function TermsPage() {
         This website is operated by [LEGAL ENTITY NAME], a company registered
         in Portugal, commercial registry and NIPC number [NUMBER], with
         registered office at [REGISTERED ADDRESS] (&quot;we&quot;,
-        &quot;us&quot;, &quot;MoggingLabs&quot;). Guest Overflow is our trade name
+        &quot;us&quot;). Guest Overflow is our trade name
         for the services described on this website. Contact:{" "}
         <a href={`mailto:${site.email}`} className="text-amber underline underline-offset-2">
           {site.email}

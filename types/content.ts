@@ -49,7 +49,7 @@ export type PricingTier = {
   featured?: boolean;
 };
 
-export type VenueThemeId = "fine-dining" | "hotel" | "spa" | "wine-bar";
+export type VenueThemeId = "fine-dining" | "hotel" | "spa" | "wine-bar" | "salon";
 
 export type VenueTheme = {
   id: VenueThemeId;
@@ -79,6 +79,7 @@ export type IconName =
   | "bed"
   | "leaf"
   | "compass"
+  | "scissors"
   | "brand"
   | "commission"
   | "data"

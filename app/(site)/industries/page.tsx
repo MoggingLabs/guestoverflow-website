@@ -11,7 +11,7 @@ import { getLocale } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "Guest Overflow powers custom online booking for restaurants, hotels, spas, and tour operators, with one system shaped to each business.",
+    "Guest Overflow powers custom online booking for restaurants, hotels, spas, salons, and tour operators, with one system shaped to each business.",
 };
 
 export default async function IndustriesPage() {

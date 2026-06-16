@@ -15,7 +15,7 @@ const en: AboutContent = {
     eyebrow: "About",
     headline: "Built by the people who build hospitality websites.",
     subhead:
-      'Guest Overflow comes from MoggingLabs, a studio that has spent years crafting high-converting websites for restaurants, contractors, and local businesses. Every client conversation ended the same way: "can the booking look like the rest of the site?" Now it can.',
+      'Guest Overflow comes from a team that has spent years crafting high-converting websites for restaurants, contractors, and local businesses. Every client conversation ended the same way: "can the booking look like the rest of the site?" Now it can.',
   },
   story: {
     title: "Why Guest Overflow exists",
@@ -50,7 +50,7 @@ const pt: AboutContent = {
     eyebrow: "Sobre nós",
     headline: "Feito por quem constrói sites para hotelaria e restauração.",
     subhead:
-      "O Guest Overflow nasce da MoggingLabs, um estúdio que passou anos a criar sites de alta conversão para restaurantes e negócios locais. Todas as conversas com clientes acabavam da mesma forma: “a reserva pode ficar com o aspeto do resto do site?” Agora pode.",
+      "O Guest Overflow nasce de uma equipa que passou anos a criar sites de alta conversão para restaurantes e negócios locais. Todas as conversas com clientes acabavam da mesma forma: “a reserva pode ficar com o aspeto do resto do site?” Agora pode.",
   },
   story: {
     title: "Porque é que o Guest Overflow existe",
