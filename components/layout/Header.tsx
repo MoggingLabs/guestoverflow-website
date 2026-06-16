@@ -59,7 +59,7 @@ export function Header() {
         >
           <div
             className={cn(
-              "relative flex items-center justify-between gap-3 px-4 transition-[height] duration-[450ms] md:px-6",
+              "flex items-center justify-between gap-3 px-4 transition-[height] duration-[450ms] md:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr]",
               EASE,
               island ? "h-14" : "h-16",
             )}
@@ -67,14 +67,14 @@ export function Header() {
             <Link
               href="/"
               aria-label="Guest Overflow home"
-              className="shrink-0"
+              className="shrink-0 lg:justify-self-start"
             >
               <Logo />
             </Link>
 
             <nav
               aria-label="Main"
-              className="absolute inset-y-0 left-1/2 hidden -translate-x-1/2 items-center gap-0.5 lg:flex"
+              className="hidden items-center justify-center gap-0.5 lg:flex"
             >
               {t.navLinks.map((link) => {
                 const active = pathname.startsWith(link.href);
@@ -95,7 +95,7 @@ export function Header() {
               })}
             </nav>
 
-            <div className="hidden shrink-0 items-center gap-2 lg:flex">
+            <div className="hidden items-center gap-2 lg:flex lg:justify-self-end">
               <LanguageToggle />
               <Button
                 href={t.cta.tertiary.href}
