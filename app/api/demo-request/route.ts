@@ -33,6 +33,7 @@ async function sendEmails(lead: {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.LEAD_FROM_EMAIL;
   const notify = process.env.LEAD_NOTIFY_EMAIL;
+  const replyTo = process.env.LEAD_REPLY_TO;
   if (!apiKey || !from) return;
 
   const { Resend } = await import("resend");
@@ -47,6 +48,7 @@ async function sendEmails(lead: {
     await resend.emails.send({
       from,
       to: notify,
+      replyTo: lead.email,
       subject: `New demo request — ${lead.businessName} (${lead.businessType})`,
       text: [
         `Name: ${lead.name}`,
@@ -63,6 +65,7 @@ async function sendEmails(lead: {
   await resend.emails.send({
     from,
     to: lead.email,
+    ...(replyTo ? { replyTo } : {}),
     subject: "Your Guest Overflow demo request",
     text: `Hi ${lead.name.split(" ")[0]},
 
