@@ -97,7 +97,7 @@ const en: SiteStrings = {
 
 const pt: SiteStrings = {
   cta: {
-    primary: { label: "Marcar demonstração", href: "/book-a-demo" },
+    primary: { label: "Marcar demo", href: "/book-a-demo" },
     secondary: { label: "Experimentar a demo", href: "/#live-demo" },
     tertiary: { label: "Começar grátis", href: "/book-a-demo?intent=trial" },
   },
@@ -143,7 +143,7 @@ const pt: SiteStrings = {
         { label: "Sobre nós", href: "/about" },
         { label: "Comparar", href: "/compare" },
         { label: "Mudar do Quandoo", href: "/quandoo" },
-        { label: "Marcar demonstração", href: "/book-a-demo" },
+        { label: "Marcar demo", href: "/book-a-demo" },
       ],
     },
     {
