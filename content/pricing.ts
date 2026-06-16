@@ -37,9 +37,9 @@ const en: PricingContent = {
       name: "Essential",
       monthlyEur: 99,
       priceNote: "For a single venue getting started",
-      blurb: "The branded booking widget on your site, with the core toolkit.",
+      blurb: "The branded booking page on your site, with the core toolkit.",
       features: [
-        "White-label booking widget on your website",
+        "White-label booking page on your website",
         "Real-time availability & capacity management",
         "Branded confirmations & reminders",
         "Guest list with full export",
@@ -141,9 +141,9 @@ const pt: PricingContent = {
       name: "Essential",
       monthlyEur: 99,
       priceNote: "Para um espaço a começar",
-      blurb: "O widget de reservas com a sua marca no seu site, com as ferramentas essenciais.",
+      blurb: "A página de reservas com a sua marca no seu site, com as ferramentas essenciais.",
       features: [
-        "Widget de reservas white-label no seu site",
+        "Página de reservas white-label no seu site",
         "Disponibilidade e capacidade geridas em tempo real",
         "Confirmações e lembretes com a sua marca",
         "Lista de clientes com exportação completa",

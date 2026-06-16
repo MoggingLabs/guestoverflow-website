@@ -31,7 +31,7 @@ const en: FaqContent = {
     {
       question: "Who owns the guest data?",
       answer:
-        "You do, unambiguously. Every booking, email, and preference collected through your widget belongs to your business and is exportable at any time. We never market to your guests or share their data.",
+        "You do, unambiguously. Every booking, email, and preference collected through your booking page belongs to your business and is exportable at any time. We never market to your guests or share their data.",
     },
     {
       question: "Can it match my brand exactly?",
@@ -160,7 +160,7 @@ const pt: FaqContent = {
     {
       question: "De quem são os dados dos clientes?",
       answer:
-        "Seus, sem ambiguidade. Cada reserva, email e preferência recolhidos através do seu widget pertencem ao seu negócio e podem ser exportados a qualquer momento. Nunca fazemos marketing aos seus clientes nem partilhamos os seus dados.",
+        "Seus, sem ambiguidade. Cada reserva, email e preferência recolhidos através da sua página de reservas pertencem ao seu negócio e podem ser exportados a qualquer momento. Nunca fazemos marketing aos seus clientes nem partilhamos os seus dados.",
     },
     {
       question: "Consegue ficar exatamente com a minha marca?",

@@ -36,7 +36,7 @@ export default async function BookADemoPage() {
           </Reveal>
 
           <div className="mt-16 grid gap-14 lg:grid-cols-2 lg:gap-16">
-            {/* Left: what to expect + the live widget to play with */}
+            {/* Left: what to expect + the live booking page to play with */}
             <div className="space-y-12">
               <Reveal>
                 <h2 className="font-display text-xl font-medium text-cream">

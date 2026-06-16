@@ -18,8 +18,8 @@ const en: DemoContent = {
     title: "What to expect",
     items: [
       {
-        title: "The widget, live",
-        body: "We walk through a real booking flow themed to a venue like yours, then talk through what your own version would look like.",
+        title: "Your booking page, live",
+        body: "We walk through a real booking page tailored to a venue like yours, then talk through how yours would work.",
       },
       {
         title: "Your setup, scoped",
@@ -35,8 +35,8 @@ const en: DemoContent = {
     "There's no commitment. If we do work together, you start with three months at half price and a clean way out if it isn't earning its keep. We'll confirm your slot within one business day.",
   tryWidget: {
     title: "Try it while you're here",
-    body: "This is the widget we'll theme for your venue. Make a booking, switch the style.",
-    caption: "One booking system, styled to match each venue.",
+    body: "This is the booking page we'll build for your venue. Make a booking, switch the venue type.",
+    caption: "One booking engine, tailored to each operation.",
   },
 };
 
@@ -49,8 +49,8 @@ const pt: DemoContent = {
     title: "O que esperar",
     items: [
       {
-        title: "O widget, ao vivo",
-        body: "Percorremos um fluxo de reserva real com o tema de um espaço como o seu e conversamos sobre como ficaria a sua própria versão.",
+        title: "A sua página de reservas, ao vivo",
+        body: "Percorremos uma página de reservas real, à medida de um espaço como o seu, e conversamos sobre como ficaria a sua.",
       },
       {
         title: "A sua instalação, definida",
@@ -66,8 +66,8 @@ const pt: DemoContent = {
     "Não há compromisso. Se viermos a trabalhar juntos, começa com três meses a metade do preço e uma saída limpa se não estiver a compensar. Confirmamos o seu horário no prazo de um dia útil.",
   tryWidget: {
     title: "Experimente enquanto está aqui",
-    body: "Este é o widget que vamos adaptar ao seu espaço. Faça uma reserva, mude o estilo.",
-    caption: "Um único sistema de reservas, à medida de cada espaço.",
+    body: "Esta é a página de reservas que vamos construir para o seu espaço. Faça uma reserva, mude o tipo de espaço.",
+    caption: "Um único motor de reservas, à medida de cada operação.",
   },
 };
 

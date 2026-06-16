@@ -13,7 +13,7 @@ import { getLocale } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Switch from Quandoo before it closes",
   description:
-    "Quandoo shuts down in December 2026. Guest Overflow migrates your bookings and guest data for free, onto a commission-free booking widget you own.",
+    "Quandoo shuts down in December 2026. Guest Overflow migrates your bookings and guest data for free, onto a commission-free booking page you own.",
 };
 
 export default async function QuandooPage() {

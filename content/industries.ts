@@ -26,9 +26,9 @@ const pricingLadder = {
     starter: {
       name: "Starter",
       note: "Self-serve. You set it up",
-      blurb: "The branded booking widget on your own site, live today. No setup call.",
+      blurb: "The branded booking page on your own site, live today. No setup call.",
       features: [
-        "White-label booking widget on your website",
+        "White-label booking page on your website",
         "Real-time availability & capacity",
         "Email confirmations & reminders",
         "Guest list with full export",
@@ -84,9 +84,9 @@ const pricingLadder = {
     starter: {
       name: "Starter",
       note: "Self-service. Instala você",
-      blurb: "O widget de reservas com a sua marca, no seu site, a funcionar hoje. Sem chamada de instalação.",
+      blurb: "A página de reservas com a sua marca, no seu site, a funcionar hoje. Sem chamada de instalação.",
       features: [
-        "Widget de reservas white-label no seu site",
+        "Página de reservas white-label no seu site",
         "Disponibilidade e capacidade em tempo real",
         "Confirmações e lembretes por email",
         "Lista de clientes com exportação completa",
@@ -173,7 +173,7 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
         body: "A 20-room hotel at €120 a night hands Booking €50,000-63,000 a year in commission. Shift even a fifth of those stays to direct and you keep over €10,000. All for a flat fee that never moves and runs on your own Stripe, with no payment take-rate.",
       },
       starterNote: "For Alojamento Local, 1-3 units",
-      starterBlurb: "A white-label direct-booking widget for your AL, so guests book you, not the OTA.",
+      starterBlurb: "A white-label direct-booking page for your AL, so guests book you, not the OTA.",
     },
     "spas-wellness": {
       valueUnit: "treatment",
@@ -232,7 +232,7 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
         body: "Um hotel de 20 quartos a 120 € por noite entrega à Booking 50.000 a 63.000 € por ano em comissão. Passe apenas um quinto dessas estadias para reserva direta e fica com mais de 10.000 €. É um valor fixo que não muda e corre no seu próprio Stripe, sem margem nos pagamentos.",
       },
       starterNote: "Para Alojamento Local, 1 a 3 unidades",
-      starterBlurb: "Um widget de reserva direta white-label para o seu AL, para que os hóspedes reservem consigo, não na OTA.",
+      starterBlurb: "Uma página de reservas direta white-label para o seu AL, para que os hóspedes reservem consigo, não na OTA.",
     },
     "spas-wellness": {
       valueUnit: "tratamento",
@@ -571,7 +571,7 @@ const en: IndustriesStrings = {
     liveDemoEyebrow: "Live demo",
     liveDemoTitle: (venue) => `Try a booking at ${venue}.`,
     liveDemoSubhead:
-      "The venue is fictional, but the widget is real. This is how Guest Overflow would feel themed for your business.",
+      "The venue is fictional, but the booking page is real. This is how Guest Overflow would feel tailored to your business.",
     builtInEyebrow: "Built in",
     builtInTitle: (label) => `Guest Overflow for ${label.toLowerCase()}`,
     pricingEyebrow: "Pricing",
@@ -820,7 +820,7 @@ const pt: IndustriesStrings = {
     liveDemoEyebrow: "Demo ao vivo",
     liveDemoTitle: (venue) => `Experimente reservar no ${venue}.`,
     liveDemoSubhead:
-      "O espaço é fictício, mas o widget é real. É assim que o Guest Overflow se sentiria com o tema do seu negócio.",
+      "O espaço é fictício, mas a página de reservas é real. É assim que o Guest Overflow se sentiria à medida do seu negócio.",
     builtInEyebrow: "Incluído",
     builtInTitle: (label) => `Guest Overflow para ${label.toLowerCase()}`,
     pricingEyebrow: "Preços",

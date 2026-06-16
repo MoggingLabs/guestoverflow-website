@@ -14,7 +14,7 @@ const en: QuandooContent = {
     eyebrow: "Quandoo is closing",
     headline: "Quandoo shuts down in December 2026. Keep your bookings, and your guest data.",
     subhead:
-      "New bookings on Quandoo end in September 2026. When it closes, its terms mean your diner data goes with it. We'll move you across for free, onto a booking widget you own, with no commission, ever.",
+      "New bookings on Quandoo end in September 2026. When it closes, its terms mean your diner data goes with it. We'll move you across for free, onto a booking page you own, with no commission, ever.",
   },
   stakes: {
     title: "What happens when Quandoo closes",
@@ -28,7 +28,7 @@ const en: QuandooContent = {
     },
     {
       title: "We rebuild it on your site",
-      body: "Your branded booking widget goes live on your own website, themed to your restaurant, with no per-cover fee.",
+      body: "Your branded booking page goes live on your own website, themed to your restaurant, with no per-cover fee.",
     },
     {
       title: "You keep everyone",
@@ -47,7 +47,7 @@ const pt: QuandooContent = {
     eyebrow: "O Quandoo vai fechar",
     headline: "O Quandoo encerra em dezembro de 2026. Fique com as suas reservas e com os dados dos seus clientes.",
     subhead:
-      "As novas reservas no Quandoo terminam em setembro de 2026. Quando fechar, os seus termos significam que os dados dos clientes vão com ele. Mudamo-lo de graça para um widget de reservas que é seu, sem comissão, nunca.",
+      "As novas reservas no Quandoo terminam em setembro de 2026. Quando fechar, os seus termos significam que os dados dos clientes vão com ele. Mudamo-lo de graça para uma página de reservas que é sua, sem comissão, nunca.",
   },
   stakes: {
     title: "O que acontece quando o Quandoo fechar",
@@ -61,7 +61,7 @@ const pt: QuandooContent = {
     },
     {
       title: "Reconstruímos no seu site",
-      body: "O seu widget de reservas com a sua marca fica online no seu próprio site, à imagem do seu restaurante, sem taxa por pessoa.",
+      body: "A sua página de reservas com a sua marca fica online no seu próprio site, à imagem do seu restaurante, sem taxa por pessoa.",
     },
     {
       title: "Fica com toda a gente",
