@@ -20,7 +20,7 @@ const en: ServicesContent = {
     eyebrow: "Services",
     headline: "Help clients find your booking page.",
     subhead:
-      "We cannot manufacture demand the way a marketplace like Fresha or Booksy does, and we will not claim otherwise. What we do is help the right clients find your salon on your own terms, and then direct them straight to your booking page, with no commission in between.",
+      "We bring the right clients straight to your own booking system, on your own terms, with no commission in between. Rather than renting visibility from a marketplace like Fresha or Booksy, you get found through Google, your brand, and word of mouth, and every client you win stays yours.",
   },
   services: [
     {
@@ -57,7 +57,7 @@ const pt: ServicesContent = {
     eyebrow: "Serviços",
     headline: "Ajude os clientes a encontrar a sua página de reservas.",
     subhead:
-      "Não conseguimos gerar procura como um marketplace como a Fresha ou a Booksy, e não pretendemos afirmar o contrário. O que fazemos é ajudar os clientes certos a encontrar o seu salão nos seus próprios termos, e encaminhá-los diretamente para a sua página de reservas, sem comissão pelo meio.",
+      "Levamos os clientes certos diretamente para o seu próprio sistema de reservas, nos seus próprios termos e sem comissão pelo meio. Em vez de alugar visibilidade a um marketplace como a Fresha ou a Booksy, é encontrado através do Google, da sua marca e do passa-a-palavra, e cada cliente que conquista permanece seu.",
   },
   services: [
     {

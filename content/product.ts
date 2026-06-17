@@ -39,7 +39,7 @@ const en: ProductContent = {
     {
       icon: "shield",
       title: "Deposits & no-show protection",
-      body: "Card guarantees and deposits for the appointments that are most costly to lose, paid into your own Stripe account, with policies you control per service and appointment. Clients pay in the manner they already use, with MB WAY, Multibanco, and card, and deposits appear on the final bill rather than in a separate spreadsheet.",
+      body: "Card guarantees and deposits for the appointments that are most costly to lose, paid into your own account, with policies you control per service and appointment. Clients pay in the manner they already use, with MB WAY, Multibanco, and card, and deposits appear on the final bill rather than in a separate spreadsheet.",
     },
     {
       icon: "bell",
@@ -57,7 +57,7 @@ const en: ProductContent = {
     title: "Your client data is yours, and it stays that way.",
     body: "Marketplace platforms like Fresha and Booksy built very large businesses on data that salons and barbershops generated for them. Guest Overflow is structured so that this cannot occur here: your appointments and your clients reside in your account, and you can export everything at any time. We charge for the software, nothing more.",
     points: [
-      "You own everything: your site, your domain, your client data, your Stripe account",
+      "You own everything: your site, your domain, your client data, your payment account",
       "Full data export, at any time, without conditions",
       "No marketing to your clients, ever",
       "Client data on EU servers, under a Portuguese-law contract, GDPR by design",
@@ -98,7 +98,7 @@ const pt: ProductContent = {
     {
       icon: "shield",
       title: "Sinais e proteção contra faltas",
-      body: "Garantias de cartão e sinais para as marcações que mais custam a perder, pagos diretamente na sua conta Stripe, com regras que controla por serviço e por marcação. Os clientes pagam da forma a que já estão habituados, com MB WAY, Multibanco e cartão, e os sinais aparecem na conta final, não numa folha à parte.",
+      body: "Garantias de cartão e sinais para as marcações que mais custam a perder, pagos diretamente na sua conta, com regras que controla por serviço e por marcação. Os clientes pagam da forma a que já estão habituados, com MB WAY, Multibanco e cartão, e os sinais aparecem na conta final, não numa folha à parte.",
     },
     {
       icon: "bell",
@@ -116,7 +116,7 @@ const pt: ProductContent = {
     title: "Os dados dos seus clientes são seus, e assim permanecem.",
     body: "As plataformas-marketplace como a Fresha e a Booksy construíram negócios enormes com dados que salões e barbearias geraram para elas. O Guest Overflow foi estruturado para que isso não possa acontecer aqui: as suas marcações e os seus clientes residem na sua conta, e pode exportar tudo a qualquer momento. Cobramos pelo software, nada mais.",
     points: [
-      "É dono de tudo: o seu site, o seu domínio, os dados dos clientes, a sua conta Stripe",
+      "É dono de tudo: o seu site, o seu domínio, os dados dos clientes, a sua conta de pagamentos",
       "Exportação completa dos dados, a qualquer momento, sem condições",
       "Nunca fazemos marketing aos seus clientes",
       "Dados em servidores na UE, contrato sob lei portuguesa, RGPD desde a base",

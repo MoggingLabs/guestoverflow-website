@@ -4,7 +4,7 @@ import { PageHero } from "@/components/sections/shared/PageHero";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
-import { SHOW_CALCULATOR } from "@/lib/features";
+import { SHOW_CALCULATOR, SHOW_FOUNDING_OFFER } from "@/lib/features";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -93,9 +93,10 @@ export default async function PricingPage() {
         </section>
       )}
 
-      {/* Founding offer */}
+      {/* Founding offer (stashed) + getting-found / transparency cards */}
       <section className="pb-24 md:pb-32">
         <Container>
+          {SHOW_FOUNDING_OFFER && (
           <Reveal>
             <div className="relative overflow-hidden rounded-lg border border-amber-deep/60 bg-surface p-9 text-center shadow-glow md:p-12">
               <Badge>{t.foundingPartner.badge}</Badge>
@@ -126,6 +127,7 @@ export default async function PricingPage() {
               </p>
             </div>
           </Reveal>
+          )}
 
           <Reveal className="mt-16 grid gap-5 lg:grid-cols-2">
             <div className="rounded-lg border border-line bg-surface p-8 shadow-card">

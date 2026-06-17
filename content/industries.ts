@@ -27,9 +27,9 @@ const pricingLadder = {
     starter: {
       name: "Starter",
       note: "Self-service. You complete the configuration",
-      blurb: "The branded booking page on your own site, operational today. No setup call is required.",
+      blurb: "Your own branded booking page, live on your own domain today. No setup call is required.",
       features: [
-        "White-label booking page on your website",
+        "White-label booking page on your own domain",
         "Real-time availability & capacity",
         "Email confirmations & reminders",
         "Guest list with full export",
@@ -54,7 +54,7 @@ const pricingLadder = {
       blurb: "Everything in Essential, with the addition of protection, analytics and a true white-label.",
       lead: [
         "Everything in Essential",
-        "Deposits & no-show protection via your own Stripe",
+        "Deposits & no-show protection into your own account",
         "Booking analytics & demand insights",
       ],
       tail: [
@@ -85,9 +85,9 @@ const pricingLadder = {
     starter: {
       name: "Starter",
       note: "Self-service. A instalação é da responsabilidade do cliente",
-      blurb: "A página de reservas com a sua marca, no seu site, em funcionamento hoje. Sem chamada de instalação.",
+      blurb: "A sua própria página de reservas com a sua marca, no seu domínio, em funcionamento hoje. Sem chamada de instalação.",
       features: [
-        "Página de reservas white-label no seu site",
+        "Página de reservas white-label no seu domínio",
         "Disponibilidade e capacidade em tempo real",
         "Confirmações e lembretes por email",
         "Lista de clientes com exportação completa",
@@ -112,7 +112,7 @@ const pricingLadder = {
       blurb: "Tudo o que está no Essential, com a adição de proteção, análise de dados e white-label verdadeiro.",
       lead: [
         "Tudo o que está no Essential",
-        "Sinais e proteção contra faltas pelo seu próprio Stripe",
+        "Sinais e proteção contra faltas pela sua própria conta",
         "Análise de reservas e tendências de procura",
       ],
       tail: [
@@ -555,7 +555,7 @@ const en: IndustriesStrings = {
         },
       ],
       metaDescription:
-        "White-label booking for hair salons and barbershops on your own website. Per-stylist scheduling, deposits for no-show protection, and client history you own.",
+        "White-label booking for hair salons and barbershops, on your own branded booking system. Per-stylist scheduling, deposits for no-show protection, and client history you own.",
       pricing: buildSectorPricing("en", "salons-barbers"),
     },
   ],
@@ -580,7 +580,7 @@ const en: IndustriesStrings = {
     pricingCalcCta: "Calculate your savings",
     comparisonFlat: "Flat, with no commission, ever.",
     seePricing: "See pricing",
-    footerHeadline: "Bring booking home to your website.",
+    footerHeadline: "Set up a booking system of your own.",
     footerSubhead: "See Guest Overflow themed for a salon like yours in a 20-minute demo.",
   },
 };
@@ -773,7 +773,7 @@ const pt: IndustriesStrings = {
       hero: {
         headline: "Marcações à medida da sua cadeira.",
         subhead:
-          "Salões e barbearias recebem um fluxo de marcações no seu próprio site, com a sua marca, sinais, agenda por profissional e sem comissões nem taxas por marcação.",
+          "Salões e barbearias recebem o seu próprio sistema de marcações, com a sua marca, sinais, agenda por profissional e sem comissões nem taxas por marcação.",
       },
       painPoints: [
         {
@@ -804,7 +804,7 @@ const pt: IndustriesStrings = {
         },
       ],
       metaDescription:
-        "Marcações white-label para cabeleireiros e barbearias no seu próprio site. Agenda por profissional, sinais contra faltas e histórico de cliente que é seu.",
+        "Marcações white-label para cabeleireiros e barbearias, no seu próprio sistema com a sua marca. Agenda por profissional, sinais contra faltas e histórico de cliente que é seu.",
       pricing: buildSectorPricing("pt", "salons-barbers"),
     },
   ],
@@ -829,7 +829,7 @@ const pt: IndustriesStrings = {
     pricingCalcCta: "Calcule a sua poupança",
     comparisonFlat: "Fixo, sem comissão, nunca.",
     seePricing: "Ver preços",
-    footerHeadline: "Traga as reservas de volta para o seu site.",
+    footerHeadline: "Monte o seu próprio sistema de reservas.",
     footerSubhead:
       "Veja o Guest Overflow com o tema de um salão como o seu numa demonstração de 20 minutos.",
   },

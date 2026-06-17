@@ -4,9 +4,9 @@ import type { Locale } from "@/lib/i18n-shared";
 const en = {
   hero: {
     eyebrow: "Booking software you own",
-    headline: "Your own booking page, built around how your salon runs.",
+    headline: "Your own booking system, built around how your salon runs.",
     subhead:
-      "We design a booking page around your services, your chairs, your hours, and your rules, on your brand and your domain. Clients book direct, you pay one flat price with no commission, and every client relationship remains yours.",
+      "We design and build a complete booking system around your services, your chairs, your hours, and your rules, on your own brand and domain. Clients book direct, you pay one flat price with no commission, and every client relationship remains yours.",
   },
   problems: {
     title: "There is no reason to send your clients elsewhere to book a cut or a colour.",
@@ -21,7 +21,7 @@ const en = {
       },
       {
         title: "The booking page is not yours",
-        body: "You have invested considerable care in your salon and your website, yet the moment clients go to book, they arrive on a generic page that bears no resemblance to your studio.",
+        body: "You have invested considerable care in your salon and your brand, yet the moment clients go to book, they arrive on a generic page that bears no resemblance to your studio.",
       },
     ],
   },
@@ -34,15 +34,15 @@ const en = {
   },
   howItWorks: {
     title: "Taking appointments within a matter of days.",
-    subhead: "You provide the salon, and we manage everything else, from design to installation.",
+    subhead: "You provide the salon, and we manage everything else, from design to launch.",
     steps: [
       {
-        title: "We integrate it into your site",
-        body: "Our team builds the booking experience to match your brand, from typography to tone of voice, and publishes it as your own branded booking page. You are never required to handle code.",
+        title: "We build your booking system",
+        body: "Our team designs and builds your booking system to match your brand, from typography to tone of voice, and launches it on your own domain. You are never required to handle code.",
       },
       {
         title: "Clients book in seconds",
-        body: "Clients pick a service, choose a stylist or barber, and select a time without leaving your site. The entire process performs equally well on a mobile device and on a laptop.",
+        body: "Clients pick a service, choose a stylist or barber, and select a time in a few taps. The entire process performs equally well on a mobile device and on a laptop.",
       },
       {
         title: "You own every appointment",
@@ -52,12 +52,12 @@ const en = {
   },
   differentiators: {
     title: "Why salons and barbershops choose Guest Overflow.",
-    ctaLine: "Book a demo and see it on your website",
+    ctaLine: "Book a demo and see your booking system",
     items: [
       {
         icon: "brand",
         title: "Genuinely yours",
-        body: "Guest Overflow operates on your domain and carries your brand. Clients book without leaving your site, and they never see our name.",
+        body: "Guest Overflow is your own booking system, on your domain and under your brand. Clients book with you directly, and they never see our name.",
       },
       {
         icon: "commission",
@@ -72,7 +72,7 @@ const en = {
       {
         icon: "concierge",
         title: "Concierge setup, individual results",
-        body: "We design, build, and install everything. You receive a founder as your direct contact, design revisions until the booking page genuinely matches your brand, and a quarterly review covering your bookings, no-shows, and repeat clients.",
+        body: "We design, build, and launch everything. You receive a founder as your direct contact, design revisions until the booking system genuinely matches your brand, and a quarterly review covering your bookings, no-shows, and repeat clients.",
       },
     ] as Differentiator[],
   },
@@ -103,8 +103,8 @@ const en = {
   },
   promiseStrip: {
     eyebrow: "How we work",
-    title: "Our promise: complete transparency.",
-    body: "Begin with three months at half price. If you do not observe genuine return or genuine usage through your website or your Google Business Profile during that period, you may conclude the engagement cleanly, without explanation and without obligation. We would prefer to conclude an engagement amicably than to retain a client who is not achieving results.",
+    title: "Our promise: a close relationship and real support.",
+    body: "We work as a true partner to your salon, not a faceless platform. You have a direct line to us whenever you need it, and we stay close to make sure your booking system keeps working for you. We want the best for our clients, and we measure our success by yours.",
   },
   builtFor: {
     line: "Built for independent salons, hair salons, barbershops, and beauty studios.",
@@ -131,18 +131,18 @@ const en = {
   whyEyebrow: "Why Guest Overflow",
   industriesEyebrow: "Industries",
   footerCta: {
-    headline: "Ready to take bookings on your own website?",
+    headline: "Ready to set up your full booking system?",
     subhead:
-      "See Guest Overflow running on a site like yours. The demonstration takes 20 minutes, and there is no commitment.",
+      "See Guest Overflow set up for a salon like yours. The demonstration takes 20 minutes, and there is no commitment.",
   },
 };
 
 const pt: typeof en = {
   hero: {
     eyebrow: "Software de reservas que é seu",
-    headline: "A sua própria página de reservas, à medida de como o seu salão funciona.",
+    headline: "O seu próprio sistema de reservas, à medida de como o seu salão funciona.",
     subhead:
-      "Desenhamos uma página de reservas à volta dos seus serviços, das suas cadeiras, dos seus horários e das suas regras, com a sua marca e no seu domínio. Os clientes marcam diretamente, paga um valor fixo sem comissões, e cada relação com o cliente permanece sua.",
+      "Desenhamos e construímos um sistema de reservas completo à volta dos seus serviços, das suas cadeiras, dos seus horários e das suas regras, com a sua marca e no seu domínio. Os clientes marcam diretamente, paga um valor fixo sem comissões, e cada relação com o cliente permanece sua.",
   },
   problems: {
     title: "Não há motivo para encaminhar os seus clientes para outro lugar para marcarem um corte ou uma cor.",
@@ -157,7 +157,7 @@ const pt: typeof en = {
       },
       {
         title: "A página de reservas não é sua",
-        body: "Investiu seriamente no seu salão e no seu site, mas no momento de marcar os clientes deparam-se com uma página genérica que em nada se assemelha ao seu estúdio.",
+        body: "Investiu seriamente no seu salão e na sua marca, mas no momento de marcar os clientes deparam-se com uma página genérica que em nada se assemelha ao seu estúdio.",
       },
     ],
   },
@@ -170,15 +170,15 @@ const pt: typeof en = {
   },
   howItWorks: {
     title: "A receber marcações no prazo de poucos dias.",
-    subhead: "O cliente fornece o salão, e nós tratamos de tudo o resto, do design à instalação.",
+    subhead: "O cliente fornece o salão, e nós tratamos de tudo o resto, do design ao lançamento.",
     steps: [
       {
-        title: "Integramos tudo dentro do seu site",
-        body: "A nossa equipa constrói a experiência de marcação à medida da sua marca, da tipografia ao tom de voz, e publica-a como a sua própria página de reservas com a sua marca. Nunca necessita de mexer em código.",
+        title: "Construímos o seu sistema de reservas",
+        body: "A nossa equipa desenha e constrói o seu sistema de reservas à medida da sua marca, da tipografia ao tom de voz, e lança-o no seu próprio domínio. Nunca necessita de mexer em código.",
       },
       {
         title: "Os clientes marcam em segundos",
-        body: "Escolhem o serviço, o profissional e a hora sem sair do seu site. Todo o processo funciona tão bem no telemóvel como no computador.",
+        body: "Escolhem o serviço, o profissional e a hora em poucos toques. Todo o processo funciona tão bem no telemóvel como no computador.",
       },
       {
         title: "Cada marcação é sua",
@@ -188,12 +188,12 @@ const pt: typeof en = {
   },
   differentiators: {
     title: "Porque é que os cabeleireiros e as barbearias escolhem o Guest Overflow.",
-    ctaLine: "Marque uma demonstração e veja-o no seu site",
+    ctaLine: "Marque uma demonstração e veja o seu sistema de reservas",
     items: [
       {
         icon: "brand",
         title: "Genuinamente seu",
-        body: "O Guest Overflow opera no seu domínio e apresenta a sua marca. Os clientes marcam sem sair do seu site, e nunca veem o nosso nome.",
+        body: "O Guest Overflow é o seu próprio sistema de reservas, no seu domínio e com a sua marca. Os clientes marcam consigo diretamente, e nunca veem o nosso nome.",
       },
       {
         icon: "commission",
@@ -208,7 +208,7 @@ const pt: typeof en = {
       {
         icon: "concierge",
         title: "Instalação concierge, resultados individuais",
-        body: "Desenhamos, construímos e instalamos tudo. Dispõe de um fundador como contacto direto, revisões de design até a página de reservas ficar verdadeiramente com a sua marca, e uma reunião trimestral sobre marcações, faltas e clientes habituais.",
+        body: "Desenhamos, construímos e lançamos tudo. Dispõe de um fundador como contacto direto, revisões de design até o sistema de reservas ficar verdadeiramente com a sua marca, e uma reunião trimestral sobre marcações, faltas e clientes habituais.",
       },
     ] as Differentiator[],
   },
@@ -239,8 +239,8 @@ const pt: typeof en = {
   },
   promiseStrip: {
     eyebrow: "Como trabalhamos",
-    title: "A nossa promessa: transparência total.",
-    body: "Comece com três meses a metade do preço. Se nesse período não verificar retorno nem utilização reais através do seu site ou do seu Perfil de Empresa no Google, pode terminar a colaboração de forma limpa, sem necessidade de justificação e sem qualquer obrigação. Preferimos concluir a colaboração de forma cordial a manter um cliente que não está a obter resultados.",
+    title: "A nossa promessa: uma relação próxima e apoio verdadeiro.",
+    body: "Trabalhamos como um verdadeiro parceiro do seu salão, não como uma plataforma sem rosto. Tem uma linha direta connosco sempre que precisar, e mantemo-nos próximos para garantir que o seu sistema de reservas continua a trabalhar para si. Queremos o melhor para os nossos clientes, e medimos o nosso sucesso pelo seu.",
   },
   builtFor: {
     line: "Feito para cabeleireiros independentes, salões de cabeleireiro, barbearias e estúdios de beleza.",
@@ -267,9 +267,9 @@ const pt: typeof en = {
   whyEyebrow: "Porquê o Guest Overflow",
   industriesEyebrow: "Setores",
   footerCta: {
-    headline: "Pronto para receber reservas no seu próprio site?",
+    headline: "Pronto para montar o seu sistema de reservas completo?",
     subhead:
-      "Veja o Guest Overflow a funcionar num site como o seu. A demonstração demora 20 minutos e não implica qualquer compromisso.",
+      "Veja o Guest Overflow configurado para um salão como o seu. A demonstração demora 20 minutos e não implica qualquer compromisso.",
   },
 };
 

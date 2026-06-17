@@ -29,7 +29,7 @@ const en: PromisesContent = {
     },
     {
       title: "No commission, no payment take-rate, ever",
-      body: "One flat price. Deposits run through your own Stripe account, so you retain your processor and your full rate.",
+      body: "One flat subscription, with no commission on your bookings and no margin on payments. Deposits run through your own account, so you keep your processor and your full rate. SMS reminders come with a monthly allowance, then transparent per-message pricing with no hidden margin, and email reminders are always free.",
       vs: "Fresha and Booksy take a cut of new-client bookings and 20-35% on the marketplace, plus a slice of every payment.",
     },
     {
@@ -71,7 +71,7 @@ const pt: PromisesContent = {
     },
     {
       title: "Sem comissão, sem margem nos pagamentos, nunca",
-      body: "Um preço fixo. Os sinais correm pela sua própria conta Stripe, por isso mantém o seu processador e a tarifa integral.",
+      body: "Uma subscrição fixa, sem comissão nas suas marcações e sem margem nos pagamentos. Os sinais correm pela sua própria conta, por isso mantém o seu processador e a tarifa integral. Os lembretes por SMS incluem um plafond mensal e, a partir daí, um preço por mensagem transparente e sem margem oculta, e os lembretes por email são sempre gratuitos.",
       vs: "A Fresha e a Booksy levam uma fatia das marcações de novos clientes e 20 a 35% no marketplace, além de uma parte de cada pagamento.",
     },
     {

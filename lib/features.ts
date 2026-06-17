@@ -13,3 +13,6 @@ export const SHOW_LIVE_DEMO: boolean = false;
 
 /** The savings / cost-of-commission calculator (CostCalculator). */
 export const SHOW_CALCULATOR: boolean = false;
+
+/** The founding-partner "three months at half price" launch offer. */
+export const SHOW_FOUNDING_OFFER: boolean = false;

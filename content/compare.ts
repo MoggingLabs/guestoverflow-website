@@ -123,7 +123,7 @@ const en: CompareContent = {
       ourAnswer: [
         "A flat price per venue, with no commission on a first visit at any time.",
         "Your client list, history and notes remain yours, with one-click export.",
-        "Deposits through your own Stripe account, with no marketplace share and no payment take-rate.",
+        "Deposits through your own account, with no marketplace share and no payment take-rate.",
       ],
     },
     {
@@ -246,7 +246,7 @@ const pt: CompareContent = {
       ourAnswer: [
         "Um preço fixo por espaço, sem comissão na primeira visita em momento algum.",
         "A sua lista de clientes, histórico e notas permanecem consigo, com exportação num clique.",
-        "Sinais pela sua própria conta Stripe, sem fatia do marketplace e sem margem nos pagamentos.",
+        "Sinais pela sua própria conta, sem fatia do marketplace e sem margem nos pagamentos.",
       ],
     },
     {

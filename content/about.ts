@@ -15,13 +15,13 @@ const en: AboutContent = {
     eyebrow: "About",
     headline: "Built by the people who build websites for salons and barbershops.",
     subhead:
-      'Guest Overflow comes from a team that has spent years building high-converting websites for local businesses. Every client conversation ended with the same question: "can the booking look like the rest of the site?" It now can, and now we build it for salons and barbershops.',
+      'Guest Overflow comes from a team that has spent years building high-converting websites for local businesses. Every client conversation ended with the same question: "can the booking look and feel like my own brand?" It now can, and now we build it for salons and barbershops.',
   },
   story: {
     title: "Why Guest Overflow exists",
     paragraphs: [
       "We were delivering well-designed websites that failed at the most important moment: the booking. Owners were paying commissions to platforms that concealed their brand, retained their client lists, and bore no resemblance to the sites we had built for them.",
-      "Guest Overflow is our response. It is a booking system that integrates into the salon's own website, so the client experiences your brand from the first click to the confirmation email, and you retain every relationship the appointment creates.",
+      "Guest Overflow is our response. It is a custom booking system we build for the salon, on its own brand and domain, so the client experiences your brand from the first click to the confirmation email, and you retain every relationship the appointment creates.",
       "We are starting deliberately small, with a founding group of salons and barbershops we can onboard personally. We would rather the product be shaped by the people who run a chair than by a feature checklist.",
     ],
   },
@@ -50,13 +50,13 @@ const pt: AboutContent = {
     eyebrow: "Sobre nós",
     headline: "Feito por quem constrói sites para salões e barbearias.",
     subhead:
-      "O Guest Overflow nasce de uma equipa que passou anos a desenvolver sites de alta conversão para negócios locais. Todas as conversas com clientes terminavam com a mesma pergunta: “a reserva pode ficar com o aspeto do resto do site?” Agora pode, e agora construímo-lo para salões e barbearias.",
+      "O Guest Overflow nasce de uma equipa que passou anos a desenvolver sites de alta conversão para negócios locais. Todas as conversas com clientes terminavam com a mesma pergunta: “a reserva pode ficar com o aspeto e a identidade da minha própria marca?” Agora pode, e agora construímo-lo para salões e barbearias.",
   },
   story: {
     title: "Porque é que o Guest Overflow existe",
     paragraphs: [
       "Entregávamos sites bem concebidos que falhavam no momento mais importante: a marcação. Os proprietários pagavam comissões a plataformas que ocultavam a sua marca, retinham as suas listas de clientes e em nada se assemelhavam aos sites que tínhamos construído.",
-      "O Guest Overflow é a nossa resposta. É um sistema de reservas concebido para se integrar com o site do próprio salão, para que o cliente experiencie a sua marca do primeiro clique ao email de confirmação, e cada relação criada pela marcação permaneça consigo.",
+      "O Guest Overflow é a nossa resposta. É um sistema de reservas à medida que construímos para o salão, na sua própria marca e domínio, para que o cliente experiencie a sua marca do primeiro clique ao email de confirmação, e cada relação criada pela marcação permaneça consigo.",
       "Estamos a começar deliberadamente pequenos, com um grupo fundador de salões e barbearias que conseguimos acompanhar pessoalmente. Preferimos um produto moldado por quem gere uma cadeira a um produto definido por uma lista de funcionalidades.",
     ],
   },

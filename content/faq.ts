@@ -21,12 +21,12 @@ const en: FaqContent = {
     {
       question: "How long does setup take?",
       answer:
-        "Most salons go live within days of kickoff. Our team designs, builds, and publishes your branded booking page, then adds a booking link to your existing site. You review and approve before it goes live.",
+        "Most salons go live within days of kickoff. Our team designs and builds your custom booking system, on your own brand and domain. You review and approve before it goes live.",
     },
     {
-      question: "Does it work with my existing website?",
+      question: "Do I need an existing website?",
       answer:
-        "Yes. Your booking page lives on your own domain, and your website stays exactly as it is. We add a clear booking button or link to your existing site, whatever platform it runs on, including custom-built sites, WordPress, Squarespace, and Webflow, so clients move straight to your branded booking page.",
+        "No. We build your custom booking system on your own domain, branded as yours, and it is the destination clients reach. If you already have a site or social profiles, on any platform, including custom-built sites, WordPress, Squarespace, and Webflow, you simply point them to it, so clients move straight to your branded booking page.",
     },
     {
       question: "Who owns the client data?",
@@ -41,7 +41,7 @@ const en: FaqContent = {
     {
       question: "Will Guest Overflow bring me new customers?",
       answer:
-        "We are candid about this: we do not replace the discovery a marketplace like Fresha or Booksy provides. If you require new prospective clients to find you, that is the role of Reserve with Google, your Google Business Profile, and a strong website, and we set all three up. What we replace is the commission paid on the clients who already chose you: the regulars, the direct traffic, and word of mouth.",
+        "Yes. We help the right clients find you and book you directly. Reserve with Google, your Google Business Profile, and a booking system built around your brand all bring people to you on your own terms, commission-free, and we set them up for you. And the clients you already have, the regulars, the direct traffic, and word of mouth, stop costing you a commission every time they come back.",
     },
     {
       question: "I do not have a website. Can I still use Guest Overflow?",
@@ -68,7 +68,7 @@ const en: FaqContent = {
     {
       question: "Can I manage availability myself?",
       answer:
-        "Fully. Open and close slots, set per-service durations, block dates, and adjust chair availability in a dashboard built for busy salons, and changes go live on your site instantly.",
+        "Fully. Open and close slots, set per-service durations, block dates, and adjust chair availability in a dashboard built for busy salons, and changes go live instantly.",
     },
     {
       question: "Does it support multiple locations?",
@@ -78,7 +78,7 @@ const en: FaqContent = {
     {
       question: "Which channels and integrations do you support?",
       answer:
-        "Reserve with Google (booking directly from your Google listing and Maps), Instagram and Facebook booking links, WhatsApp and email for confirmations and reminders, and Stripe for deposits paid into your own account. POS integration begins with Lightspeed, so deposits are applied to the final bill rather than a separate spreadsheet. We configure all of this for you during setup.",
+        "Reserve with Google (booking directly from your Google listing and Maps), Instagram and Facebook booking links, WhatsApp and email for confirmations and reminders, and deposits paid into your own account. POS integration begins with Lightspeed, so deposits are applied to the final bill rather than a separate spreadsheet. We configure all of this for you during setup.",
     },
     {
       question: "Where does our data live, and under which law?",
@@ -150,12 +150,12 @@ const pt: FaqContent = {
     {
       question: "Quanto tempo demora a instalação?",
       answer:
-        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha, constrói e publica a sua página de reservas com a sua marca, e adiciona um link de reserva ao seu site atual. O cliente revê e aprova antes de ficar no ar.",
+        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas à medida, na sua própria marca e domínio. O cliente revê e aprova antes de ficar no ar.",
     },
     {
-      question: "Funciona com o meu site atual?",
+      question: "Preciso de ter um site?",
       answer:
-        "Sim. A sua página de reservas fica no seu próprio domínio, e o seu site mantém-se exatamente como está. Adicionamos um botão ou link de reserva claro ao seu site atual, seja qual for a plataforma, incluindo sites à medida, WordPress, Squarespace e Webflow, para que os clientes sigam diretamente para a sua página de reservas com a sua marca.",
+        "Não. Construímos o seu sistema de reservas à medida no seu próprio domínio, com a sua marca, e é esse o destino a que os clientes chegam. Se já tiver um site ou perfis nas redes sociais, seja qual for a plataforma, incluindo sites à medida, WordPress, Squarespace e Webflow, basta apontá-los para ele, para que os clientes sigam diretamente para a sua página de reservas com a sua marca.",
     },
     {
       question: "De quem são os dados dos clientes?",
@@ -170,7 +170,7 @@ const pt: FaqContent = {
     {
       question: "O Guest Overflow traz-me novos clientes?",
       answer:
-        "Seremos francos: não substituímos a descoberta que um marketplace como a Fresha ou a Booksy proporciona. Se necessita que novos potenciais clientes o encontrem, é essa a função do Reservar com o Google, do seu Perfil de Empresa no Google e de um bom site, e configuramos os três. O que substituímos é o pagamento de comissão sobre os clientes que já o escolheram: os habituais, o tráfego direto e o passa-a-palavra.",
+        "Sim. Ajudamos os clientes certos a encontrá-lo e a marcar consigo diretamente. O Reservar com o Google, o seu Perfil de Empresa no Google e um sistema de reservas construído à volta da sua marca trazem pessoas até si, nos seus próprios termos e sem comissão, e tratamos de configurar tudo. E os clientes que já tem, os habituais, o tráfego direto e o passa-a-palavra, deixam de lhe custar uma comissão sempre que regressam.",
     },
     {
       question: "Não tenho site. Ainda assim posso usar o Guest Overflow?",
@@ -197,7 +197,7 @@ const pt: FaqContent = {
     {
       question: "Posso gerir a disponibilidade sozinho?",
       answer:
-        "Totalmente. Abra e feche horários, defina durações por serviço, bloqueie datas e ajuste a disponibilidade de cadeiras num painel concebido para salões com muito movimento, e as alterações ficam ativas no seu site de imediato.",
+        "Totalmente. Abra e feche horários, defina durações por serviço, bloqueie datas e ajuste a disponibilidade de cadeiras num painel concebido para salões com muito movimento, e as alterações ficam ativas de imediato.",
     },
     {
       question: "Suporta vários salões?",
@@ -207,7 +207,7 @@ const pt: FaqContent = {
     {
       question: "Que canais e integrações suportam?",
       answer:
-        "Reserve with Google (reservas diretamente a partir da sua ficha no Google e no Maps), links de reserva no Instagram e Facebook, WhatsApp e email para confirmações e lembretes, e Stripe para sinais pagos diretamente na sua conta. A integração com POS inicia-se pelo Lightspeed, para que os sinais sejam aplicados na conta final em vez de numa folha à parte. Configuramos tudo isto por si durante a instalação.",
+        "Reserve with Google (reservas diretamente a partir da sua ficha no Google e no Maps), links de reserva no Instagram e Facebook, WhatsApp e email para confirmações e lembretes, e sinais pagos diretamente na sua conta. A integração com POS inicia-se pelo Lightspeed, para que os sinais sejam aplicados na conta final em vez de numa folha à parte. Configuramos tudo isto por si durante a instalação.",
     },
     {
       question: "Onde ficam os nossos dados, e sob que lei?",

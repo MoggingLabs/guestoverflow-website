@@ -37,9 +37,9 @@ const en: PricingContent = {
       name: "Essential",
       monthlyEur: 99,
       priceNote: "For a single venue beginning with the platform",
-      blurb: "The branded booking page on your site, with the core toolkit.",
+      blurb: "Your own branded booking page, with the core toolkit.",
       features: [
-        "White-label booking page on your website",
+        "White-label booking page on your own domain",
         "Real-time availability & capacity management",
         "Branded confirmations & reminders",
         "Guest list with full export",
@@ -113,8 +113,8 @@ const en: PricingContent = {
   },
   transparency: {
     eyebrow: "How we work",
-    title: "Complete transparency, in writing",
-    body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, how many appointments it booked, what we changed, and whether it succeeded. If the figures do not justify the relationship after the three-month pilot, ending it requires one sentence in an email. No justification is required, and the relationship concludes amicably.",
+    title: "A close relationship, real support",
+    body: "We work as a true partner, not a faceless platform. You have a direct line to us whenever you need it, with people who know your salon and answer quickly. We want the best for the businesses we serve, and we measure our own success by yours, so when something is not working we are already on it with you.",
   },
   sectorPicker: {
     eyebrow: "Pricing for salons & barbers",
@@ -141,9 +141,9 @@ const pt: PricingContent = {
       name: "Essential",
       monthlyEur: 99,
       priceNote: "Para um espaço a começar",
-      blurb: "A página de reservas com a sua marca no seu site, com as ferramentas essenciais.",
+      blurb: "A sua própria página de reservas com a sua marca, com as ferramentas essenciais.",
       features: [
-        "Página de reservas white-label no seu site",
+        "Página de reservas white-label no seu próprio domínio",
         "Disponibilidade e capacidade geridas em tempo real",
         "Confirmações e lembretes com a sua marca",
         "Lista de clientes com exportação completa",
@@ -217,8 +217,8 @@ const pt: PricingContent = {
   },
   transparency: {
     eyebrow: "Como trabalhamos",
-    title: "Transparência total, por escrito",
-    body: "Medimos tudo em conjunto. Todos os meses vê exatamente o que chegou através do seu site ou do seu perfil no Google, quantas marcações gerou, o que alterámos e se resultou. Se os números não justificarem a relação no fim do piloto de três meses, terminá-la é uma frase num email. Não é exigida qualquer justificação, e a relação termina de forma cordial.",
+    title: "Uma relação próxima, com apoio a sério",
+    body: "Trabalhamos como um verdadeiro parceiro, não como uma plataforma sem rosto. Tem uma linha direta connosco sempre que precisar, com pessoas que conhecem o seu salão e respondem com rapidez. Queremos o melhor para os negócios que servimos, e medimos o nosso sucesso pelo seu, por isso, quando algo não está a resultar, já estamos a tratar disso consigo.",
   },
   sectorPicker: {
     eyebrow: "Preços para salões e barbearias",
