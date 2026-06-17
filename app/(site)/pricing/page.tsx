@@ -11,7 +11,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { pricingContent } from "@/content/pricing";
-import { industriesContent, sectorPrices } from "@/content/industries";
+import { getActiveIndustries, sectorPrices } from "@/content/industries";
 import { faqContent } from "@/content/faq";
 import { siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
@@ -19,7 +19,7 @@ import { getLocale } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Flat monthly pricing with no per-cover commission, calibrated for each sector. Restaurants, hotels, spas, salons, and tours & experiences.",
+    "Flat monthly pricing with no commission on your bookings, calibrated for salons and barbershops.",
 };
 
 export default async function PricingPage() {
@@ -27,7 +27,7 @@ export default async function PricingPage() {
   const t = pricingContent[locale];
   const faq = faqContent[locale];
   const cta = siteStrings[locale].cta.primary;
-  const industries = industriesContent[locale].industries;
+  const industries = getActiveIndustries(locale);
 
   return (
     <>

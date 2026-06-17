@@ -1,5 +1,6 @@
 import type { IndustryContent, SectorPricing } from "@/types/content";
 import type { Locale } from "@/lib/i18n-shared";
+import { isActiveSector } from "@/lib/sectors";
 
 /* ---------------------------------------------------------------------------
  * Per-sector pricing (PT-calibrated, ex-IVA). The shared tier ladder lives in
@@ -560,9 +561,9 @@ const en: IndustriesStrings = {
   ],
   index: {
     eyebrow: "Industries",
-    title: "Built for the way you host.",
+    title: "Built for the way your salon runs.",
     subhead:
-      "One booking system, adapted to how your business operates. Each page below includes a live demo themed for that type of venue.",
+      "One booking system, built around how your salon or barbershop operates, with a live demo you can try.",
     seeBooking: (label) => `See ${label.toLowerCase()} booking →`,
   },
   detail: {
@@ -571,7 +572,7 @@ const en: IndustriesStrings = {
     liveDemoEyebrow: "Live demo",
     liveDemoTitle: (venue) => `Try a booking at ${venue}.`,
     liveDemoSubhead:
-      "The venue is fictional, but the booking page is real. This is how Guest Overflow would perform once tailored to your business.",
+      "The salon is fictional, but the booking page is real. This is how Guest Overflow would perform once tailored to your business.",
     builtInEyebrow: "Built in",
     builtInTitle: (label) => `Guest Overflow for ${label.toLowerCase()}`,
     pricingEyebrow: "Pricing",
@@ -580,7 +581,7 @@ const en: IndustriesStrings = {
     comparisonFlat: "Flat, with no commission, ever.",
     seePricing: "See pricing",
     footerHeadline: "Bring booking home to your website.",
-    footerSubhead: "See Guest Overflow themed for a venue like yours in a 20-minute demo.",
+    footerSubhead: "See Guest Overflow themed for a salon like yours in a 20-minute demo.",
   },
 };
 
@@ -809,9 +810,9 @@ const pt: IndustriesStrings = {
   ],
   index: {
     eyebrow: "Setores",
-    title: "Feito para a forma como recebe.",
+    title: "Feito para a forma como o seu salão trabalha.",
     subhead:
-      "Um único sistema de reservas, adaptado à forma como o seu negócio funciona. Cada página abaixo inclui uma demonstração ao vivo com o tema desse tipo de espaço.",
+      "Um único sistema de reservas, à medida de como o seu salão ou barbearia funciona, com uma demonstração ao vivo que pode experimentar.",
     seeBooking: (label) => `Ver reservas para ${label.toLowerCase()} →`,
   },
   detail: {
@@ -820,7 +821,7 @@ const pt: IndustriesStrings = {
     liveDemoEyebrow: "Demo ao vivo",
     liveDemoTitle: (venue) => `Experimente reservar no ${venue}.`,
     liveDemoSubhead:
-      "O espaço é fictício, mas a página de reservas é real. É assim que o Guest Overflow funcionaria depois de adaptado ao seu negócio.",
+      "O salão é fictício, mas a página de reservas é real. É assim que o Guest Overflow funcionaria depois de adaptado ao seu negócio.",
     builtInEyebrow: "Incluído",
     builtInTitle: (label) => `Guest Overflow para ${label.toLowerCase()}`,
     pricingEyebrow: "Preços",
@@ -830,18 +831,32 @@ const pt: IndustriesStrings = {
     seePricing: "Ver preços",
     footerHeadline: "Traga as reservas de volta para o seu site.",
     footerSubhead:
-      "Veja o Guest Overflow com o tema de um espaço como o seu numa demonstração de 20 minutos.",
+      "Veja o Guest Overflow com o tema de um salão como o seu numa demonstração de 20 minutos.",
   },
 };
 
 export const industriesContent: Record<Locale, IndustriesStrings> = { en, pt };
 
-/** Slugs are locale-independent; used by generateStaticParams and the sitemap. */
-export const industrySlugs = en.industries.map((i) => i.slug);
+/**
+ * Active slugs only (locale-independent); used by generateStaticParams and the
+ * sitemap. Stashed verticals stay in `industries` above but are filtered out by
+ * `isActiveSector` - see `lib/sectors.ts`.
+ */
+export const industrySlugs = en.industries
+  .filter((i) => isActiveSector(i.slug))
+  .map((i) => i.slug);
+
+/** The active industries for a locale, in display order - used by the hubs. */
+export function getActiveIndustries(locale: Locale): IndustryContent[] {
+  return industriesContent[locale].industries.filter((i) =>
+    isActiveSector(i.slug),
+  );
+}
 
 export function getIndustry(
   locale: Locale,
   slug: string,
 ): IndustryContent | undefined {
+  if (!isActiveSector(slug)) return undefined;
   return industriesContent[locale].industries.find((i) => i.slug === slug);
 }

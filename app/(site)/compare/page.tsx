@@ -5,18 +5,19 @@ import { FooterCta } from "@/components/layout/FooterCta";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { compareContent } from "@/content/compare";
+import { compareContent, getActiveCompareEntries } from "@/content/compare";
 import { getLocale } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Compare Guest Overflow",
   description:
-    "Honest side-by-side comparisons of Guest Overflow against TheFork, Booking.com, Zappy, Fresha and FareHarbor.",
+    "An honest side-by-side comparison of Guest Overflow against Fresha and the salon booking marketplaces.",
 };
 
 export default async function ComparePage() {
   const locale = await getLocale();
   const t = compareContent[locale];
+  const entries = getActiveCompareEntries(locale);
 
   return (
     <>
@@ -30,7 +31,7 @@ export default async function ComparePage() {
       <section className="border-t border-line py-24 md:py-32">
         <Container>
           <Reveal stagger className="grid gap-5 md:grid-cols-2">
-            {t.entries.map((entry) => (
+            {entries.map((entry) => (
               <Link key={entry.slug} href={`/compare/${entry.slug}`} className="group">
                 <Card className="h-full transition-colors group-hover:border-amber-deep/60">
                   <h2 className="font-display text-lg font-medium text-cream">

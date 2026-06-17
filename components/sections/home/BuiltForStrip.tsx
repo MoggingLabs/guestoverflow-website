@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { homeContent } from "@/content/home";
-import { industriesContent } from "@/content/industries";
+import { getActiveIndustries } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
 
 /**
@@ -12,7 +12,7 @@ import { getLocale } from "@/lib/i18n";
 export async function BuiltForStrip() {
   const locale = await getLocale();
   const t = homeContent[locale].builtFor;
-  const industries = industriesContent[locale].industries;
+  const industries = getActiveIndustries(locale);
 
   return (
     <section className="border-t border-line bg-surface/40 py-20 md:py-24">

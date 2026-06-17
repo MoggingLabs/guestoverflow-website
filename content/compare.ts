@@ -1,5 +1,6 @@
 import type { Locale } from "@/lib/i18n-shared";
 import type { FeeSector } from "@/content/competitors";
+import { isActiveSector } from "@/lib/sectors";
 
 export type CompareEntry = {
   slug: string;
@@ -29,9 +30,9 @@ type CompareContent = {
 const en: CompareContent = {
   index: {
     eyebrow: "Compare",
-    title: "Guest Overflow versus the platforms you already know",
+    title: "Guest Overflow versus the salon booking apps",
     subhead:
-      "Direct, side-by-side comparisons against the tools Portuguese venues use today. What they charge, where the cost falls, and the alternative we provide.",
+      "A direct, side-by-side comparison against the tools Portuguese salons and barbershops use today. What they charge, where the cost falls, and the alternative we provide.",
   },
   detail: {
     theirTitle: (name) => `What ${name} charges`,
@@ -152,9 +153,9 @@ const en: CompareContent = {
 const pt: CompareContent = {
   index: {
     eyebrow: "Comparar",
-    title: "Guest Overflow versus as plataformas que já conhece",
+    title: "Guest Overflow versus as apps de reservas para salões",
     subhead:
-      "Comparações diretas, lado a lado, com as ferramentas que os espaços portugueses utilizam. O que cobram, onde recai o custo, e a alternativa que oferecemos.",
+      "Uma comparação direta, lado a lado, com as ferramentas que os salões e barbearias em Portugal utilizam. O que cobram, onde recai o custo, e a alternativa que oferecemos.",
   },
   detail: {
     theirTitle: (name) => `O que a ${name} cobra`,
@@ -274,9 +275,23 @@ const pt: CompareContent = {
 
 export const compareContent: Record<Locale, CompareContent> = { en, pt };
 
-/** Slugs are locale-independent; used by generateStaticParams and the sitemap. */
-export const competitorSlugs = en.entries.map((e) => e.slug);
+/**
+ * Active competitor slugs only (those whose sector is live); used by
+ * generateStaticParams and the sitemap. Stashed entries stay in the data but
+ * are filtered by `isActiveSector` - see `lib/sectors.ts`.
+ */
+export const competitorSlugs = en.entries
+  .filter((e) => isActiveSector(e.sector))
+  .map((e) => e.slug);
+
+/** Active compare entries for a locale, in order - used by the /compare hub. */
+export function getActiveCompareEntries(locale: Locale) {
+  return compareContent[locale].entries.filter((e) =>
+    isActiveSector(e.sector),
+  );
+}
 
 export function getCompareEntry(locale: Locale, slug: string) {
-  return compareContent[locale].entries.find((e) => e.slug === slug);
+  const entry = compareContent[locale].entries.find((e) => e.slug === slug);
+  return entry && isActiveSector(entry.sector) ? entry : undefined;
 }

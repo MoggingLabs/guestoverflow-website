@@ -4,8 +4,9 @@ import { FooterCta } from "@/components/layout/FooterCta";
 import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { calculatorContent, feeSectors, type FeeSector } from "@/content/competitors";
+import { calculatorContent, type FeeSector } from "@/content/competitors";
 import { getLocale } from "@/lib/i18n";
+import { isActiveSector } from "@/lib/sectors";
 
 export const metadata: Metadata = {
   title: "Commission savings calculator",
@@ -20,10 +21,13 @@ export default async function CalculatorPage({
 }) {
   const locale = await getLocale();
   const c = calculatorContent[locale];
+  // Honour ?sector= only for live verticals; otherwise fall back to the
+  // calculator's default active sector. See lib/sectors.ts.
   const requested = (await searchParams).sector;
-  const initialSector: FeeSector = feeSectors.includes(requested as FeeSector)
-    ? (requested as FeeSector)
-    : "restaurants";
+  const initialSector: FeeSector | undefined =
+    requested && isActiveSector(requested)
+      ? (requested as FeeSector)
+      : undefined;
 
   return (
     <>

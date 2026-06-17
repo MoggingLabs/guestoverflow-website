@@ -11,7 +11,7 @@ type DemoContent = {
 
 const en: DemoContent = {
   eyebrow: "Book a demo",
-  headline: "See Guest Overflow on a site like yours, in 20 minutes.",
+  headline: "See Guest Overflow on a site like your salon's, in 20 minutes.",
   subhead:
     "A working session, not a sales pitch. We will show you the booking flow, the dashboard, and what your branded version would look like.",
   expectations: {
@@ -19,7 +19,7 @@ const en: DemoContent = {
     items: [
       {
         title: "Your booking page, live",
-        body: "We will walk through a real booking page tailored to a venue like yours, and then discuss how yours would work.",
+        body: "We will walk through a real booking page tailored to a salon like yours, and then discuss how yours would work.",
       },
       {
         title: "Your setup, scoped",
@@ -35,14 +35,14 @@ const en: DemoContent = {
     "There is no commitment. Should we work together, you begin with three months at half price and a clear exit if the product does not prove its value. We will confirm your slot within one business day.",
   tryWidget: {
     title: "Try it during your visit",
-    body: "This is the booking page we will build for your venue. Make a booking and switch the venue type.",
-    caption: "One booking engine, tailored to each operation.",
+    body: "This is the booking page we will build for your salon. Make an appointment and see how it works.",
+    caption: "One booking engine, tailored to your salon.",
   },
 };
 
 const pt: DemoContent = {
   eyebrow: "Marcar demonstração",
-  headline: "Veja o Guest Overflow num site como o seu, em 20 minutos.",
+  headline: "Veja o Guest Overflow num site como o do seu salão, em 20 minutos.",
   subhead:
     "Uma sessão de trabalho, não um discurso de vendas. Mostramos-lhe o fluxo de reservas, o painel e como ficaria a sua versão com a sua marca.",
   expectations: {
@@ -50,7 +50,7 @@ const pt: DemoContent = {
     items: [
       {
         title: "A sua página de reservas, ao vivo",
-        body: "Percorremos uma página de reservas real, à medida de um espaço como o seu, e analisamos consigo como ficaria a sua.",
+        body: "Percorremos uma página de reservas real, à medida de um salão como o seu, e analisamos consigo como ficaria a sua.",
       },
       {
         title: "A sua instalação, definida",
@@ -66,8 +66,8 @@ const pt: DemoContent = {
     "Não há compromisso. Caso venhamos a trabalhar juntos, começa com três meses a metade do preço e uma saída clara se o produto não demonstrar o seu valor. Confirmamos o seu horário no prazo de um dia útil.",
   tryWidget: {
     title: "Experimente durante a sua visita",
-    body: "Esta é a página de reservas que vamos construir para o seu espaço. Faça uma reserva e mude o tipo de espaço.",
-    caption: "Um único motor de reservas, à medida de cada operação.",
+    body: "Esta é a página de reservas que vamos construir para o seu salão. Faça uma marcação e veja como funciona.",
+    caption: "Um único motor de reservas, à medida do seu salão.",
   },
 };
 

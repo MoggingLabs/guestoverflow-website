@@ -14,7 +14,11 @@ import { sectorPrices } from "@/content/industries";
 import { siteStrings } from "@/content/site";
 import { useLocale } from "@/lib/locale-client";
 import { track } from "@/lib/analytics";
+import { isActiveSector } from "@/lib/sectors";
 import { cn } from "@/lib/utils";
+
+/** Only the live verticals are selectable; stashed ones are filtered out. */
+const activeFeeSectors = feeSectors.filter((s) => isActiveSector(s));
 
 const ANNUAL_FACTOR = 2 / 3;
 const REPEAT_SHARE = 0.5; // research: 40–60% of guests are repeat
@@ -41,7 +45,7 @@ function monthlyCost(m: CommissionModel, x: number, avgTicket: number): number {
 }
 
 export function CostCalculator({
-  initialSector = "restaurants",
+  initialSector = activeFeeSectors[0],
   compact = false,
 }: {
   initialSector?: FeeSector;
@@ -154,30 +158,34 @@ export function CostCalculator({
       <div className="grid gap-8 lg:grid-cols-2">
         {/* Controls */}
         <div>
-          {/* Sector */}
-          <label className="text-xs font-medium uppercase tracking-[0.15em] text-amber">
-            {c.sectorLabel}
-          </label>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {feeSectors.map((s) => (
-              <button
-                key={s}
-                type="button"
-                onClick={() => changeSector(s)}
-                className={cn(
-                  "rounded-md border px-3 py-1.5 text-sm transition-colors",
-                  s === sector
-                    ? "border-amber-deep bg-amber text-white"
-                    : "border-line text-cream-dim hover:text-cream",
-                )}
-              >
-                {c.sectorNames[s]}
-              </button>
-            ))}
-          </div>
+          {/* Sector — hidden when only one vertical is live */}
+          {activeFeeSectors.length > 1 && (
+            <>
+              <label className="text-xs font-medium uppercase tracking-[0.15em] text-amber">
+                {c.sectorLabel}
+              </label>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {activeFeeSectors.map((s) => (
+                  <button
+                    key={s}
+                    type="button"
+                    onClick={() => changeSector(s)}
+                    className={cn(
+                      "rounded-md border px-3 py-1.5 text-sm transition-colors",
+                      s === sector
+                        ? "border-amber-deep bg-amber text-white"
+                        : "border-line text-cream-dim hover:text-cream",
+                    )}
+                  >
+                    {c.sectorNames[s]}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
 
           {/* Volume */}
-          <div className="mt-7">
+          <div className={activeFeeSectors.length > 1 ? "mt-7" : ""}>
             <div className="flex items-baseline justify-between">
               <label htmlFor="gv-volume" className="text-sm text-cream-dim">
                 {c.volumeLabel(unitPlural)}

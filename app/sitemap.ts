@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/pricing/calculator",
     "/compare",
     "/promises",
-    "/quandoo",
+    // "/quandoo" — stashed with the off-vertical (restaurant) campaigns
     "/about",
     "/book-a-demo",
     "/privacy",

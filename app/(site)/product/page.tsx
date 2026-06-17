@@ -34,6 +34,8 @@ export default async function ProductPage() {
         title={t.liveDemo.title}
         subhead={t.liveDemo.subhead}
         caption={t.liveDemo.caption}
+        initialTheme="salon"
+        showThemeSwitcher={false}
       />
       <FaqSection items={faq.product} title={faq.productTitle} />
       <FooterCta />

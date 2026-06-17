@@ -163,7 +163,7 @@ export const calculatorContent: Record<Locale, CalculatorStrings> = {
     savesPerYear: (amount, c) => `You would retain ${amount} a year versus ${c}`,
     costsPerYear: (amount, c) => `${c} would bill you ${amount}/year`,
     repeatTax: (amount) =>
-      `≈ ${amount} of that is the repeat-guest tax: a charge for guests who had already chosen you.`,
+      `≈ ${amount} of that is the repeat-client tax: a charge for clients who had already chosen you.`,
     breakEven: (tier, n, unit) => `${tier} pays for itself at ~${n} ${unit}/mo.`,
     perUnitFee: (amount, unit) => `${amount} per ${unit}`,
     pctFee: (pct) => `${pct} per booking`,

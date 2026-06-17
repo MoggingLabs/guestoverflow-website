@@ -5,17 +5,19 @@ import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { FooterCta } from "@/components/layout/FooterCta";
-import { industriesContent } from "@/content/industries";
+import { industriesContent, getActiveIndustries } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "Guest Overflow powers custom online booking for restaurants, hotels, spas, salons, and tour operators, with one system shaped to each business.",
+    "Guest Overflow powers custom online booking for salons and barbershops, with one system shaped to how your business runs.",
 };
 
 export default async function IndustriesPage() {
-  const t = industriesContent[await getLocale()];
+  const locale = await getLocale();
+  const t = industriesContent[locale];
+  const industries = getActiveIndustries(locale);
 
   return (
     <>
@@ -28,7 +30,7 @@ export default async function IndustriesPage() {
       <section className="pb-24 md:pb-36">
         <Container>
           <Reveal stagger className="grid gap-5 sm:grid-cols-2">
-            {t.industries.map((industry) => (
+            {industries.map((industry) => (
               <Link
                 key={industry.slug}
                 href={`/industries/${industry.slug}`}

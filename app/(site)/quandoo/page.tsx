@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PageHero } from "@/components/sections/shared/PageHero";
 import { PromisesStrip } from "@/components/sections/shared/PromisesStrip";
 import { FooterCta } from "@/components/layout/FooterCta";
@@ -16,7 +17,12 @@ export const metadata: Metadata = {
     "Quandoo shuts down in December 2026. Guest Overflow migrates your bookings and guest data for free, onto a commission-free booking page you own.",
 };
 
+// Stashed with the off-vertical (restaurant) campaigns. The page and its content
+// stay intact; remove this guard to restore. See lib/sectors.ts.
+const STASHED = true;
+
 export default async function QuandooPage() {
+  if (STASHED) notFound();
   const locale = await getLocale();
   const t = quandooContent[locale];
   const cta = siteStrings[locale].cta.primary;

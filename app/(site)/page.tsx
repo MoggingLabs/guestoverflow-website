@@ -4,9 +4,7 @@ import { ProblemStrip } from "@/components/sections/home/ProblemStrip";
 import { WidgetShowcase } from "@/components/sections/shared/WidgetShowcase";
 import { HowItWorks } from "@/components/sections/home/HowItWorks";
 import { Differentiators } from "@/components/sections/home/Differentiators";
-import { RateParityStrip } from "@/components/sections/home/RateParityStrip";
 import { HomePricing } from "@/components/sections/home/HomePricing";
-import { IndustriesPreview } from "@/components/sections/home/IndustriesPreview";
 import { PromisesStrip } from "@/components/sections/shared/PromisesStrip";
 import { NoWebsitePath } from "@/components/sections/home/NoWebsitePath";
 import { PromiseStrip } from "@/components/sections/home/PromiseStrip";
@@ -32,13 +30,13 @@ export default async function HomePage() {
         title={t.widgetShowcase.title}
         subhead={t.widgetShowcase.subhead}
         caption={t.widgetShowcase.caption}
+        initialTheme="salon"
+        showThemeSwitcher={false}
       />
       <HowItWorks />
       <Differentiators />
-      <RateParityStrip />
       {/* Pricing + savings calculator pulled onto the home page. */}
       <HomePricing />
-      <IndustriesPreview />
       {/* Contractual promises mapped to competitor failures. */}
       <PromisesStrip limit={4} />
       {/* Side products (GBP + website build), demoted as the discovery answer. */}

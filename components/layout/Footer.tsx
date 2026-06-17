@@ -3,9 +3,24 @@ import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { site, siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
+import { isActiveSector } from "@/lib/sectors";
+
+/** Hide footer links that point at stashed verticals or stashed campaigns. */
+function isStashedLink(href: string): boolean {
+  const industry = href.match(/^\/industries\/(.+)$/);
+  if (industry) return !isActiveSector(industry[1]);
+  if (href === "/quandoo") return true;
+  return false;
+}
 
 export async function Footer() {
   const t = siteStrings[await getLocale()];
+  const columns = t.footerColumns
+    .map((col) => ({
+      ...col,
+      links: col.links.filter((link) => !isStashedLink(link.href)),
+    }))
+    .filter((col) => col.links.length > 0);
 
   return (
     <footer className="border-t border-line bg-surface/40">
@@ -20,7 +35,7 @@ export async function Footer() {
             </p>
           </div>
 
-          {t.footerColumns.map((col) => (
+          {columns.map((col) => (
             <nav key={col.heading} aria-label={col.heading}>
               <h3 className="text-xs font-medium uppercase tracking-[0.15em] text-cream-faint">
                 {col.heading}

@@ -16,32 +16,32 @@ const en: FaqContent = {
     {
       question: "How is Guest Overflow priced?",
       answer:
-        "A flat monthly subscription, with no per-cover or per-booking commission, ever. Pricing depends on the plan and the level of customization your venue requires; see the pricing page for tiers, or book a demo for an exact quote.",
+        "A flat monthly subscription, with no per-appointment or per-booking commission, ever. Pricing depends on the plan and the level of customization your salon requires; see the pricing page for tiers, or book a demo for an exact quote.",
     },
     {
       question: "How long does setup take?",
       answer:
-        "Most venues go live within days of kickoff. Our team designs, builds, and publishes your branded booking page, then adds a booking link to your existing site. You review and approve before it goes live.",
+        "Most salons go live within days of kickoff. Our team designs, builds, and publishes your branded booking page, then adds a booking link to your existing site. You review and approve before it goes live.",
     },
     {
       question: "Does it work with my existing website?",
       answer:
-        "Yes. Your booking page lives on your own domain, and your website stays exactly as it is. We add a clear booking button or link to your existing site, whatever platform it runs on, including custom-built sites, WordPress, Squarespace, and Webflow, so guests move straight to your branded booking page.",
+        "Yes. Your booking page lives on your own domain, and your website stays exactly as it is. We add a clear booking button or link to your existing site, whatever platform it runs on, including custom-built sites, WordPress, Squarespace, and Webflow, so clients move straight to your branded booking page.",
     },
     {
-      question: "Who owns the guest data?",
+      question: "Who owns the client data?",
       answer:
-        "You do, unambiguously. Every booking, email, and preference collected through your booking page belongs to your business and is exportable at any time. We never market to your guests or share their data.",
+        "You do, unambiguously. Every appointment, email, and preference collected through your booking page belongs to your business and is exportable at any time. We never market to your clients or share their data.",
     },
     {
       question: "Can it match my brand exactly?",
       answer:
-        "Yes; that is the core of what we do. Colors, typography, copy, and flow are tailored to each venue. Try the live demo above and switch venue types to see how different the same system can appear.",
+        "Yes; that is the core of what we do. Colors, typography, copy, and flow are tailored to each salon. Try the live demo above to see how the booking page can look as your own.",
     },
     {
       question: "Will Guest Overflow bring me new customers?",
       answer:
-        "We are candid about this: we do not replace the discovery a marketplace provides. If you require new prospective customers to find you, that is the role of Reserve with Google, your Google Business Profile, and a strong website, and we set all three up. What we replace is the commission paid on the guests who already chose you: the regulars, the direct traffic, and word of mouth.",
+        "We are candid about this: we do not replace the discovery a marketplace like Fresha or Booksy provides. If you require new prospective clients to find you, that is the role of Reserve with Google, your Google Business Profile, and a strong website, and we set all three up. What we replace is the commission paid on the clients who already chose you: the regulars, the direct traffic, and word of mouth.",
     },
     {
       question: "I do not have a website. Can I still use Guest Overflow?",
@@ -63,17 +63,17 @@ const en: FaqContent = {
     {
       question: "Does Guest Overflow handle deposits and no-shows?",
       answer:
-        "Yes. You can require card details or take deposits for specific services, party sizes, or dates, with automated reminders that reduce no-shows considerably.",
+        "Yes. You can require card details or take deposits for specific services, stylists, or dates, with automated reminders that reduce no-shows considerably.",
     },
     {
       question: "Can I manage availability myself?",
       answer:
-        "Fully. Open and close slots, set per-service durations, block dates, and adjust capacity in a dashboard built for busy operators, and changes go live on your site instantly.",
+        "Fully. Open and close slots, set per-service durations, block dates, and adjust chair availability in a dashboard built for busy salons, and changes go live on your site instantly.",
     },
     {
       question: "Does it support multiple locations?",
       answer:
-        "Yes. Groups can run several venues from one dashboard with separate availability, branding, and guest lists per location.",
+        "Yes. Groups can run several salons from one dashboard with separate availability, branding, and client lists per location.",
     },
     {
       question: "Which channels and integrations do you support?",
@@ -83,7 +83,7 @@ const en: FaqContent = {
     {
       question: "Where does our data live, and under which law?",
       answer:
-        "Guest data is stored on servers in the European Union, your contract is governed by Portuguese law, and the entire system is built GDPR-first. Two questions worth asking any booking vendor: under which jurisdiction is my contract governed, and where exactly does my guest data reside?",
+        "Client data is stored on servers in the European Union, your contract is governed by Portuguese law, and the entire system is built GDPR-first. Two questions worth asking any booking vendor: under which jurisdiction is my contract governed, and where exactly does my client data reside?",
     },
   ],
   pricing: [
@@ -105,7 +105,7 @@ const en: FaqContent = {
     {
       question: "Can I cancel anytime?",
       answer:
-        "Monthly plans may be cancelled at any time. Your guest data remains exportable for 90 days after cancellation.",
+        "Monthly plans may be cancelled at any time. Your client data remains exportable for 90 days after cancellation.",
     },
     {
       question: "What does the founding offer include?",
@@ -132,7 +132,7 @@ const en: FaqContent = {
     {
       question: "Is this a sales call?",
       answer:
-        "It is a working session. If Guest Overflow is not the right fit for your venue, we will say so and direct you to a more suitable option.",
+        "It is a working session. If Guest Overflow is not the right fit for your salon, we will say so and direct you to a more suitable option.",
     },
   ],
   productTitle: "Product questions",
@@ -145,12 +145,12 @@ const pt: FaqContent = {
     {
       question: "Como funciona o preço do Guest Overflow?",
       answer:
-        "Uma subscrição mensal fixa, sem comissão por reserva, nunca. O valor depende do plano e do nível de personalização de que o seu espaço necessita; veja os planos na página de preços ou marque uma demonstração para um orçamento exato.",
+        "Uma subscrição mensal fixa, sem comissão por marcação, nunca. O valor depende do plano e do nível de personalização de que o seu salão necessita; veja os planos na página de preços ou marque uma demonstração para um orçamento exato.",
     },
     {
       question: "Quanto tempo demora a instalação?",
       answer:
-        "A maioria dos espaços fica online poucos dias após o arranque. A nossa equipa desenha, constrói e publica a sua página de reservas com a sua marca, e adiciona um link de reserva ao seu site atual. O cliente revê e aprova antes de ficar no ar.",
+        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha, constrói e publica a sua página de reservas com a sua marca, e adiciona um link de reserva ao seu site atual. O cliente revê e aprova antes de ficar no ar.",
     },
     {
       question: "Funciona com o meu site atual?",
@@ -160,17 +160,17 @@ const pt: FaqContent = {
     {
       question: "De quem são os dados dos clientes?",
       answer:
-        "Seus, sem ambiguidade. Cada reserva, email e preferência recolhidos através da sua página de reservas pertencem ao seu negócio e podem ser exportados a qualquer momento. Nunca fazemos marketing aos seus clientes nem partilhamos os seus dados.",
+        "Seus, sem ambiguidade. Cada marcação, email e preferência recolhidos através da sua página de reservas pertencem ao seu negócio e podem ser exportados a qualquer momento. Nunca fazemos marketing aos seus clientes nem partilhamos os seus dados.",
     },
     {
       question: "Consegue ficar exatamente com a minha marca?",
       answer:
-        "Sim; é esse o centro do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada espaço. Experimente a demo ao vivo acima e mude o tipo de espaço para ver como o mesmo sistema pode ficar diferente.",
+        "Sim; é esse o centro do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada salão. Experimente a demo ao vivo acima para ver como a página de reservas pode ficar com a sua marca.",
     },
     {
       question: "O Guest Overflow traz-me novos clientes?",
       answer:
-        "Seremos francos: não substituímos a descoberta que um marketplace proporciona. Se necessita que novos potenciais clientes o encontrem, é essa a função do Reservar com o Google, do seu Perfil de Empresa no Google e de um bom site, e configuramos os três. O que substituímos é o pagamento de comissão sobre os clientes que já o escolheram: os habituais, o tráfego direto e o passa-a-palavra.",
+        "Seremos francos: não substituímos a descoberta que um marketplace como a Fresha ou a Booksy proporciona. Se necessita que novos potenciais clientes o encontrem, é essa a função do Reservar com o Google, do seu Perfil de Empresa no Google e de um bom site, e configuramos os três. O que substituímos é o pagamento de comissão sobre os clientes que já o escolheram: os habituais, o tráfego direto e o passa-a-palavra.",
     },
     {
       question: "Não tenho site. Ainda assim posso usar o Guest Overflow?",
@@ -192,17 +192,17 @@ const pt: FaqContent = {
     {
       question: "O Guest Overflow trata de sinais e faltas (no-shows)?",
       answer:
-        "Sim. Pode pedir dados de cartão ou cobrar sinais para serviços, tamanhos de grupo ou datas específicos, com lembretes automáticos que reduzem consideravelmente as faltas.",
+        "Sim. Pode pedir dados de cartão ou cobrar sinais para serviços, profissionais ou datas específicos, com lembretes automáticos que reduzem consideravelmente as faltas.",
     },
     {
       question: "Posso gerir a disponibilidade sozinho?",
       answer:
-        "Totalmente. Abra e feche horários, defina durações por serviço, bloqueie datas e ajuste a capacidade num painel concebido para quem opera no terreno, e as alterações ficam ativas no seu site de imediato.",
+        "Totalmente. Abra e feche horários, defina durações por serviço, bloqueie datas e ajuste a disponibilidade de cadeiras num painel concebido para salões com muito movimento, e as alterações ficam ativas no seu site de imediato.",
     },
     {
-      question: "Suporta vários espaços?",
+      question: "Suporta vários salões?",
       answer:
-        "Sim. Grupos podem gerir vários espaços a partir de um único painel, com disponibilidade, marca e listas de clientes separadas por localização.",
+        "Sim. Grupos podem gerir vários salões a partir de um único painel, com disponibilidade, marca e listas de clientes separadas por localização.",
     },
     {
       question: "Que canais e integrações suportam?",
@@ -261,7 +261,7 @@ const pt: FaqContent = {
     {
       question: "Isto é uma chamada de vendas?",
       answer:
-        "É uma sessão de trabalho. Se o Guest Overflow não for adequado para o seu espaço, dizemos-lho e indicamos-lhe uma opção mais apropriada.",
+        "É uma sessão de trabalho. Se o Guest Overflow não for adequado para o seu salão, dizemos-lho e indicamos-lhe uma opção mais apropriada.",
     },
   ],
   productTitle: "Perguntas sobre o produto",

@@ -4,9 +4,9 @@ import type { Locale } from "@/lib/i18n-shared";
 /** Locale-independent site facts (URLs, identity, default metadata). */
 export const site = {
   name: "Guest Overflow",
-  tagline: "Your own booking page, built around how you operate.",
+  tagline: "Your own booking page, built around how your salon runs.",
   description:
-    "Guest Overflow provides each venue with its own booking page, built around how they operate, on their brand and domain. Flat pricing, no commission, and every guest relationship remains yours. For restaurants, hotels, spas, salons, and experiences.",
+    "Guest Overflow gives each salon and barbershop its own booking page, built around how they run, on their brand and domain. Flat pricing, no commission, and every client relationship remains yours. For salons and barbershops.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow.com",
   email: "hello@guestoverflow.com",
   cta: {
@@ -38,7 +38,6 @@ const en: SiteStrings = {
   },
   navLinks: [
     { label: "Booking page", href: "/product" },
-    { label: "Industries", href: "/industries" },
     { label: "Services", href: "/services" },
     { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
@@ -90,7 +89,7 @@ const en: SiteStrings = {
     },
   ],
   footerBlurb:
-    "White-label online booking for restaurants, hotels, spas, salons, and experiences.",
+    "White-label online booking for salons and barbershops.",
   footerProductOf: "all rights reserved",
   footerNote: "No lock-in · No commission · Cancel at any time.",
 };
@@ -103,7 +102,6 @@ const pt: SiteStrings = {
   },
   navLinks: [
     { label: "Página de reservas", href: "/product" },
-    { label: "Setores", href: "/industries" },
     { label: "Serviços", href: "/services" },
     { label: "Preços", href: "/pricing" },
     { label: "Sobre nós", href: "/about" },
@@ -155,7 +153,7 @@ const pt: SiteStrings = {
     },
   ],
   footerBlurb:
-    "Reservas online white-label para restaurantes, hotéis, spas, cabeleireiros e experiências.",
+    "Reservas online white-label para cabeleireiros e barbearias.",
   footerProductOf: "todos os direitos reservados",
   footerNote: "Sem fidelização · Sem comissões · Cancele quando quiser.",
 };

@@ -28,9 +28,9 @@ type PricingContent = {
 const en: PricingContent = {
   hero: {
     eyebrow: "Pricing",
-    headline: "Flat pricing. No per-cover commission.",
+    headline: "Flat pricing. No commission on your bookings.",
     subhead:
-      "Whatever your volume, your price does not change, and the prices are published here on a public page. Final quotes depend on your setup, so every plan below begins with a demo.",
+      "Whatever your chair count or how busy you get, your price does not change, and the prices are published here on a public page. Final quotes depend on your setup, so every plan below begins with a demo.",
   },
   tiers: [
     {
@@ -88,12 +88,12 @@ const en: PricingContent = {
   },
   comparison: {
     title: "What commission really costs",
-    body: "A restaurant seating 1,000 covers a month at €2-3 commission per cover pays €24,000-36,000 a year, for a booking page that does not even belong to it. Guest Overflow replaces that with a flat subscription that remains constant even in your busiest month.",
+    body: "A salon taking 800 appointments a month at €2-3 commission per appointment pays €19,200-28,800 a year, for a booking page that does not even belong to it. Guest Overflow replaces that with a flat subscription that remains constant even in your busiest month.",
   },
   foundingPartner: {
     badge: "Founding offer",
     title: "Three months at half price, with a straightforward exit",
-    body: "Join as a founding venue and pay half price for your first three months. If you do not observe genuine return or genuine usage through your website or your Google Business Profile during that period, you may end the relationship without complication. No justification is required and no exit fees apply. We seek only clients for whom the platform delivers measurable results.",
+    body: "Join as a founding salon and pay half price for your first three months. If you do not observe genuine return or genuine usage through your website or your Google Business Profile during that period, you may end the relationship without complication. No justification is required and no exit fees apply. We seek only clients for whom the platform delivers measurable results.",
     cta: "Claim the founding offer",
   },
   offerDisclaimer: {
@@ -104,7 +104,7 @@ const en: PricingContent = {
   noWebsiteOffer: {
     eyebrow: "Getting found",
     title: "Start with your Google Business Profile",
-    body: "If you do not have a website, we begin by optimizing your Google Business Profile so that customers can find and book you. Rather than renting your visibility on Google, you retain ownership of it. When you are ready for more, we design and build a full website with booking included. That is our higher-level offering, and there is no obligation to reach it on day one.",
+    body: "If you do not have a website, we begin by optimizing your Google Business Profile so that clients can find and book you. Rather than renting your visibility on Google, you retain ownership of it. When you are ready for more, we design and build a full website with booking included. That is our higher-level offering, and there is no obligation to reach it on day one.",
     points: [
       "Google Business Profile optimization as the affordable starting point",
       "Bookings operating without a website of your own",
@@ -114,27 +114,27 @@ const en: PricingContent = {
   transparency: {
     eyebrow: "How we work",
     title: "Complete transparency, in writing",
-    body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, what we changed, and whether it succeeded. If the figures do not justify the relationship after the three-month pilot, ending it requires one sentence in an email. No justification is required, and the relationship concludes amicably.",
+    body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, how many appointments it booked, what we changed, and whether it succeeded. If the figures do not justify the relationship after the three-month pilot, ending it requires one sentence in an email. No justification is required, and the relationship concludes amicably.",
   },
   sectorPicker: {
-    eyebrow: "Pricing by sector",
-    title: "Pricing built for your sector",
+    eyebrow: "Pricing for salons & barbers",
+    title: "Pricing built for salons and barbershops",
     subhead:
-      "Pick your business to see plans and prices framed for how you actually take bookings.",
+      "Plans and prices framed for how salons and barbershops actually take bookings.",
     from: (eur) => `from €${eur}/mo`,
   },
   calc: {
     title: "See what commission really costs you",
-    subhead: "A flat price against the rising fee a marketplace bills as you grow.",
+    subhead: "A flat price against the rising fee a marketplace like Fresha or Booksy bills as you grow.",
   },
 };
 
 const pt: PricingContent = {
   hero: {
     eyebrow: "Preços",
-    headline: "Preço fixo. Sem comissão por reserva.",
+    headline: "Preço fixo. Sem comissão nas suas marcações.",
     subhead:
-      "Seja qual for o seu volume, o preço mantém-se, e encontra-se publicado nesta página pública. O orçamento final depende da sua instalação, por isso cada plano abaixo começa com uma demonstração.",
+      "Seja qual for o número de cadeiras ou a procura que tiver, o preço mantém-se, e encontra-se publicado nesta página pública. O orçamento final depende da sua instalação, por isso cada plano abaixo começa com uma demonstração.",
   },
   tiers: [
     {
@@ -192,12 +192,12 @@ const pt: PricingContent = {
   },
   comparison: {
     title: "O que a comissão custa realmente",
-    body: "Um restaurante com 1.000 reservas por mês a 2 a 3 € de comissão por pessoa paga 24.000 a 36.000 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que se mantém constante mesmo no mês de maior procura.",
+    body: "Um salão com 800 marcações por mês a 2 a 3 € de comissão por marcação paga 19.200 a 28.800 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que se mantém constante mesmo no mês de maior procura.",
   },
   foundingPartner: {
     badge: "Oferta de lançamento",
     title: "Três meses a metade do preço, com uma saída simples",
-    body: "Junte-se como espaço fundador e pague metade do preço nos primeiros três meses. Se nesse período não verificar retorno nem utilização reais através do seu site ou do seu Perfil de Empresa no Google, pode terminar a relação sem complicações. Não é exigida qualquer justificação e não se aplicam custos de saída. Procuramos apenas clientes para quem a plataforma produz resultados mensuráveis.",
+    body: "Junte-se como salão fundador e pague metade do preço nos primeiros três meses. Se nesse período não verificar retorno nem utilização reais através do seu site ou do seu Perfil de Empresa no Google, pode terminar a relação sem complicações. Não é exigida qualquer justificação e não se aplicam custos de saída. Procuramos apenas clientes para quem a plataforma produz resultados mensuráveis.",
     cta: "Garantir a oferta de lançamento",
   },
   offerDisclaimer: {
@@ -208,7 +208,7 @@ const pt: PricingContent = {
   noWebsiteOffer: {
     eyebrow: "Ser encontrado",
     title: "Comece pelo seu Perfil de Empresa no Google",
-    body: "Se não tem site, começamos por otimizar o seu Perfil de Empresa no Google para que as pessoas o encontrem e reservem efetivamente. Em vez de alugar a sua visibilidade no Google, mantém a sua propriedade. Quando pretender mais, desenhamos e construímos um site completo com reservas integradas. É a nossa oferta de nível superior, e não existe obrigação de a atingir no primeiro dia.",
+    body: "Se não tem site, começamos por otimizar o seu Perfil de Empresa no Google para que os clientes o encontrem e marquem efetivamente. Em vez de alugar a sua visibilidade no Google, mantém a sua propriedade. Quando pretender mais, desenhamos e construímos um site completo com reservas integradas. É a nossa oferta de nível superior, e não existe obrigação de a atingir no primeiro dia.",
     points: [
       "Otimização do Perfil de Empresa no Google como porta de entrada acessível",
       "Reservas a funcionar sem precisar de site próprio",
@@ -218,18 +218,18 @@ const pt: PricingContent = {
   transparency: {
     eyebrow: "Como trabalhamos",
     title: "Transparência total, por escrito",
-    body: "Medimos tudo em conjunto. Todos os meses vê exatamente o que chegou através do seu site ou do seu perfil no Google, o que alterámos e se resultou. Se os números não justificarem a relação no fim do piloto de três meses, terminá-la é uma frase num email. Não é exigida qualquer justificação, e a relação termina de forma cordial.",
+    body: "Medimos tudo em conjunto. Todos os meses vê exatamente o que chegou através do seu site ou do seu perfil no Google, quantas marcações gerou, o que alterámos e se resultou. Se os números não justificarem a relação no fim do piloto de três meses, terminá-la é uma frase num email. Não é exigida qualquer justificação, e a relação termina de forma cordial.",
   },
   sectorPicker: {
-    eyebrow: "Preços por setor",
-    title: "Preços feitos para o seu setor",
+    eyebrow: "Preços para salões e barbearias",
+    title: "Preços feitos para salões e barbearias",
     subhead:
-      "Escolha o seu negócio para ver planos e preços pensados para a forma como recebe reservas.",
+      "Planos e preços pensados para a forma como os salões e as barbearias recebem marcações.",
     from: (eur) => `desde ${eur} €/mês`,
   },
   calc: {
     title: "Veja o que a comissão lhe custa realmente",
-    subhead: "Um preço fixo face à taxa crescente que um marketplace cobra à medida que cresce.",
+    subhead: "Um preço fixo face à taxa crescente que um marketplace como a Fresha ou a Booksy cobra à medida que cresce.",
   },
 };
 

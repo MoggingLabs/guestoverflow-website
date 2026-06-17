@@ -23,34 +23,34 @@ const en: PromisesContent = {
   stripTitle: "Commitments we put in writing",
   promises: [
     {
-      title: "Your guest data is yours, with one-click export",
-      body: "Export your full guest list at any time, in a clean file you own. This is written into the agreement.",
-      vs: "OpenTable amended its contract to block the export of your guests to a competitor.",
+      title: "Your client data is yours, with one-click export",
+      body: "Export your full client list at any time, in a clean file you own. This is written into the agreement.",
+      vs: "Marketplaces keep your client list on their side, so the relationships you build stay with them, not you.",
     },
     {
       title: "No commission, no payment take-rate, ever",
       body: "One flat price. Deposits run through your own Stripe account, so you retain your processor and your full rate.",
-      vs: "TheFork bills per cover, Fresha/Treatwell take 20-35%, and many 'flat' tools deduct 1-3.6% on payments.",
+      vs: "Fresha and Booksy take a cut of new-client bookings and 20-35% on the marketplace, plus a slice of every payment.",
     },
     {
       title: "No surprise add-ons",
       body: "The quoted price is the actual price. Essentials are included, not unlocked one fee at a time.",
-      vs: "A €16 headline becomes ~€60 once the branded app, invoicing and GDPR modules are added on.",
+      vs: "A low headline price becomes far higher once marketing boosts, the branded app and payment fees are added on.",
     },
     {
       title: "We never increase your rate without notice",
-      body: "Your price is protected for as long as you remain a client. Increases never apply to existing venues.",
-      vs: "Bokun changed pricing three times in two years; Cloudbeds increases drew formal complaints.",
+      body: "Your price is protected for as long as you remain a client. Increases never apply to existing salons.",
+      vs: "Salon marketplaces have repeatedly raised commission rates and payment fees with little notice to the salons on them.",
     },
     {
       title: "No lock-in, with a one-sentence exit",
       body: "Leave whenever you choose, in a single email. No multi-year contract, and no invoice after your departure.",
-      vs: "Mews locks clients in for two years; one platform billed a hotel ~€1,900 for 14 months after it had cancelled.",
+      vs: "Leaving a marketplace can mean losing the client reviews and rebooking history you spent years building on it.",
     },
     {
       title: "Our price is public, with no sales call required to see it",
       body: "Every plan is published on the site. You will never have to attend a demo simply to learn the cost.",
-      vs: "TheFork, Mews, Cloudbeds and most incumbents conceal pricing behind a quote.",
+      vs: "Fresha and Booksy bury the real cost of commission and payment fees behind sign-up rather than a public price.",
     },
   ],
 };
@@ -67,32 +67,32 @@ const pt: PromisesContent = {
     {
       title: "Os dados dos seus clientes são seus, com exportação num clique",
       body: "Exporte a lista completa de clientes quando quiser, num ficheiro limpo que é seu. Está estipulado no contrato.",
-      vs: "A OpenTable alterou o contrato para bloquear a exportação dos seus clientes para um concorrente.",
+      vs: "Os marketplaces guardam a sua lista de clientes do lado deles, por isso as relações que constrói ficam com eles e não consigo.",
     },
     {
       title: "Sem comissão, sem margem nos pagamentos, nunca",
       body: "Um preço fixo. Os sinais correm pela sua própria conta Stripe, por isso mantém o seu processador e a tarifa integral.",
-      vs: "O TheFork cobra por pessoa, a Fresha/Treatwell levam 20 a 35%, e muitas ferramentas 'fixas' deduzem 1 a 3,6% nos pagamentos.",
+      vs: "A Fresha e a Booksy levam uma fatia das marcações de novos clientes e 20 a 35% no marketplace, além de uma parte de cada pagamento.",
     },
     {
       title: "Sem extras-surpresa",
       body: "O preço indicado é o preço efetivo. O essencial vem incluído, não desbloqueado taxa a taxa.",
-      vs: "Um valor de 16 € anunciado torna-se ~60 € depois da app de marca, faturação e módulo de RGPD.",
+      vs: "Um preço anunciado baixo torna-se muito mais alto depois de se somarem os impulsos de marketing, a app de marca e as taxas de pagamento.",
     },
     {
       title: "Nunca aumentamos a sua tarifa sem aviso prévio",
-      body: "O seu preço fica garantido enquanto se mantiver cliente. Os aumentos nunca se aplicam a espaços existentes.",
-      vs: "A Bokun alterou os preços três vezes em dois anos; os aumentos da Cloudbeds geraram queixas formais.",
+      body: "O seu preço fica garantido enquanto se mantiver cliente. Os aumentos nunca se aplicam a salões existentes.",
+      vs: "Os marketplaces de salões já aumentaram repetidamente as comissões e as taxas de pagamento com pouco aviso aos salões que neles estão.",
     },
     {
       title: "Sem fidelização, com uma saída numa frase",
       body: "Sai quando quiser, num único email. Sem contrato de vários anos, e sem fatura após a sua saída.",
-      vs: "A Mews vincula os clientes por dois anos; uma plataforma cobrou a um hotel ~1.900 € por 14 meses depois de ter cancelado.",
+      vs: "Sair de um marketplace pode significar perder as avaliações dos clientes e o histórico de remarcações que levou anos a construir nele.",
     },
     {
       title: "O nosso preço é público, sem necessidade de chamada de vendas para o consultar",
       body: "Todos os planos estão publicados no site. Nunca terá de assistir a uma demonstração apenas para saber o custo.",
-      vs: "O TheFork, a Mews, a Cloudbeds e a maioria dos incumbentes ocultam o preço atrás de um orçamento.",
+      vs: "A Fresha e a Booksy escondem o custo real da comissão e das taxas de pagamento atrás do registo, em vez de um preço público.",
     },
   ],
 };
