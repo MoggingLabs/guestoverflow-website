@@ -15,10 +15,20 @@ const FLUSH_INTERVAL_MS = 5000;
 const FLUSH_AT_COUNT = 10;
 const SCROLL_THRESHOLDS = [25, 50, 75, 100] as const;
 
+function randomId(): string {
+  // crypto.randomUUID exists only in secure contexts (HTTPS / localhost). Fall
+  // back when previewing over plain HTTP on a LAN IP, so the provider does not
+  // throw and take down client hydration.
+  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+    return crypto.randomUUID();
+  }
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
 function sessionId(): string {
   let sid = sessionStorage.getItem("gf_sid");
   if (!sid) {
-    sid = crypto.randomUUID();
+    sid = randomId();
     sessionStorage.setItem("gf_sid", sid);
   }
   return sid;

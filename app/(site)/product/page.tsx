@@ -8,6 +8,7 @@ import { FooterCta } from "@/components/layout/FooterCta";
 import { productContent } from "@/content/product";
 import { faqContent } from "@/content/faq";
 import { getLocale } from "@/lib/i18n";
+import { SHOW_LIVE_DEMO } from "@/lib/features";
 
 export const metadata: Metadata = {
   title: "Product",
@@ -29,14 +30,16 @@ export default async function ProductPage() {
       />
       <FeatureGrid />
       <OwnYourData />
-      <WidgetShowcase
-        eyebrow={t.liveDemo.eyebrow}
-        title={t.liveDemo.title}
-        subhead={t.liveDemo.subhead}
-        caption={t.liveDemo.caption}
-        initialTheme="salon"
-        showThemeSwitcher={false}
-      />
+      {SHOW_LIVE_DEMO && (
+        <WidgetShowcase
+          eyebrow={t.liveDemo.eyebrow}
+          title={t.liveDemo.title}
+          subhead={t.liveDemo.subhead}
+          caption={t.liveDemo.caption}
+          initialTheme="salon"
+          showThemeSwitcher={false}
+        />
+      )}
       <FaqSection items={faq.product} title={faq.productTitle} />
       <FooterCta />
     </>

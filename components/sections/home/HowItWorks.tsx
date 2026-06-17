@@ -17,16 +17,24 @@ export async function HowItWorks() {
             subhead={t.howItWorks.subhead}
           />
         </Reveal>
-        <Reveal stagger className="mt-14 grid gap-10 md:grid-cols-3">
+        {/* Subgrid keeps the number / title / body rows aligned across all three
+            columns even when titles wrap to different line counts. */}
+        <Reveal
+          stagger
+          className="mt-14 grid gap-x-10 gap-y-4 md:grid-cols-3 md:grid-rows-[auto_auto_auto]"
+        >
           {t.howItWorks.steps.map((step, i) => (
-            <div key={step.title}>
+            <div
+              key={step.title}
+              className="grid gap-y-3 md:row-span-3 md:grid-rows-subgrid"
+            >
               <span className="font-display text-4xl font-medium text-amber">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-4 font-display text-lg font-medium text-cream">
+              <h3 className="font-display text-lg font-medium text-cream">
                 {step.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-cream-dim">
+              <p className="text-sm leading-relaxed text-cream-dim">
                 {step.body}
               </p>
             </div>

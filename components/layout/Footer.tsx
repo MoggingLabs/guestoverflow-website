@@ -4,12 +4,15 @@ import { Logo } from "@/components/ui/Logo";
 import { site, siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
 import { isActiveSector } from "@/lib/sectors";
+import { SHOW_LIVE_DEMO, SHOW_CALCULATOR } from "@/lib/features";
 
-/** Hide footer links that point at stashed verticals or stashed campaigns. */
+/** Hide footer links that point at stashed verticals, campaigns, or features. */
 function isStashedLink(href: string): boolean {
   const industry = href.match(/^\/industries\/(.+)$/);
   if (industry) return !isActiveSector(industry[1]);
   if (href === "/quandoo") return true;
+  if (href === "/#live-demo" && !SHOW_LIVE_DEMO) return true;
+  if (href === "/pricing/calculator" && !SHOW_CALCULATOR) return true;
   return false;
 }
 

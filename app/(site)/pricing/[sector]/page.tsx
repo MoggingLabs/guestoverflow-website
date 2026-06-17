@@ -12,6 +12,7 @@ import {
   industrySlugs,
 } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
+import { SHOW_CALCULATOR } from "@/lib/features";
 
 type Params = { sector: string };
 
@@ -69,14 +70,16 @@ export default async function SectorPricingPage({
             <p className="mt-4 text-sm leading-relaxed text-cream-dim">
               {comparison.body}
             </p>
-            <div className="mt-8">
-              <Button
-                href={`/pricing/calculator?sector=${industry.slug}`}
-                analyticsLabel={`pricing_${industry.slug}_calculator`}
-              >
-                {t.pricingCalcCta}
-              </Button>
-            </div>
+            {SHOW_CALCULATOR && (
+              <div className="mt-8">
+                <Button
+                  href={`/pricing/calculator?sector=${industry.slug}`}
+                  analyticsLabel={`pricing_${industry.slug}_calculator`}
+                >
+                  {t.pricingCalcCta}
+                </Button>
+              </div>
+            )}
           </Reveal>
 
           {addOns && addOns.length > 0 && (

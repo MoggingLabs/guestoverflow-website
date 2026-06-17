@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
 import { homeContent } from "@/content/home";
 import { getLocale } from "@/lib/i18n";
+import { SHOW_CALCULATOR } from "@/lib/features";
 
 /**
  * Pulls the savings calculator onto the home page (loss-aversion + intent),
@@ -23,9 +24,11 @@ export async function HomePricing() {
             subhead={t.subhead}
           />
         </Reveal>
-        <Reveal className="mt-12">
-          <CostCalculator compact />
-        </Reveal>
+        {SHOW_CALCULATOR && (
+          <Reveal className="mt-12">
+            <CostCalculator compact />
+          </Reveal>
+        )}
         <Reveal className="mt-10 text-center">
           <Button href="/pricing" analyticsLabel="home_see_pricing">
             {t.cta}

@@ -11,6 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { getIndustry, industriesContent, industrySlugs } from "@/content/industries";
 import { getVenueTheme } from "@/content/widget-themes";
 import { getLocale } from "@/lib/i18n";
+import { SHOW_LIVE_DEMO } from "@/lib/features";
 
 type Params = { slug: string };
 
@@ -76,13 +77,15 @@ export default async function IndustryPage({
 
       <ComparisonCallout slug={industry.slug} />
 
-      <WidgetShowcase
-        eyebrow={t.liveDemoEyebrow}
-        title={t.liveDemoTitle(venue.venueName)}
-        subhead={t.liveDemoSubhead}
-        initialTheme={industry.themeId}
-        showThemeSwitcher={false}
-      />
+      {SHOW_LIVE_DEMO && (
+        <WidgetShowcase
+          eyebrow={t.liveDemoEyebrow}
+          title={t.liveDemoTitle(venue.venueName)}
+          subhead={t.liveDemoSubhead}
+          initialTheme={industry.themeId}
+          showThemeSwitcher={false}
+        />
+      )}
 
       <section className="border-t border-line py-24 md:py-36">
         <Container>

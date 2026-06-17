@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { formStrings } from "@/content/form";
 import { useLocale } from "@/lib/locale-client";
+import { SHOW_LIVE_DEMO } from "@/lib/features";
 
 export function DemoFormSuccess() {
   const t = formStrings[useLocale()].success;
@@ -32,16 +33,18 @@ export function DemoFormSuccess() {
       <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-cream-dim">
         {t.body}
       </p>
-      <p className="mt-6 text-sm text-cream-faint">
-        {t.meanwhile}{" "}
-        <Link
-          href="/#live-demo"
-          className="text-amber underline underline-offset-2 hover:text-amber-bright"
-        >
-          {t.tryDemo}
-        </Link>
-        .
-      </p>
+      {SHOW_LIVE_DEMO && (
+        <p className="mt-6 text-sm text-cream-faint">
+          {t.meanwhile}{" "}
+          <Link
+            href="/#live-demo"
+            className="text-amber underline underline-offset-2 hover:text-amber-bright"
+          >
+            {t.tryDemo}
+          </Link>
+          .
+        </p>
+      )}
     </div>
   );
 }

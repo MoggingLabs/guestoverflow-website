@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PageHero } from "@/components/sections/shared/PageHero";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
@@ -7,6 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { calculatorContent, type FeeSector } from "@/content/competitors";
 import { getLocale } from "@/lib/i18n";
 import { isActiveSector } from "@/lib/sectors";
+import { SHOW_CALCULATOR } from "@/lib/features";
 
 export const metadata: Metadata = {
   title: "Commission savings calculator",
@@ -19,6 +21,7 @@ export default async function CalculatorPage({
 }: {
   searchParams: Promise<{ sector?: string }>;
 }) {
+  if (!SHOW_CALCULATOR) notFound();
   const locale = await getLocale();
   const c = calculatorContent[locale];
   // Honour ?sector= only for live verticals; otherwise fall back to the

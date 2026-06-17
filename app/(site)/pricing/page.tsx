@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/shared/PageHero";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
+import { SHOW_CALCULATOR } from "@/lib/features";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -74,21 +75,23 @@ export default async function PricingPage() {
         </Container>
       </section>
 
-      {/* Savings calculator */}
-      <section className="py-20 md:py-28">
-        <Container>
-          <Reveal>
-            <SectionHeading
-              eyebrow={t.sectorPicker.eyebrow}
-              title={t.calc.title}
-              subhead={t.calc.subhead}
-            />
-          </Reveal>
-          <Reveal className="mt-12">
-            <CostCalculator compact />
-          </Reveal>
-        </Container>
-      </section>
+      {/* Savings calculator (stashed for a future addition) */}
+      {SHOW_CALCULATOR && (
+        <section className="py-20 md:py-28">
+          <Container>
+            <Reveal>
+              <SectionHeading
+                eyebrow={t.sectorPicker.eyebrow}
+                title={t.calc.title}
+                subhead={t.calc.subhead}
+              />
+            </Reveal>
+            <Reveal className="mt-12">
+              <CostCalculator compact />
+            </Reveal>
+          </Container>
+        </section>
+      )}
 
       {/* Founding offer */}
       <section className="pb-24 md:pb-32">

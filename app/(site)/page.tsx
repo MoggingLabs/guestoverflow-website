@@ -13,6 +13,7 @@ import { FooterCta } from "@/components/layout/FooterCta";
 import { homeContent } from "@/content/home";
 import { faqContent } from "@/content/faq";
 import { getLocale } from "@/lib/i18n";
+import { SHOW_LIVE_DEMO } from "@/lib/features";
 
 export default async function HomePage() {
   const locale = await getLocale();
@@ -24,15 +25,17 @@ export default async function HomePage() {
       {/* Proof bar moved up: honest credibility + sectors served. */}
       <BuiltForStrip />
       <ProblemStrip />
-      {/* The booking page, playable. Centerpiece kept high, reframed from "widget". */}
-      <WidgetShowcase
-        eyebrow={t.widgetShowcase.eyebrow}
-        title={t.widgetShowcase.title}
-        subhead={t.widgetShowcase.subhead}
-        caption={t.widgetShowcase.caption}
-        initialTheme="salon"
-        showThemeSwitcher={false}
-      />
+      {/* Booking demo, stashed until we have a live one to show. */}
+      {SHOW_LIVE_DEMO && (
+        <WidgetShowcase
+          eyebrow={t.widgetShowcase.eyebrow}
+          title={t.widgetShowcase.title}
+          subhead={t.widgetShowcase.subhead}
+          caption={t.widgetShowcase.caption}
+          initialTheme="salon"
+          showThemeSwitcher={false}
+        />
+      )}
       <HowItWorks />
       <Differentiators />
       {/* Pricing + savings calculator pulled onto the home page. */}

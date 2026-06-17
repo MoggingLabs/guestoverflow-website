@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { industrySlugs } from "@/content/industries";
 import { competitorSlugs } from "@/content/compare";
 import { site } from "@/content/site";
+import { SHOW_CALCULATOR } from "@/lib/features";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -10,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/industries",
     "/services",
     "/pricing",
-    "/pricing/calculator",
+    ...(SHOW_CALCULATOR ? ["/pricing/calculator"] : []),
     "/compare",
     "/promises",
     // "/quandoo" — stashed with the off-vertical (restaurant) campaigns

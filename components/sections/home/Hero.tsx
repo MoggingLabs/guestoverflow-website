@@ -5,6 +5,7 @@ import { HeroParticles } from "@/components/sections/home/HeroParticles";
 import { homeContent } from "@/content/home";
 import { siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
+import { SHOW_LIVE_DEMO } from "@/lib/features";
 
 export async function Hero() {
   const locale = await getLocale();
@@ -44,12 +45,14 @@ export async function Hero() {
               {cta.tertiary.label}
             </Button>
           </div>
-          <a
-            href={cta.secondary.href}
-            className="mt-6 inline-block text-sm text-white/60 transition-colors hover:text-white"
-          >
-            {cta.secondary.label} ↓
-          </a>
+          {SHOW_LIVE_DEMO && (
+            <a
+              href={cta.secondary.href}
+              className="mt-6 inline-block text-sm text-white/60 transition-colors hover:text-white"
+            >
+              {cta.secondary.label} ↓
+            </a>
+          )}
         </Reveal>
       </Container>
     </section>
