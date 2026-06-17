@@ -27,16 +27,19 @@ export default async function PromisesPage() {
 
       <section className="border-t border-line py-24 md:py-32">
         <Container>
-          <Reveal stagger className="grid gap-5 md:grid-cols-2">
+          <Reveal stagger className="grid gap-x-5 gap-y-4 md:grid-cols-2">
             {t.promises.map((p) => (
-              <Card key={p.title}>
+              <Card
+                key={p.title}
+                className="grid gap-y-4 md:row-span-3 md:grid-rows-subgrid"
+              >
                 <h2 className="font-display text-lg font-medium text-cream">
                   {p.title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-cream-dim">
+                <p className="text-sm leading-relaxed text-cream-dim">
                   {p.body}
                 </p>
-                <p className="mt-4 border-t border-line pt-4 text-xs leading-relaxed text-cream-faint">
+                <p className="border-t border-line pt-4 text-xs leading-relaxed text-cream-faint">
                   {p.vs}
                 </p>
               </Card>

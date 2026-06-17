@@ -26,7 +26,7 @@ export async function HowItWorks() {
           {t.howItWorks.steps.map((step, i) => (
             <div
               key={step.title}
-              className="grid gap-y-3 md:row-span-3 md:grid-rows-subgrid"
+              className="grid gap-y-4 md:row-span-3 md:grid-rows-subgrid"
             >
               <span className="font-display text-4xl font-medium text-amber">
                 {String(i + 1).padStart(2, "0")}

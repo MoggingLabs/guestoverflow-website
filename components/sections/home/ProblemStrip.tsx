@@ -14,13 +14,21 @@ export async function ProblemStrip() {
         <Reveal>
           <SectionHeading eyebrow={t.problemsEyebrow} title={t.problems.title} />
         </Reveal>
-        <Reveal stagger className="mt-14 grid gap-5 md:grid-cols-3">
+        {/* Subgrid keeps the title and body rows aligned across all three cards
+            even when a title wraps to a different number of lines. */}
+        <Reveal
+          stagger
+          className="mt-14 grid gap-x-5 gap-y-4 md:grid-cols-3 md:grid-rows-[auto_auto]"
+        >
           {t.problems.items.map((item) => (
-            <Card key={item.title}>
+            <Card
+              key={item.title}
+              className="grid gap-y-4 md:row-span-2 md:grid-rows-subgrid"
+            >
               <h3 className="font-display text-lg font-medium text-cream">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-cream-dim">
+              <p className="text-sm leading-relaxed text-cream-dim">
                 {item.body}
               </p>
             </Card>

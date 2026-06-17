@@ -17,14 +17,17 @@ export async function NoWebsitePath() {
         <Reveal>
           <SectionHeading eyebrow={t.eyebrow} title={t.title} subhead={t.subhead} />
         </Reveal>
-        <Reveal stagger className="mx-auto mt-14 grid max-w-4xl gap-5 md:grid-cols-2">
+        <Reveal stagger className="mx-auto mt-14 grid max-w-4xl gap-x-5 gap-y-4 md:grid-cols-2 md:grid-rows-[auto_auto_auto]">
           {t.paths.map((path) => (
-            <Card key={path.title}>
+            <Card
+              key={path.title}
+              className="grid gap-y-4 md:row-span-3 md:grid-rows-subgrid"
+            >
               <Badge>{path.badge}</Badge>
-              <h3 className="mt-4 font-display text-lg font-medium text-cream">
+              <h3 className="font-display text-lg font-medium text-cream">
                 {path.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-cream-dim">
+              <p className="text-sm leading-relaxed text-cream-dim">
                 {path.body}
               </p>
             </Card>

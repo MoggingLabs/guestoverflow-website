@@ -60,13 +60,16 @@ export default async function IndustryPage({
               title={t.problemTitle(industry.label)}
             />
           </Reveal>
-          <Reveal stagger className="mt-14 grid gap-5 md:grid-cols-3">
+          <Reveal stagger className="mt-14 grid gap-x-5 gap-y-4 md:grid-cols-3 md:grid-rows-[auto_auto]">
             {industry.painPoints.map((point) => (
-              <Card key={point.title}>
+              <Card
+                key={point.title}
+                className="grid gap-y-4 md:row-span-2 md:grid-rows-subgrid"
+              >
                 <h3 className="font-display text-lg font-medium text-cream">
                   {point.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-cream-dim">
+                <p className="text-sm leading-relaxed text-cream-dim">
                   {point.body}
                 </p>
               </Card>
@@ -95,16 +98,19 @@ export default async function IndustryPage({
               title={t.builtInTitle(industry.label)}
             />
           </Reveal>
-          <Reveal stagger className="mt-14 grid gap-10 md:grid-cols-3">
+          <Reveal stagger className="mt-14 grid gap-x-10 gap-y-4 md:grid-cols-3 md:grid-rows-[auto_auto_auto]">
             {industry.highlights.map((highlight, i) => (
-              <div key={highlight.title}>
+              <div
+                key={highlight.title}
+                className="grid gap-y-4 md:row-span-3 md:grid-rows-subgrid"
+              >
                 <span className="font-display text-4xl font-medium text-amber">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-4 font-display text-lg font-medium text-cream">
+                <h3 className="font-display text-lg font-medium text-cream">
                   {highlight.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-cream-dim">
+                <p className="text-sm leading-relaxed text-cream-dim">
                   {highlight.body}
                 </p>
               </div>

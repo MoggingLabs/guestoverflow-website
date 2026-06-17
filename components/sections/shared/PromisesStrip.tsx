@@ -18,11 +18,14 @@ export async function PromisesStrip({ limit }: { limit?: number }) {
         </Reveal>
         <Reveal stagger className="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2">
           {items.map((p) => (
-            <div key={p.title}>
+            <div
+              key={p.title}
+              className="grid gap-y-8 md:row-span-2 md:grid-rows-subgrid"
+            >
               <h3 className="font-display text-base font-medium text-cream">
                 {p.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-cream-dim">
+              <p className="text-sm leading-relaxed text-cream-dim">
                 {p.body}
               </p>
             </div>
