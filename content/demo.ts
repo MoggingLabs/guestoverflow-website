@@ -32,7 +32,7 @@ const en: DemoContent = {
     ],
   },
   reassurance:
-    "There is no commitment. Should we work together, you begin with three months at half price and a clear exit if the product does not prove its value. We will confirm your slot within one business day.",
+    "There is no commitment, and no pressure. We will confirm your slot within one business day.",
   tryWidget: {
     title: "Try it during your visit",
     body: "This is the booking page we will build for your salon. Make an appointment and see how it works.",
@@ -63,7 +63,7 @@ const pt: DemoContent = {
     ],
   },
   reassurance:
-    "Não há compromisso. Caso venhamos a trabalhar juntos, começa com três meses a metade do preço e uma saída clara se o produto não demonstrar o seu valor. Confirmamos o seu horário no prazo de um dia útil.",
+    "Não há compromisso, e não há pressão. Confirmamos o seu horário no prazo de um dia útil.",
   tryWidget: {
     title: "Experimente durante a sua visita",
     body: "Esta é a página de reservas que vamos construir para o seu salão. Faça uma marcação e veja como funciona.",

@@ -13,6 +13,7 @@ import {
 } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
 import { SHOW_CALCULATOR } from "@/lib/features";
+import { cn } from "@/lib/utils";
 
 type Params = { sector: string };
 
@@ -63,31 +64,17 @@ export default async function SectorPricingPage({
             />
           </Reveal>
 
-          <Reveal className="mx-auto mt-16 max-w-2xl text-center">
-            <h2 className="font-display text-2xl font-medium text-cream">
-              {comparison.title}
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-cream-dim">
-              {comparison.body}
-            </p>
-            {SHOW_CALCULATOR && (
-              <div className="mt-8">
-                <Button
-                  href={`/pricing/calculator?sector=${industry.slug}`}
-                  analyticsLabel={`pricing_${industry.slug}_calculator`}
-                >
-                  {t.pricingCalcCta}
-                </Button>
-              </div>
-            )}
-          </Reveal>
-
           {addOns && addOns.length > 0 && (
-            <Reveal className="mx-auto mt-16 max-w-3xl">
+            <Reveal className="mx-auto mt-12 max-w-3xl">
               <h2 className="text-center font-display text-xl font-medium text-cream">
                 {t.pricingAddOnsTitle}
               </h2>
-              <div className="mt-6 grid gap-5 sm:grid-cols-2">
+              <div
+                className={cn(
+                  "mt-6 grid gap-5",
+                  addOns.length === 1 ? "max-w-md mx-auto" : "sm:grid-cols-2",
+                )}
+              >
                 {addOns.map((addOn) => (
                   <div
                     key={addOn.name}
@@ -111,6 +98,25 @@ export default async function SectorPricingPage({
               </div>
             </Reveal>
           )}
+
+          <Reveal className="mx-auto mt-16 max-w-2xl text-center">
+            <h2 className="font-display text-2xl font-medium text-cream">
+              {comparison.title}
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-cream-dim">
+              {comparison.body}
+            </p>
+            {SHOW_CALCULATOR && (
+              <div className="mt-8">
+                <Button
+                  href={`/pricing/calculator?sector=${industry.slug}`}
+                  analyticsLabel={`pricing_${industry.slug}_calculator`}
+                >
+                  {t.pricingCalcCta}
+                </Button>
+              </div>
+            )}
+          </Reveal>
         </Container>
       </section>
 

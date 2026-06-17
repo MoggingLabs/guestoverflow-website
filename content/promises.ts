@@ -43,9 +43,9 @@ const en: PromisesContent = {
       vs: "Salon marketplaces have repeatedly raised commission rates and payment fees with little notice to the salons on them.",
     },
     {
-      title: "No lock-in, with a one-sentence exit",
-      body: "Leave whenever you choose, in a single email. No multi-year contract, and no invoice after your departure.",
-      vs: "Leaving a marketplace can mean losing the client reviews and rebooking history you spent years building on it.",
+      title: "We never market to your clients",
+      body: "Your client list is for your salon alone. We will never email, advertise to, or sell your clients, and this is written into the agreement.",
+      vs: "Marketplaces market your own clients back to you, and to nearby competitors, using the list you built.",
     },
     {
       title: "Our price is public, with no sales call required to see it",
@@ -85,9 +85,9 @@ const pt: PromisesContent = {
       vs: "Os marketplaces de salões já aumentaram repetidamente as comissões e as taxas de pagamento com pouco aviso aos salões que neles estão.",
     },
     {
-      title: "Sem fidelização, com uma saída numa frase",
-      body: "Sai quando quiser, num único email. Sem contrato de vários anos, e sem fatura após a sua saída.",
-      vs: "Sair de um marketplace pode significar perder as avaliações dos clientes e o histórico de remarcações que levou anos a construir nele.",
+      title: "Nunca fazemos marketing aos seus clientes",
+      body: "A sua lista de clientes é só do seu salão. Nunca enviamos email, publicidade, nem vendemos os seus clientes, e isto está estipulado no contrato.",
+      vs: "Os marketplaces fazem marketing dos seus próprios clientes de volta para si, e para concorrentes próximos, usando a lista que construiu.",
     },
     {
       title: "O nosso preço é público, sem necessidade de chamada de vendas para o consultar",

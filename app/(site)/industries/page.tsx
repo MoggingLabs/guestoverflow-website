@@ -7,6 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { industriesContent, getActiveIndustries } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Industries",
@@ -29,7 +30,13 @@ export default async function IndustriesPage() {
       />
       <section className="pb-24 md:pb-36">
         <Container>
-          <Reveal stagger className="grid gap-5 sm:grid-cols-2">
+          <Reveal
+            stagger
+            className={cn(
+              "grid gap-5",
+              industries.length === 1 ? "max-w-md mx-auto" : "sm:grid-cols-2",
+            )}
+          >
             {industries.map((industry) => (
               <Link
                 key={industry.slug}

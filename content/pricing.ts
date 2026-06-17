@@ -93,8 +93,8 @@ const en: PricingContent = {
   },
   foundingPartner: {
     badge: "Founding offer",
-    title: "Three months at half price, with a straightforward exit",
-    body: "Join as a founding salon and pay half price for your first three months. If you do not observe genuine return or genuine usage through your website or your Google Business Profile during that period, you may end the relationship without complication. No justification is required and no exit fees apply. We seek only clients for whom the platform delivers measurable results.",
+    title: "Three months at half price",
+    body: "Join as a founding salon and pay half price for your first three months. We work closely with you to make the platform deliver measurable results through your website and your Google Business Profile, and you see exactly what it produces every month.",
     cta: "Claim the founding offer",
   },
   offerDisclaimer: {
@@ -198,8 +198,8 @@ const pt: PricingContent = {
   },
   foundingPartner: {
     badge: "Oferta de lançamento",
-    title: "Três meses a metade do preço, com uma saída simples",
-    body: "Junte-se como salão fundador e pague metade do preço nos primeiros três meses. Se nesse período não verificar retorno nem utilização reais através do seu site ou do seu Perfil de Empresa no Google, pode terminar a relação sem complicações. Não é exigida qualquer justificação e não se aplicam custos de saída. Procuramos apenas clientes para quem a plataforma produz resultados mensuráveis.",
+    title: "Três meses a metade do preço",
+    body: "Junte-se como salão fundador e pague metade do preço nos primeiros três meses. Trabalhamos de perto consigo para que a plataforma produza resultados mensuráveis através do seu site e do seu Perfil de Empresa no Google, e vê exatamente o que produz todos os meses.",
     cta: "Garantir a oferta de lançamento",
   },
   offerDisclaimer: {

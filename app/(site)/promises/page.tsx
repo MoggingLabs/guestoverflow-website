@@ -10,7 +10,7 @@ import { getLocale } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Our promises",
   description:
-    "Guest Overflow's contractual commitments: one-click data export, no commission, no surprise add-ons, no rate hikes, no lock-in, and public pricing.",
+    "Guest Overflow's contractual commitments: one-click data export, no commission, no surprise add-ons, no rate hikes, and public pricing.",
 };
 
 export default async function PromisesPage() {

@@ -51,7 +51,7 @@ const en: FaqContent = {
     {
       question: "What if it does not work for us?",
       answer:
-        "In that case, you may withdraw cleanly. Our founding offer is three months at half price, and if you do not see real return or usage through your website or Google profile in that time, you may end the relationship without conditions. We track the numbers together, so you will never have to rely on our word alone.",
+        "We work closely with you and measure the results together: every month you see exactly what came through your website and your Google profile. If something is not working, we would rather fix it with you than let it slide, so you never have to rely on our word alone.",
     },
     {
       question: "What happens after I book a demo?",
@@ -108,14 +108,14 @@ const en: FaqContent = {
         "Yes. Choose annual billing and you pay a third less than the monthly price, so Essential decreases from €99 to €66 a month. Use the toggle above the plans to compare both.",
     },
     {
-      question: "Can I cancel anytime?",
+      question: "What happens to my data if I cancel?",
       answer:
-        "Monthly plans may be cancelled at any time. Your client data remains exportable for 90 days after cancellation.",
+        "Your client data remains exportable for 90 days after cancellation, in a clean file you own.",
     },
     {
       question: "What does the founding offer include?",
       answer:
-        "Half price for your first three months, hands-on onboarding directly with the founding team, and a clean exit if it is not working: if you see no return or usage through your website or Google profile in that time, you may end it, without conditions.",
+        "Half price for your first three months, and hands-on onboarding directly with the founding team, who set up and tune your booking system with you.",
     },
     {
       question: "I only have a Google Business Profile. Where do I start?",
@@ -185,7 +185,7 @@ const pt: FaqContent = {
     {
       question: "E se não resultar para nós?",
       answer:
-        "Nesse caso, pode retirar-se de forma limpa. A nossa oferta de lançamento é de três meses a metade do preço, e se nesse período não verificar retorno nem utilização reais através do seu site ou do seu perfil no Google, pode terminar a relação sem condições. Acompanhamos os números em conjunto, pelo que nunca terá de confiar apenas na nossa palavra.",
+        "Trabalhamos de perto consigo e medimos os resultados em conjunto: todos os meses vê exatamente o que chegou através do seu site e do seu perfil no Google. Se algo não estiver a funcionar, preferimos resolvê-lo consigo a deixá-lo andar, por isso nunca terá de confiar apenas na nossa palavra.",
     },
     {
       question: "O que acontece depois de marcar a demonstração?",
@@ -242,14 +242,14 @@ const pt: FaqContent = {
         "Sim. Com faturação anual paga menos um terço face ao preço mensal, pelo que o Essential desce de 99 € para 66 € por mês. Utilize o seletor acima dos planos para comparar.",
     },
     {
-      question: "Posso cancelar quando quiser?",
+      question: "O que acontece aos meus dados se cancelar?",
       answer:
-        "Os planos mensais podem ser cancelados a qualquer momento. Os dados dos seus clientes continuam exportáveis durante 90 dias após o cancelamento.",
+        "Os dados dos seus clientes continuam exportáveis durante 90 dias após o cancelamento, num ficheiro limpo que é seu.",
     },
     {
       question: "O que inclui a oferta de lançamento?",
       answer:
-        "Metade do preço nos primeiros três meses, onboarding conduzido diretamente com a equipa fundadora, e uma saída limpa caso não esteja a resultar: se não verificar retorno nem utilização através do seu site ou do seu perfil no Google nesse período, pode terminar sem condições.",
+        "Metade do preço nos primeiros três meses, e onboarding conduzido diretamente com a equipa fundadora, que monta e afina o seu sistema de reservas consigo.",
     },
     {
       question: "Só tenho um Perfil de Empresa no Google. Por onde começo?",

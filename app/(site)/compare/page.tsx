@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { compareContent, getActiveCompareEntries } from "@/content/compare";
 import { getLocale } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Compare Guest Overflow",
@@ -30,7 +31,13 @@ export default async function ComparePage() {
 
       <section className="border-t border-line py-24 md:py-32">
         <Container>
-          <Reveal stagger className="grid gap-5 md:grid-cols-2">
+          <Reveal
+            stagger
+            className={cn(
+              "grid gap-5",
+              entries.length === 1 ? "max-w-md mx-auto" : "md:grid-cols-2",
+            )}
+          >
             {entries.map((entry) => (
               <Link key={entry.slug} href={`/compare/${entry.slug}`} className="group">
                 <Card className="h-full transition-colors group-hover:border-amber-deep/60">

@@ -5,6 +5,7 @@ import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
 import { SHOW_CALCULATOR, SHOW_FOUNDING_OFFER } from "@/lib/features";
+import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -49,7 +50,15 @@ export default async function PricingPage() {
               subhead={t.sectorPicker.subhead}
             />
           </Reveal>
-          <Reveal stagger className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <Reveal
+            stagger
+            className={cn(
+              "mt-12 grid gap-5",
+              industries.length === 1
+                ? "max-w-sm mx-auto"
+                : "md:grid-cols-2 lg:grid-cols-3",
+            )}
+          >
             {industries.map((industry) => (
               <Link
                 key={industry.slug}
