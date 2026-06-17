@@ -36,7 +36,7 @@ const en: FaqContent = {
     {
       question: "Can it match my brand exactly?",
       answer:
-        "Yes; that is the core of what we do. Colors, typography, copy, and flow are tailored to each salon. Try the live demo above to see how the booking page can look as your own.",
+        "Yes; that is the core of what we do. Colours, typography, copy, and flow are tailored to each salon, so your booking page looks like your studio, not a generic app. We show you exactly how it will look in your demo.",
     },
     {
       question: "Will Guest Overflow bring me new customers?",
@@ -56,7 +56,7 @@ const en: FaqContent = {
     {
       question: "What happens after I book a demo?",
       answer:
-        "A 20-minute call in which we show Guest Overflow running on a site like yours and scope what your setup would involve. No commitment, and no discussion of setup fees unless you wish to have it.",
+        "A 20-minute call in which we show Guest Overflow running on a site like yours and scope what your setup would involve. No pressure, and no discussion of setup fees unless you wish to have it.",
     },
   ],
   product: [
@@ -113,11 +113,6 @@ const en: FaqContent = {
         "Your client data remains exportable for 90 days after cancellation, in a clean file you own.",
     },
     {
-      question: "What does the founding offer include?",
-      answer:
-        "Half price for your first three months, and hands-on onboarding directly with the founding team, who set up and tune your booking system with you.",
-    },
-    {
       question: "I only have a Google Business Profile. Where do I start?",
       answer:
         "There precisely. We optimize your profile so that people find and book you from Google. It is the affordable entry point. A full website with built-in booking is our higher-level offering, for when you are ready.",
@@ -170,7 +165,7 @@ const pt: FaqContent = {
     {
       question: "Consegue ficar exatamente com a minha marca?",
       answer:
-        "Sim; é esse o centro do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada salão. Experimente a demo ao vivo acima para ver como a página de reservas pode ficar com a sua marca.",
+        "Sim; é esse o centro do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada salão, para que a sua página de reservas se pareça com o seu estúdio e não com uma app genérica. Mostramos-lhe exatamente como ficará na sua demonstração.",
     },
     {
       question: "O Guest Overflow traz-me novos clientes?",
@@ -190,7 +185,7 @@ const pt: FaqContent = {
     {
       question: "O que acontece depois de marcar a demonstração?",
       answer:
-        "Uma chamada de 20 minutos em que mostramos o Guest Overflow a funcionar num site como o seu e definimos o que a sua instalação envolveria. Sem compromisso, e sem discussão de custos de instalação a menos que a pretenda ter.",
+        "Uma chamada de 20 minutos em que mostramos o Guest Overflow a funcionar num site como o seu e definimos o que a sua instalação envolveria. Sem pressão, e sem discussão de custos de instalação a menos que a pretenda ter.",
     },
   ],
   product: [
@@ -245,11 +240,6 @@ const pt: FaqContent = {
       question: "O que acontece aos meus dados se cancelar?",
       answer:
         "Os dados dos seus clientes continuam exportáveis durante 90 dias após o cancelamento, num ficheiro limpo que é seu.",
-    },
-    {
-      question: "O que inclui a oferta de lançamento?",
-      answer:
-        "Metade do preço nos primeiros três meses, e onboarding conduzido diretamente com a equipa fundadora, que monta e afina o seu sistema de reservas consigo.",
     },
     {
       question: "Só tenho um Perfil de Empresa no Google. Por onde começo?",

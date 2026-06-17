@@ -133,7 +133,7 @@ const en = {
   footerCta: {
     headline: "Ready to set up your full booking system?",
     subhead:
-      "See Guest Overflow set up for a salon like yours. The demonstration takes 20 minutes, and there is no commitment.",
+      "See Guest Overflow set up for a salon like yours. The demonstration takes 20 minutes, with no pressure.",
   },
 };
 
@@ -269,7 +269,7 @@ const pt: typeof en = {
   footerCta: {
     headline: "Pronto para montar o seu sistema de reservas completo?",
     subhead:
-      "Veja o Guest Overflow configurado para um salão como o seu. A demonstração demora 20 minutos e não implica qualquer compromisso.",
+      "Veja o Guest Overflow configurado para um salão como o seu. A demonstração demora 20 minutos, sem qualquer pressão.",
   },
 };
 

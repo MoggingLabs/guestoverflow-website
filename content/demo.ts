@@ -27,12 +27,12 @@ const en: DemoContent = {
       },
       {
         title: "Straight answers",
-        body: "Ask us anything about pricing, data ownership, or how your specific setup would work. There is no commitment and no pressure at the close of the session.",
+        body: "Ask us anything about pricing, data ownership, or how your specific setup would work. There is no pressure at the close of the session.",
       },
     ],
   },
   reassurance:
-    "There is no commitment, and no pressure. We will confirm your slot within one business day.",
+    "There is no pressure. We will confirm your slot within one business day.",
   tryWidget: {
     title: "Try it during your visit",
     body: "This is the booking page we will build for your salon. Make an appointment and see how it works.",
@@ -58,12 +58,12 @@ const pt: DemoContent = {
       },
       {
         title: "Respostas diretas",
-        body: "Pergunte-nos o que quiser sobre preços, propriedade dos dados ou como funcionaria o seu caso concreto. Sem compromisso e sem pressão no final da sessão.",
+        body: "Pergunte-nos o que quiser sobre preços, propriedade dos dados ou como funcionaria o seu caso concreto. Sem pressão no final da sessão.",
       },
     ],
   },
   reassurance:
-    "Não há compromisso, e não há pressão. Confirmamos o seu horário no prazo de um dia útil.",
+    "Não há pressão. Confirmamos o seu horário no prazo de um dia útil.",
   tryWidget: {
     title: "Experimente durante a sua visita",
     body: "Esta é a página de reservas que vamos construir para o seu salão. Faça uma marcação e veja como funciona.",
