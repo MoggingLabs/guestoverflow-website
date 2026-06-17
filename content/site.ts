@@ -6,7 +6,7 @@ export const site = {
   name: "Guest Overflow",
   tagline: "Your own booking page, built around how your salon runs.",
   description:
-    "Guest Overflow gives each salon and barbershop its own booking page, built around how they run, on their brand and domain. Flat pricing, no commission, and every client relationship remains yours. For salons and barbershops.",
+    "Guest Overflow gives each salon and barbershop its own booking page, built around how they run, branded as theirs. Flat pricing, no commission, and every client relationship remains yours. For salons and barbershops.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow.com",
   email: "hello@guestoverflow.com",
   cta: {
@@ -89,7 +89,7 @@ const en: SiteStrings = {
     },
   ],
   footerBlurb:
-    "White-label online booking for salons and barbershops.",
+    "Branded online booking for salons and barbershops.",
   footerProductOf: "all rights reserved",
   footerNote: "No lock-in · No commission · Cancel at any time.",
 };
@@ -153,7 +153,7 @@ const pt: SiteStrings = {
     },
   ],
   footerBlurb:
-    "Reservas online white-label para cabeleireiros e barbearias.",
+    "Reservas online com a sua marca para cabeleireiros e barbearias.",
   footerProductOf: "todos os direitos reservados",
   footerNote: "Sem fidelização · Sem comissões · Cancele quando quiser.",
 };

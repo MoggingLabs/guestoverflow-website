@@ -24,7 +24,7 @@ const en: ProductContent = {
     {
       icon: "widget",
       title: "Your own branded booking page",
-      body: "It runs as its own branded page on your domain, the link for your Google profile, Instagram bio, and advertising, designed and built by people who build websites professionally. It is a considered part of your salon's brand, with chair availability, service durations, and blackout dates updating in real time.",
+      body: "It runs as its own branded page at your own guestoverflow.com address, the link for your Google profile, Instagram bio, and advertising, designed and built by people who build websites professionally. It is a considered part of your salon's brand, with chair availability, service durations, and blackout dates updating in real time. On Premium, it moves to your own custom domain with no trace of us.",
     },
     {
       icon: "compass",
@@ -57,7 +57,7 @@ const en: ProductContent = {
     title: "Your client data is yours, and it stays that way.",
     body: "Marketplace platforms like Fresha and Booksy built very large businesses on data that salons and barbershops generated for them. Guest Overflow is structured so that this cannot occur here: your appointments and your clients reside in your account, and you can export everything at any time. We charge for the software, nothing more.",
     points: [
-      "You own everything: your site, your domain, your client data, your payment account",
+      "You own everything: your booking page, your brand, your client data, your payment account",
       "Full data export, at any time, without conditions",
       "No marketing to your clients, ever",
       "Client data on EU servers, under a Portuguese-law contract, GDPR by design",
@@ -83,7 +83,7 @@ const pt: ProductContent = {
     {
       icon: "widget",
       title: "A sua própria página de reservas com a sua marca",
-      body: "No ar como página própria com a sua marca, no seu domínio, o link para o seu perfil no Google, a bio do Instagram e a publicidade, desenhada e construída por quem constrói sites profissionalmente. É uma parte pensada da marca do seu salão, com disponibilidade de cadeiras, durações de serviço e datas bloqueadas a atualizar em tempo real.",
+      body: "No ar como página própria com a sua marca, num endereço guestoverflow.com, o link para o seu perfil no Google, a bio do Instagram e a publicidade, desenhada e construída por quem constrói sites profissionalmente. É uma parte pensada da marca do seu salão, com disponibilidade de cadeiras, durações de serviço e datas bloqueadas a atualizar em tempo real. No Premium, passa para o seu próprio domínio, sem rasto da nossa parte.",
     },
     {
       icon: "compass",
@@ -116,7 +116,7 @@ const pt: ProductContent = {
     title: "Os dados dos seus clientes são seus, e assim permanecem.",
     body: "As plataformas-marketplace como a Fresha e a Booksy construíram negócios enormes com dados que salões e barbearias geraram para elas. O Guest Overflow foi estruturado para que isso não possa acontecer aqui: as suas marcações e os seus clientes residem na sua conta, e pode exportar tudo a qualquer momento. Cobramos pelo software, nada mais.",
     points: [
-      "É dono de tudo: o seu site, o seu domínio, os dados dos clientes, a sua conta de pagamentos",
+      "É dono de tudo: a sua página de reservas, a sua marca, os dados dos clientes, a sua conta de pagamentos",
       "Exportação completa dos dados, a qualquer momento, sem condições",
       "Nunca fazemos marketing aos seus clientes",
       "Dados em servidores na UE, contrato sob lei portuguesa, RGPD desde a base",

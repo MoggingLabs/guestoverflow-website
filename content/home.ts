@@ -6,7 +6,7 @@ const en = {
     eyebrow: "Booking software you own",
     headline: "Your own booking system, built around how your salon runs.",
     subhead:
-      "We design and build a complete booking system around your services, your chairs, your hours, and your rules, on your own brand and domain. Clients book direct, you pay one flat price with no commission, and every client relationship remains yours.",
+      "We design and build a complete booking system around your services, your chairs, your hours, and your rules, branded as your salon. Clients book direct, you pay one flat price with no commission, and every client relationship remains yours.",
   },
   problems: {
     title: "There is no reason to send your clients elsewhere to book a cut or a colour.",
@@ -29,7 +29,7 @@ const en = {
     eyebrow: "Live demo",
     title: "This is your salon booking page. We invite you to try it.",
     subhead:
-      "A genuine, working salon booking page is running here. Pick a service, choose a stylist, and book an appointment exactly as your clients would, then publish it live as your own branded booking page, on your brand and your domain.",
+      "A genuine, working salon booking page is running here. Pick a service, choose a stylist, and book an appointment exactly as your clients would, then publish it live as your own branded booking page.",
     caption: "One booking engine, tailored to your salon, live as your own branded page.",
   },
   howItWorks: {
@@ -38,7 +38,7 @@ const en = {
     steps: [
       {
         title: "We build your booking system",
-        body: "Our team designs and builds your booking system to match your brand, from typography to tone of voice, and launches it on your own domain. You are never required to handle code.",
+        body: "Our team designs and builds your booking system to match your brand, from typography to tone of voice, and launches it on a branded guestoverflow.com address. You are never required to handle code.",
       },
       {
         title: "Clients book in seconds",
@@ -57,7 +57,7 @@ const en = {
       {
         icon: "brand",
         title: "Genuinely yours",
-        body: "Guest Overflow is your own booking system, on your domain and under your brand. Clients book with you directly, and they never see our name.",
+        body: "Guest Overflow carries your salon's brand: your logo, colours, and tone. Clients book with you directly. On Premium, it moves to your own custom domain, with no trace of us.",
       },
       {
         icon: "commission",
@@ -142,7 +142,7 @@ const pt: typeof en = {
     eyebrow: "Software de reservas que é seu",
     headline: "O seu próprio sistema de reservas, à medida de como o seu salão funciona.",
     subhead:
-      "Desenhamos e construímos um sistema de reservas completo à volta dos seus serviços, das suas cadeiras, dos seus horários e das suas regras, com a sua marca e no seu domínio. Os clientes marcam diretamente, paga um valor fixo sem comissões, e cada relação com o cliente permanece sua.",
+      "Desenhamos e construímos um sistema de reservas completo à volta dos seus serviços, das suas cadeiras, dos seus horários e das suas regras, com a sua marca. Os clientes marcam diretamente, paga um valor fixo sem comissões, e cada relação com o cliente permanece sua.",
   },
   problems: {
     title: "Não há motivo para encaminhar os seus clientes para outro lugar para marcarem um corte ou uma cor.",
@@ -165,7 +165,7 @@ const pt: typeof en = {
     eyebrow: "Demo ao vivo",
     title: "Esta é a página de reservas do seu salão. Convidamo-lo a experimentá-la.",
     subhead:
-      "Uma página de reservas de salão, real e a funcionar aqui mesmo. Escolha um serviço, escolha um profissional e marque uma marcação tal como os seus clientes fariam, e depois publique-a no ar como a sua própria página de reservas, com a sua marca e no seu domínio.",
+      "Uma página de reservas de salão, real e a funcionar aqui mesmo. Escolha um serviço, escolha um profissional e marque uma marcação tal como os seus clientes fariam, e depois publique-a no ar como a sua própria página de reservas, com a sua marca.",
     caption: "Um único motor de reservas, à medida do seu salão, no ar como a sua própria página com a sua marca.",
   },
   howItWorks: {
@@ -174,7 +174,7 @@ const pt: typeof en = {
     steps: [
       {
         title: "Construímos o seu sistema de reservas",
-        body: "A nossa equipa desenha e constrói o seu sistema de reservas à medida da sua marca, da tipografia ao tom de voz, e lança-o no seu próprio domínio. Nunca necessita de mexer em código.",
+        body: "A nossa equipa desenha e constrói o seu sistema de reservas à medida da sua marca, da tipografia ao tom de voz, e lança-o num endereço guestoverflow.com com a sua marca. Nunca necessita de mexer em código.",
       },
       {
         title: "Os clientes marcam em segundos",
@@ -193,7 +193,7 @@ const pt: typeof en = {
       {
         icon: "brand",
         title: "Genuinamente seu",
-        body: "O Guest Overflow é o seu próprio sistema de reservas, no seu domínio e com a sua marca. Os clientes marcam consigo diretamente, e nunca veem o nosso nome.",
+        body: "O Guest Overflow apresenta a marca do seu salão: o seu logótipo, cores e tom. Os clientes marcam consigo diretamente. No Premium, passa para o seu próprio domínio, sem rasto da nossa parte.",
       },
       {
         icon: "commission",

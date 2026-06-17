@@ -27,9 +27,9 @@ const pricingLadder = {
     starter: {
       name: "Starter",
       note: "Self-service. You complete the configuration",
-      blurb: "Your own branded booking page, live on your own domain today. No setup call is required.",
+      blurb: "Your own branded booking page, live on a guestoverflow.com address today. No setup call is required.",
       features: [
-        "White-label booking page on your own domain",
+        "Branded booking page on your own guestoverflow.com address",
         "Real-time availability & capacity",
         "Email confirmations & reminders",
         "Guest list with full export",
@@ -85,9 +85,9 @@ const pricingLadder = {
     starter: {
       name: "Starter",
       note: "Self-service. A instalação é da responsabilidade do cliente",
-      blurb: "A sua própria página de reservas com a sua marca, no seu domínio, em funcionamento hoje. Sem chamada de instalação.",
+      blurb: "A sua própria página de reservas com a sua marca, num endereço guestoverflow.com, em funcionamento hoje. Sem chamada de instalação.",
       features: [
-        "Página de reservas white-label no seu domínio",
+        "Página de marcações com a sua marca, num endereço guestoverflow.com",
         "Disponibilidade e capacidade em tempo real",
         "Confirmações e lembretes por email",
         "Lista de clientes com exportação completa",
@@ -174,7 +174,7 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
         body: "A 20-room hotel at €120 a night pays Booking €50,000-63,000 a year in commission. Move even a fifth of those stays to direct booking and you retain over €10,000, all for a flat fee that never moves and runs on your own Stripe, with no payment take-rate.",
       },
       starterNote: "For Alojamento Local, 1-3 units",
-      starterBlurb: "A white-label direct-booking page for your AL, so that guests book with you, not the OTA.",
+      starterBlurb: "A branded direct-booking page for your AL, so that guests book with you, not the OTA.",
     },
     "spas-wellness": {
       valueUnit: "treatment",
@@ -233,7 +233,7 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
         body: "Um hotel de 20 quartos a 120 € por noite entrega à Booking 50.000 a 63.000 € por ano em comissão. Transfira apenas um quinto dessas estadias para reserva direta e ficará com mais de 10.000 €. É um valor fixo que não se altera e corre no seu próprio Stripe, sem margem nos pagamentos.",
       },
       starterNote: "Para Alojamento Local, 1 a 3 unidades",
-      starterBlurb: "Uma página de reservas direta white-label para o seu AL, para que os hóspedes reservem consigo, não na OTA.",
+      starterBlurb: "Uma página de reservas direta com a sua marca para o seu AL, para que os hóspedes reservem consigo, não na OTA.",
     },
     "spas-wellness": {
       valueUnit: "tratamento",
@@ -379,7 +379,7 @@ const en: IndustriesStrings = {
         },
       ],
       metaDescription:
-        "White-label restaurant reservations on your own website. No per-cover commission, deposits for no-show protection, and a guest book you own.",
+        "Branded restaurant reservations, on your own booking system. No per-cover commission, deposits for no-show protection, and a guest book you own.",
       pricing: buildSectorPricing("en", "restaurants"),
     },
     {
@@ -467,7 +467,7 @@ const en: IndustriesStrings = {
         },
       ],
       metaDescription:
-        "White-label spa and wellness booking on your own website. Services, practitioners, deposits, and intake, in a flow as calm as your brand.",
+        "Branded spa and wellness booking, on your own booking system. Services, practitioners, deposits, and intake, in a flow as calm as your brand.",
       pricing: buildSectorPricing("en", "spas-wellness"),
     },
     {
@@ -555,7 +555,7 @@ const en: IndustriesStrings = {
         },
       ],
       metaDescription:
-        "White-label booking for hair salons and barbershops, on your own branded booking system. Per-stylist scheduling, deposits for no-show protection, and client history you own.",
+        "Branded booking for hair salons and barbershops, on your own booking system. Per-stylist scheduling, deposits for no-show protection, and client history you own.",
       pricing: buildSectorPricing("en", "salons-barbers"),
     },
   ],
@@ -628,7 +628,7 @@ const pt: IndustriesStrings = {
         },
       ],
       metaDescription:
-        "Reservas de restaurante white-label no seu próprio site. Sem comissão por reserva, sinais contra faltas e um livro de clientes que é seu.",
+        "Reservas de restaurante com a sua marca, no seu próprio sistema. Sem comissão por reserva, sinais contra faltas e um livro de clientes que é seu.",
       pricing: buildSectorPricing("pt", "restaurants"),
     },
     {
@@ -716,7 +716,7 @@ const pt: IndustriesStrings = {
         },
       ],
       metaDescription:
-        "Marcações white-label para spas e bem-estar no seu próprio site. Serviços, terapeutas, sinais e fichas de cliente, num fluxo tão calmo como a sua marca.",
+        "Marcações com a sua marca para spas e bem-estar, no seu próprio sistema. Serviços, terapeutas, sinais e fichas de cliente, num fluxo tão calmo como a sua marca.",
       pricing: buildSectorPricing("pt", "spas-wellness"),
     },
     {
@@ -804,7 +804,7 @@ const pt: IndustriesStrings = {
         },
       ],
       metaDescription:
-        "Marcações white-label para cabeleireiros e barbearias, no seu próprio sistema com a sua marca. Agenda por profissional, sinais contra faltas e histórico de cliente que é seu.",
+        "Marcações com a sua marca para cabeleireiros e barbearias, no seu próprio sistema. Agenda por profissional, sinais contra faltas e histórico de cliente que é seu.",
       pricing: buildSectorPricing("pt", "salons-barbers"),
     },
   ],

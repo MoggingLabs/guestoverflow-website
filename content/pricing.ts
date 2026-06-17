@@ -39,7 +39,7 @@ const en: PricingContent = {
       priceNote: "For a single venue beginning with the platform",
       blurb: "Your own branded booking page, with the core toolkit.",
       features: [
-        "White-label booking page on your own domain",
+        "Branded booking page on your own guestoverflow.com address",
         "Real-time availability & capacity management",
         "Branded confirmations & reminders",
         "Guest list with full export",
@@ -56,6 +56,7 @@ const en: PricingContent = {
         "Everything in Essential",
         "Deposits, card guarantees & no-show protection",
         "Booking analytics & demand insights",
+        "True white-label on your own custom domain, where clients never see our name",
         "Custom flow design (multi-service, practitioners, sessions)",
         "Concierge setup included",
         "Priority support",
@@ -143,7 +144,7 @@ const pt: PricingContent = {
       priceNote: "Para um espaço a começar",
       blurb: "A sua própria página de reservas com a sua marca, com as ferramentas essenciais.",
       features: [
-        "Página de reservas white-label no seu próprio domínio",
+        "Página de marcações com a sua marca, num endereço guestoverflow.com",
         "Disponibilidade e capacidade geridas em tempo real",
         "Confirmações e lembretes com a sua marca",
         "Lista de clientes com exportação completa",
@@ -160,6 +161,7 @@ const pt: PricingContent = {
         "Tudo o que está no Essential",
         "Sinais, garantias de cartão e proteção contra faltas",
         "Análise de reservas e tendências de procura",
+        "White-label completo no seu próprio domínio, onde os clientes nunca veem o nosso nome",
         "Fluxos à medida (multi-serviço, terapeutas, sessões)",
         "Instalação concierge incluída",
         "Suporte prioritário",

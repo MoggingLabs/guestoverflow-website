@@ -80,7 +80,7 @@ const en: CompareContent = {
       ],
       ourAnswer: [
         "A flat monthly fee. Recovering a small number of direct bookings covers the cost in full.",
-        "A booking flow true to your brand on your own domain, with the guest relationship retained by you.",
+        "A booking flow true to your brand, with the guest relationship retained by you.",
         "Reserve with Google and direct-rate incentives that make booking direct the better value.",
       ],
     },
@@ -91,7 +91,7 @@ const en: CompareContent = {
       blurb: "Portugal's beauty-booking leader. Commission-free, but priced per seat and heavy on add-ons.",
       headline: "Guest Overflow vs Zappy",
       subhead:
-        "Zappy is a capable, commission-free Portuguese tool. Guest Overflow leads on what it does not provide: genuine no-show protection, guest self-service, and true white-label on your own domain, configured for you.",
+        "Zappy is a capable, commission-free Portuguese tool. Guest Overflow leads on what it does not provide: genuine no-show protection, guest self-service, and, on Premium, true white-label on your own custom domain, configured for you.",
       theirModel:
         "Per-provider pricing from €16 to €119/mo, with a branded app, invoicing, GDPR and additional locations sold as paid add-ons on top.",
       theirPains: [
@@ -102,7 +102,7 @@ const en: CompareContent = {
       ourAnswer: [
         "One flat price per venue, regardless of your chair or practitioner count.",
         "Genuine no-show protection, with deposits and card guarantees through your own Stripe account.",
-        "True white-label on your own domain, and concierge setup that we handle for you.",
+        "True white-label on your own custom domain (on Premium), and concierge setup that we handle for you.",
       ],
     },
     {
@@ -203,7 +203,7 @@ const pt: CompareContent = {
       ],
       ourAnswer: [
         "Um valor mensal fixo. A recuperação de um número reduzido de reservas diretas cobre o custo na totalidade.",
-        "Um fluxo de reserva fiel à marca no seu domínio, com a relação com o hóspede a permanecer consigo.",
+        "Um fluxo de reserva fiel à marca, com a relação com o hóspede a permanecer consigo.",
         "Reservar com o Google e incentivos à tarifa direta que tornam a reserva direta a melhor opção.",
       ],
     },
@@ -214,7 +214,7 @@ const pt: CompareContent = {
       blurb: "O líder português das marcações de beleza. Sem comissão, mas cobrado por lugar e cheio de extras.",
       headline: "Guest Overflow vs Zappy",
       subhead:
-        "O Zappy é uma ferramenta portuguesa competente e sem comissão. O Guest Overflow distingue-se naquilo que ele não oferece: proteção genuína contra faltas, self-service do cliente e white-label verdadeiro no seu domínio, configurado por nós.",
+        "O Zappy é uma ferramenta portuguesa competente e sem comissão. O Guest Overflow distingue-se naquilo que ele não oferece: proteção genuína contra faltas, self-service do cliente e, no Premium, white-label verdadeiro no seu próprio domínio, configurado por nós.",
       theirModel:
         "Preço por profissional de 16 a 119 €/mês, com app de marca, faturação, RGPD e localizações adicionais vendidas como extras pagos por cima.",
       theirPains: [
@@ -225,7 +225,7 @@ const pt: CompareContent = {
       ourAnswer: [
         "Um preço fixo por espaço, independentemente do número de cadeiras ou profissionais.",
         "Proteção genuína contra faltas, com sinais e garantias de cartão pela sua própria conta Stripe.",
-        "White-label verdadeiro no seu domínio, e instalação concierge que tratamos por si.",
+        "White-label verdadeiro no seu próprio domínio (no Premium), e instalação concierge que tratamos por si.",
       ],
     },
     {

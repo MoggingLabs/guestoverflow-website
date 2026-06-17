@@ -21,12 +21,12 @@ const en: FaqContent = {
     {
       question: "How long does setup take?",
       answer:
-        "Most salons go live within days of kickoff. Our team designs and builds your custom booking system, on your own brand and domain. You review and approve before it goes live.",
+        "Most salons go live within days of kickoff. Our team designs and builds your custom booking system, branded as yours. You review and approve before it goes live.",
     },
     {
       question: "Do I need an existing website?",
       answer:
-        "No. We build your custom booking system on your own domain, branded as yours, and it is the destination clients reach. If you already have a site or social profiles, on any platform, including custom-built sites, WordPress, Squarespace, and Webflow, you simply point them to it, so clients move straight to your branded booking page.",
+        "No. We build your custom booking system, branded as yours, at your own guestoverflow.com address, and it is the destination clients reach. If you already have a site or social profiles, on any platform, including custom-built sites, WordPress, Squarespace, and Webflow, you simply point them to it, so clients move straight to your branded booking page. On Premium, it runs on your own custom domain.",
     },
     {
       question: "Who owns the client data?",
@@ -93,6 +93,11 @@ const en: FaqContent = {
         "Correct. Your subscription remains flat regardless of how many bookings you take. We do not believe you should pay more for being busy.",
     },
     {
+      question: "Is the booking page on my own domain?",
+      answer:
+        "By default your booking page lives at a branded guestoverflow.com address (for example, yoursalon.guestoverflow.com), with your logo, colours, and name throughout. On Premium, it moves to your own custom domain as a true white-label, where clients never see our name.",
+    },
+    {
       question: "Is there a setup fee?",
       answer:
         "Setup is included in Premium. For Essential, a one-time setup fee may apply depending on your configuration. We will tell you exactly what it is before you commit.",
@@ -150,12 +155,12 @@ const pt: FaqContent = {
     {
       question: "Quanto tempo demora a instalação?",
       answer:
-        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas à medida, na sua própria marca e domínio. O cliente revê e aprova antes de ficar no ar.",
+        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas à medida, com a sua marca. O cliente revê e aprova antes de ficar no ar.",
     },
     {
       question: "Preciso de ter um site?",
       answer:
-        "Não. Construímos o seu sistema de reservas à medida no seu próprio domínio, com a sua marca, e é esse o destino a que os clientes chegam. Se já tiver um site ou perfis nas redes sociais, seja qual for a plataforma, incluindo sites à medida, WordPress, Squarespace e Webflow, basta apontá-los para ele, para que os clientes sigam diretamente para a sua página de reservas com a sua marca.",
+        "Não. Construímos o seu sistema de reservas à medida, com a sua marca, num endereço guestoverflow.com, e é esse o destino a que os clientes chegam. Se já tiver um site ou perfis nas redes sociais, seja qual for a plataforma, incluindo sites à medida, WordPress, Squarespace e Webflow, basta apontá-los para ele, para que os clientes sigam diretamente para a sua página de reservas com a sua marca. No Premium, a página corre no seu próprio domínio.",
     },
     {
       question: "De quem são os dados dos clientes?",
@@ -220,6 +225,11 @@ const pt: FaqContent = {
       question: "Não há mesmo taxa por reserva?",
       answer:
         "Não, de facto. A sua subscrição mantém-se fixa independentemente do número de reservas. Não consideramos que deva pagar mais por ter muito movimento.",
+    },
+    {
+      question: "A página de marcações fica no meu próprio domínio?",
+      answer:
+        "Por defeito, a sua página de marcações fica num endereço guestoverflow.com com a sua marca (por exemplo, oseusalao.guestoverflow.com), com o seu logótipo, cores e nome em todo o lado. No Premium, passa para o seu próprio domínio como white-label completo, onde os clientes nunca veem o nosso nome.",
     },
     {
       question: "Há custo de instalação?",
