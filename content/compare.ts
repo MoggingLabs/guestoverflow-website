@@ -29,13 +29,13 @@ type CompareContent = {
 const en: CompareContent = {
   index: {
     eyebrow: "Compare",
-    title: "Guest Overflow vs the platforms you already know",
+    title: "Guest Overflow versus the platforms you already know",
     subhead:
-      "Honest, side-by-side comparisons against the tools Portuguese venues actually use. What they charge, where they hurt, and what we do instead.",
+      "Direct, side-by-side comparisons against the tools Portuguese venues use today. What they charge, where the cost falls, and the alternative we provide.",
   },
   detail: {
     theirTitle: (name) => `What ${name} charges`,
-    painsTitle: "Where it hurts",
+    painsTitle: "Where the cost falls",
     ourTitle: "With Guest Overflow",
     calcCta: "Calculate your savings",
     seePricing: "See our pricing",
@@ -48,18 +48,18 @@ const en: CompareContent = {
       blurb: "The dominant restaurant marketplace in Portugal, with a per-cover fee on every diner.",
       headline: "Guest Overflow vs TheFork",
       subhead:
-        "TheFork brings discovery, but bills you per cover, including the regulars who already book with you. We're the flat, commission-free booking that lives on your own site.",
+        "TheFork provides discovery, but it bills you per cover, including the regulars who already book with you. Guest Overflow is the flat, commission-free booking solution that resides on your own site.",
       theirModel:
-        "A per-cover commission of roughly €2-4 (more on promotions), on top of a subscription priced behind a quote. The fee applies to repeat guests too.",
+        "A per-cover commission of roughly €2-4 (higher on promotions), on top of a subscription priced behind a quote. The fee applies to repeat guests as well.",
       theirPains: [
-        "You pay again every time a regular comes back. Your best guests become your most expensive channel.",
-        "The booking page is theirs; the guest's email belongs to the platform.",
-        "Pricing is quote-gated, and promotion covers cost €3-4 each.",
+        "You pay again every time a regular returns. Your most valuable guests become your most expensive channel.",
+        "The booking page belongs to the platform, and so does the guest's email address.",
+        "Pricing is available only on request, and promotion covers cost €3-4 each.",
       ],
       ourAnswer: [
-        "One flat monthly price that never moves, and no per-cover fee, ever.",
-        "Booking lives on your own site, and the guest list is yours to export in one click.",
-        "No-show protection runs through your own Stripe, with no payment take-rate.",
+        "One flat monthly price that never changes, with no per-cover fee at any time.",
+        "Booking resides on your own site, and the guest list is yours to export in a single click.",
+        "No-show protection operates through your own Stripe account, with no payment take-rate.",
       ],
     },
     {
@@ -69,18 +69,18 @@ const en: CompareContent = {
       blurb: "Dominant for Portuguese lodging, and 15-18% of every stay, forever.",
       headline: "Guest Overflow vs Booking.com",
       subhead:
-        "Booking fills rooms, but takes 15-18% of every stay and keeps the guest. We make direct booking the obvious choice on your own site.",
+        "Booking fills rooms, but it takes 15-18% of every stay and retains the guest. Guest Overflow makes direct booking the clear choice on your own site.",
       theirModel:
         "A commission of 15-18% on every booking (plus 15% on add-on services), with the guest relationship and email retained by the platform.",
       theirPains: [
-        "A 20-room hotel can hand over €50,000-63,000 a year in commission.",
-        "The guest is the OTA's, not yours. Your first real contact is at check-in.",
-        "Once it becomes your only channel, the dependency is hard to break.",
+        "A 20-room hotel can pay €50,000-63,000 a year in commission.",
+        "The guest belongs to the OTA, not to you. Your first direct contact occurs at check-in.",
+        "Once it becomes your sole channel, the dependency is difficult to break.",
       ],
       ourAnswer: [
-        "A flat monthly fee. Recover a handful of direct bookings and it's already paid for itself.",
-        "A brand-true booking flow on your own domain, with the guest relationship kept yours.",
-        "Reserve with Google and direct-rate incentives that make booking direct the better deal.",
+        "A flat monthly fee. Recovering a small number of direct bookings covers the cost in full.",
+        "A booking flow true to your brand on your own domain, with the guest relationship retained by you.",
+        "Reserve with Google and direct-rate incentives that make booking direct the better value.",
       ],
     },
     {
@@ -90,18 +90,18 @@ const en: CompareContent = {
       blurb: "Portugal's beauty-booking leader. Commission-free, but priced per seat and heavy on add-ons.",
       headline: "Guest Overflow vs Zappy",
       subhead:
-        "Zappy is a strong, commission-free Portuguese tool. We win on the things it doesn't do. Real no-show protection, guest self-service, and true white-label on your own domain, set up for you.",
+        "Zappy is a capable, commission-free Portuguese tool. Guest Overflow leads on what it does not provide: genuine no-show protection, guest self-service, and true white-label on your own domain, configured for you.",
       theirModel:
-        "Per-provider pricing from €16 to €119/mo, with a branded app, invoicing, GDPR and extra locations sold as paid add-ons on top.",
+        "Per-provider pricing from €16 to €119/mo, with a branded app, invoicing, GDPR and additional locations sold as paid add-ons on top.",
       theirPains: [
-        "Pricing scales per provider (and per piece of equipment), so growing your team costs more.",
-        "No card-guarantee or automatic no-show charge, just manual upfront prepayment.",
-        "Guests book through a shared app rated 3.3/5 where self-cancel was removed; true branding is a €29 add-on.",
+        "Pricing scales per provider (and per item of equipment), so expanding your team increases the cost.",
+        "There is no card guarantee or automatic no-show charge, only manual upfront prepayment.",
+        "Guests book through a shared app rated 3.3/5 in which self-cancellation was removed, and true branding is a €29 add-on.",
       ],
       ourAnswer: [
-        "One flat price per venue, whatever your chair or practitioner count.",
-        "Real no-show protection, with deposits and card guarantees through your own Stripe.",
-        "True white-label on your own domain, and concierge setup we handle for you.",
+        "One flat price per venue, regardless of your chair or practitioner count.",
+        "Genuine no-show protection, with deposits and card guarantees through your own Stripe account.",
+        "True white-label on your own domain, and concierge setup that we handle for you.",
       ],
     },
     {
@@ -111,18 +111,18 @@ const en: CompareContent = {
       blurb: "Free to start, then a cut of every new client and a margin on payments.",
       headline: "Guest Overflow vs Fresha",
       subhead:
-        "Fresha looks free, but charges a commission on new clients and a margin on payments. We're a flat price per venue with no cut of your bookings.",
+        "Fresha appears free, but it charges a commission on new clients and a margin on payments. Guest Overflow is a flat price per venue, with no share of your bookings.",
       theirModel:
         "A free core, then a per-bookable-member subscription, a ~20% fee on new marketplace clients, and a processing margin on payments.",
       theirPains: [
-        "You pay a commission on a new client even when they found you on Google or Instagram.",
-        "Marketplace visibility is tied to sharing your client data.",
-        "The 'free' total climbs once per-staff fees and payment margins are added.",
+        "You pay a commission on a new client even when that client found you on Google or Instagram.",
+        "Marketplace visibility is conditional on sharing your client data.",
+        "The 'free' total rises once per-staff fees and payment margins are added.",
       ],
       ourAnswer: [
-        "A flat price per venue, with no commission on a first visit, ever.",
-        "Your client list, history and notes stay yours, with one-click export.",
-        "Deposits through your own Stripe, with no marketplace cut and no payment take-rate.",
+        "A flat price per venue, with no commission on a first visit at any time.",
+        "Your client list, history and notes remain yours, with one-click export.",
+        "Deposits through your own Stripe account, with no marketplace share and no payment take-rate.",
       ],
     },
     {
@@ -132,13 +132,13 @@ const en: CompareContent = {
       blurb: "“Free” software, paid for by a 6% fee added to your guests' price.",
       headline: "Guest Overflow vs FareHarbor",
       subhead:
-        "FareHarbor's software is free because your guests pay a 6% booking fee. We charge a flat price and add nothing to your guests' checkout.",
+        "FareHarbor's software is free because your guests pay a 6% booking fee. Guest Overflow charges a flat price and adds nothing to your guests' checkout.",
       theirModel:
         "No monthly fee, but a ~6% surcharge added to the guest's price at checkout (plus payment processing).",
       theirPains: [
-        "The 6% inflates your displayed price, and guests often blame you, not the platform.",
-        "A slow, cluttered checkout has been shown to drop conversion.",
-        "On marketplace-routed bookings the cut is taken there too.",
+        "The 6% inflates your displayed price, and guests frequently attribute it to you rather than the platform.",
+        "A slow, cluttered checkout has been shown to reduce conversion.",
+        "On marketplace-routed bookings, the share is taken there as well.",
       ],
       ourAnswer: [
         "A flat monthly price, with nothing added to your guests' price.",
@@ -152,13 +152,13 @@ const en: CompareContent = {
 const pt: CompareContent = {
   index: {
     eyebrow: "Comparar",
-    title: "Guest Overflow vs as plataformas que já conhece",
+    title: "Guest Overflow versus as plataformas que já conhece",
     subhead:
-      "Comparações honestas, lado a lado, com as ferramentas que os espaços portugueses usam. O que cobram, onde doem, e o que fazemos em vez disso.",
+      "Comparações diretas, lado a lado, com as ferramentas que os espaços portugueses utilizam. O que cobram, onde recai o custo, e a alternativa que oferecemos.",
   },
   detail: {
     theirTitle: (name) => `O que a ${name} cobra`,
-    painsTitle: "Onde dói",
+    painsTitle: "Onde recai o custo",
     ourTitle: "Com o Guest Overflow",
     calcCta: "Calcule a sua poupança",
     seePricing: "Ver os nossos preços",
@@ -171,18 +171,18 @@ const pt: CompareContent = {
       blurb: "O marketplace de restaurantes dominante em Portugal, com uma taxa por pessoa em cada cliente.",
       headline: "Guest Overflow vs TheFork",
       subhead:
-        "O TheFork traz descoberta, mas cobra por pessoa, incluindo os habituais que já reservam consigo. Nós somos a reserva fixa, sem comissão, que vive no seu próprio site.",
+        "O TheFork proporciona descoberta, mas cobra por pessoa, incluindo os clientes habituais que já reservam consigo. O Guest Overflow é a solução de reservas fixa e sem comissão que reside no seu próprio site.",
       theirModel:
-        "Uma comissão por pessoa de cerca de 2 a 4 € (mais nas promoções), além de uma subscrição com preço atrás de orçamento. A taxa aplica-se também aos habituais.",
+        "Uma comissão por pessoa de cerca de 2 a 4 € (superior nas promoções), além de uma subscrição com preço apenas sob orçamento. A taxa aplica-se igualmente aos clientes habituais.",
       theirPains: [
-        "Paga outra vez sempre que um habitual volta. Os seus melhores clientes tornam-se o canal mais caro.",
-        "A página de reservas é deles; o email do cliente pertence à plataforma.",
-        "O preço está atrás de orçamento, e cada pessoa em promoção custa 3 a 4 €.",
+        "Paga novamente sempre que um cliente habitual regressa. Os seus clientes mais valiosos tornam-se o seu canal mais caro.",
+        "A página de reservas pertence-lhes, e o email do cliente pertence à plataforma.",
+        "O preço está disponível apenas sob orçamento, e cada pessoa em promoção custa 3 a 4 €.",
       ],
       ourAnswer: [
-        "Um preço mensal fixo que não mexe, e sem taxa por pessoa, nunca.",
-        "A reserva vive no seu próprio site, e a lista de clientes é sua, exportável num clique.",
-        "A proteção contra faltas corre pelo seu próprio Stripe, sem margem nos pagamentos.",
+        "Um preço mensal fixo que não se altera, sem taxa por pessoa em momento algum.",
+        "A reserva reside no seu próprio site, e a lista de clientes é sua, exportável num único clique.",
+        "A proteção contra faltas opera através da sua própria conta Stripe, sem margem nos pagamentos.",
       ],
     },
     {
@@ -192,18 +192,18 @@ const pt: CompareContent = {
       blurb: "Dominante no alojamento português, e 15 a 18% de cada estadia, para sempre.",
       headline: "Guest Overflow vs Booking.com",
       subhead:
-        "A Booking enche quartos, mas leva 15 a 18% de cada estadia e fica com o hóspede. Nós tornamos a reserva direta a escolha óbvia no seu próprio site.",
+        "A Booking enche quartos, mas leva 15 a 18% de cada estadia e retém o hóspede. O Guest Overflow torna a reserva direta a escolha evidente no seu próprio site.",
       theirModel:
         "Uma comissão de 15 a 18% sobre cada reserva (mais 15% sobre serviços adicionais), com a relação e o email do hóspede retidos pela plataforma.",
       theirPains: [
-        "Um hotel de 20 quartos pode entregar 50.000 a 63.000 € por ano em comissão.",
-        "O hóspede é da OTA, não seu. O primeiro contacto real é no check-in.",
-        "Quando se torna o único canal, a dependência é difícil de quebrar.",
+        "Um hotel de 20 quartos pode pagar 50.000 a 63.000 € por ano em comissão.",
+        "O hóspede pertence à OTA, não a si. O seu primeiro contacto direto ocorre no check-in.",
+        "Quando se torna o seu único canal, a dependência é difícil de quebrar.",
       ],
       ourAnswer: [
-        "Um valor mensal fixo. Recupere um punhado de reservas diretas e já se pagou.",
-        "Um fluxo de reserva fiel à marca no seu domínio, com a relação com o hóspede a ficar consigo.",
-        "Reservar com o Google e incentivos à tarifa direta que tornam reservar direto o melhor negócio.",
+        "Um valor mensal fixo. A recuperação de um número reduzido de reservas diretas cobre o custo na totalidade.",
+        "Um fluxo de reserva fiel à marca no seu domínio, com a relação com o hóspede a permanecer consigo.",
+        "Reservar com o Google e incentivos à tarifa direta que tornam a reserva direta a melhor opção.",
       ],
     },
     {
@@ -213,17 +213,17 @@ const pt: CompareContent = {
       blurb: "O líder português das marcações de beleza. Sem comissão, mas cobrado por lugar e cheio de extras.",
       headline: "Guest Overflow vs Zappy",
       subhead:
-        "O Zappy é uma boa ferramenta portuguesa e sem comissão. Ganhamos no que ele não faz. Proteção real contra faltas, self-service do cliente e white-label verdadeiro no seu domínio, montado por si.",
+        "O Zappy é uma ferramenta portuguesa competente e sem comissão. O Guest Overflow distingue-se naquilo que ele não oferece: proteção genuína contra faltas, self-service do cliente e white-label verdadeiro no seu domínio, configurado por nós.",
       theirModel:
-        "Preço por profissional de 16 a 119 €/mês, com app de marca, faturação, RGPD e localizações extra vendidas como extras pagos por cima.",
+        "Preço por profissional de 16 a 119 €/mês, com app de marca, faturação, RGPD e localizações adicionais vendidas como extras pagos por cima.",
       theirPains: [
-        "O preço escala por profissional (e por equipamento), por isso crescer a equipa custa mais.",
-        "Sem garantia de cartão nem cobrança automática de faltas, apenas pré-pagamento manual.",
-        "Os clientes reservam por uma app partilhada com 3,3/5 onde o cancelamento foi removido; a marca verdadeira é um extra de 29 €.",
+        "O preço escala por profissional (e por equipamento), por isso aumentar a equipa implica um custo superior.",
+        "Não existe garantia de cartão nem cobrança automática de faltas, apenas pré-pagamento manual.",
+        "Os clientes reservam por uma app partilhada com 3,3/5 na qual o cancelamento foi removido, e a marca verdadeira é um extra de 29 €.",
       ],
       ourAnswer: [
-        "Um preço fixo por espaço, seja qual for o número de cadeiras ou profissionais.",
-        "Proteção real contra faltas, com sinais e garantias de cartão pelo seu próprio Stripe.",
+        "Um preço fixo por espaço, independentemente do número de cadeiras ou profissionais.",
+        "Proteção genuína contra faltas, com sinais e garantias de cartão pela sua própria conta Stripe.",
         "White-label verdadeiro no seu domínio, e instalação concierge que tratamos por si.",
       ],
     },
@@ -234,18 +234,18 @@ const pt: CompareContent = {
       blurb: "Grátis para começar, depois uma fatia de cada novo cliente e uma margem nos pagamentos.",
       headline: "Guest Overflow vs Fresha",
       subhead:
-        "A Fresha parece gratuita, mas cobra comissão sobre novos clientes e uma margem nos pagamentos. Nós somos um preço fixo por espaço, sem fatia das suas reservas.",
+        "A Fresha parece gratuita, mas cobra comissão sobre novos clientes e uma margem nos pagamentos. O Guest Overflow é um preço fixo por espaço, sem qualquer fatia das suas reservas.",
       theirModel:
         "Um núcleo gratuito, depois uma subscrição por profissional, uma taxa de ~20% sobre novos clientes do marketplace, e uma margem de processamento nos pagamentos.",
       theirPains: [
-        "Paga comissão sobre um novo cliente mesmo quando ele o encontrou no Google ou no Instagram.",
-        "A visibilidade no marketplace está ligada a partilhar os dados dos seus clientes.",
-        "O total 'grátis' sobe assim que se somam as taxas por profissional e as margens de pagamento.",
+        "Paga comissão sobre um novo cliente mesmo quando esse cliente o encontrou no Google ou no Instagram.",
+        "A visibilidade no marketplace está condicionada à partilha dos dados dos seus clientes.",
+        "O total 'grátis' aumenta assim que se somam as taxas por profissional e as margens de pagamento.",
       ],
       ourAnswer: [
-        "Um preço fixo por espaço, sem comissão na primeira visita, nunca.",
-        "A sua lista de clientes, histórico e notas ficam consigo, com exportação num clique.",
-        "Sinais pelo seu próprio Stripe, sem fatia do marketplace e sem margem nos pagamentos.",
+        "Um preço fixo por espaço, sem comissão na primeira visita em momento algum.",
+        "A sua lista de clientes, histórico e notas permanecem consigo, com exportação num clique.",
+        "Sinais pela sua própria conta Stripe, sem fatia do marketplace e sem margem nos pagamentos.",
       ],
     },
     {
@@ -255,13 +255,13 @@ const pt: CompareContent = {
       blurb: "Software “grátis”, pago por uma taxa de 6% acrescentada ao preço dos seus clientes.",
       headline: "Guest Overflow vs FareHarbor",
       subhead:
-        "O software da FareHarbor é grátis porque os seus clientes pagam uma taxa de 6%. Nós cobramos um preço fixo e não acrescentamos nada ao checkout dos seus clientes.",
+        "O software da FareHarbor é grátis porque os seus clientes pagam uma taxa de 6%. O Guest Overflow cobra um preço fixo e não acrescenta nada ao checkout dos seus clientes.",
       theirModel:
         "Sem mensalidade, mas uma sobretaxa de ~6% acrescentada ao preço do cliente no checkout (mais o processamento de pagamentos).",
       theirPains: [
-        "Os 6% inflacionam o preço que mostra, e os clientes culpam-no a si, não à plataforma.",
-        "Um checkout lento e carregado já demonstrou reduzir a conversão.",
-        "Nas reservas vindas do marketplace, a fatia também é levada lá.",
+        "Os 6% inflacionam o preço que apresenta, e os clientes atribuem-no frequentemente a si, não à plataforma.",
+        "Um checkout lento e sobrecarregado já demonstrou reduzir a conversão.",
+        "Nas reservas provenientes do marketplace, a fatia é igualmente cobrada nesse canal.",
       ],
       ourAnswer: [
         "Um preço mensal fixo, sem nada acrescentado ao preço dos seus clientes.",

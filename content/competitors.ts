@@ -128,9 +128,9 @@ type CalculatorStrings = {
 export const calculatorContent: Record<Locale, CalculatorStrings> = {
   en: {
     eyebrow: "Savings calculator",
-    title: "See what commission really costs you",
+    title: "See what commission actually costs you",
     subhead:
-      "Drag the slider to your monthly volume. The flat line is Guest Overflow; the rising line is what a commission platform bills as you grow.",
+      "Set the slider to your monthly volume. The flat line is Guest Overflow; the rising line is what a commission platform bills as you grow.",
     sectorLabel: "Your business",
     sectorNames: {
       restaurants: "Restaurant",
@@ -160,22 +160,22 @@ export const calculatorContent: Record<Locale, CalculatorStrings> = {
     billingAnnual: "Annual",
     goLineLabel: "Guest Overflow (flat)",
     savingsHeading: "Your savings, per year",
-    savesPerYear: (amount, c) => `You'd keep ${amount} a year vs ${c}`,
+    savesPerYear: (amount, c) => `You would retain ${amount} a year versus ${c}`,
     costsPerYear: (amount, c) => `${c} would bill you ${amount}/year`,
     repeatTax: (amount) =>
-      `≈ ${amount} of that is the repeat-guest tax: a charge for guests who already chose you.`,
+      `≈ ${amount} of that is the repeat-guest tax: a charge for guests who had already chosen you.`,
     breakEven: (tier, n, unit) => `${tier} pays for itself at ~${n} ${unit}/mo.`,
     perUnitFee: (amount, unit) => `${amount} per ${unit}`,
     pctFee: (pct) => `${pct} per booking`,
     flatYou: (amount) => `${amount}/mo flat, at any volume`,
     disclaimer:
-      "Estimates based on typical Portuguese ticket values and published competitor fees. Your numbers may vary.",
+      "Estimates based on typical Portuguese ticket values and published competitor fees. Your figures may vary.",
   },
   pt: {
     eyebrow: "Calculadora de poupança",
-    title: "Veja o que a comissão lhe custa de verdade",
+    title: "Veja o que a comissão lhe custa realmente",
     subhead:
-      "Arraste o cursor até ao seu volume mensal. A linha plana é o Guest Overflow; a linha ascendente é o que uma plataforma de comissões cobra à medida que cresce.",
+      "Ajuste o cursor ao seu volume mensal. A linha plana é o Guest Overflow; a linha ascendente é o que uma plataforma de comissões cobra à medida que cresce.",
     sectorLabel: "O seu negócio",
     sectorNames: {
       restaurants: "Restaurante",
@@ -205,15 +205,15 @@ export const calculatorContent: Record<Locale, CalculatorStrings> = {
     billingAnnual: "Anual",
     goLineLabel: "Guest Overflow (fixo)",
     savingsHeading: "A sua poupança, por ano",
-    savesPerYear: (amount, c) => `Ficaria com ${amount} por ano face à ${c}`,
+    savesPerYear: (amount, c) => `Reteria ${amount} por ano face à ${c}`,
     costsPerYear: (amount, c) => `A ${c} cobrar-lhe-ia ${amount}/ano`,
     repeatTax: (amount) =>
-      `≈ ${amount} disso é a taxa sobre habituais: a cobrar-lhe por clientes que já o escolheram.`,
+      `≈ ${amount} disso é a taxa sobre clientes habituais: uma cobrança por clientes que já o tinham escolhido.`,
     breakEven: (tier, n, unit) => `O ${tier} paga-se a partir de ~${n} ${unit}/mês.`,
     perUnitFee: (amount, unit) => `${amount} por ${unit}`,
     pctFee: (pct) => `${pct} por reserva`,
     flatYou: (amount) => `${amount}/mês fixo, em qualquer volume`,
     disclaimer:
-      "Estimativas com base em tickets médios típicos em Portugal e nas taxas publicadas dos concorrentes. Os seus números podem variar.",
+      "Estimativas com base em tickets médios típicos em Portugal e nas taxas publicadas dos concorrentes. Os seus valores podem variar.",
   },
 };

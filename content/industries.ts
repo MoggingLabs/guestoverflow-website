@@ -25,8 +25,8 @@ const pricingLadder = {
     eyebrow: "Pricing",
     starter: {
       name: "Starter",
-      note: "Self-serve. You set it up",
-      blurb: "The branded booking page on your own site, live today. No setup call.",
+      note: "Self-service. You complete the configuration",
+      blurb: "The branded booking page on your own site, operational today. No setup call is required.",
       features: [
         "White-label booking page on your website",
         "Real-time availability & capacity",
@@ -37,8 +37,8 @@ const pricingLadder = {
     },
     essential: {
       name: "Essential",
-      note: "We build, install & optimise it for you",
-      blurb: "A partner who sets the whole thing up, instead of software you wire up alone.",
+      note: "We build, install & optimise it on your behalf",
+      blurb: "A partner that completes the entire setup, rather than software you configure alone.",
       features: [
         "Everything in Starter",
         "Concierge setup: we build & install it",
@@ -49,22 +49,22 @@ const pricingLadder = {
     },
     premium: {
       name: "Premium",
-      note: "For venues that live on bookings",
-      blurb: "Everything in Essential, plus protection, insight and true white-label.",
+      note: "For venues that depend on bookings",
+      blurb: "Everything in Essential, with the addition of protection, analytics and a true white-label.",
       lead: [
         "Everything in Essential",
         "Deposits & no-show protection via your own Stripe",
         "Booking analytics & demand insights",
       ],
       tail: [
-        "True on-domain white-label, zero of our branding",
+        "True on-domain white-label, none of our branding",
         "Priority support",
       ],
     },
     custom: {
       name: "Custom",
       note: "Groups & multiple locations",
-      blurb: "Multiple venues, custom integrations, or something we haven't thought of yet.",
+      blurb: "Multiple venues, custom integrations, or requirements we have not yet anticipated.",
       features: [
         "Everything in Premium",
         "Multiple locations: flat per venue, no per-location penalty",
@@ -76,15 +76,15 @@ const pricingLadder = {
       name: "SMS reminders",
       priceNote: "from €0.09 / SMS",
       included:
-        "Monthly allowance included on Essential & Premium, then transparent per-SMS. Never a per-booking fee. Email reminders are always free.",
+        "A monthly allowance is included on Essential & Premium, followed by transparent per-SMS pricing. There is never a per-booking fee. Email reminders are always free of charge.",
     },
   },
   pt: {
     eyebrow: "Preços",
     starter: {
       name: "Starter",
-      note: "Self-service. Instala você",
-      blurb: "A página de reservas com a sua marca, no seu site, a funcionar hoje. Sem chamada de instalação.",
+      note: "Self-service. A instalação é da responsabilidade do cliente",
+      blurb: "A página de reservas com a sua marca, no seu site, em funcionamento hoje. Sem chamada de instalação.",
       features: [
         "Página de reservas white-label no seu site",
         "Disponibilidade e capacidade em tempo real",
@@ -96,7 +96,7 @@ const pricingLadder = {
     essential: {
       name: "Essential",
       note: "Construímos, instalamos e otimizamos por si",
-      blurb: "Um parceiro que monta tudo, em vez de software que configura sozinho.",
+      blurb: "Um parceiro que efetua toda a instalação, em vez de software que o cliente configura sozinho.",
       features: [
         "Tudo o que está no Starter",
         "Instalação concierge: montamos e instalamos por si",
@@ -107,8 +107,8 @@ const pricingLadder = {
     },
     premium: {
       name: "Premium",
-      note: "Para espaços que vivem de reservas",
-      blurb: "Tudo o que está no Essential, mais proteção, inteligência e white-label verdadeiro.",
+      note: "Para espaços que dependem de reservas",
+      blurb: "Tudo o que está no Essential, com a adição de proteção, análise de dados e white-label verdadeiro.",
       lead: [
         "Tudo o que está no Essential",
         "Sinais e proteção contra faltas pelo seu próprio Stripe",
@@ -122,7 +122,7 @@ const pricingLadder = {
     custom: {
       name: "À medida",
       note: "Grupos e várias localizações",
-      blurb: "Vários espaços, integrações à medida, ou algo em que ainda não pensámos.",
+      blurb: "Vários espaços, integrações à medida, ou requisitos que ainda não antecipámos.",
       features: [
         "Tudo o que está no Premium",
         "Várias localizações: preço fixo por espaço, sem penalização",
@@ -134,7 +134,7 @@ const pricingLadder = {
       name: "Lembretes por SMS",
       priceNote: "desde 0,09 € / SMS",
       included:
-        "Plafond mensal incluído no Essential e no Premium, depois SMS a preço transparente. Nunca uma taxa por reserva. Os lembretes por email são sempre gratuitos.",
+        "Plafond mensal incluído no Essential e no Premium, seguido de SMS a preço transparente. Não existe qualquer taxa por reserva. Os lembretes por email são sempre gratuitos.",
     },
   },
 } as const;
@@ -155,57 +155,57 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
       valueUnit: "cover",
       heroHeadline: "Pricing for restaurants. Flat, never per cover.",
       heroSubhead:
-        "Whatever your volume, your price doesn't move. No commission on covers, not even on the regulars who already know you.",
+        "Whatever your volume, your price does not move. There is no commission on covers, not even on the regular guests who already know you.",
       premiumFlow: "Table & turn management with pacing controls",
       comparison: {
-        title: "What TheFork really costs",
-        body: "TheFork bills around €2-4 a cover, including the regulars who already book with you. A busy month can run well over €1,000. Guest Overflow is one flat price that doesn't move on your busiest night, and never charges per cover.",
+        title: "The actual cost of TheFork",
+        body: "TheFork bills approximately €2-4 a cover, including the regular guests who already book with you. A busy month can exceed €1,000. Guest Overflow is a single flat price that does not move on your busiest night, and it never charges per cover.",
       },
     },
     hotels: {
       valueUnit: "room-night",
-      heroHeadline: "Pricing for hotels. Flat, and you keep the OTA cut.",
+      heroHeadline: "Pricing for hotels. Flat, and you retain the OTA cut.",
       heroSubhead:
-        "Booking.com takes 15-18% of every stay. Recover a handful of direct bookings a month and Guest Overflow has already paid for itself. In Portugal, you can price your own site below Booking by law.",
+        "Booking.com takes 15-18% of every stay. Recover a small number of direct bookings each month and Guest Overflow has already paid for itself. In Portugal, you are permitted by law to price your own site below Booking.",
       premiumFlow: "Room types, occupancy rules & seasonal rates",
       comparison: {
-        title: "What OTA commission really costs",
-        body: "A 20-room hotel at €120 a night hands Booking €50,000-63,000 a year in commission. Shift even a fifth of those stays to direct and you keep over €10,000. All for a flat fee that never moves and runs on your own Stripe, with no payment take-rate.",
+        title: "The actual cost of OTA commission",
+        body: "A 20-room hotel at €120 a night pays Booking €50,000-63,000 a year in commission. Move even a fifth of those stays to direct booking and you retain over €10,000, all for a flat fee that never moves and runs on your own Stripe, with no payment take-rate.",
       },
       starterNote: "For Alojamento Local, 1-3 units",
-      starterBlurb: "A white-label direct-booking page for your AL, so guests book you, not the OTA.",
+      starterBlurb: "A white-label direct-booking page for your AL, so that guests book with you, not the OTA.",
     },
     "spas-wellness": {
       valueUnit: "treatment",
       heroHeadline: "Pricing for spas & wellness. Flat per venue, never per chair.",
       heroSubhead:
-        "One flat price however many rooms or practitioners you run. No commission on new clients, ever.",
+        "A single flat price regardless of how many rooms or practitioners you operate. There is no commission on new clients, at any time.",
       premiumFlow: "Service, duration & per-practitioner scheduling",
       comparison: {
-        title: "What the marketplaces really cost",
-        body: "Fresha takes ~20% of a new client's first booking, Treatwell 25%, Booksy 30%. And per-seat tools charge more with every practitioner you add. Guest Overflow is one flat price per venue, with no cut of your clients and no per-seat penalty.",
+        title: "The actual cost of the marketplaces",
+        body: "Fresha takes ~20% of a new client's first booking, Treatwell 25%, and Booksy 30%. In addition, per-seat tools charge more with every practitioner you add. Guest Overflow is a single flat price per venue, with no commission on your clients and no per-seat penalty.",
       },
     },
     "salons-barbers": {
       valueUnit: "appointment",
       heroHeadline: "Pricing for salons & barbers. Flat per venue, not per chair.",
       heroSubhead:
-        "A two-chair shop and a ten-chair salon pay the same. No commission on a first visit, no per-booking fee.",
+        "A two-chair shop and a ten-chair salon pay the same. There is no commission on a first visit and no per-booking fee.",
       premiumFlow: "Per-stylist scheduling, buffers & chair management",
       comparison: {
-        title: "What per-chair pricing really costs",
-        body: "A four-chair shop on Booksy pays around €80-110 a month in seat fees alone, plus 30% of every new client's first visit. Guest Overflow is one flat price per venue, whatever your chair count, and never takes a cut of a booking.",
+        title: "The actual cost of per-chair pricing",
+        body: "A four-chair shop on Booksy pays approximately €80-110 a month in seat fees alone, plus 30% of every new client's first visit. Guest Overflow is a single flat price per venue, whatever your chair count, and it never takes a commission on a booking.",
       },
     },
     "tours-experiences": {
       valueUnit: "ticket",
       heroHeadline: "Pricing for tours & experiences. Flat, never per ticket.",
       heroSubhead:
-        "Sell direct at a flat cost, whatever your volume. No commission, no cancellation fees, and a rate we never raise out from under you.",
+        "Sell direct at a flat cost, whatever your volume. There is no commission and no cancellation fees, and we do not increase the rate without notice.",
       premiumFlow: "Capacity-aware sessions, manifests & group buyouts",
       comparison: {
-        title: "What marketplace commission really costs",
-        body: "Civitatis, GetYourGuide and Viator take 20-30% of every ticket and keep the customer for the next trip; FareHarbor adds 6% to your guests' price. An operator selling 500 tickets a month at €60 hands a marketplace €90,000+ a year. Guest Overflow is one flat price that doesn't move, and we never bill you for a cancellation.",
+        title: "The actual cost of marketplace commission",
+        body: "Civitatis, GetYourGuide and Viator take 20-30% of every ticket and retain the customer for the next trip; FareHarbor adds 6% to your guests' price. An operator selling 500 tickets a month at €60 pays a marketplace €90,000+ a year. Guest Overflow is a single flat price that does not move, and we never bill you for a cancellation.",
       },
     },
   },
@@ -214,22 +214,22 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
       valueUnit: "reserva",
       heroHeadline: "Preços para restaurantes. Fixo, nunca por reserva.",
       heroSubhead:
-        "Seja qual for o volume, o preço não mexe. Sem comissão por pessoa, nem sequer nos habituais que já reservam consigo.",
+        "Seja qual for o volume, o preço não se altera. Não existe comissão por pessoa, nem sequer nos clientes habituais que já reservam consigo.",
       premiumFlow: "Gestão de mesas e rotação com controlo de ritmo",
       comparison: {
-        title: "O que o TheFork custa de verdade",
-        body: "O TheFork cobra cerca de 2 a 4 € por pessoa, incluindo os habituais que já reservam consigo. Um mês cheio passa facilmente dos 1.000 €. O Guest Overflow é um preço fixo que não muda no seu mês mais cheio, e nunca cobra por reserva.",
+        title: "O custo real do TheFork",
+        body: "O TheFork cobra cerca de 2 a 4 € por pessoa, incluindo os clientes habituais que já reservam consigo. Um mês cheio ultrapassa facilmente os 1.000 €. O Guest Overflow é um preço fixo que não se altera no seu mês mais cheio, e nunca cobra por reserva.",
       },
     },
     hotels: {
       valueUnit: "dormida",
       heroHeadline: "Preços para hotéis. Fixo, e a comissão das OTAs fica consigo.",
       heroSubhead:
-        "A Booking leva 15 a 18% de cada estadia. Recupere um punhado de reservas diretas por mês e o Guest Overflow já se pagou. Em Portugal, por lei, pode pôr o seu site abaixo da Booking.",
+        "A Booking leva 15 a 18% de cada estadia. Recupere um pequeno número de reservas diretas por mês e o Guest Overflow já se terá pago. Em Portugal, por lei, pode colocar o seu site abaixo da Booking.",
       premiumFlow: "Tipos de quarto, regras de ocupação e tarifas sazonais",
       comparison: {
-        title: "O que a comissão das OTAs custa de verdade",
-        body: "Um hotel de 20 quartos a 120 € por noite entrega à Booking 50.000 a 63.000 € por ano em comissão. Passe apenas um quinto dessas estadias para reserva direta e fica com mais de 10.000 €. É um valor fixo que não muda e corre no seu próprio Stripe, sem margem nos pagamentos.",
+        title: "O custo real da comissão das OTAs",
+        body: "Um hotel de 20 quartos a 120 € por noite entrega à Booking 50.000 a 63.000 € por ano em comissão. Transfira apenas um quinto dessas estadias para reserva direta e ficará com mais de 10.000 €. É um valor fixo que não se altera e corre no seu próprio Stripe, sem margem nos pagamentos.",
       },
       starterNote: "Para Alojamento Local, 1 a 3 unidades",
       starterBlurb: "Uma página de reservas direta white-label para o seu AL, para que os hóspedes reservem consigo, não na OTA.",
@@ -238,33 +238,33 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
       valueUnit: "tratamento",
       heroHeadline: "Preços para spas e bem-estar. Fixo por espaço, nunca por cadeira.",
       heroSubhead:
-        "Um preço fixo, sejam quantas salas ou terapeutas tiver. Sem comissão sobre novos clientes, nunca.",
+        "Um preço fixo, independentemente do número de salas ou terapeutas que tiver. Não existe comissão sobre novos clientes, em momento algum.",
       premiumFlow: "Agenda por serviço, duração e por terapeuta",
       comparison: {
-        title: "O que os marketplaces custam de verdade",
-        body: "A Fresha leva ~20% da primeira marcação de um novo cliente, a Treatwell 25%, a Booksy 30%. E as ferramentas por lugar cobram mais a cada terapeuta que acrescenta. O Guest Overflow é um preço fixo por espaço, sem comissão sobre os seus clientes e sem penalização por lugar.",
+        title: "O custo real dos marketplaces",
+        body: "A Fresha leva ~20% da primeira marcação de um novo cliente, a Treatwell 25% e a Booksy 30%. Além disso, as ferramentas por lugar cobram mais a cada terapeuta que acrescenta. O Guest Overflow é um preço fixo por espaço, sem comissão sobre os seus clientes e sem penalização por lugar.",
       },
     },
     "salons-barbers": {
       valueUnit: "marcação",
       heroHeadline: "Preços para cabeleireiros e barbearias. Fixo por espaço, não por cadeira.",
       heroSubhead:
-        "Um espaço de duas cadeiras e um de dez pagam o mesmo. Sem comissão na primeira visita, sem taxa por marcação.",
+        "Um espaço de duas cadeiras e um de dez pagam o mesmo. Não existe comissão na primeira visita nem taxa por marcação.",
       premiumFlow: "Agenda por profissional, intervalos e gestão de cadeiras",
       comparison: {
-        title: "O que o preço por cadeira custa de verdade",
-        body: "Um espaço de quatro cadeiras na Booksy paga cerca de 80 a 110 € por mês só em taxas por lugar, mais 30% da primeira visita de cada novo cliente. O Guest Overflow é um preço fixo por espaço, seja qual for o número de cadeiras, e nunca leva uma fatia de uma marcação.",
+        title: "O custo real do preço por cadeira",
+        body: "Um espaço de quatro cadeiras na Booksy paga cerca de 80 a 110 € por mês apenas em taxas por lugar, mais 30% da primeira visita de cada novo cliente. O Guest Overflow é um preço fixo por espaço, seja qual for o número de cadeiras, e nunca cobra uma comissão sobre uma marcação.",
       },
     },
     "tours-experiences": {
       valueUnit: "bilhete",
       heroHeadline: "Preços para tours e experiências. Fixo, nunca por bilhete.",
       heroSubhead:
-        "Venda direto a um custo fixo, seja qual for o volume. Sem comissão, sem taxas de cancelamento, e uma tarifa que nunca aumentamos sem o avisar.",
+        "Venda direto a um custo fixo, seja qual for o volume. Não existe comissão nem taxas de cancelamento, e não aumentamos a tarifa sem aviso prévio.",
       premiumFlow: "Sessões com gestão de lotação, manifestos e reservas exclusivas",
       comparison: {
-        title: "O que a comissão dos marketplaces custa de verdade",
-        body: "A Civitatis, a GetYourGuide e a Viator levam 20 a 30% de cada bilhete e ficam com o cliente para a próxima viagem; a FareHarbor acrescenta 6% ao preço dos seus clientes. Um operador que vende 500 bilhetes por mês a 60 € entrega a um marketplace mais de 90.000 € por ano. O Guest Overflow é um preço fixo que não muda, e nunca lhe cobramos por um cancelamento.",
+        title: "O custo real da comissão dos marketplaces",
+        body: "A Civitatis, a GetYourGuide e a Viator levam 20 a 30% de cada bilhete e ficam com o cliente para a próxima viagem; a FareHarbor acrescenta 6% ao preço dos seus clientes. Um operador que vende 500 bilhetes por mês a 60 € entrega a um marketplace mais de 90.000 € por ano. O Guest Overflow é um preço fixo que não se altera, e nunca lhe cobramos por um cancelamento.",
       },
     },
   },
@@ -343,24 +343,24 @@ const en: IndustriesStrings = {
       themeId: "fine-dining",
       icon: "fork",
       cardBlurb:
-        "Table reservations that feel like a natural part of your dining room, not a marketplace tab.",
+        "Table reservations that function as a natural part of your dining room, not a marketplace tab.",
       hero: {
         headline: "Take reservations on your own website.",
         subhead:
-          "Guest Overflow gives restaurants a reservation flow that lives on their own site, carries their brand, and never charges per cover.",
+          "Guest Overflow provides restaurants with a reservation flow that lives on their own site, carries their brand, and never charges per cover.",
       },
       painPoints: [
         {
           title: "Marketplaces compete for your diners",
-          body: "Booking platforms list you right next to your competitors, and they're happy to nudge your guests toward someone else's table.",
+          body: "Booking platforms list you directly beside your competitors, and they readily direct your guests toward another establishment's table.",
         },
         {
           title: "Per-cover fees scale against you",
-          body: "With commission pricing, a fully booked night is also your most expensive one. The fees quietly eat into your best services.",
+          body: "With commission pricing, a fully booked night is also your most expensive one. The fees steadily reduce the margin on your best services.",
         },
         {
-          title: "No-shows burn prime slots",
-          body: "Without deposits and well-timed reminders, a no-show on a Friday eight-top is revenue you simply never get back.",
+          title: "No-shows remove revenue from prime time slots",
+          body: "Without deposits and well-timed reminders, a no-show on a Friday eight-top is revenue that you never recover.",
         },
       ],
       highlights: [
@@ -374,7 +374,7 @@ const en: IndustriesStrings = {
         },
         {
           title: "A guest book you own",
-          body: "Regulars, allergies, anniversaries. It all stays in your hands, and you can export it whenever you like.",
+          body: "Regular guests, allergies, anniversaries. All of it remains in your hands, and you may export it whenever you require.",
         },
       ],
       metaDescription:
@@ -387,38 +387,38 @@ const en: IndustriesStrings = {
       themeId: "hotel",
       icon: "bed",
       cardBlurb:
-        "Direct bookings for boutique hotels, so you keep the OTA commission and own the guest relationship.",
+        "Direct bookings for boutique hotels, so you retain the OTA commission and own the guest relationship.",
       hero: {
         headline: "Make direct booking the obvious choice.",
         subhead:
-          "Boutique hotels lose 15-25% of every OTA stay. Guest Overflow puts a beautiful, brand-true booking flow on your own site so guests book direct.",
+          "Boutique hotels lose 15-25% of every OTA stay. Guest Overflow places a polished, brand-true booking flow on your own site so that guests book direct.",
       },
       painPoints: [
         {
           title: "OTAs take a fifth of every stay",
-          body: "Online travel agencies charge commissions that dwarf any software cost, and they keep the guest's email forever.",
+          body: "Online travel agencies charge commissions that far exceed any software cost, and they retain the guest's email permanently.",
         },
         {
-          title: "Clunky booking engines lose guests",
-          body: "Most hotel booking engines feel like airline checkouts, so guests give up halfway and book through the OTA instead.",
+          title: "Cumbersome booking engines lose guests",
+          body: "Most hotel booking engines resemble airline checkouts, so guests abandon the process partway and book through the OTA instead.",
         },
         {
           title: "No relationship before arrival",
-          body: "When the OTA owns the booking, your first real contact with a guest happens at the front desk.",
+          body: "When the OTA owns the booking, your first genuine contact with a guest occurs at the front desk.",
         },
       ],
       highlights: [
         {
           title: "Room & rate aware",
-          body: "Room types, occupancy rules, and seasonal rates presented in a flow that feels like your hotel, not a portal.",
+          body: "Room types, occupancy rules, and seasonal rates presented in a flow that reflects your hotel, not a portal.",
         },
         {
           title: "Direct-booking incentives",
-          body: "Surface member rates, perks, or packages that make booking direct visibly better than the OTA price.",
+          body: "Present member rates, perks, or packages that make booking direct visibly preferable to the OTA price.",
         },
         {
           title: "Pre-arrival guest profile",
-          body: "Preferences and special requests collected at booking, so the welcome starts before check-in.",
+          body: "Preferences and special requests collected at booking, so that the welcome begins before check-in.",
         },
       ],
       metaDescription:
@@ -431,30 +431,30 @@ const en: IndustriesStrings = {
       themeId: "spa",
       icon: "leaf",
       cardBlurb:
-        "Treatment bookings that feel as calm as your space, with services, practitioners, and schedules handled gracefully.",
+        "Treatment bookings as calm as your space, with services, practitioners, and schedules handled gracefully.",
       hero: {
         headline: "A booking experience as calm as your space.",
         subhead:
-          "Spas and wellness studios get a booking flow that matches the feel of their brand, with services, durations, and practitioner schedules handled without the friction.",
+          "Spas and wellness studios receive a booking flow that matches the character of their brand, with services, durations, and practitioner schedules handled without friction.",
       },
       painPoints: [
         {
-          title: "Phone tag fills your front desk",
-          body: "Every booking taken by phone costs staff time, and enquiries that come in after hours often never get answered at all.",
+          title: "Telephone reservations consume front-desk time",
+          body: "Every booking taken by telephone costs staff time, and enquiries that arrive after hours frequently receive no response at all.",
         },
         {
-          title: "Generic salon software, generic feel",
-          body: "Mass-market booking tools tend to look like spreadsheets. Your booking page should feel like your space does.",
+          title: "Generic salon software, generic impression",
+          body: "Mass-market booking tools tend to resemble spreadsheets. Your booking page should convey what your space conveys.",
         },
         {
           title: "Late cancellations leave empty rooms",
-          body: "An empty treatment room is revenue you can't get back, and unprotected bookings make late cancellations painless for everyone but you.",
+          body: "An empty treatment room is revenue that you cannot recover, and unprotected bookings render late cancellations cost-free for everyone but you.",
         },
       ],
       highlights: [
         {
           title: "Service & practitioner logic",
-          body: "Durations, prep time, and per-practitioner availability all handled cleanly behind the scenes.",
+          body: "Durations, preparation time, and per-practitioner availability all handled cleanly behind the scenes.",
         },
         {
           title: "Cancellation protection",
@@ -462,7 +462,7 @@ const en: IndustriesStrings = {
         },
         {
           title: "Intake built into booking",
-          body: "Collect preferences and health notes at booking time, so clients arrive ready and sessions start on time.",
+          body: "Collect preferences and health notes at the time of booking, so that clients arrive prepared and sessions begin on time.",
         },
       ],
       metaDescription:
@@ -479,26 +479,26 @@ const en: IndustriesStrings = {
       hero: {
         headline: "Sell out departures from your own site.",
         subhead:
-          "Wineries, tour operators, and experience hosts get capacity-aware scheduling and direct sales, without marketplace commissions eating into the margin.",
+          "Wineries, tour operators, and experience hosts receive capacity-aware scheduling and direct sales, without marketplace commissions reducing the margin.",
       },
       painPoints: [
         {
           title: "Marketplaces take 20-30% per ticket",
-          body: "Experience platforms charge steep commissions and own the customer for the next trip too.",
+          body: "Experience platforms charge substantial commissions and retain the customer for the next trip as well.",
         },
         {
-          title: "Capacity chaos across channels",
-          body: "Selling the same departure in three places means overbooking or, worse, half-empty sessions.",
+          title: "Capacity conflicts across channels",
+          body: "Selling the same departure in three places results in overbooking or, worse, half-empty sessions.",
         },
         {
           title: "Group bookings handled by email",
-          body: "Private tastings and group tours arranged over long email threads take up hours and slip through the cracks more often than anyone admits.",
+          body: "Private tastings and group tours arranged over lengthy email threads consume hours and are overlooked more often than is generally acknowledged.",
         },
       ],
       highlights: [
         {
           title: "Capacity-aware sessions",
-          body: "Fixed departures with live seat counts, so guests see real availability and you never oversell a session.",
+          body: "Fixed departures with live seat counts, so that guests see real availability and you never oversell a session.",
         },
         {
           title: "Direct payment, no commission",
@@ -506,7 +506,7 @@ const en: IndustriesStrings = {
         },
         {
           title: "Private & group requests",
-          body: "A structured enquiry flow for buyouts and groups, so your largest bookings don't get lost in your inbox.",
+          body: "A structured enquiry flow for buyouts and groups, so that your largest bookings are not lost in your inbox.",
         },
       ],
       metaDescription:
@@ -519,24 +519,24 @@ const en: IndustriesStrings = {
       themeId: "salon",
       icon: "scissors",
       cardBlurb:
-        "Appointments that look like your salon, not a booking app, with deposits and rebooking that keep chairs full.",
+        "Appointments that present as your salon, not a booking app, with deposits and rebooking that keep chairs full.",
       hero: {
         headline: "Booking that fits your chair.",
         subhead:
-          "Salons and barbershops get an appointment flow on their own site, themed to their brand, with deposits, per-stylist scheduling, and no commission or per-booking fees.",
+          "Salons and barbershops receive an appointment flow on their own site, themed to their brand, with deposits, per-stylist scheduling, and no commission or per-booking fees.",
       },
       painPoints: [
         {
           title: "Booking apps own your clients",
-          body: "Marketplace apps list your shop next to every competitor, take a cut of each booking, and keep the client's details for themselves.",
+          body: "Marketplace apps list your shop beside every competitor, take a commission on each booking, and retain the client's details for themselves.",
         },
         {
           title: "No-shows leave the chair empty",
-          body: "An empty chair is time you can't sell twice. Without deposits and reminders, a missed appointment is gone for good.",
+          body: "An empty chair is time that cannot be sold twice. Without deposits and reminders, a missed appointment is lost permanently.",
         },
         {
-          title: "The phone rings mid-cut",
-          body: "Taking bookings by phone means stopping mid-service, and calls that come in after hours often go unanswered.",
+          title: "The telephone rings mid-service",
+          body: "Taking bookings by telephone requires interrupting a service, and calls that arrive after hours frequently go unanswered.",
         },
       ],
       highlights: [
@@ -550,7 +550,7 @@ const en: IndustriesStrings = {
         },
         {
           title: "Rebooking & client history",
-          body: "Preferred stylist, colour formulas, and visit history stay with you, so the next appointment is one tap away.",
+          body: "Preferred stylist, colour formulas, and visit history remain with you, so that the next appointment is one tap away.",
         },
       ],
       metaDescription:
@@ -562,22 +562,22 @@ const en: IndustriesStrings = {
     eyebrow: "Industries",
     title: "Built for the way you host.",
     subhead:
-      "One booking system, adapted to how your business works. Each page below includes a live demo themed for that type of venue.",
+      "One booking system, adapted to how your business operates. Each page below includes a live demo themed for that type of venue.",
     seeBooking: (label) => `See ${label.toLowerCase()} booking →`,
   },
   detail: {
     problemEyebrow: "The problem",
-    problemTitle: (label) => `What ${label.toLowerCase()} put up with today`,
+    problemTitle: (label) => `What ${label.toLowerCase()} contend with today`,
     liveDemoEyebrow: "Live demo",
     liveDemoTitle: (venue) => `Try a booking at ${venue}.`,
     liveDemoSubhead:
-      "The venue is fictional, but the booking page is real. This is how Guest Overflow would feel tailored to your business.",
+      "The venue is fictional, but the booking page is real. This is how Guest Overflow would perform once tailored to your business.",
     builtInEyebrow: "Built in",
     builtInTitle: (label) => `Guest Overflow for ${label.toLowerCase()}`,
     pricingEyebrow: "Pricing",
     pricingAddOnsTitle: "Optional add-ons",
     pricingCalcCta: "Calculate your savings",
-    comparisonFlat: "Flat, no commission, ever.",
+    comparisonFlat: "Flat, with no commission, ever.",
     seePricing: "See pricing",
     footerHeadline: "Bring booking home to your website.",
     footerSubhead: "See Guest Overflow themed for a venue like yours in a 20-minute demo.",
@@ -592,24 +592,24 @@ const pt: IndustriesStrings = {
       themeId: "fine-dining",
       icon: "fork",
       cardBlurb:
-        "Reservas de mesa que parecem uma parte natural da sua sala, não um separador de marketplace.",
+        "Reservas de mesa que constituem uma parte natural da sua sala, não um separador de marketplace.",
       hero: {
         headline: "Receba reservas no seu próprio site.",
         subhead:
-          "O Guest Overflow dá aos restaurantes um fluxo de reservas que vive no seu próprio site, veste a sua marca e nunca cobra por reserva.",
+          "O Guest Overflow disponibiliza aos restaurantes um fluxo de reservas que vive no seu próprio site, apresenta a sua marca e nunca cobra por reserva.",
       },
       painPoints: [
         {
           title: "Os marketplaces disputam os seus clientes",
-          body: "As plataformas de reservas mostram-no mesmo ao lado dos concorrentes, e não hesitam em empurrar os seus clientes para a mesa de outro.",
+          body: "As plataformas de reservas apresentam-no mesmo ao lado dos concorrentes, e não hesitam em direcionar os seus clientes para a mesa de outro.",
         },
         {
           title: "As taxas por reserva crescem contra si",
-          body: "Com comissões, uma noite esgotada é também a mais cara. As taxas vão comendo os seus melhores serviços sem dar por isso.",
+          body: "Com comissões, uma noite esgotada é também a mais cara. As taxas reduzem progressivamente a margem dos seus melhores serviços.",
         },
         {
-          title: "As faltas queimam os melhores horários",
-          body: "Sem sinais e lembretes na hora certa, uma falta numa mesa de oito à sexta-feira é receita que nunca mais recupera.",
+          title: "As faltas retiram receita dos melhores horários",
+          body: "Sem sinais e lembretes na hora certa, uma falta numa mesa de oito à sexta-feira é receita que não volta a recuperar.",
         },
       ],
       highlights: [
@@ -623,7 +623,7 @@ const pt: IndustriesStrings = {
         },
         {
           title: "Um livro de clientes que é seu",
-          body: "Habituais, alergias, aniversários. Tudo fica nas suas mãos, e pode exportá-lo quando quiser.",
+          body: "Clientes habituais, alergias, aniversários. Tudo permanece nas suas mãos, e poderá exportá-lo quando pretender.",
         },
       ],
       metaDescription:
@@ -640,34 +640,34 @@ const pt: IndustriesStrings = {
       hero: {
         headline: "Faça da reserva direta a escolha óbvia.",
         subhead:
-          "Os hotéis boutique perdem 15 a 25% de cada estadia vendida por OTA. O Guest Overflow coloca um fluxo de reserva bonito e fiel à marca no seu próprio site, para que os hóspedes reservem diretamente.",
+          "Os hotéis boutique perdem 15 a 25% de cada estadia vendida por OTA. O Guest Overflow coloca um fluxo de reserva cuidado e fiel à marca no seu próprio site, para que os hóspedes reservem diretamente.",
       },
       painPoints: [
         {
           title: "As OTAs levam um quinto de cada estadia",
-          body: "As agências de viagens online cobram comissões que ultrapassam em muito qualquer custo de software, e ficam para sempre com o email do hóspede.",
+          body: "As agências de viagens online cobram comissões que ultrapassam largamente qualquer custo de software, e ficam permanentemente com o email do hóspede.",
         },
         {
           title: "Motores de reserva pesados afastam hóspedes",
-          body: "A maioria dos motores de reserva de hotel parece um checkout de companhia aérea, e os hóspedes desistem a meio e acabam por reservar na OTA.",
+          body: "A maioria dos motores de reserva de hotel assemelha-se a um checkout de companhia aérea, pelo que os hóspedes desistem a meio e acabam por reservar na OTA.",
         },
         {
           title: "Nenhuma relação antes da chegada",
-          body: "Quando a reserva pertence à OTA, o primeiro contacto real com o hóspede acontece na receção.",
+          body: "Quando a reserva pertence à OTA, o primeiro contacto real com o hóspede ocorre na receção.",
         },
       ],
       highlights: [
         {
           title: "A pensar em quartos e tarifas",
-          body: "Tipos de quarto, regras de ocupação e tarifas sazonais apresentados num fluxo que parece o seu hotel, não um portal.",
+          body: "Tipos de quarto, regras de ocupação e tarifas sazonais apresentados num fluxo que reflete o seu hotel, não um portal.",
         },
         {
           title: "Incentivos à reserva direta",
-          body: "Destaque tarifas de membro, vantagens ou pacotes que tornem a reserva direta visivelmente melhor do que o preço da OTA.",
+          body: "Destaque tarifas de membro, vantagens ou pacotes que tornem a reserva direta visivelmente preferível ao preço da OTA.",
         },
         {
           title: "Perfil do hóspede antes da chegada",
-          body: "Preferências e pedidos especiais recolhidos na reserva, para que a hospitalidade comece antes do check-in.",
+          body: "Preferências e pedidos especiais recolhidos na reserva, para que o acolhimento comece antes do check-in.",
         },
       ],
       metaDescription:
@@ -689,15 +689,15 @@ const pt: IndustriesStrings = {
       painPoints: [
         {
           title: "O telefone consome a sua receção",
-          body: "Cada marcação por telefone custa tempo à equipa, e os contactos fora de horas muitas vezes ficam simplesmente sem resposta.",
+          body: "Cada marcação por telefone custa tempo à equipa, e os contactos fora de horas frequentemente ficam sem resposta.",
         },
         {
           title: "Software genérico, experiência genérica",
-          body: "As ferramentas de marcação massificadas parecem folhas de cálculo. A sua página de marcações devia transmitir o que o seu espaço transmite.",
+          body: "As ferramentas de marcação massificadas assemelham-se a folhas de cálculo. A sua página de marcações deveria transmitir aquilo que o seu espaço transmite.",
         },
         {
           title: "Cancelamentos tardios deixam salas vazias",
-          body: "Uma sala de tratamento vazia é receita irrecuperável, e marcações sem proteção tornam o cancelamento tardio indolor para todos menos para si.",
+          body: "Uma sala de tratamento vazia é receita irrecuperável, e as marcações sem proteção tornam o cancelamento tardio isento de custo para todos exceto para si.",
         },
       ],
       highlights: [
@@ -711,7 +711,7 @@ const pt: IndustriesStrings = {
         },
         {
           title: "Ficha de cliente integrada na marcação",
-          body: "Preferências e notas de saúde recolhidas no momento da marcação, para que os clientes cheguem prontos e as sessões comecem a horas.",
+          body: "Preferências e notas de saúde recolhidas no momento da marcação, para que os clientes cheguem preparados e as sessões comecem a horas.",
         },
       ],
       metaDescription:
@@ -728,20 +728,20 @@ const pt: IndustriesStrings = {
       hero: {
         headline: "Esgote partidas a partir do seu próprio site.",
         subhead:
-          "Quintas, operadores de tours e anfitriões de experiências recebem agendamento com gestão de lotação e vendas diretas, sem comissões de marketplace a comer a margem.",
+          "Quintas, operadores de tours e anfitriões de experiências recebem agendamento com gestão de lotação e vendas diretas, sem comissões de marketplace a reduzir a margem.",
       },
       painPoints: [
         {
           title: "Os marketplaces levam 20 a 30% por bilhete",
-          body: "As plataformas de experiências cobram comissões pesadas e ficam com o cliente para a próxima viagem.",
+          body: "As plataformas de experiências cobram comissões elevadas e ficam com o cliente para a próxima viagem.",
         },
         {
-          title: "Caos de lotação entre canais",
-          body: "Vender a mesma partida em três sítios significa overbooking ou, pior, sessões meio vazias.",
+          title: "Conflitos de lotação entre canais",
+          body: "Vender a mesma partida em três sítios resulta em overbooking ou, pior, em sessões meio vazias.",
         },
         {
           title: "Reservas de grupo geridas por email",
-          body: "Provas privadas e tours de grupo negociados em longas trocas de email consomem horas e escapam-se mais vezes do que se admite.",
+          body: "Provas privadas e tours de grupo negociados em longas trocas de email consomem horas e são esquecidos mais vezes do que é reconhecido.",
         },
       ],
       highlights: [
@@ -777,15 +777,15 @@ const pt: IndustriesStrings = {
       painPoints: [
         {
           title: "As apps ficam com os seus clientes",
-          body: "As apps de marcações colocam o seu espaço ao lado de todos os concorrentes, levam uma fatia de cada marcação e guardam os dados do cliente para si.",
+          body: "As apps de marcações colocam o seu espaço ao lado de todos os concorrentes, cobram uma comissão sobre cada marcação e guardam os dados do cliente para si.",
         },
         {
           title: "As faltas deixam a cadeira vazia",
           body: "Uma cadeira vazia é tempo que não se vende duas vezes. Sem sinais e lembretes, uma falta é receita perdida.",
         },
         {
-          title: "O telefone toca a meio do corte",
-          body: "Aceitar marcações por telefone obriga a parar a meio do serviço, e as chamadas fora de horas ficam muitas vezes sem resposta.",
+          title: "O telefone toca a meio do serviço",
+          body: "Aceitar marcações por telefone obriga a interromper o serviço, e as chamadas fora de horas ficam frequentemente sem resposta.",
         },
       ],
       highlights: [
@@ -799,7 +799,7 @@ const pt: IndustriesStrings = {
         },
         {
           title: "Remarcação e histórico de cliente",
-          body: "Profissional preferido, fórmulas de cor e histórico de visitas ficam consigo, para que a próxima marcação fique a um toque.",
+          body: "Profissional preferido, fórmulas de cor e histórico de visitas permanecem consigo, para que a próxima marcação fique a um toque.",
         },
       ],
       metaDescription:
@@ -811,16 +811,16 @@ const pt: IndustriesStrings = {
     eyebrow: "Setores",
     title: "Feito para a forma como recebe.",
     subhead:
-      "Um único sistema de reservas, adaptado à forma como o seu negócio funciona. Cada página abaixo inclui uma demo ao vivo com o tema desse tipo de espaço.",
+      "Um único sistema de reservas, adaptado à forma como o seu negócio funciona. Cada página abaixo inclui uma demonstração ao vivo com o tema desse tipo de espaço.",
     seeBooking: (label) => `Ver reservas para ${label.toLowerCase()} →`,
   },
   detail: {
     problemEyebrow: "O problema",
-    problemTitle: (label) => `O que ${label.toLowerCase()} aturam hoje`,
+    problemTitle: (label) => `O que ${label.toLowerCase()} enfrentam hoje`,
     liveDemoEyebrow: "Demo ao vivo",
     liveDemoTitle: (venue) => `Experimente reservar no ${venue}.`,
     liveDemoSubhead:
-      "O espaço é fictício, mas a página de reservas é real. É assim que o Guest Overflow se sentiria à medida do seu negócio.",
+      "O espaço é fictício, mas a página de reservas é real. É assim que o Guest Overflow funcionaria depois de adaptado ao seu negócio.",
     builtInEyebrow: "Incluído",
     builtInTitle: (label) => `Guest Overflow para ${label.toLowerCase()}`,
     pricingEyebrow: "Preços",

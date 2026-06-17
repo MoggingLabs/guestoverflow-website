@@ -30,13 +30,13 @@ const en: PricingContent = {
     eyebrow: "Pricing",
     headline: "Flat pricing. No per-cover commission.",
     subhead:
-      "Whatever your volume, your price doesn't move, and the prices are right here on a public page. Final quotes depend on your setup, so every plan below starts with a demo.",
+      "Whatever your volume, your price does not change, and the prices are published here on a public page. Final quotes depend on your setup, so every plan below begins with a demo.",
   },
   tiers: [
     {
       name: "Essential",
       monthlyEur: 99,
-      priceNote: "For a single venue getting started",
+      priceNote: "For a single venue beginning with the platform",
       blurb: "The branded booking page on your site, with the core toolkit.",
       features: [
         "White-label booking page on your website",
@@ -49,8 +49,8 @@ const en: PricingContent = {
     {
       name: "Premium",
       monthlyEur: 249,
-      priceNote: "For venues that live on bookings",
-      blurb: "Everything in Essential, plus protection and intelligence.",
+      priceNote: "For venues that depend on bookings",
+      blurb: "Everything in Essential, plus protection and analytics.",
       featured: true,
       features: [
         "Everything in Essential",
@@ -66,7 +66,7 @@ const en: PricingContent = {
       monthlyEur: null,
       priceNote: "Groups & multi-location",
       blurb:
-        "Multiple venues, custom integrations, or something we haven't thought of yet.",
+        "Multiple venues, custom integrations, or a requirement we have not yet anticipated.",
       features: [
         "Everything in Premium",
         "Multi-location dashboard",
@@ -78,9 +78,9 @@ const en: PricingContent = {
   tierUi: {
     monthly: "Monthly",
     annual: "Annual",
-    annualBadge: "a third off",
+    annualBadge: "one third off",
     mostPopular: "Most popular",
-    letsTalk: "Let's talk",
+    letsTalk: "Contact us",
     fromPerMonth: (eur) => `from €${eur}/mo`,
     billedAnnually: "billed annually",
     monthlyWord: "monthly",
@@ -88,12 +88,12 @@ const en: PricingContent = {
   },
   comparison: {
     title: "What commission really costs",
-    body: "A restaurant seating 1,000 covers a month at €2–3 commission per cover pays €24,000–36,000 a year, for a booking page that isn't even theirs. Guest Overflow replaces that with a flat subscription that stays the same even in your busiest month.",
+    body: "A restaurant seating 1,000 covers a month at €2-3 commission per cover pays €24,000-36,000 a year, for a booking page that does not even belong to it. Guest Overflow replaces that with a flat subscription that remains constant even in your busiest month.",
   },
   foundingPartner: {
     badge: "Founding offer",
-    title: "Three months at half price, and a clean way out",
-    body: "Join as a founding venue and pay half price for your first three months. If you don't see real return or real usage through your website or your Google Business Profile in that time, you can end the relationship cleanly. No questions asked, no exit fees, and everything stays good between us. We only want clients who are genuinely winning with this.",
+    title: "Three months at half price, with a straightforward exit",
+    body: "Join as a founding venue and pay half price for your first three months. If you do not observe genuine return or genuine usage through your website or your Google Business Profile during that period, you may end the relationship without complication. No justification is required and no exit fees apply. We seek only clients for whom the platform delivers measurable results.",
     cta: "Claim the founding offer",
   },
   offerDisclaimer: {
@@ -104,17 +104,17 @@ const en: PricingContent = {
   noWebsiteOffer: {
     eyebrow: "Getting found",
     title: "Start with your Google Business Profile",
-    body: "If you don't have a website, we begin by optimizing your Google Business Profile so people can actually find and book you. Don't rent your visibility on Google, own it. When you're ready for more, we design and build a full website with booking built in. That's our higher-level offering, and there's no pressure to get there on day one.",
+    body: "If you do not have a website, we begin by optimizing your Google Business Profile so that customers can find and book you. Rather than renting your visibility on Google, you retain ownership of it. When you are ready for more, we design and build a full website with booking included. That is our higher-level offering, and there is no obligation to reach it on day one.",
     points: [
       "Google Business Profile optimization as the affordable starting point",
-      "Bookings working without a website of your own",
-      "A full custom website with built-in booking when you're ready to level up",
+      "Bookings operating without a website of your own",
+      "A full custom website with built-in booking when you are ready to expand",
     ],
   },
   transparency: {
     eyebrow: "How we work",
     title: "Complete transparency, in writing",
-    body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, what we changed, and whether it worked. If the numbers don't justify the relationship after the three-month pilot, ending it takes one sentence in an email. No questions, no hard feelings.",
+    body: "We measure everything together. Every month you see exactly what came through your website or your Google profile, what we changed, and whether it succeeded. If the figures do not justify the relationship after the three-month pilot, ending it requires one sentence in an email. No justification is required, and the relationship concludes amicably.",
   },
   sectorPicker: {
     eyebrow: "Pricing by sector",
@@ -134,7 +134,7 @@ const pt: PricingContent = {
     eyebrow: "Preços",
     headline: "Preço fixo. Sem comissão por reserva.",
     subhead:
-      "Seja qual for o seu volume, o preço não mexe, e está aqui mesmo, numa página pública. O orçamento final depende da sua instalação, por isso cada plano abaixo começa com uma demonstração.",
+      "Seja qual for o seu volume, o preço mantém-se, e encontra-se publicado nesta página pública. O orçamento final depende da sua instalação, por isso cada plano abaixo começa com uma demonstração.",
   },
   tiers: [
     {
@@ -170,7 +170,7 @@ const pt: PricingContent = {
       monthlyEur: null,
       priceNote: "Grupos e várias localizações",
       blurb:
-        "Vários espaços, integrações à medida, ou algo em que ainda não pensámos.",
+        "Vários espaços, integrações à medida, ou um requisito que ainda não tenhamos previsto.",
       features: [
         "Tudo o que está no Premium",
         "Painel multi-localização",
@@ -184,7 +184,7 @@ const pt: PricingContent = {
     annual: "Anual",
     annualBadge: "um terço de desconto",
     mostPopular: "Mais popular",
-    letsTalk: "Vamos falar",
+    letsTalk: "Contacte-nos",
     fromPerMonth: (eur) => `desde ${eur} €/mês`,
     billedAnnually: "faturado anualmente",
     monthlyWord: "mensal",
@@ -192,12 +192,12 @@ const pt: PricingContent = {
   },
   comparison: {
     title: "O que a comissão custa realmente",
-    body: "Um restaurante com 1.000 reservas por mês a 2–3 € de comissão por pessoa paga 24.000 a 36.000 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que não muda nem no seu mês mais cheio.",
+    body: "Um restaurante com 1.000 reservas por mês a 2 a 3 € de comissão por pessoa paga 24.000 a 36.000 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que se mantém constante mesmo no mês de maior procura.",
   },
   foundingPartner: {
     badge: "Oferta de lançamento",
-    title: "Três meses a metade do preço, e uma saída limpa",
-    body: "Junte-se como espaço fundador e pague metade do preço nos primeiros três meses. Se nesse período não vir retorno nem utilização reais através do seu site ou do seu Perfil de Empresa no Google, pode terminar a relação de forma limpa. Sem perguntas, sem custos de saída, e tudo fica bem entre nós. Só queremos clientes que estejam genuinamente a ganhar com isto.",
+    title: "Três meses a metade do preço, com uma saída simples",
+    body: "Junte-se como espaço fundador e pague metade do preço nos primeiros três meses. Se nesse período não verificar retorno nem utilização reais através do seu site ou do seu Perfil de Empresa no Google, pode terminar a relação sem complicações. Não é exigida qualquer justificação e não se aplicam custos de saída. Procuramos apenas clientes para quem a plataforma produz resultados mensuráveis.",
     cta: "Garantir a oferta de lançamento",
   },
   offerDisclaimer: {
@@ -208,17 +208,17 @@ const pt: PricingContent = {
   noWebsiteOffer: {
     eyebrow: "Ser encontrado",
     title: "Comece pelo seu Perfil de Empresa no Google",
-    body: "Se não tem site, começamos por otimizar o seu Perfil de Empresa no Google para que as pessoas o encontrem e reservem de facto. Não alugue a sua visibilidade no Google, seja dono dela. Quando quiser mais, desenhamos e construímos um site completo com reservas integradas. É a nossa oferta de nível superior, e não há pressa de lá chegar no primeiro dia.",
+    body: "Se não tem site, começamos por otimizar o seu Perfil de Empresa no Google para que as pessoas o encontrem e reservem efetivamente. Em vez de alugar a sua visibilidade no Google, mantém a sua propriedade. Quando pretender mais, desenhamos e construímos um site completo com reservas integradas. É a nossa oferta de nível superior, e não existe obrigação de a atingir no primeiro dia.",
     points: [
       "Otimização do Perfil de Empresa no Google como porta de entrada acessível",
       "Reservas a funcionar sem precisar de site próprio",
-      "Um site completo à medida com reservas integradas quando quiser dar o salto",
+      "Um site completo à medida com reservas integradas quando pretender expandir",
     ],
   },
   transparency: {
     eyebrow: "Como trabalhamos",
     title: "Transparência total, por escrito",
-    body: "Medimos tudo em conjunto. Todos os meses vê exatamente o que chegou através do seu site ou do seu perfil no Google, o que alterámos e se resultou. Se os números não justificarem a relação no fim do piloto de três meses, terminá-la é uma frase num email. Sem perguntas, sem ressentimentos.",
+    body: "Medimos tudo em conjunto. Todos os meses vê exatamente o que chegou através do seu site ou do seu perfil no Google, o que alterámos e se resultou. Se os números não justificarem a relação no fim do piloto de três meses, terminá-la é uma frase num email. Não é exigida qualquer justificação, e a relação termina de forma cordial.",
   },
   sectorPicker: {
     eyebrow: "Preços por setor",
@@ -228,7 +228,7 @@ const pt: PricingContent = {
     from: (eur) => `desde ${eur} €/mês`,
   },
   calc: {
-    title: "Veja o que a comissão lhe custa de verdade",
+    title: "Veja o que a comissão lhe custa realmente",
     subhead: "Um preço fixo face à taxa crescente que um marketplace cobra à medida que cresce.",
   },
 };

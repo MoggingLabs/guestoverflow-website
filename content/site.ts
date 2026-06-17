@@ -6,7 +6,7 @@ export const site = {
   name: "Guest Overflow",
   tagline: "Your own booking page, built around how you operate.",
   description:
-    "Guest Overflow gives each venue its own booking page, built around how they operate, on their brand and domain. Flat pricing, no commission, and every guest relationship stays yours. For restaurants, hotels, spas, salons, and experiences.",
+    "Guest Overflow provides each venue with its own booking page, built around how they operate, on their brand and domain. Flat pricing, no commission, and every guest relationship remains yours. For restaurants, hotels, spas, salons, and experiences.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow.com",
   email: "hello@guestoverflow.com",
   cta: {
@@ -92,7 +92,7 @@ const en: SiteStrings = {
   footerBlurb:
     "White-label online booking for restaurants, hotels, spas, salons, and experiences.",
   footerProductOf: "all rights reserved",
-  footerNote: "No lock-in · No commission · Cancel anytime.",
+  footerNote: "No lock-in · No commission · Cancel at any time.",
 };
 
 const pt: SiteStrings = {

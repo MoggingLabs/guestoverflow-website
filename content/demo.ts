@@ -13,29 +13,29 @@ const en: DemoContent = {
   eyebrow: "Book a demo",
   headline: "See Guest Overflow on a site like yours, in 20 minutes.",
   subhead:
-    "A working session, not a sales pitch. We'll show you the booking flow, the dashboard, and what your branded version would look like.",
+    "A working session, not a sales pitch. We will show you the booking flow, the dashboard, and what your branded version would look like.",
   expectations: {
     title: "What to expect",
     items: [
       {
         title: "Your booking page, live",
-        body: "We walk through a real booking page tailored to a venue like yours, then talk through how yours would work.",
+        body: "We will walk through a real booking page tailored to a venue like yours, and then discuss how yours would work.",
       },
       {
         title: "Your setup, scoped",
-        body: "We look at your current website and tell you exactly what installing Guest Overflow would involve, and how fast.",
+        body: "We will review your current website and explain precisely what installing Guest Overflow would involve, and how quickly.",
       },
       {
         title: "Straight answers",
-        body: "Ask us anything about pricing, data ownership, or how your specific setup would work. There's no commitment and no pressure at the end.",
+        body: "Ask us anything about pricing, data ownership, or how your specific setup would work. There is no commitment and no pressure at the close of the session.",
       },
     ],
   },
   reassurance:
-    "There's no commitment. If we do work together, you start with three months at half price and a clean way out if it isn't earning its keep. We'll confirm your slot within one business day.",
+    "There is no commitment. Should we work together, you begin with three months at half price and a clear exit if the product does not prove its value. We will confirm your slot within one business day.",
   tryWidget: {
-    title: "Try it while you're here",
-    body: "This is the booking page we'll build for your venue. Make a booking, switch the venue type.",
+    title: "Try it during your visit",
+    body: "This is the booking page we will build for your venue. Make a booking and switch the venue type.",
     caption: "One booking engine, tailored to each operation.",
   },
 };
@@ -50,23 +50,23 @@ const pt: DemoContent = {
     items: [
       {
         title: "A sua página de reservas, ao vivo",
-        body: "Percorremos uma página de reservas real, à medida de um espaço como o seu, e conversamos sobre como ficaria a sua.",
+        body: "Percorremos uma página de reservas real, à medida de um espaço como o seu, e analisamos consigo como ficaria a sua.",
       },
       {
         title: "A sua instalação, definida",
-        body: "Olhamos para o seu site atual e dizemos-lhe exatamente o que a instalação do Guest Overflow envolveria, e em quanto tempo.",
+        body: "Analisamos o seu site atual e indicamos-lhe com precisão o que a instalação do Guest Overflow envolveria, e em quanto tempo.",
       },
       {
         title: "Respostas diretas",
-        body: "Pergunte-nos o que quiser sobre preços, propriedade dos dados ou como funcionaria o seu caso concreto. Sem compromisso e sem pressão no fim.",
+        body: "Pergunte-nos o que quiser sobre preços, propriedade dos dados ou como funcionaria o seu caso concreto. Sem compromisso e sem pressão no final da sessão.",
       },
     ],
   },
   reassurance:
-    "Não há compromisso. Se viermos a trabalhar juntos, começa com três meses a metade do preço e uma saída limpa se não estiver a compensar. Confirmamos o seu horário no prazo de um dia útil.",
+    "Não há compromisso. Caso venhamos a trabalhar juntos, começa com três meses a metade do preço e uma saída clara se o produto não demonstrar o seu valor. Confirmamos o seu horário no prazo de um dia útil.",
   tryWidget: {
-    title: "Experimente enquanto está aqui",
-    body: "Esta é a página de reservas que vamos construir para o seu espaço. Faça uma reserva, mude o tipo de espaço.",
+    title: "Experimente durante a sua visita",
+    body: "Esta é a página de reservas que vamos construir para o seu espaço. Faça uma reserva e mude o tipo de espaço.",
     caption: "Um único motor de reservas, à medida de cada operação.",
   },
 };
