@@ -56,9 +56,9 @@ export type PricingTier = {
 /** An optional, transparently-priced add-on shown beneath a sector's tiers. */
 export type PricingAddOn = {
   name: string;
-  /** e.g. "from €0.09 / SMS" — kept honest, never a per-booking surcharge. */
+  /** e.g. "allowance included", kept honest, never a per-booking surcharge. */
   priceNote: string;
-  /** What's bundled before overage, e.g. "100 SMS/mo included on Premium". */
+  /** What's bundled before overage, e.g. "WhatsApp allowance included on Premium". */
   included?: string;
 };
 
@@ -70,7 +70,7 @@ export type SectorPricing = {
   valueUnit: string;
   /** Sector-framed "what commission really costs" block. */
   comparison: { title: string; body: string };
-  /** Optional metered add-ons (e.g. SMS reminders). */
+  /** Optional metered add-ons (e.g. WhatsApp reminders). */
   addOns?: PricingAddOn[];
 };
 

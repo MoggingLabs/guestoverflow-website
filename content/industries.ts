@@ -43,7 +43,7 @@ const pricingLadder = {
       features: [
         "Everything in Starter",
         "Concierge setup: we build & install it",
-        "SMS reminders (allowance included)",
+        "WhatsApp reminders (allowance included)",
         "Quarterly review with us",
         "Email support",
       ],
@@ -74,10 +74,10 @@ const pricingLadder = {
       ],
     },
     smsAddOn: {
-      name: "SMS reminders",
-      priceNote: "from €0.09 / SMS",
+      name: "WhatsApp reminders",
+      priceNote: "allowance included",
       included:
-        "A monthly allowance is included on Essential & Premium, followed by transparent per-SMS pricing. There is never a per-booking fee. Email reminders are always free of charge.",
+        "A monthly allowance is included on Essential & Premium, followed by transparent per-message pricing. There is never a per-booking fee. Email reminders are always free of charge.",
     },
   },
   pt: {
@@ -101,7 +101,7 @@ const pricingLadder = {
       features: [
         "Tudo o que está no Starter",
         "Instalação concierge: montamos e instalamos por si",
-        "Lembretes por SMS (com plafond incluído)",
+        "Lembretes por WhatsApp (com plafond incluído)",
         "Revisão trimestral connosco",
         "Suporte por email",
       ],
@@ -132,10 +132,10 @@ const pricingLadder = {
       ],
     },
     smsAddOn: {
-      name: "Lembretes por SMS",
-      priceNote: "desde 0,09 € / SMS",
+      name: "Lembretes por WhatsApp",
+      priceNote: "plafond incluído",
       included:
-        "Plafond mensal incluído no Essential e no Premium, seguido de SMS a preço transparente. Não existe qualquer taxa por reserva. Os lembretes por email são sempre gratuitos.",
+        "Plafond mensal incluído no Essential e no Premium, seguido de preço transparente por mensagem. Não existe qualquer taxa por reserva. Os lembretes por email são sempre gratuitos.",
     },
   },
 } as const;

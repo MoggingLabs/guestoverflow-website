@@ -279,7 +279,7 @@ async function seed() {
     await sql`insert into implementations ${sql([
       {
         client_id: id,
-        title: pick(["SMS booking reminders", "Deposit on prime-time tables", "Homepage booking widget placement", "GBP profile overhaul"]),
+        title: pick(["WhatsApp booking reminders", "Deposit on prime-time tables", "Homepage booking widget placement", "GBP profile overhaul"]),
         hypothesis: "Guests forget — well-timed nudges should cut no-shows and lift completed bookings.",
         target_metric: "bookings",
         shipped_at: shippedAt,
