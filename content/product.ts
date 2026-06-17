@@ -23,8 +23,8 @@ const en: ProductContent = {
   features: [
     {
       icon: "widget",
-      title: "Your booking page, two ways to go live",
-      body: "Run it as its own branded page, the link for your Google profile, Instagram bio, and advertising, or embedded directly on your site, by people who build websites professionally. It is a designed part of your brand, not a themed iframe, with availability, capacity, and blackout dates updating in real time.",
+      title: "Your own branded booking page",
+      body: "It runs as its own branded page on your domain, the link for your Google profile, Instagram bio, and advertising, designed and built by people who build websites professionally. It is a considered part of your brand, with availability, capacity, and blackout dates updating in real time.",
     },
     {
       icon: "compass",
@@ -82,8 +82,8 @@ const pt: ProductContent = {
   features: [
     {
       icon: "widget",
-      title: "A sua página de reservas, duas formas de a colocar no ar",
-      body: "No ar como página própria com a sua marca, o link para o seu perfil no Google, a bio do Instagram e a publicidade, ou integrada no seu site, por quem constrói sites profissionalmente. É uma parte desenhada da sua marca, não um iframe com um tema, com disponibilidade, capacidade e datas bloqueadas a atualizar em tempo real.",
+      title: "A sua própria página de reservas com a sua marca",
+      body: "No ar como página própria com a sua marca, no seu domínio, o link para o seu perfil no Google, a bio do Instagram e a publicidade, desenhada e construída por quem constrói sites profissionalmente. É uma parte pensada da sua marca, com disponibilidade, capacidade e datas bloqueadas a atualizar em tempo real.",
     },
     {
       icon: "compass",

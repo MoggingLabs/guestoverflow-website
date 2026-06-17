@@ -29,8 +29,8 @@ const en = {
     eyebrow: "Live demo",
     title: "This is your booking page. We invite you to try it.",
     subhead:
-      "A genuine, working booking page is running here. Change the venue type to observe the same system adapt to each operation, then publish it live as its own branded page or embedded directly on your site.",
-    caption: "One booking engine, tailored to each operation. Live as a page, or embedded on your site.",
+      "A genuine, working booking page is running here. Change the venue type to observe the same system adapt to each operation, then publish it live as your own branded booking page, on your brand and your domain.",
+    caption: "One booking engine, tailored to each operation, live as your own branded page.",
   },
   howItWorks: {
     title: "Operational within a matter of days.",
@@ -38,7 +38,7 @@ const en = {
     steps: [
       {
         title: "We integrate it into your site",
-        body: "Our team builds the booking experience to match your brand, from typography to tone of voice, and installs it on your existing website. You are never required to handle code.",
+        body: "Our team builds the booking experience to match your brand, from typography to tone of voice, and publishes it as your own branded booking page. You are never required to handle code.",
       },
       {
         title: "Guests book in seconds",
@@ -165,8 +165,8 @@ const pt: typeof en = {
     eyebrow: "Demo ao vivo",
     title: "Esta é a sua página de reservas. Convidamo-lo a experimentá-la.",
     subhead:
-      "Uma página de reservas real, a funcionar aqui mesmo. Altere o tipo de espaço para observar o mesmo sistema a adaptar-se a cada operação, e depois publique-a no ar como página própria com a sua marca ou integrada no seu site.",
-    caption: "Um único motor de reservas, à medida de cada operação. No ar como página, ou integrado no seu site.",
+      "Uma página de reservas real, a funcionar aqui mesmo. Altere o tipo de espaço para observar o mesmo sistema a adaptar-se a cada operação, e depois publique-a no ar como a sua própria página de reservas, com a sua marca e no seu domínio.",
+    caption: "Um único motor de reservas, à medida de cada operação, no ar como a sua própria página com a sua marca.",
   },
   howItWorks: {
     title: "A funcionar no prazo de poucos dias.",
@@ -174,7 +174,7 @@ const pt: typeof en = {
     steps: [
       {
         title: "Integramos tudo dentro do seu site",
-        body: "A nossa equipa constrói a experiência de reserva à medida da sua marca, da tipografia ao tom de voz, e instala-a no seu site atual. Nunca necessita de mexer em código.",
+        body: "A nossa equipa constrói a experiência de reserva à medida da sua marca, da tipografia ao tom de voz, e publica-a como a sua própria página de reservas com a sua marca. Nunca necessita de mexer em código.",
       },
       {
         title: "Os clientes reservam em segundos",

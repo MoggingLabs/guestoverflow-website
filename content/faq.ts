@@ -21,12 +21,12 @@ const en: FaqContent = {
     {
       question: "How long does setup take?",
       answer:
-        "Most venues go live within days of kickoff. Our team handles design, build, and installation on your existing website. You review and approve, and we publish it.",
+        "Most venues go live within days of kickoff. Our team designs, builds, and publishes your branded booking page, then adds a booking link to your existing site. You review and approve before it goes live.",
     },
     {
       question: "Does it work with my existing website?",
       answer:
-        "Yes. Guest Overflow installs on any modern website platform, including custom-built sites, WordPress, Squarespace, and Webflow. If you are able to edit your site, we are able to install Guest Overflow on it.",
+        "Yes. Your booking page lives on your own domain, and your website stays exactly as it is. We add a clear booking button or link to your existing site, whatever platform it runs on, including custom-built sites, WordPress, Squarespace, and Webflow, so guests move straight to your branded booking page.",
     },
     {
       question: "Who owns the guest data?",
@@ -95,7 +95,7 @@ const en: FaqContent = {
     {
       question: "Is there a setup fee?",
       answer:
-        "Setup is included in Premium. For Essential, a one-time installation fee may apply depending on your website platform. We will tell you exactly what it is before you commit.",
+        "Setup is included in Premium. For Essential, a one-time setup fee may apply depending on your configuration. We will tell you exactly what it is before you commit.",
     },
     {
       question: "Is there a discount for paying annually?",
@@ -150,12 +150,12 @@ const pt: FaqContent = {
     {
       question: "Quanto tempo demora a instalação?",
       answer:
-        "A maioria dos espaços fica online poucos dias após o arranque. A nossa equipa trata do design, da construção e da instalação no seu site atual. O cliente revê e aprova, e nós publicamos.",
+        "A maioria dos espaços fica online poucos dias após o arranque. A nossa equipa desenha, constrói e publica a sua página de reservas com a sua marca, e adiciona um link de reserva ao seu site atual. O cliente revê e aprova antes de ficar no ar.",
     },
     {
       question: "Funciona com o meu site atual?",
       answer:
-        "Sim. O Guest Overflow instala-se em qualquer plataforma moderna, incluindo sites à medida, WordPress, Squarespace e Webflow. Se conseguir editar o seu site, conseguimos instalar nele o Guest Overflow.",
+        "Sim. A sua página de reservas fica no seu próprio domínio, e o seu site mantém-se exatamente como está. Adicionamos um botão ou link de reserva claro ao seu site atual, seja qual for a plataforma, incluindo sites à medida, WordPress, Squarespace e Webflow, para que os clientes sigam diretamente para a sua página de reservas com a sua marca.",
     },
     {
       question: "De quem são os dados dos clientes?",
@@ -224,7 +224,7 @@ const pt: FaqContent = {
     {
       question: "Há custo de instalação?",
       answer:
-        "A instalação está incluída no Premium. No Essential, pode aplicar-se um custo único de instalação consoante a plataforma do seu site. Indicamos-lhe exatamente qual é antes de se comprometer.",
+        "A instalação está incluída no Premium. No Essential, pode aplicar-se um custo único de instalação consoante o seu caso. Indicamos-lhe exatamente qual é antes de se comprometer.",
     },
     {
       question: "Há desconto por pagamento anual?",

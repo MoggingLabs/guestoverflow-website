@@ -23,7 +23,7 @@ const en: DemoContent = {
       },
       {
         title: "Your setup, scoped",
-        body: "We will review your current website and explain precisely what installing Guest Overflow would involve, and how quickly.",
+        body: "We will review your current website and explain precisely what launching your booking page would involve, and how quickly.",
       },
       {
         title: "Straight answers",
@@ -54,7 +54,7 @@ const pt: DemoContent = {
       },
       {
         title: "A sua instalação, definida",
-        body: "Analisamos o seu site atual e indicamos-lhe com precisão o que a instalação do Guest Overflow envolveria, e em quanto tempo.",
+        body: "Analisamos o seu site atual e indicamos-lhe com precisão o que o lançamento da sua página de reservas envolveria, e em quanto tempo.",
       },
       {
         title: "Respostas diretas",

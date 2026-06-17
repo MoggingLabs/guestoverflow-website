@@ -37,7 +37,7 @@ const en: WidgetUi = {
   dateWord: "Date",
   timeWord: "Time",
   makeAnother: "Make another booking",
-  wantThis: "Add this to your website?",
+  wantThis: "Want your own booking page?",
   bookDemoLink: "Book a demo",
   confirmingAria: "Confirming your booking",
 };
@@ -58,7 +58,7 @@ const pt: WidgetUi = {
   dateWord: "Data",
   timeWord: "Hora",
   makeAnother: "Fazer outra reserva",
-  wantThis: "Adicione isto ao seu site?",
+  wantThis: "Quer a sua própria página de reservas?",
   bookDemoLink: "Marcar demonstração",
   confirmingAria: "A confirmar a sua reserva",
 };
