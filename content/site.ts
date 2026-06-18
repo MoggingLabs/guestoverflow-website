@@ -12,7 +12,6 @@ export const site = {
   cta: {
     primary: { label: "Book a demo", href: "/book-a-demo" },
     secondary: { label: "Try the live demo", href: "/#live-demo" },
-    tertiary: { label: "Start free", href: "/book-a-demo?intent=trial" },
   },
 } as const;
 
@@ -20,7 +19,6 @@ type SiteStrings = {
   cta: {
     primary: { label: string; href: string };
     secondary: { label: string; href: string };
-    tertiary: { label: string; href: string };
   };
   navLinks: NavLink[];
   navDemoShort: string;
@@ -34,7 +32,6 @@ const en: SiteStrings = {
   cta: {
     primary: { label: "Book a demo", href: "/book-a-demo" },
     secondary: { label: "Try the live demo", href: "/#live-demo" },
-    tertiary: { label: "Start free", href: "/book-a-demo?intent=trial" },
   },
   navLinks: [
     { label: "Booking page", href: "/product" },
@@ -98,7 +95,6 @@ const pt: SiteStrings = {
   cta: {
     primary: { label: "Marcar demo", href: "/book-a-demo" },
     secondary: { label: "Experimentar a demo", href: "/#live-demo" },
-    tertiary: { label: "Começar grátis", href: "/book-a-demo?intent=trial" },
   },
   navLinks: [
     { label: "Página de reservas", href: "/product" },

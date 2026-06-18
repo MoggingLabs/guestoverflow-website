@@ -36,14 +36,6 @@ export async function Hero() {
             >
               {cta.primary.label}
             </Button>
-            <Button
-              href={cta.tertiary.href}
-              variant="inverseSecondary"
-              size="lg"
-              analyticsLabel="hero_start_free"
-            >
-              {cta.tertiary.label}
-            </Button>
           </div>
           {SHOW_LIVE_DEMO && (
             <a

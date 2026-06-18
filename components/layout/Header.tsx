@@ -98,14 +98,6 @@ export function Header() {
             <div className="hidden items-center gap-2 lg:flex lg:justify-self-end">
               <LanguageToggle />
               <Button
-                href={t.cta.tertiary.href}
-                variant="tertiary"
-                size="sm"
-                analyticsLabel="header_start_free"
-              >
-                {t.cta.tertiary.label}
-              </Button>
-              <Button
                 href={t.cta.primary.href}
                 size="sm"
                 analyticsLabel="header_book_demo"
@@ -176,16 +168,6 @@ export function Header() {
             <LanguageToggle />
           </div>
           <div className="mt-6 space-y-3">
-            <Button
-              href={t.cta.tertiary.href}
-              size="lg"
-              variant="tertiary"
-              className="w-full"
-              onClick={() => setOpen(false)}
-              analyticsLabel="mobile_nav_start_free"
-            >
-              {t.cta.tertiary.label}
-            </Button>
             <Button
               href={t.cta.primary.href}
               size="lg"
