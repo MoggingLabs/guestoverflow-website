@@ -11,6 +11,8 @@ type PricingContent = {
     mostPopular: string;
     letsTalk: string;
     fromPerMonth: (eur: number) => string;
+    perMonth: (eur: number) => string;
+    flatMonthly: string;
     billedAnnually: string;
     monthlyWord: string;
     orAnnually: (eur: number) => string;
@@ -83,6 +85,8 @@ const en: PricingContent = {
     mostPopular: "Most popular",
     letsTalk: "Contact us",
     fromPerMonth: (eur) => `from €${eur}/mo`,
+    perMonth: (eur) => `€${eur}/mo`,
+    flatMonthly: "Flat monthly price",
     billedAnnually: "billed annually",
     monthlyWord: "monthly",
     orAnnually: (eur) => `or €${eur}/mo billed annually`,
@@ -188,6 +192,8 @@ const pt: PricingContent = {
     mostPopular: "Mais popular",
     letsTalk: "Contacte-nos",
     fromPerMonth: (eur) => `desde ${eur} €/mês`,
+    perMonth: (eur) => `${eur} €/mês`,
+    flatMonthly: "Preço fixo mensal",
     billedAnnually: "faturado anualmente",
     monthlyWord: "mensal",
     orAnnually: (eur) => `ou ${eur} €/mês com faturação anual`,

@@ -17,7 +17,7 @@ export const sectorPrices: Record<
   restaurants: { starter: 39, essential: 89, premium: 199, customFrom: 349 },
   hotels: { starter: 29, essential: 129, premium: 279, customFrom: 499 },
   "spas-wellness": { starter: 39, essential: 79, premium: 149, customFrom: 299 },
-  "salons-barbers": { starter: 25, essential: 59, premium: 119, customFrom: 249 },
+  "salons-barbers": { starter: 35, essential: 59, premium: 119, customFrom: 249 },
   "tours-experiences": { starter: 39, essential: 99, premium: 189, customFrom: 349 },
 };
 
@@ -26,14 +26,16 @@ const pricingLadder = {
     eyebrow: "Pricing",
     starter: {
       name: "Starter",
-      note: "Self-service. You complete the configuration",
-      blurb: "Your own branded booking page, live on a guestoverflow.com address today. No setup call is required.",
+      note: "For solo professionals and small studios getting started",
+      blurb: "Your branded booking page with WhatsApp reminders, set up by you.",
       features: [
         "Branded booking page on your own guestoverflow.com address",
-        "Real-time availability & capacity",
-        "Email confirmations & reminders",
-        "Guest list with full export",
+        "Real-time availability & capacity management",
+        "WhatsApp & email reminders, 450/month included",
+        "Client list with full export",
         "Reserve with Google",
+        "Self-service setup",
+        "Email support",
       ],
     },
     essential: {
@@ -84,14 +86,16 @@ const pricingLadder = {
     eyebrow: "Preços",
     starter: {
       name: "Starter",
-      note: "Self-service. A instalação é da responsabilidade do cliente",
-      blurb: "A sua própria página de reservas com a sua marca, num endereço guestoverflow.com, em funcionamento hoje. Sem chamada de instalação.",
+      note: "Para profissionais a solo e pequenos estúdios a começar",
+      blurb: "A sua página de marcações com a sua marca e lembretes por WhatsApp, configurada por si.",
       features: [
         "Página de marcações com a sua marca, num endereço guestoverflow.com",
-        "Disponibilidade e capacidade em tempo real",
-        "Confirmações e lembretes por email",
+        "Disponibilidade e capacidade geridas em tempo real",
+        "Lembretes por WhatsApp e email, 450/mês incluídos",
         "Lista de clientes com exportação completa",
         "Reservar com o Google",
+        "Configuração self-service",
+        "Suporte por email",
       ],
     },
     essential: {
@@ -286,6 +290,7 @@ function buildSectorPricing(locale: Locale, slug: string): SectorPricing {
         priceNote: c.starterNote ?? ui.starter.note,
         blurb: c.starterBlurb ?? ui.starter.blurb,
         features: [...ui.starter.features],
+        flatMonthly: true,
       },
       {
         name: ui.essential.name,

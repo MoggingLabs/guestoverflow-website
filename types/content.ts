@@ -51,6 +51,8 @@ export type PricingTier = {
   blurb: string;
   features: string[];
   featured?: boolean;
+  /** Flat monthly price with no annual discount (e.g. the Starter tier). */
+  flatMonthly?: boolean;
 };
 
 /** An optional, transparently-priced add-on shown beneath a sector's tiers. */

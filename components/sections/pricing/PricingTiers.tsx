@@ -112,6 +112,15 @@ export function PricingTiers({
                       {t.tierUi.letsTalk}
                     </p>
                   )
+                ) : tier.flatMonthly ? (
+                  <>
+                    <p className="font-display text-3xl font-medium text-cream">
+                      {t.tierUi.perMonth(monthly)}
+                    </p>
+                    <p className="mt-1 text-xs text-cream-faint">
+                      {t.tierUi.flatMonthly}
+                    </p>
+                  </>
                 ) : (
                   <>
                     <p className="font-display text-3xl font-medium text-cream">
