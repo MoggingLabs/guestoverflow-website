@@ -88,7 +88,7 @@ const en: SiteStrings = {
   footerBlurb:
     "Branded online booking for salons and barbershops.",
   footerProductOf: "all rights reserved",
-  footerNote: "No commission · No surprise fees · Your data is yours.",
+  footerNote: "No commission · Your data is yours.",
 };
 
 const pt: SiteStrings = {
@@ -151,7 +151,7 @@ const pt: SiteStrings = {
   footerBlurb:
     "Reservas online com a sua marca para cabeleireiros e barbearias.",
   footerProductOf: "todos os direitos reservados",
-  footerNote: "Sem comissões · Sem taxas-surpresa · Os seus dados são seus.",
+  footerNote: "Sem comissões · Os seus dados são seus.",
 };
 
 export const siteStrings: Record<Locale, SiteStrings> = { en, pt };
