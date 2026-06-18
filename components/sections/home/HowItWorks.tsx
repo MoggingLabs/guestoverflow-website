@@ -31,7 +31,7 @@ export async function HowItWorks() {
               <span className="font-display text-4xl font-medium text-amber">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display text-lg font-medium text-cream">
+              <h3 className="font-display text-lg font-medium text-cream md:min-h-[3.5rem]">
                 {step.title}
               </h3>
               <p className="text-sm leading-relaxed text-cream-dim">

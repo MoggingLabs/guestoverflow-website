@@ -25,7 +25,7 @@ export async function ProblemStrip() {
               key={item.title}
               className="grid gap-y-4 md:row-span-2 md:grid-rows-subgrid"
             >
-              <h3 className="font-display text-lg font-medium text-cream">
+              <h3 className="font-display text-lg font-medium text-cream md:min-h-[3.5rem]">
                 {item.title}
               </h3>
               <p className="text-sm leading-relaxed text-cream-dim">

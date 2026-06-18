@@ -66,7 +66,7 @@ export default async function IndustryPage({
                 key={point.title}
                 className="grid gap-y-4 md:row-span-2 md:grid-rows-subgrid"
               >
-                <h3 className="font-display text-lg font-medium text-cream">
+                <h3 className="font-display text-lg font-medium text-cream md:min-h-[3.5rem]">
                   {point.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-cream-dim">
@@ -107,7 +107,7 @@ export default async function IndustryPage({
                 <span className="font-display text-4xl font-medium text-amber">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display text-lg font-medium text-cream">
+                <h3 className="font-display text-lg font-medium text-cream md:min-h-[3.5rem]">
                   {highlight.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-cream-dim">

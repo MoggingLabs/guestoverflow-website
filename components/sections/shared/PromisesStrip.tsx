@@ -22,7 +22,7 @@ export async function PromisesStrip({ limit }: { limit?: number }) {
               key={p.title}
               className="grid gap-y-8 md:row-span-2 md:grid-rows-subgrid"
             >
-              <h3 className="font-display text-base font-medium text-cream">
+              <h3 className="font-display text-base font-medium text-cream md:min-h-[3rem]">
                 {p.title}
               </h3>
               <p className="text-sm leading-relaxed text-cream-dim">

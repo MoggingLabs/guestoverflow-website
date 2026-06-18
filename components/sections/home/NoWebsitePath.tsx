@@ -24,7 +24,7 @@ export async function NoWebsitePath() {
               className="grid gap-y-4 md:row-span-3 md:grid-rows-subgrid"
             >
               <Badge>{path.badge}</Badge>
-              <h3 className="font-display text-lg font-medium text-cream">
+              <h3 className="font-display text-lg font-medium text-cream md:min-h-[3.5rem]">
                 {path.title}
               </h3>
               <p className="text-sm leading-relaxed text-cream-dim">
