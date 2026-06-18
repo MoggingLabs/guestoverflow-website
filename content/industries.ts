@@ -12,12 +12,28 @@ import { isActiveSector } from "@/lib/sectors";
 /** Locale-independent monthly € (ex-IVA). Custom shows a published "from". */
 export const sectorPrices: Record<
   string,
-  { starter: number; essential: number; premium: number; customFrom: number }
+  {
+    starter: number;
+    essential: number;
+    premium: number;
+    customFrom: number;
+    starterSetup?: number;
+    essentialSetup?: number;
+    premiumSetup?: number;
+  }
 > = {
   restaurants: { starter: 39, essential: 89, premium: 199, customFrom: 349 },
   hotels: { starter: 29, essential: 129, premium: 279, customFrom: 499 },
   "spas-wellness": { starter: 39, essential: 79, premium: 149, customFrom: 299 },
-  "salons-barbers": { starter: 35, essential: 59, premium: 119, customFrom: 249 },
+  "salons-barbers": {
+    starter: 35,
+    essential: 59,
+    premium: 119,
+    customFrom: 249,
+    starterSetup: 299,
+    essentialSetup: 499,
+    premiumSetup: 999,
+  },
   "tours-experiences": { starter: 39, essential: 99, premium: 189, customFrom: 349 },
 };
 
@@ -27,42 +43,43 @@ const pricingLadder = {
     starter: {
       name: "Starter",
       note: "For solo professionals and small studios getting started",
-      blurb: "Your branded booking page with WhatsApp reminders, set up by you.",
+      blurb: "Your branded booking page with WhatsApp reminders, built and launched by us.",
       features: [
         "Branded booking page on your own guestoverflow.com address",
         "Real-time availability & capacity management",
         "Scheduling for up to 2 professionals",
         "WhatsApp & email reminders, 450/month included",
+        "Guest self-service: online cancel & reschedule",
         "Client list with full export",
         "Reserve with Google",
-        "Self-service setup",
         "Email support",
       ],
     },
     essential: {
       name: "Essential",
-      note: "We build, install & optimise it on your behalf",
-      blurb: "A partner that completes the entire setup, rather than software you configure alone.",
+      note: "For growing salons and barbershops",
+      blurb: "Room to grow your team, with an ongoing partnership and priority support.",
       features: [
         "Everything in Starter",
-        "Concierge setup: we build & install it",
-        "WhatsApp reminders (allowance included)",
-        "Quarterly review with us",
-        "Email support",
+        "Multiple staff calendars (3+ professionals)",
+        "Deposits & no-show protection into your own Stripe",
+        "Client CRM: visit history, notes & tags",
+        "WhatsApp reminders that scale with your team",
+        "Quarterly business review with us",
+        "Priority support",
       ],
     },
     premium: {
       name: "Premium",
-      note: "For venues that depend on bookings",
+      note: "For salons and barbershops that depend on bookings",
       blurb: "Everything in Essential, with the addition of protection, analytics and a true white-label.",
       lead: [
         "Everything in Essential",
-        "Deposits & no-show protection into your own account",
         "Booking analytics & demand insights",
       ],
       tail: [
         "True on-domain white-label, none of our branding",
-        "Priority support",
+        "Dedicated priority support",
       ],
     },
     custom: {
@@ -80,7 +97,7 @@ const pricingLadder = {
       name: "WhatsApp reminders",
       priceNote: "allowance included",
       included:
-        "A monthly allowance is included on Essential & Premium, followed by transparent per-message pricing. There is never a per-booking fee. Email reminders are always free of charge.",
+        "A monthly allowance is included on every plan, followed by transparent per-message pricing. There is never a per-booking fee. Email reminders are always free of charge.",
     },
   },
   pt: {
@@ -88,42 +105,43 @@ const pricingLadder = {
     starter: {
       name: "Starter",
       note: "Para profissionais a solo e pequenos estúdios a começar",
-      blurb: "A sua página de marcações com a sua marca e lembretes por WhatsApp, configurada por si.",
+      blurb: "A sua página de marcações com a sua marca e lembretes por WhatsApp, criada e lançada por nós.",
       features: [
         "Página de marcações com a sua marca, num endereço guestoverflow.com",
         "Disponibilidade e capacidade geridas em tempo real",
         "Agenda para até 2 profissionais",
         "Lembretes por WhatsApp e email, 450/mês incluídos",
+        "Self-service do cliente: cancelar e remarcar online",
         "Lista de clientes com exportação completa",
         "Reservar com o Google",
-        "Configuração self-service",
         "Suporte por email",
       ],
     },
     essential: {
       name: "Essential",
-      note: "Construímos, instalamos e otimizamos por si",
-      blurb: "Um parceiro que efetua toda a instalação, em vez de software que o cliente configura sozinho.",
+      note: "Para salões e barbearias em crescimento",
+      blurb: "Espaço para crescer a sua equipa, com uma parceria contínua e suporte prioritário.",
       features: [
         "Tudo o que está no Starter",
-        "Instalação concierge: montamos e instalamos por si",
-        "Lembretes por WhatsApp (com plafond incluído)",
+        "Agendas individuais para a equipa (3+ profissionais)",
+        "Sinais e proteção contra faltas na sua conta Stripe",
+        "CRM de clientes: histórico de visitas, notas e etiquetas",
+        "Lembretes por WhatsApp que crescem com a sua equipa",
         "Revisão trimestral connosco",
-        "Suporte por email",
+        "Suporte prioritário",
       ],
     },
     premium: {
       name: "Premium",
-      note: "Para espaços que dependem de reservas",
+      note: "Para salões e barbearias que dependem de reservas",
       blurb: "Tudo o que está no Essential, com a adição de proteção, análise de dados e white-label verdadeiro.",
       lead: [
         "Tudo o que está no Essential",
-        "Sinais e proteção contra faltas pela sua própria conta",
         "Análise de reservas e tendências de procura",
       ],
       tail: [
         "White-label verdadeiro no seu domínio, sem a nossa marca",
-        "Suporte prioritário",
+        "Suporte prioritário dedicado",
       ],
     },
     custom: {
@@ -141,7 +159,7 @@ const pricingLadder = {
       name: "Lembretes por WhatsApp",
       priceNote: "plafond incluído",
       included:
-        "Plafond mensal incluído no Essential e no Premium, seguido de preço transparente por mensagem. Não existe qualquer taxa por reserva. Os lembretes por email são sempre gratuitos.",
+        "Plafond mensal incluído em todos os planos, seguido de preço transparente por mensagem. Não existe qualquer taxa por reserva. Os lembretes por email são sempre gratuitos.",
     },
   },
 } as const;
@@ -195,13 +213,13 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
     },
     "salons-barbers": {
       valueUnit: "appointment",
-      heroHeadline: "Pricing for salons & barbers. Flat per venue, not per chair.",
+      heroHeadline: "Pricing for salons & barbers. Published, flat, commission-free.",
       heroSubhead:
-        "A two-chair shop and a ten-chair salon pay the same. There is no commission on a first visit and no per-booking fee.",
-      premiumFlow: "Per-stylist scheduling, buffers & chair management",
+        "Choose the plan that fits your team. No commission on a first visit, no per-booking fee, and no marketplace cut — just a flat monthly price you can see right here.",
+      premiumFlow: "Advanced per-stylist buffers & chair/resource management",
       comparison: {
         title: "The actual cost of per-chair pricing",
-        body: "A four-chair shop on Booksy pays approximately €80-110 a month in seat fees alone, plus 30% of every new client's first visit. Guest Overflow is a single flat price per venue, whatever your chair count, and it never takes a commission on a booking.",
+        body: "A four-chair shop on Booksy pays approximately €80-110 a month in per-seat fees, plus 30% of every new client's first visit. Guest Overflow is a published flat plan with no commission on your bookings and no marketplace cut — you choose your plan, and your regulars never cost you a fee.",
       },
     },
     "tours-experiences": {
@@ -254,13 +272,13 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
     },
     "salons-barbers": {
       valueUnit: "marcação",
-      heroHeadline: "Preços para cabeleireiros e barbearias. Fixo por espaço, não por cadeira.",
+      heroHeadline: "Preços para cabeleireiros e barbearias. Públicos, fixos e sem comissão.",
       heroSubhead:
-        "Um espaço de duas cadeiras e um de dez pagam o mesmo. Não existe comissão na primeira visita nem taxa por marcação.",
-      premiumFlow: "Agenda por profissional, intervalos e gestão de cadeiras",
+        "Escolha o plano à medida da sua equipa. Sem comissão na primeira visita, sem taxa por marcação e sem corte de marketplace — apenas uma mensalidade fixa que pode ver aqui mesmo.",
+      premiumFlow: "Gestão avançada de intervalos por profissional e de cadeiras/recursos",
       comparison: {
         title: "O custo real do preço por cadeira",
-        body: "Um espaço de quatro cadeiras na Booksy paga cerca de 80 a 110 € por mês apenas em taxas por lugar, mais 30% da primeira visita de cada novo cliente. O Guest Overflow é um preço fixo por espaço, seja qual for o número de cadeiras, e nunca cobra uma comissão sobre uma marcação.",
+        body: "Um espaço de quatro cadeiras na Booksy paga cerca de 80 a 110 € por mês em taxas por lugar, mais 30% da primeira visita de cada novo cliente. O Guest Overflow é um plano fixo e público, sem comissão nas suas marcações e sem corte de marketplace — escolhe o seu plano, e os seus clientes habituais nunca lhe custam uma taxa.",
       },
     },
     "tours-experiences": {
@@ -293,6 +311,7 @@ function buildSectorPricing(locale: Locale, slug: string): SectorPricing {
         blurb: c.starterBlurb ?? ui.starter.blurb,
         features: [...ui.starter.features],
         flatMonthly: true,
+        setupFeeEur: p.starterSetup,
       },
       {
         name: ui.essential.name,
@@ -301,6 +320,7 @@ function buildSectorPricing(locale: Locale, slug: string): SectorPricing {
         blurb: ui.essential.blurb,
         features: [...ui.essential.features],
         featured: true,
+        setupFeeEur: p.essentialSetup,
       },
       {
         name: ui.premium.name,
@@ -308,6 +328,7 @@ function buildSectorPricing(locale: Locale, slug: string): SectorPricing {
         priceNote: ui.premium.note,
         blurb: ui.premium.blurb,
         features: [...ui.premium.lead, c.premiumFlow, ...ui.premium.tail],
+        setupFeeEur: p.premiumSetup,
       },
       {
         name: ui.custom.name,

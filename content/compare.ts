@@ -88,19 +88,19 @@ const en: CompareContent = {
       slug: "zappy",
       name: "Zappy",
       sector: "spas-wellness",
-      blurb: "Portugal's beauty-booking leader. Commission-free, but priced per seat and heavy on add-ons.",
+      blurb: "Portugal's beauty-booking leader. Commission-free, but heavy on paid add-ons and without real no-show protection.",
       headline: "Guest Overflow vs Zappy",
       subhead:
         "Zappy is a capable, commission-free Portuguese tool. Guest Overflow leads on what it does not provide: genuine no-show protection, guest self-service, and, on Premium, true white-label on your own custom domain, configured for you.",
       theirModel:
         "Per-provider pricing from €16 to €119/mo, with a branded app, invoicing, GDPR and additional locations sold as paid add-ons on top.",
       theirPains: [
-        "Pricing scales per provider (and per item of equipment), so expanding your team increases the cost.",
+        "The real total climbs once you add the branded client app (€29), invoicing, GDPR and per-location fees.",
         "There is no card guarantee or automatic no-show charge, only manual upfront prepayment.",
         "Guests book through a shared app rated 3.3/5 in which self-cancellation was removed, and true branding is a €29 add-on.",
       ],
       ourAnswer: [
-        "One flat price per venue, regardless of your chair or practitioner count.",
+        "One published, all-in plan with no marketplace commission — WhatsApp reminders and client CRM are built in, never billed as add-ons.",
         "Genuine no-show protection, with deposits and card guarantees through your own Stripe account.",
         "True white-label on your own custom domain (on Premium), and concierge setup that we handle for you.",
       ],
@@ -112,7 +112,7 @@ const en: CompareContent = {
       blurb: "Free to start, then a cut of every new client and a margin on payments.",
       headline: "Guest Overflow vs Fresha",
       subhead:
-        "Fresha appears free, but it charges a commission on new clients and a margin on payments. Guest Overflow is a flat price per venue, with no share of your bookings.",
+        "Fresha appears free, but it charges a commission on new clients and a margin on payments. Guest Overflow is a published flat price, with no share of your bookings.",
       theirModel:
         "A free core, then a per-bookable-member subscription, a ~20% fee on new marketplace clients, and a processing margin on payments.",
       theirPains: [
@@ -121,7 +121,7 @@ const en: CompareContent = {
         "The 'free' total rises once per-staff fees and payment margins are added.",
       ],
       ourAnswer: [
-        "A flat price per venue, with no commission on a first visit at any time.",
+        "A published flat price, with no commission on a first visit at any time.",
         "Your client list, history and notes remain yours, with one-click export.",
         "Deposits through your own account, with no marketplace share and no payment take-rate.",
       ],
@@ -211,19 +211,19 @@ const pt: CompareContent = {
       slug: "zappy",
       name: "Zappy",
       sector: "spas-wellness",
-      blurb: "O líder português das marcações de beleza. Sem comissão, mas cobrado por lugar e cheio de extras.",
+      blurb: "O líder português das marcações de beleza. Sem comissão, mas cheio de extras pagos e sem proteção real contra faltas.",
       headline: "Guest Overflow vs Zappy",
       subhead:
         "O Zappy é uma ferramenta portuguesa competente e sem comissão. O Guest Overflow distingue-se naquilo que ele não oferece: proteção genuína contra faltas, self-service do cliente e, no Premium, white-label verdadeiro no seu próprio domínio, configurado por nós.",
       theirModel:
         "Preço por profissional de 16 a 119 €/mês, com app de marca, faturação, RGPD e localizações adicionais vendidas como extras pagos por cima.",
       theirPains: [
-        "O preço escala por profissional (e por equipamento), por isso aumentar a equipa implica um custo superior.",
+        "O custo real sobe assim que adiciona a app de cliente com marca (29 €), faturação, RGPD e taxas por localização.",
         "Não existe garantia de cartão nem cobrança automática de faltas, apenas pré-pagamento manual.",
         "Os clientes reservam por uma app partilhada com 3,3/5 na qual o cancelamento foi removido, e a marca verdadeira é um extra de 29 €.",
       ],
       ourAnswer: [
-        "Um preço fixo por espaço, independentemente do número de cadeiras ou profissionais.",
+        "Um plano único e público, sem comissão de marketplace — lembretes por WhatsApp e CRM de clientes incluídos, nunca cobrados como extras.",
         "Proteção genuína contra faltas, com sinais e garantias de cartão pela sua própria conta Stripe.",
         "White-label verdadeiro no seu próprio domínio (no Premium), e instalação concierge que tratamos por si.",
       ],
@@ -235,7 +235,7 @@ const pt: CompareContent = {
       blurb: "Grátis para começar, depois uma fatia de cada novo cliente e uma margem nos pagamentos.",
       headline: "Guest Overflow vs Fresha",
       subhead:
-        "A Fresha parece gratuita, mas cobra comissão sobre novos clientes e uma margem nos pagamentos. O Guest Overflow é um preço fixo por espaço, sem qualquer fatia das suas reservas.",
+        "A Fresha parece gratuita, mas cobra comissão sobre novos clientes e uma margem nos pagamentos. O Guest Overflow é um preço fixo e público, sem qualquer fatia das suas reservas.",
       theirModel:
         "Um núcleo gratuito, depois uma subscrição por profissional, uma taxa de ~20% sobre novos clientes do marketplace, e uma margem de processamento nos pagamentos.",
       theirPains: [
@@ -244,7 +244,7 @@ const pt: CompareContent = {
         "O total 'grátis' aumenta assim que se somam as taxas por profissional e as margens de pagamento.",
       ],
       ourAnswer: [
-        "Um preço fixo por espaço, sem comissão na primeira visita em momento algum.",
+        "Um preço fixo e público, sem comissão na primeira visita em momento algum.",
         "A sua lista de clientes, histórico e notas permanecem consigo, com exportação num clique.",
         "Sinais pela sua própria conta, sem fatia do marketplace e sem margem nos pagamentos.",
       ],

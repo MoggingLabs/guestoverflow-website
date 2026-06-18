@@ -77,9 +77,9 @@ const en = {
     ] as Differentiator[],
   },
   industriesPreview: {
-    title: "Configured for the way your business operates.",
+    title: "Configured for the way your salon operates.",
     subhead:
-      "Table reservations, room bookings, treatments, appointments, tour departures. Guest Overflow adapts to the way your business genuinely operates.",
+      "Cuts, colour, treatments, barbering, beauty appointments. Guest Overflow adapts to the way your salon genuinely operates.",
     explore: "Explore →",
   },
   noWebsite: {
@@ -114,8 +114,8 @@ const en = {
   rateParity: {
     eyebrow: "Direct booking",
     title:
-      "By law, you may already sell at a lower price on your own site than on Booking.com.",
-    body: "Portugal prohibited rate-parity clauses, so your own site may price below the OTA. We provide that site, and the booking page that takes the reservation with no commission.",
+      "Every booking on your own page is yours, with no marketplace cut.",
+    body: "Marketplaces like Fresha and Booksy take a slice of new-client bookings and a share of every payment. Your own booking page takes the reservation directly, with no commission and no payment take-rate, so the full price stays with you.",
   },
   homePricing: {
     eyebrow: "Pricing",
@@ -213,9 +213,9 @@ const pt: typeof en = {
     ] as Differentiator[],
   },
   industriesPreview: {
-    title: "Configurado para a forma como o seu negócio funciona.",
+    title: "Configurado para a forma como o seu salão funciona.",
     subhead:
-      "Reservas de mesa, quartos, tratamentos, marcações, partidas de tours. O Guest Overflow adapta-se à forma como o seu negócio efetivamente funciona.",
+      "Cortes, cor, tratamentos, barbearia, marcações de estética. O Guest Overflow adapta-se à forma como o seu salão efetivamente funciona.",
     explore: "Explorar →",
   },
   noWebsite: {
@@ -250,8 +250,8 @@ const pt: typeof en = {
   rateParity: {
     eyebrow: "Reserva direta",
     title:
-      "Por lei, já pode vender a um preço inferior no seu site do que na Booking.com.",
-    body: "Portugal proibiu as cláusulas de paridade, por isso o seu próprio site pode praticar preços abaixo da OTA. Nós disponibilizamos-lhe esse site, e a página de reservas que recebe a reserva sem comissão.",
+      "Cada marcação na sua própria página é sua, sem corte de marketplace.",
+    body: "Marketplaces como a Fresha e a Booksy levam uma fatia das marcações de novos clientes e uma parte de cada pagamento. A sua própria página de reservas recebe a marcação diretamente, sem comissão e sem margem nos pagamentos, para que o valor integral fique consigo.",
   },
   homePricing: {
     eyebrow: "Preços",

@@ -53,6 +53,8 @@ export type PricingTier = {
   featured?: boolean;
   /** Flat monthly price with no annual discount (e.g. the Starter tier). */
   flatMonthly?: boolean;
+  /** One-time setup fee in euros, shown beneath the monthly price. */
+  setupFeeEur?: number;
 };
 
 /** An optional, transparently-priced add-on shown beneath a sector's tiers. */

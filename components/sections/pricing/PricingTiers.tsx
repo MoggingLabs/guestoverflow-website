@@ -9,21 +9,21 @@ import { siteStrings } from "@/content/site";
 import { useLocale } from "@/lib/locale-client";
 import { cn } from "@/lib/utils";
 
-const ANNUAL_FACTOR = 2 / 3; // annual billing takes a third off
+const ANNUAL_FACTOR = 0.85; // annual billing takes 15% off
 
 export function PricingTiers({
   tiers,
   analyticsPrefix = "pricing",
 }: {
-  /** Sector tiers; defaults to the global pricing tiers when omitted.
-   *  Only plain data crosses the boundary — tierUi stays sourced internally. */
-  tiers?: PricingTier[];
+  /** Sector tiers to render. Only plain data crosses the boundary —
+   *  tierUi stays sourced internally. */
+  tiers: PricingTier[];
   analyticsPrefix?: string;
-} = {}) {
+}) {
   const locale = useLocale();
   const t = pricingContent[locale];
   const cta = siteStrings[locale].cta.primary;
-  const tierList = tiers ?? t.tiers;
+  const tierList = tiers;
   const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
   const annual = billing === "annual";
 
@@ -142,6 +142,12 @@ export function PricingTiers({
                   </>
                 )}
               </div>
+
+              <p className="mt-1 min-h-4 text-xs text-amber">
+                {tier.setupFeeEur != null
+                  ? t.tierUi.setupFee(tier.setupFeeEur)
+                  : " "}
+              </p>
 
               <p className="mt-2 min-h-10 text-xs text-cream-faint">
                 {tier.priceNote}

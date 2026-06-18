@@ -31,7 +31,7 @@ const en: AboutContent = {
     items: [
       {
         title: "The brand is the salon's",
-        body: "Software should be invisible. If a client notices Guest Overflow, we have designed it incorrectly.",
+        body: "Your brand should lead. The page carries your salon's name, logo, and colours — and on Premium runs on your own domain, with no sign of us at all.",
       },
       {
         title: "Data belongs to the salon",
@@ -66,7 +66,7 @@ const pt: AboutContent = {
     items: [
       {
         title: "A marca é do salão",
-        body: "O software deve ser invisível. Se um cliente reparar no Guest Overflow, concebemo-lo incorretamente.",
+        body: "A sua marca deve estar à frente. A página apresenta o nome, o logótipo e as cores do seu salão e, no Premium, corre no seu próprio domínio, sem qualquer sinal nosso.",
       },
       {
         title: "Os dados pertencem ao salão",

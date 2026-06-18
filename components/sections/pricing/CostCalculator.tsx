@@ -20,7 +20,7 @@ import { cn } from "@/lib/utils";
 /** Only the live verticals are selectable; stashed ones are filtered out. */
 const activeFeeSectors = feeSectors.filter((s) => isActiveSector(s));
 
-const ANNUAL_FACTOR = 2 / 3;
+const ANNUAL_FACTOR = 0.85; // annual billing takes 15% off
 const REPEAT_SHARE = 0.5; // research: 40–60% of guests are repeat
 const PALETTE = [
   "var(--color-error)",

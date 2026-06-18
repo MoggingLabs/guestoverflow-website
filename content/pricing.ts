@@ -1,9 +1,7 @@
-import type { PricingTier } from "@/types/content";
 import type { Locale } from "@/lib/i18n-shared";
 
 type PricingContent = {
   hero: { eyebrow: string; headline: string; subhead: string };
-  tiers: PricingTier[];
   tierUi: {
     monthly: string;
     annual: string;
@@ -16,6 +14,7 @@ type PricingContent = {
     billedAnnually: string;
     monthlyWord: string;
     orAnnually: (eur: number) => string;
+    setupFee: (eur: number) => string;
   };
   comparison: { title: string; body: string };
   foundingPartner: { badge: string; title: string; body: string; cta: string };
@@ -32,56 +31,12 @@ const en: PricingContent = {
     eyebrow: "Pricing",
     headline: "Flat pricing. No commission on your bookings.",
     subhead:
-      "Whatever your chair count or how busy you get, your price does not change, and the prices are published here on a public page. Final quotes depend on your setup, so every plan below begins with a demo.",
+      "However busy you get, your price never rises with your bookings — there is no commission and no per-booking fee. Every plan's price is published right here, and each one begins with a demo.",
   },
-  tiers: [
-    {
-      name: "Essential",
-      monthlyEur: 99,
-      priceNote: "For a single venue beginning with the platform",
-      blurb: "Your own branded booking page, with the core toolkit.",
-      features: [
-        "Branded booking page on your own guestoverflow.com address",
-        "Real-time availability & capacity management",
-        "Branded confirmations & reminders",
-        "Guest list with full export",
-        "Email support",
-      ],
-    },
-    {
-      name: "Premium",
-      monthlyEur: 249,
-      priceNote: "For venues that depend on bookings",
-      blurb: "Everything in Essential, plus protection and analytics.",
-      featured: true,
-      features: [
-        "Everything in Essential",
-        "Deposits, card guarantees & no-show protection",
-        "Booking analytics & demand insights",
-        "True white-label on your own custom domain, where clients never see our name",
-        "Custom flow design (multi-service, practitioners, sessions)",
-        "Concierge setup included",
-        "Priority support",
-      ],
-    },
-    {
-      name: "Custom",
-      monthlyEur: null,
-      priceNote: "Groups & multi-location",
-      blurb:
-        "Multiple venues, custom integrations, or a requirement we have not yet anticipated.",
-      features: [
-        "Everything in Premium",
-        "Multi-location dashboard",
-        "Custom integrations (PMS, POS, CRM)",
-        "Dedicated account manager",
-      ],
-    },
-  ],
   tierUi: {
     monthly: "Monthly",
     annual: "Annual",
-    annualBadge: "one third off",
+    annualBadge: "15% off",
     mostPopular: "Most popular",
     letsTalk: "Contact us",
     fromPerMonth: (eur) => `from €${eur}/mo`,
@@ -90,6 +45,7 @@ const en: PricingContent = {
     billedAnnually: "billed annually",
     monthlyWord: "monthly",
     orAnnually: (eur) => `or €${eur}/mo billed annually`,
+    setupFee: (eur) => `+ €${eur} one-time setup`,
   },
   comparison: {
     title: "What commission really costs",
@@ -139,56 +95,12 @@ const pt: PricingContent = {
     eyebrow: "Preços",
     headline: "Preço fixo. Sem comissão nas suas marcações.",
     subhead:
-      "Seja qual for o número de cadeiras ou a procura que tiver, o preço mantém-se, e encontra-se publicado nesta página pública. O orçamento final depende da sua instalação, por isso cada plano abaixo começa com uma demonstração.",
+      "Por mais movimento que tenha, o preço nunca sobe com as suas marcações — não há comissão nem taxa por marcação. O preço de cada plano está publicado aqui mesmo, e cada um começa com uma demonstração.",
   },
-  tiers: [
-    {
-      name: "Essential",
-      monthlyEur: 99,
-      priceNote: "Para um espaço a começar",
-      blurb: "A sua própria página de reservas com a sua marca, com as ferramentas essenciais.",
-      features: [
-        "Página de marcações com a sua marca, num endereço guestoverflow.com",
-        "Disponibilidade e capacidade geridas em tempo real",
-        "Confirmações e lembretes com a sua marca",
-        "Lista de clientes com exportação completa",
-        "Suporte por email",
-      ],
-    },
-    {
-      name: "Premium",
-      monthlyEur: 249,
-      priceNote: "Para espaços que vivem de reservas",
-      blurb: "Tudo o que está no Essential, mais proteção e inteligência.",
-      featured: true,
-      features: [
-        "Tudo o que está no Essential",
-        "Sinais, garantias de cartão e proteção contra faltas",
-        "Análise de reservas e tendências de procura",
-        "White-label completo no seu próprio domínio, onde os clientes nunca veem o nosso nome",
-        "Fluxos à medida (multi-serviço, terapeutas, sessões)",
-        "Instalação concierge incluída",
-        "Suporte prioritário",
-      ],
-    },
-    {
-      name: "À medida",
-      monthlyEur: null,
-      priceNote: "Grupos e várias localizações",
-      blurb:
-        "Vários espaços, integrações à medida, ou um requisito que ainda não tenhamos previsto.",
-      features: [
-        "Tudo o que está no Premium",
-        "Painel multi-localização",
-        "Integrações à medida (PMS, POS, CRM)",
-        "Gestor de conta dedicado",
-      ],
-    },
-  ],
   tierUi: {
     monthly: "Mensal",
     annual: "Anual",
-    annualBadge: "um terço de desconto",
+    annualBadge: "15% de desconto",
     mostPopular: "Mais popular",
     letsTalk: "Contacte-nos",
     fromPerMonth: (eur) => `desde ${eur} €/mês`,
@@ -197,6 +109,7 @@ const pt: PricingContent = {
     billedAnnually: "faturado anualmente",
     monthlyWord: "mensal",
     orAnnually: (eur) => `ou ${eur} €/mês com faturação anual`,
+    setupFee: (eur) => `+ ${eur} € de instalação única`,
   },
   comparison: {
     title: "O que a comissão custa realmente",

@@ -21,7 +21,7 @@ const en: FaqContent = {
     {
       question: "How long does setup take?",
       answer:
-        "Most salons go live within days of kickoff. Our team designs and builds your custom booking system, branded as yours. You review and approve before it goes live.",
+        "Most salons go live within days of kickoff. Our team designs and builds your booking system, branded with your name, logo, and colours on your own guestoverflow.com address (your own custom domain on Premium). You review and approve before it goes live.",
     },
     {
       question: "Do I need an existing website?",
@@ -100,12 +100,12 @@ const en: FaqContent = {
     {
       question: "Is there a setup fee?",
       answer:
-        "Setup is included in Premium. For Essential, a one-time setup fee may apply depending on your configuration. We will tell you exactly what it is before you commit.",
+        "Yes. Every plan includes a one-time setup fee, because our team builds and configures everything for you before launch: €299 on Starter, €499 on Essential, and €999 on Premium (Custom is quoted). The fee is published up front, so you know it before you commit.",
     },
     {
       question: "Is there a discount for paying annually?",
       answer:
-        "Yes. Choose annual billing and you pay a third less than the monthly price, so Essential decreases from €99 to €66 a month. Use the toggle above the plans to compare both.",
+        "Yes. Choose annual billing and you pay 15% less than the monthly price, so Essential decreases from €59 to €50 a month. Use the toggle above the plans to compare both.",
     },
     {
       question: "What happens to my data if I cancel?",
@@ -150,7 +150,7 @@ const pt: FaqContent = {
     {
       question: "Quanto tempo demora a instalação?",
       answer:
-        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas à medida, com a sua marca. O cliente revê e aprova antes de ficar no ar.",
+        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas, com o seu nome, logótipo e cores, num endereço guestoverflow.com próprio (no seu próprio domínio no Premium). O cliente revê e aprova antes de ficar no ar.",
     },
     {
       question: "Preciso de ter um site?",
@@ -229,12 +229,12 @@ const pt: FaqContent = {
     {
       question: "Há custo de instalação?",
       answer:
-        "A instalação está incluída no Premium. No Essential, pode aplicar-se um custo único de instalação consoante o seu caso. Indicamos-lhe exatamente qual é antes de se comprometer.",
+        "Sim. Todos os planos incluem um custo único de instalação, porque a nossa equipa constrói e configura tudo por si antes do lançamento: 299 € no Starter, 499 € no Essential e 999 € no Premium (o À medida é orçamentado). O valor é publicado à partida, para que o conheça antes de se comprometer.",
     },
     {
       question: "Há desconto por pagamento anual?",
       answer:
-        "Sim. Com faturação anual paga menos um terço face ao preço mensal, pelo que o Essential desce de 99 € para 66 € por mês. Utilize o seletor acima dos planos para comparar.",
+        "Sim. Com faturação anual paga menos 15% face ao preço mensal, pelo que o Essential desce de 59 € para 50 € por mês. Utilize o seletor acima dos planos para comparar.",
     },
     {
       question: "O que acontece aos meus dados se cancelar?",
