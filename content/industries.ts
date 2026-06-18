@@ -31,6 +31,7 @@ const pricingLadder = {
       features: [
         "Branded booking page on your own guestoverflow.com address",
         "Real-time availability & capacity management",
+        "Scheduling for up to 2 professionals",
         "WhatsApp & email reminders, 450/month included",
         "Client list with full export",
         "Reserve with Google",
@@ -91,6 +92,7 @@ const pricingLadder = {
       features: [
         "Página de marcações com a sua marca, num endereço guestoverflow.com",
         "Disponibilidade e capacidade geridas em tempo real",
+        "Agenda para até 2 profissionais",
         "Lembretes por WhatsApp e email, 450/mês incluídos",
         "Lista de clientes com exportação completa",
         "Reservar com o Google",
