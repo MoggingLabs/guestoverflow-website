@@ -10,7 +10,6 @@ import { getActiveIndustries } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
 import { publicSlugFor } from "@/lib/sectors";
 import { SHOW_LIVE_DEMO } from "@/lib/features";
-import { cn } from "@/lib/utils";
 
 export async function Hero() {
   const locale = await getLocale();
@@ -46,18 +45,13 @@ export async function Hero() {
         </Reveal>
         <Reveal
           stagger
-          className={cn(
-            "grid gap-4",
-            industries.length === 1
-              ? "max-w-md mx-auto"
-              : "mx-auto max-w-5xl sm:grid-cols-2 lg:grid-cols-3",
-          )}
+          className="mx-auto flex max-w-5xl flex-wrap justify-center gap-4"
         >
           {industries.map((industry) => (
             <Link
               key={industry.slug}
               href={`/industries/${publicSlugFor(industry.slug)}`}
-              className="group flex h-full flex-col rounded-xl border border-white/20 bg-white/[0.07] p-6 text-left shadow-xl shadow-black/20 transition-colors hover:border-mint hover:bg-white/[0.11]"
+              className="group flex h-full w-full flex-col rounded-xl border border-white/20 bg-white/[0.07] p-6 text-left shadow-xl shadow-black/20 transition-colors hover:border-mint hover:bg-white/[0.11] sm:w-80"
             >
               <span className="text-mint">
                 <Icon name={industry.icon} className="h-7 w-7" />
