@@ -17,6 +17,7 @@ import { getActiveIndustries, sectorPrices } from "@/content/industries";
 import { faqContent } from "@/content/faq";
 import { siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
+import { publicSlugFor } from "@/lib/sectors";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -62,7 +63,7 @@ export default async function PricingPage() {
             {industries.map((industry) => (
               <Link
                 key={industry.slug}
-                href={`/pricing/${industry.slug}`}
+                href={`/pricing/${publicSlugFor(industry.slug)}`}
                 className="group"
               >
                 <Card className="h-full transition-colors group-hover:border-amber-deep/60">

@@ -4,13 +4,21 @@ import { Icon } from "@/components/ui/Icon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { homeContent } from "@/content/home";
-import { industriesContent } from "@/content/industries";
+import { getActiveIndustries } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
+import { publicSlugFor } from "@/lib/sectors";
+import { cn } from "@/lib/utils";
 
+/**
+ * The sector picker on the hub (`/`). Renders a card per ACTIVE sector that
+ * links to that sector's mini-site at `/industries/{publicSlug}`. Stashed
+ * verticals are filtered out by `getActiveIndustries`; the grid collapses to a
+ * centered single card while only one sector is live.
+ */
 export async function IndustriesPreview() {
   const locale = await getLocale();
   const t = homeContent[locale];
-  const industries = industriesContent[locale].industries;
+  const industries = getActiveIndustries(locale);
 
   return (
     <section className="border-t border-line py-24 md:py-36">
@@ -22,11 +30,19 @@ export async function IndustriesPreview() {
             subhead={t.industriesPreview.subhead}
           />
         </Reveal>
-        <Reveal stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <Reveal
+          stagger
+          className={cn(
+            "mt-14 grid gap-5",
+            industries.length === 1
+              ? "max-w-md mx-auto"
+              : "sm:grid-cols-2 lg:grid-cols-5",
+          )}
+        >
           {industries.map((industry) => (
             <Link
               key={industry.slug}
-              href={`/industries/${industry.slug}`}
+              href={`/industries/${publicSlugFor(industry.slug)}`}
               className="group flex h-full flex-col rounded-lg border border-line bg-surface p-7 shadow-card transition-colors hover:border-amber-deep"
             >
               <span className="text-amber">

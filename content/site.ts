@@ -63,9 +63,9 @@ const en: SiteStrings = {
       links: [
         { label: "Restaurants", href: "/industries/restaurants" },
         { label: "Hotels", href: "/industries/hotels" },
-        { label: "Spas & wellness", href: "/industries/spas-wellness" },
-        { label: "Tours & experiences", href: "/industries/tours-experiences" },
-        { label: "Salons & barbers", href: "/industries/salons-barbers" },
+        { label: "Spas & wellness", href: "/industries/spas" },
+        { label: "Tours & experiences", href: "/industries/tours" },
+        { label: "Salons & barbers", href: "/industries/salons" },
       ],
     },
     {
@@ -126,9 +126,9 @@ const pt: SiteStrings = {
       links: [
         { label: "Restaurantes", href: "/industries/restaurants" },
         { label: "Hotéis", href: "/industries/hotels" },
-        { label: "Spas e bem-estar", href: "/industries/spas-wellness" },
-        { label: "Tours e experiências", href: "/industries/tours-experiences" },
-        { label: "Cabeleireiros e barbearias", href: "/industries/salons-barbers" },
+        { label: "Spas e bem-estar", href: "/industries/spas" },
+        { label: "Tours e experiências", href: "/industries/tours" },
+        { label: "Cabeleireiros e barbearias", href: "/industries/salons" },
       ],
     },
     {
