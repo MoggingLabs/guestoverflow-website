@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/home/Hero";
 import { BuiltForStrip } from "@/components/sections/home/BuiltForStrip";
-import { IndustriesPreview } from "@/components/sections/home/IndustriesPreview";
 import { HowItWorks } from "@/components/sections/home/HowItWorks";
 import { Differentiators } from "@/components/sections/home/Differentiators";
 import { PromisesStrip } from "@/components/sections/shared/PromisesStrip";
@@ -15,9 +14,10 @@ import { SHOW_FOUNDING_OFFER } from "@/lib/features";
 
 /**
  * The brand hub. `/` introduces Guest Overflow and hands off to a per-sector
- * mini-site via the sector picker (`IndustriesPreview`). Sector-specific
- * sections (the salon problem strip, salon pricing teaser, salon live-demo)
- * now live on the spoke at `/industries/[slug]` and `/pricing/[slug]`.
+ * mini-site via the sector picker, which lives inside the `Hero`.
+ * Sector-specific sections (the salon problem strip, salon pricing teaser,
+ * salon live-demo) now live on the spoke at `/industries/[slug]` and
+ * `/pricing/[slug]`.
  *
  * COPY TODO (flagged, follow-up pass): the Hero, HowItWorks, Differentiators,
  * NoWebsitePath and home FAQ copy are still salon-narrowed from the
@@ -30,11 +30,11 @@ export default async function HomePage() {
 
   return (
     <>
+      {/* Hero carries the sector picker — the hub's hand-off to each
+          vertical's mini-site at /industries/[slug]. */}
       <Hero />
       {/* Proof bar: honest credibility + the sectors served (active only). */}
       <BuiltForStrip />
-      {/* Sector picker — the hub's hand-off to each vertical's mini-site. */}
-      <IndustriesPreview />
       <HowItWorks />
       <Differentiators />
       {/* Contractual promises mapped to competitor failures. */}
