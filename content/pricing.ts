@@ -49,12 +49,12 @@ const en: PricingContent = {
   },
   comparison: {
     title: "What commission really costs",
-    body: "A salon taking 800 appointments a month at €2-3 commission per appointment pays €19,200-28,800 a year, for a booking page that does not even belong to it. Guest Overflow replaces that with a flat subscription that remains constant even in your busiest month.",
+    body: "A business taking 800 appointments a month at €2-3 commission per appointment pays €19,200-28,800 a year, for a booking page that does not even belong to it. Guest Overflow replaces that with a flat subscription that remains constant even in your busiest month.",
   },
   foundingPartner: {
     badge: "Founding offer",
     title: "Three months at half price",
-    body: "Join as a founding salon and pay half price for your first three months. We work closely with you to make the platform deliver measurable results through your website and your Google Business Profile, and you see exactly what it produces every month.",
+    body: "Join as a founding partner and pay half price for your first three months. We work closely with you to make the platform deliver measurable results through your website and your Google Business Profile, and you see exactly what it produces every month.",
     cta: "Claim the founding offer",
   },
   offerDisclaimer: {
@@ -75,13 +75,13 @@ const en: PricingContent = {
   transparency: {
     eyebrow: "How we work",
     title: "A close relationship, real support",
-    body: "We work as a true partner, not a faceless platform. You have a direct line to us whenever you need it, with people who know your salon and answer quickly. We want the best for the businesses we serve, and we measure our own success by yours, so when something is not working we are already on it with you.",
+    body: "We work as a true partner, not a faceless platform. You have a direct line to us whenever you need it, with people who know your business and answer quickly. We want the best for the businesses we serve, and we measure our own success by yours, so when something is not working we are already on it with you.",
   },
   sectorPicker: {
-    eyebrow: "Pricing for salons & barbers",
-    title: "Pricing built for salons and barbershops",
+    eyebrow: "Pricing by sector",
+    title: "Pricing built for guest-facing businesses",
     subhead:
-      "Plans and prices framed for how salons and barbershops actually take bookings.",
+      "Plans and prices framed for how guest-facing businesses actually take bookings.",
     from: (eur) => `from €${eur}/mo`,
   },
   calc: {
@@ -113,12 +113,12 @@ const pt: PricingContent = {
   },
   comparison: {
     title: "O que a comissão custa realmente",
-    body: "Um salão com 800 marcações por mês a 2 a 3 € de comissão por marcação paga 19.200 a 28.800 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que se mantém constante mesmo no mês de maior procura.",
+    body: "Um negócio com 800 marcações por mês a 2 a 3 € de comissão por marcação paga 19.200 a 28.800 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que se mantém constante mesmo no mês de maior procura.",
   },
   foundingPartner: {
     badge: "Oferta de lançamento",
     title: "Três meses a metade do preço",
-    body: "Junte-se como salão fundador e pague metade do preço nos primeiros três meses. Trabalhamos de perto consigo para que a plataforma produza resultados mensuráveis através do seu site e do seu Perfil de Empresa no Google, e vê exatamente o que produz todos os meses.",
+    body: "Junte-se como parceiro fundador e pague metade do preço nos primeiros três meses. Trabalhamos de perto consigo para que a plataforma produza resultados mensuráveis através do seu site e do seu Perfil de Empresa no Google, e vê exatamente o que produz todos os meses.",
     cta: "Garantir a oferta de lançamento",
   },
   offerDisclaimer: {
@@ -139,13 +139,13 @@ const pt: PricingContent = {
   transparency: {
     eyebrow: "Como trabalhamos",
     title: "Uma relação próxima, com apoio a sério",
-    body: "Trabalhamos como um verdadeiro parceiro, não como uma plataforma sem rosto. Tem uma linha direta connosco sempre que precisar, com pessoas que conhecem o seu salão e respondem com rapidez. Queremos o melhor para os negócios que servimos, e medimos o nosso sucesso pelo seu, por isso, quando algo não está a resultar, já estamos a tratar disso consigo.",
+    body: "Trabalhamos como um verdadeiro parceiro, não como uma plataforma sem rosto. Tem uma linha direta connosco sempre que precisar, com pessoas que conhecem o seu negócio e respondem com rapidez. Queremos o melhor para os negócios que servimos, e medimos o nosso sucesso pelo seu, por isso, quando algo não está a resultar, já estamos a tratar disso consigo.",
   },
   sectorPicker: {
-    eyebrow: "Preços para salões e barbearias",
-    title: "Preços feitos para salões e barbearias",
+    eyebrow: "Preços por setor",
+    title: "Preços feitos para negócios que vivem de reservas",
     subhead:
-      "Planos e preços pensados para a forma como os salões e as barbearias recebem marcações.",
+      "Planos e preços pensados para a forma como os negócios que vivem de reservas recebem marcações.",
     from: (eur) => `desde ${eur} €/mês`,
   },
   calc: {

@@ -63,17 +63,17 @@ const en: FaqContent = {
     {
       question: "Does Guest Overflow handle deposits and no-shows?",
       answer:
-        "Yes. You can require card details or take deposits for specific services, stylists, or dates, with automated reminders that reduce no-shows considerably.",
+        "Yes. You can require card details or take deposits for specific services, staff, or dates, with automated reminders that reduce no-shows considerably.",
     },
     {
       question: "Can I manage availability myself?",
       answer:
-        "Fully. Open and close slots, set per-service durations, block dates, and adjust chair availability in a dashboard built for busy salons, and changes go live instantly.",
+        "Fully. Open and close slots, set per-service durations, block dates, and adjust team availability in a dashboard built for busy businesses, and changes go live instantly.",
     },
     {
       question: "Does it support multiple locations?",
       answer:
-        "Yes. Groups can run several salons from one dashboard with separate availability, branding, and client lists per location.",
+        "Yes. Groups can run several locations from one dashboard with separate availability, branding, and client lists per location.",
     },
     {
       question: "Which channels and integrations do you support?",
@@ -95,7 +95,7 @@ const en: FaqContent = {
     {
       question: "Is the booking page on my own domain?",
       answer:
-        "By default your booking page lives at a branded guestoverflow.com address (for example, yoursalon.guestoverflow.com), with your logo, colours, and name throughout. On Premium, it moves to your own custom domain as a true white-label, where clients never see our name.",
+        "By default your booking page lives at a branded guestoverflow.com address (for example, yourbusiness.guestoverflow.com), with your logo, colours, and name throughout. On Premium, it moves to your own custom domain as a true white-label, where clients never see our name.",
     },
     {
       question: "Is there a setup fee?",
@@ -132,7 +132,7 @@ const en: FaqContent = {
     {
       question: "Is this a sales call?",
       answer:
-        "It is a working session. If Guest Overflow is not the right fit for your salon, we will say so and direct you to a more suitable option.",
+        "It is a working session. If Guest Overflow is not the right fit for your business, we will say so and direct you to a more suitable option.",
     },
   ],
   productTitle: "Product questions",
@@ -192,17 +192,17 @@ const pt: FaqContent = {
     {
       question: "O Guest Overflow trata de sinais e faltas (no-shows)?",
       answer:
-        "Sim. Pode pedir dados de cartão ou cobrar sinais para serviços, profissionais ou datas específicos, com lembretes automáticos que reduzem consideravelmente as faltas.",
+        "Sim. Pode pedir dados de cartão ou cobrar sinais para serviços, equipa ou datas específicos, com lembretes automáticos que reduzem consideravelmente as faltas.",
     },
     {
       question: "Posso gerir a disponibilidade sozinho?",
       answer:
-        "Totalmente. Abra e feche horários, defina durações por serviço, bloqueie datas e ajuste a disponibilidade de cadeiras num painel concebido para salões com muito movimento, e as alterações ficam ativas de imediato.",
+        "Totalmente. Abra e feche horários, defina durações por serviço, bloqueie datas e ajuste a disponibilidade num painel concebido para negócios com muito movimento, e as alterações ficam ativas de imediato.",
     },
     {
-      question: "Suporta vários salões?",
+      question: "Suporta vários espaços?",
       answer:
-        "Sim. Grupos podem gerir vários salões a partir de um único painel, com disponibilidade, marca e listas de clientes separadas por localização.",
+        "Sim. Grupos podem gerir vários espaços a partir de um único painel, com disponibilidade, marca e listas de clientes separadas por localização.",
     },
     {
       question: "Que canais e integrações suportam?",
@@ -224,7 +224,7 @@ const pt: FaqContent = {
     {
       question: "A página de marcações fica no meu próprio domínio?",
       answer:
-        "Por defeito, a sua página de marcações fica num endereço guestoverflow.com com a sua marca (por exemplo, oseusalao.guestoverflow.com), com o seu logótipo, cores e nome em todo o lado. No Premium, passa para o seu próprio domínio como white-label completo, onde os clientes nunca veem o nosso nome.",
+        "Por defeito, a sua página de marcações fica num endereço guestoverflow.com com a sua marca (por exemplo, oseunegocio.guestoverflow.com), com o seu logótipo, cores e nome em todo o lado. No Premium, passa para o seu próprio domínio como white-label completo, onde os clientes nunca veem o nosso nome.",
     },
     {
       question: "Há custo de instalação?",
@@ -261,7 +261,7 @@ const pt: FaqContent = {
     {
       question: "Isto é uma chamada de vendas?",
       answer:
-        "É uma sessão de trabalho. Se o Guest Overflow não for adequado para o seu salão, dizemos-lho e indicamos-lhe uma opção mais apropriada.",
+        "É uma sessão de trabalho. Se o Guest Overflow não for adequado para o seu negócio, dizemos-lho e indicamos-lhe uma opção mais apropriada.",
     },
   ],
   productTitle: "Perguntas sobre o produto",

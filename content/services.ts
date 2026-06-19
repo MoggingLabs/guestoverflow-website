@@ -26,7 +26,7 @@ const en: ServicesContent = {
     {
       badge: "The starting point",
       title: "Google Business Profile setup",
-      body: "The fastest and most affordable way to start taking bookings. We optimize your Google Business Profile and activate Reserve with Google, so clients searching for a salon or barber nearby see the correct photos and hours, along with a Book button that leads directly to you.",
+      body: "The fastest and most affordable way to start taking bookings. We optimize your Google Business Profile and activate Reserve with Google, so clients searching nearby see the correct photos and hours, along with a Book button that leads directly to you.",
       points: [
         "Google Business Profile optimization",
         "Reserve with Google turned on",
@@ -47,7 +47,7 @@ const en: ServicesContent = {
   included: {
     eyebrow: "Already included",
     title: "Setting up your booking page is included with every plan.",
-    body: "Concierge setup of your booking page is included with every plan. These two services are separate and optional, for salons and barbershops that also want assistance with being found. They are never a prerequisite for obtaining the core product.",
+    body: "Concierge setup of your booking page is included with every plan. These two services are separate and optional, for guest-facing businesses that also want assistance with being found. They are never a prerequisite for obtaining the core product.",
   },
 };
 
@@ -63,7 +63,7 @@ const pt: ServicesContent = {
     {
       badge: "O ponto de partida",
       title: "Configuração do Perfil de Empresa no Google",
-      body: "A forma mais rápida e acessível de começar a receber marcações. Otimizamos o seu Perfil de Empresa no Google e ativamos o Reservar com o Google, para que quem procura um salão ou uma barbearia por perto veja as fotos e horários corretos, bem como um botão de Reservar que conduz diretamente a si.",
+      body: "A forma mais rápida e acessível de começar a receber marcações. Otimizamos o seu Perfil de Empresa no Google e ativamos o Reservar com o Google, para que quem procura por perto veja as fotos e horários corretos, bem como um botão de Reservar que conduz diretamente a si.",
       points: [
         "Otimização do Perfil de Empresa no Google",
         "Reservar com o Google ativado",
@@ -84,7 +84,7 @@ const pt: ServicesContent = {
   included: {
     eyebrow: "Já incluído",
     title: "A instalação da sua página de reservas está incluída em todos os planos.",
-    body: "A instalação concierge da sua página de reservas está incluída em todos os planos. Estes dois serviços são separados e opcionais, para salões e barbearias que também pretendem apoio para serem encontrados. Nunca constituem um requisito para obter o produto principal.",
+    body: "A instalação concierge da sua página de reservas está incluída em todos os planos. Estes dois serviços são separados e opcionais, para negócios que vivem de reservas e que também pretendem apoio para serem encontrados. Nunca constituem um requisito para obter o produto principal.",
   },
 };
 

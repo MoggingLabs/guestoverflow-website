@@ -13,16 +13,16 @@ type AboutContent = {
 const en: AboutContent = {
   hero: {
     eyebrow: "About",
-    headline: "Built by the people who build websites for salons and barbershops.",
+    headline: "Built by the people who build websites for guest-facing businesses.",
     subhead:
-      'Guest Overflow comes from a team that has spent years building high-converting websites for local businesses. Every client conversation ended with the same question: "can the booking look and feel like my own brand?" It now can, and now we build it for salons and barbershops.',
+      'Guest Overflow comes from a team that has spent years building high-converting websites for local businesses. Every client conversation ended with the same question: "can the booking look and feel like my own brand?" It now can, and now we build it for guest-facing businesses.',
   },
   story: {
     title: "Why Guest Overflow exists",
     paragraphs: [
       "We were delivering well-designed websites that failed at the most important moment: the booking. Owners were paying commissions to platforms that concealed their brand, retained their client lists, and bore no resemblance to the sites we had built for them.",
-      "Guest Overflow is our response. It is a custom booking system we build for the salon, on its own brand, so the client experiences your brand from the first click to the confirmation email, and you retain every relationship the appointment creates.",
-      "We are starting deliberately small, with a founding group of salons and barbershops we can onboard personally. We would rather the product be shaped by the people who run a chair than by a feature checklist.",
+      "Guest Overflow is our response. It is a custom booking system we build for your business, on its own brand, so the client experiences your brand from the first click to the confirmation email, and you retain every relationship the appointment creates.",
+      "We are starting deliberately small, with a founding group of guest-facing businesses we can onboard personally. We would rather the product be shaped by the people who run the business than by a feature checklist.",
     ],
   },
   principles: {
@@ -30,12 +30,12 @@ const en: AboutContent = {
     title: "What we believe",
     items: [
       {
-        title: "The brand is the salon's",
-        body: "Your brand should lead. The page carries your salon's name, logo, and colours — and on Premium runs on your own domain, with no sign of us at all.",
+        title: "The brand is yours",
+        body: "Your brand should lead. The page carries your business's name, logo, and colours — and on Premium runs on your own domain, with no sign of us at all.",
       },
       {
-        title: "Data belongs to the salon",
-        body: "Client relationships are the most valuable asset a salon owns. We will never position ourselves between you and them.",
+        title: "Data belongs to the business",
+        body: "Client relationships are the most valuable asset your business owns. We will never position ourselves between you and them.",
       },
       {
         title: "Flat beats percentage",
@@ -48,16 +48,16 @@ const en: AboutContent = {
 const pt: AboutContent = {
   hero: {
     eyebrow: "Sobre nós",
-    headline: "Feito por quem constrói sites para salões e barbearias.",
+    headline: "Feito por quem constrói sites para negócios que vivem de reservas.",
     subhead:
-      "O Guest Overflow nasce de uma equipa que passou anos a desenvolver sites de alta conversão para negócios locais. Todas as conversas com clientes terminavam com a mesma pergunta: “a reserva pode ficar com o aspeto e a identidade da minha própria marca?” Agora pode, e agora construímo-lo para salões e barbearias.",
+      "O Guest Overflow nasce de uma equipa que passou anos a desenvolver sites de alta conversão para negócios locais. Todas as conversas com clientes terminavam com a mesma pergunta: “a reserva pode ficar com o aspeto e a identidade da minha própria marca?” Agora pode, e agora construímo-lo para negócios que vivem de reservas.",
   },
   story: {
     title: "Porque é que o Guest Overflow existe",
     paragraphs: [
       "Entregávamos sites bem concebidos que falhavam no momento mais importante: a marcação. Os proprietários pagavam comissões a plataformas que ocultavam a sua marca, retinham as suas listas de clientes e em nada se assemelhavam aos sites que tínhamos construído.",
-      "O Guest Overflow é a nossa resposta. É um sistema de reservas à medida que construímos para o salão, com a sua própria marca, para que o cliente experiencie a sua marca do primeiro clique ao email de confirmação, e cada relação criada pela marcação permaneça consigo.",
-      "Estamos a começar deliberadamente pequenos, com um grupo fundador de salões e barbearias que conseguimos acompanhar pessoalmente. Preferimos um produto moldado por quem gere uma cadeira a um produto definido por uma lista de funcionalidades.",
+      "O Guest Overflow é a nossa resposta. É um sistema de reservas à medida que construímos para o seu negócio, com a sua própria marca, para que o cliente experiencie a sua marca do primeiro clique ao email de confirmação, e cada relação criada pela marcação permaneça consigo.",
+      "Estamos a começar deliberadamente pequenos, com um grupo fundador de negócios que vivem de reservas que conseguimos acompanhar pessoalmente. Preferimos um produto moldado por quem gere o negócio a um produto definido por uma lista de funcionalidades.",
     ],
   },
   principles: {
@@ -65,12 +65,12 @@ const pt: AboutContent = {
     title: "Aquilo em que acreditamos",
     items: [
       {
-        title: "A marca é do salão",
-        body: "A sua marca deve estar à frente. A página apresenta o nome, o logótipo e as cores do seu salão e, no Premium, corre no seu próprio domínio, sem qualquer sinal nosso.",
+        title: "A marca é sua",
+        body: "A sua marca deve estar à frente. A página apresenta o nome, o logótipo e as cores do seu negócio e, no Premium, corre no seu próprio domínio, sem qualquer sinal nosso.",
       },
       {
-        title: "Os dados pertencem ao salão",
-        body: "As relações com os clientes são o ativo mais valioso de um salão. Nunca nos colocaremos entre si e eles.",
+        title: "Os dados pertencem ao negócio",
+        body: "As relações com os clientes são o ativo mais valioso do seu negócio. Nunca nos colocaremos entre si e eles.",
       },
       {
         title: "Fixo ganha à percentagem",
