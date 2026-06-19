@@ -19,10 +19,9 @@ import { SHOW_FOUNDING_OFFER } from "@/lib/features";
  * salon live-demo) now live on the spoke at `/industries/[slug]` and
  * `/pricing/[slug]`.
  *
- * COPY TODO (flagged, follow-up pass): the Hero, HowItWorks, Differentiators,
- * NoWebsitePath and home FAQ copy are still salon-narrowed from the
- * single-vertical era. They should be rewritten brand-neutral (multi-sector)
- * now that `/` is the hub rather than the salon landing page.
+ * Hub copy is sector-neutral (covers every vertical) — sourced from
+ * content/home.ts, content/faq.ts (`home`), content/promises.ts and
+ * content/site.ts. Sector-specific language belongs on the spoke, not here.
  */
 export default async function HomePage() {
   const locale = await getLocale();

@@ -4,9 +4,9 @@ import type { Locale } from "@/lib/i18n-shared";
 /** Locale-independent site facts (URLs, identity, default metadata). */
 export const site = {
   name: "Guest Overflow",
-  tagline: "Your own booking page, built around how your salon runs.",
+  tagline: "Your own booking page, built around how your business runs.",
   description:
-    "Guest Overflow gives each salon and barbershop its own booking page, built around how they run, branded as theirs. Flat pricing, no commission, and every client relationship remains yours. For salons and barbershops.",
+    "Guest Overflow gives each business its own booking page, built around how it runs, branded as theirs. Flat pricing, no commission, and every client relationship remains yours. For guest-facing businesses.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guestoverflow.com",
   email: "hello@guestoverflow.com",
   cta: {
@@ -86,7 +86,7 @@ const en: SiteStrings = {
     },
   ],
   footerBlurb:
-    "Branded online booking for salons and barbershops.",
+    "Branded online booking for guest-facing businesses.",
   footerProductOf: "all rights reserved",
   footerNote: "No commission · Your data is yours.",
 };
@@ -149,7 +149,7 @@ const pt: SiteStrings = {
     },
   ],
   footerBlurb:
-    "Reservas online com a sua marca para cabeleireiros e barbearias.",
+    "Reservas online com a sua marca para negócios que vivem de reservas.",
   footerProductOf: "todos os direitos reservados",
   footerNote: "Sem comissões · Os seus dados são seus.",
 };

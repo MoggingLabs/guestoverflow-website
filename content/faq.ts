@@ -16,12 +16,12 @@ const en: FaqContent = {
     {
       question: "How is Guest Overflow priced?",
       answer:
-        "A flat monthly subscription, with no per-appointment or per-booking commission, ever. Pricing depends on the plan and the level of customization your salon requires; see the pricing page for tiers, or book a demo for an exact quote.",
+        "A flat monthly subscription, with no per-appointment or per-booking commission, ever. Pricing depends on the plan and the level of customization your business requires; see the pricing page for tiers, or book a demo for an exact quote.",
     },
     {
       question: "How long does setup take?",
       answer:
-        "Most salons go live within days of kickoff. Our team designs and builds your booking system, branded with your name, logo, and colours on your own guestoverflow.com address (your own custom domain on Premium). You review and approve before it goes live.",
+        "Most businesses go live within days of kickoff. Our team designs and builds your booking system, branded with your name, logo, and colours on your own guestoverflow.com address (your own custom domain on Premium). You review and approve before it goes live.",
     },
     {
       question: "Do I need an existing website?",
@@ -36,7 +36,7 @@ const en: FaqContent = {
     {
       question: "Can it match my brand exactly?",
       answer:
-        "Yes; that is the core of what we do. Colours, typography, copy, and flow are tailored to each salon, so your booking page looks like your studio, not a generic app. We show you exactly how it will look in your demo.",
+        "Yes; that is the core of what we do. Colours, typography, copy, and flow are tailored to each business, so your booking page looks like your brand, not a generic app. We show you exactly how it will look in your demo.",
     },
     {
       question: "Will Guest Overflow bring me new customers?",
@@ -145,12 +145,12 @@ const pt: FaqContent = {
     {
       question: "Como funciona o preço do Guest Overflow?",
       answer:
-        "Uma subscrição mensal fixa, sem comissão por marcação, nunca. O valor depende do plano e do nível de personalização de que o seu salão necessita; veja os planos na página de preços ou marque uma demonstração para um orçamento exato.",
+        "Uma subscrição mensal fixa, sem comissão por marcação, nunca. O valor depende do plano e do nível de personalização de que o seu negócio necessita; veja os planos na página de preços ou marque uma demonstração para um orçamento exato.",
     },
     {
       question: "Quanto tempo demora a instalação?",
       answer:
-        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas, com o seu nome, logótipo e cores, num endereço guestoverflow.com próprio (no seu próprio domínio no Premium). O cliente revê e aprova antes de ficar no ar.",
+        "A maioria dos negócios fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas, com o seu nome, logótipo e cores, num endereço guestoverflow.com próprio (no seu próprio domínio no Premium). O cliente revê e aprova antes de ficar no ar.",
     },
     {
       question: "Preciso de ter um site?",
@@ -165,7 +165,7 @@ const pt: FaqContent = {
     {
       question: "Consegue ficar exatamente com a minha marca?",
       answer:
-        "Sim; é esse o centro do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada salão, para que a sua página de reservas se pareça com o seu estúdio e não com uma app genérica. Mostramos-lhe exatamente como ficará na sua demonstração.",
+        "Sim; é esse o centro do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada negócio, para que a sua página de reservas se pareça com a sua marca e não com uma app genérica. Mostramos-lhe exatamente como ficará na sua demonstração.",
     },
     {
       question: "O Guest Overflow traz-me novos clientes?",
