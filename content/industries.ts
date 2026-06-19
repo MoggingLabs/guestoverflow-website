@@ -215,10 +215,10 @@ const sectorLadders: Partial<Record<Locale, Record<string, LadderShape>>> = {
           "WhatsApp & email confirmations & reminders, 450/month included",
           "One-tap confirm & cancel to cut no-shows",
           "Deposits & card holds into your own Stripe",
-          "Guest list with full export — you are the data controller",
+          "Guest list with full export; you are the data controller",
           "Reserve with Google, commission-free",
           "Floor map & walk-in waitlist",
-          "No commission — never per cover, never on regulars",
+          "No commission, never per cover, never on regulars",
           "Email support",
         ],
       },
@@ -279,10 +279,10 @@ const sectorLadders: Partial<Record<Locale, Record<string, LadderShape>>> = {
           "Confirmações e lembretes por WhatsApp e email, 450/mês incluídos",
           "Confirmar e cancelar num toque para reduzir as faltas",
           "Sinais e cauções de cartão na sua própria conta Stripe",
-          "Lista de clientes com exportação completa — o responsável pelos dados é você",
+          "Lista de clientes com exportação completa; o responsável pelos dados é você",
           "Reservar com o Google, sem comissão",
           "Mapa de sala e lista de espera para walk-ins",
-          "Sem comissão — nunca por pessoa, nunca sobre os habituais",
+          "Sem comissão, nunca por pessoa, nunca sobre os habituais",
           "Suporte por email",
         ],
       },
@@ -383,11 +383,11 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
       valueUnit: "appointment",
       heroHeadline: "Pricing for salons & barbers. Published, flat, commission-free.",
       heroSubhead:
-        "Choose the plan that fits your team. No commission on a first visit, no per-booking fee, and no marketplace cut — just a flat monthly price you can see right here.",
+        "Choose the plan that fits your team. No commission on a first visit, no per-booking fee, and no marketplace cut, only a flat monthly price you can see right here.",
       premiumFlow: "Advanced per-stylist buffers & chair/resource management",
       comparison: {
         title: "The actual cost of per-chair pricing",
-        body: "A four-chair shop on Booksy pays approximately €80-110 a month in per-seat fees, plus 30% of every new client's first visit. Guest Overflow is a published flat plan with no commission on your bookings and no marketplace cut — you choose your plan, and your regulars never cost you a fee.",
+        body: "A four-chair shop on Booksy pays approximately €80-110 a month in per-seat fees, plus 30% of every new client's first visit. Guest Overflow is a published flat plan with no commission on your bookings and no marketplace cut. You choose your plan, and your regulars never cost you a fee.",
       },
     },
     "tours-experiences": {
@@ -442,11 +442,11 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
       valueUnit: "marcação",
       heroHeadline: "Preços para cabeleireiros e barbearias. Públicos, fixos e sem comissão.",
       heroSubhead:
-        "Escolha o plano à medida da sua equipa. Sem comissão na primeira visita, sem taxa por marcação e sem corte de marketplace — apenas uma mensalidade fixa que pode ver aqui mesmo.",
+        "Escolha o plano à medida da sua equipa. Sem comissão na primeira visita, sem taxa por marcação e sem corte de marketplace, apenas uma mensalidade fixa que pode ver aqui mesmo.",
       premiumFlow: "Gestão avançada de intervalos por profissional e de cadeiras/recursos",
       comparison: {
         title: "O custo real do preço por cadeira",
-        body: "Um espaço de quatro cadeiras na Booksy paga cerca de 80 a 110 € por mês em taxas por lugar, mais 30% da primeira visita de cada novo cliente. O Guest Overflow é um plano fixo e público, sem comissão nas suas marcações e sem corte de marketplace — escolhe o seu plano, e os seus clientes habituais nunca lhe custam uma taxa.",
+        body: "Um espaço de quatro cadeiras na Booksy paga cerca de 80 a 110 € por mês em taxas por lugar, mais 30% da primeira visita de cada novo cliente. O Guest Overflow é um plano fixo e público, sem comissão nas suas marcações e sem corte de marketplace. Escolhe o seu plano, e os seus clientes habituais nunca lhe custam uma taxa.",
       },
     },
     "tours-experiences": {
@@ -571,7 +571,7 @@ const en: IndustriesStrings = {
         },
         {
           title: "A guest book you own",
-          body: "Regular guests, allergies, anniversaries. All of it remains in your hands, and you may export it whenever you require.",
+          body: "Regular guests, allergies, anniversaries. It all stays in your hands, and you can export it any time.",
         },
       ],
       metaDescription:
@@ -689,7 +689,7 @@ const en: IndustriesStrings = {
         },
         {
           title: "Group bookings handled by email",
-          body: "Private tastings and group tours arranged over lengthy email threads consume hours and are overlooked more often than is generally acknowledged.",
+          body: "Private tastings and group tours arranged over long email threads eat up hours, and too many fall through the cracks.",
         },
       ],
       highlights: [
@@ -938,7 +938,7 @@ const pt: IndustriesStrings = {
         },
         {
           title: "Reservas de grupo geridas por email",
-          body: "Provas privadas e tours de grupo negociados em longas trocas de email consomem horas e são esquecidos mais vezes do que é reconhecido.",
+          body: "Provas privadas e tours de grupo negociados em longas trocas de email consomem horas, e muitos acabam por se perder.",
         },
       ],
       highlights: [

@@ -24,7 +24,7 @@ const en: ProductContent = {
     {
       icon: "widget",
       title: "Your own branded booking page",
-      body: "It runs as its own branded page at your own guestoverflow.com address, the link for your Google profile, Instagram bio, and advertising, designed and built by people who build websites professionally. It is a considered part of your brand, with team availability, service durations, and blackout dates updating in real time. On Premium, it moves to your own custom domain with no trace of us.",
+      body: "It runs as its own branded page at your own guestoverflow.com address, the link for your Google profile, Instagram bio, and advertising, designed and built by professional web designers. It is a considered part of your brand, with team availability, service durations, and blackout dates updating in real time. On Premium, it moves to your own custom domain with no trace of us.",
     },
     {
       icon: "compass",
@@ -83,7 +83,7 @@ const pt: ProductContent = {
     {
       icon: "widget",
       title: "A sua própria página de reservas com a sua marca",
-      body: "No ar como página própria com a sua marca, num endereço guestoverflow.com, o link para o seu perfil no Google, a bio do Instagram e a publicidade, desenhada e construída por quem constrói sites profissionalmente. É uma parte pensada da marca do seu negócio, com disponibilidade da sua equipa, durações de serviço e datas bloqueadas a atualizar em tempo real. No Premium, passa para o seu próprio domínio, sem rasto da nossa parte.",
+      body: "No ar como página própria com a sua marca, num endereço guestoverflow.com, o link para o seu perfil no Google, a bio do Instagram e a publicidade, desenhada e construída por profissionais de criação de sites. É uma parte pensada da marca do seu negócio, com disponibilidade da sua equipa, durações de serviço e datas bloqueadas a atualizar em tempo real. No Premium, passa para o seu próprio domínio, sem rasto da nossa parte.",
     },
     {
       icon: "compass",

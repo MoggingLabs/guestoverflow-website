@@ -36,7 +36,7 @@ const en: ServicesContent = {
     {
       badge: "The full picture",
       title: "We build your website",
-      body: "When you want a home of your own on the web, we design and build a full website with your booking page built in from day one, delivered by a team that builds high-converting sites professionally.",
+      body: "When you want a home of your own on the web, we design and build a full website with your booking page built in from day one, delivered by a team that builds high-converting sites for a living.",
       points: [
         "A full custom website, designed and built for you",
         "Your booking page built in from day one",
@@ -73,7 +73,7 @@ const pt: ServicesContent = {
     {
       badge: "O quadro completo",
       title: "Construímos o seu site",
-      body: "Quando quiser uma casa própria na internet, desenhamos e construímos um site completo com a sua página de reservas integrada desde o primeiro dia, por uma equipa que constrói sites de alta conversão profissionalmente.",
+      body: "Quando quiser uma casa própria na internet, desenhamos e construímos um site completo com a sua página de reservas integrada desde o primeiro dia, por uma equipa cujo trabalho é construir sites de alta conversão.",
       points: [
         "Um site completo à medida, desenhado e construído por nós",
         "A sua página de reservas integrada desde o primeiro dia",

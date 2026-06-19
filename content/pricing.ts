@@ -31,7 +31,7 @@ const en: PricingContent = {
     eyebrow: "Pricing",
     headline: "Flat pricing. No commission on your bookings.",
     subhead:
-      "However busy you get, your price never rises with your bookings — there is no commission and no per-booking fee. Every plan's price is published right here, and each one begins with a demo.",
+      "However busy you get, your price never rises with your bookings. There is no commission and no per-booking fee. Every plan's price is published right here, and each one begins with a demo.",
   },
   tierUi: {
     monthly: "Monthly",
@@ -49,7 +49,7 @@ const en: PricingContent = {
   },
   comparison: {
     title: "What commission really costs",
-    body: "A business taking 800 appointments a month at €2-3 commission per appointment pays €19,200-28,800 a year, for a booking page that does not even belong to it. Guest Overflow replaces that with a flat subscription that remains constant even in your busiest month.",
+    body: "A business taking 800 appointments a month at €2-3 commission per appointment pays €19,200 to €28,800 a year, for a booking page that does not even belong to it. Guest Overflow replaces that with a flat subscription that stays constant even in your busiest month.",
   },
   foundingPartner: {
     badge: "Founding offer",
@@ -95,7 +95,7 @@ const pt: PricingContent = {
     eyebrow: "Preços",
     headline: "Preço fixo. Sem comissão nas suas marcações.",
     subhead:
-      "Por mais movimento que tenha, o preço nunca sobe com as suas marcações — não há comissão nem taxa por marcação. O preço de cada plano está publicado aqui mesmo, e cada um começa com uma demonstração.",
+      "Por mais movimento que tenha, o preço nunca sobe com as suas marcações. Não há comissão nem taxa por marcação. O preço de cada plano está publicado aqui mesmo, e cada um começa com uma demonstração.",
   },
   tierUi: {
     monthly: "Mensal",
@@ -113,7 +113,7 @@ const pt: PricingContent = {
   },
   comparison: {
     title: "O que a comissão custa realmente",
-    body: "Um negócio com 800 marcações por mês a 2 a 3 € de comissão por marcação paga 19.200 a 28.800 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que se mantém constante mesmo no mês de maior procura.",
+    body: "Um negócio com 800 marcações por mês a 2 a 3 € de comissão por marcação paga 19.200 a 28.800 € por ano, por uma página de reservas que nem sequer é sua. O Guest Overflow substitui isso por uma subscrição fixa que não se altera mesmo no mês de maior procura.",
   },
   foundingPartner: {
     badge: "Oferta de lançamento",

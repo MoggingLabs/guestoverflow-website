@@ -20,7 +20,7 @@ const en: AboutContent = {
   story: {
     title: "Why Guest Overflow exists",
     paragraphs: [
-      "We were delivering well-designed websites that failed at the most important moment: the booking. Owners were paying commissions to platforms that concealed their brand, retained their client lists, and bore no resemblance to the sites we had built for them.",
+      "We were delivering well-designed websites that failed at the most important moment: the booking. Owners were paying commissions to platforms that hid their brand, kept their client lists, and looked nothing like the sites we had built for them.",
       "Guest Overflow is our response. It is a custom booking system we build for your business, on its own brand, so the client experiences your brand from the first click to the confirmation email, and you retain every relationship the appointment creates.",
       "We are starting deliberately small, with a founding group of guest-facing businesses we can onboard personally. We would rather the product be shaped by the people who run the business than by a feature checklist.",
     ],
@@ -31,7 +31,7 @@ const en: AboutContent = {
     items: [
       {
         title: "The brand is yours",
-        body: "Your brand should lead. The page carries your business's name, logo, and colours — and on Premium runs on your own domain, with no sign of us at all.",
+        body: "Your brand should lead. The page carries your business's name, logo, and colours, and on Premium it runs on your own domain, with no sign of us at all.",
       },
       {
         title: "Data belongs to the business",
@@ -39,7 +39,7 @@ const en: AboutContent = {
       },
       {
         title: "Flat beats percentage",
-        body: "We do not believe you should pay more simply because your business is performing well. Our incentive is your renewal, not your volume.",
+        body: "We do not believe you should pay more because your business is performing well. Our incentive is your renewal, not your volume.",
       },
     ],
   },

@@ -26,7 +26,7 @@ const en: FaqContent = {
     {
       question: "Do I need an existing website?",
       answer:
-        "No. We build your custom booking system, branded as yours, at your own guestoverflow.com address, and it is the destination clients reach. If you already have a site or social profiles, on any platform, including custom-built sites, WordPress, Squarespace, and Webflow, you simply point them to it, so clients move straight to your branded booking page. On Premium, it runs on your own custom domain.",
+        "No. We build your custom booking system, branded as yours, at your own guestoverflow.com address, and it is the destination clients reach. If you already have a site or social profiles, on any platform, including custom-built sites, WordPress, Squarespace, and Webflow, you point them to it, so clients move straight to your branded booking page. On Premium, it runs on your own custom domain.",
     },
     {
       question: "Who owns the client data?",
@@ -41,7 +41,7 @@ const en: FaqContent = {
     {
       question: "Will Guest Overflow bring me new customers?",
       answer:
-        "Yes. We help the right clients find you and book you directly. Reserve with Google, your Google Business Profile, and a booking system built around your brand all bring people to you on your own terms, commission-free, and we set them up for you. And the clients you already have, the regulars, the direct traffic, and word of mouth, stop costing you a commission every time they come back.",
+        "Yes. We help the right clients find you and book you directly. Reserve with Google, your Google Business Profile, and a booking system built around your brand all bring people to you on your own terms, commission-free, and we set them up for you. And the clients you already have, the regulars, the direct traffic, the word of mouth, stop costing you a commission every time they come back.",
     },
     {
       question: "I do not have a website. Can I still use Guest Overflow?",
@@ -219,7 +219,7 @@ const pt: FaqContent = {
     {
       question: "Não há mesmo taxa por reserva?",
       answer:
-        "Não, de facto. A sua subscrição mantém-se fixa independentemente do número de reservas. Não consideramos que deva pagar mais por ter muito movimento.",
+        "Exato. A sua subscrição mantém-se fixa independentemente do número de reservas. Não achamos que deva pagar mais por ter muito movimento.",
     },
     {
       question: "A página de marcações fica no meu próprio domínio?",

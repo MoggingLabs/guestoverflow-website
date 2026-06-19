@@ -6,7 +6,7 @@ const en = {
     eyebrow: "Booking software you own",
     headline: "Your own booking system, built around how your business runs.",
     subhead:
-      "We design and build a complete booking system around your services, your team, your hours, and your rules, branded as your business. Clients book direct, you pay one flat price with no commission, and every client relationship remains yours.",
+      "We design and build a complete booking system around your services, your team, your hours, and your rules, branded as your business. Clients book direct, you pay one flat price with no commission, and every client relationship stays yours.",
   },
   problems: {
     title: "There is no reason to send your clients elsewhere to book a cut or a colour.",
@@ -27,9 +27,9 @@ const en = {
   },
   widgetShowcase: {
     eyebrow: "Live demo",
-    title: "This is your salon booking page. We invite you to try it.",
+    title: "This is your salon booking page. Try it for yourself.",
     subhead:
-      "A genuine, working salon booking page is running here. Pick a service, choose a stylist, and book an appointment exactly as your clients would, then publish it live as your own branded booking page.",
+      "A real, working salon booking page is running here. Pick a service, choose a stylist, and book an appointment exactly as your clients would, then publish it live as your own branded booking page.",
     caption: "One booking engine, tailored to your salon, live as your own branded page.",
   },
   howItWorks: {
@@ -38,15 +38,15 @@ const en = {
     steps: [
       {
         title: "We build your booking system",
-        body: "Our team designs and builds your booking system to match your brand, from typography to tone of voice, and launches it on a branded guestoverflow.com address. You are never required to handle code.",
+        body: "Our team designs and builds your booking system to match your brand, down to the typography and tone of voice, and launches it on a branded guestoverflow.com address. You never touch a line of code.",
       },
       {
         title: "Clients book in seconds",
-        body: "Clients pick a service, choose a time, and confirm in a few taps. The entire process performs equally well on a mobile device and on a laptop.",
+        body: "Clients pick a service, choose a time, and confirm in a few taps. The whole process works just as well on a phone as on a laptop.",
       },
       {
         title: "You own every booking",
-        body: "Bookings, client details, and preferences all arrive in your dashboard. They are yours to retain, export, and build upon, with no intermediary involved.",
+        body: "Bookings, client details, and preferences all arrive in your dashboard. They are yours to keep, export, and build on, with no intermediary in the way.",
       },
     ] as HowItWorksStep[],
   },
@@ -56,7 +56,7 @@ const en = {
     items: [
       {
         icon: "brand",
-        title: "Genuinely yours",
+        title: "Yours, end to end",
         body: "Guest Overflow carries your brand: your logo, colours, and tone. Clients book with you directly. On Premium, it moves to your own custom domain, with no trace of us.",
       },
       {
@@ -72,14 +72,14 @@ const en = {
       {
         icon: "concierge",
         title: "Concierge setup, individual results",
-        body: "We design, build, and launch everything. You receive a founder as your direct contact, design revisions until the booking system genuinely matches your brand, and a quarterly review covering your bookings, no-shows, and repeat clients.",
+        body: "We design, build, and launch everything. You get a founder as your direct contact, design revisions until the booking system really matches your brand, and a quarterly review covering your bookings, no-shows, and repeat clients.",
       },
     ] as Differentiator[],
   },
   industriesPreview: {
     title: "Configured for the way your business operates.",
     subhead:
-      "Services, staff, schedules, and rules. Guest Overflow adapts to the way your business genuinely operates.",
+      "Services, staff, schedules, and rules. Guest Overflow adapts to the way your business actually runs.",
     explore: "Explore →",
   },
   noWebsite: {
@@ -104,12 +104,12 @@ const en = {
   promiseStrip: {
     eyebrow: "How we work",
     title: "Our promise: a close relationship and real support.",
-    body: "We work as a true partner to your salon, not a faceless platform. You have a direct line to us whenever you need it, and we stay close to make sure your booking system keeps working for you. We want the best for our clients, and we measure our success by yours.",
+    body: "We work as a real partner to your salon, not a faceless platform. You have a direct line to us whenever you need it, and we stay close to keep your booking system working for you. We want the best for our clients, and we measure our success by yours.",
   },
   builtFor: {
     line: "Built for independent, guest-facing businesses that live by their bookings.",
     credibility:
-      "We have spent years building high-converting websites for guest-facing businesses. Guest Overflow is everything our clients consistently requested.",
+      "We have spent years building high-converting websites for guest-facing businesses. Guest Overflow is everything our clients kept asking us for.",
   },
   rateParity: {
     eyebrow: "Direct booking",
@@ -163,9 +163,9 @@ const pt: typeof en = {
   },
   widgetShowcase: {
     eyebrow: "Demo ao vivo",
-    title: "Esta é a página de reservas do seu salão. Convidamo-lo a experimentá-la.",
+    title: "Esta é a página de reservas do seu salão. Experimente-a.",
     subhead:
-      "Uma página de reservas de salão, real e a funcionar aqui mesmo. Escolha um serviço, escolha um profissional e marque uma marcação tal como os seus clientes fariam, e depois publique-a no ar como a sua própria página de reservas, com a sua marca.",
+      "Uma página de reservas de salão, real e a funcionar aqui mesmo. Escolha um serviço, escolha um profissional e faça uma marcação tal como os seus clientes fariam, e depois publique-a no ar como a sua própria página de reservas, com a sua marca.",
     caption: "Um único motor de reservas, à medida do seu salão, no ar como a sua própria página com a sua marca.",
   },
   howItWorks: {
@@ -192,7 +192,7 @@ const pt: typeof en = {
     items: [
       {
         icon: "brand",
-        title: "Genuinamente seu",
+        title: "Seu, de uma ponta à outra",
         body: "O Guest Overflow apresenta a sua marca: o seu logótipo, cores e tom. Os clientes marcam consigo diretamente. No Premium, passa para o seu próprio domínio, sem rasto da nossa parte.",
       },
       {
@@ -208,14 +208,14 @@ const pt: typeof en = {
       {
         icon: "concierge",
         title: "Instalação concierge, resultados individuais",
-        body: "Desenhamos, construímos e lançamos tudo. Dispõe de um fundador como contacto direto, revisões de design até o sistema de reservas ficar verdadeiramente com a sua marca, e uma reunião trimestral sobre reservas, faltas e clientes habituais.",
+        body: "Desenhamos, construímos e lançamos tudo. Fica com um fundador como contacto direto, revisões de design até o sistema de reservas ficar mesmo com a sua marca, e uma reunião trimestral sobre reservas, faltas e clientes habituais.",
       },
     ] as Differentiator[],
   },
   industriesPreview: {
     title: "Configurado para a forma como o seu negócio funciona.",
     subhead:
-      "Serviços, equipa, horários e regras. O Guest Overflow adapta-se à forma como o seu negócio efetivamente funciona.",
+      "Serviços, equipa, horários e regras. O Guest Overflow adapta-se à forma como o seu negócio funciona no dia a dia.",
     explore: "Explorar →",
   },
   noWebsite: {
@@ -240,12 +240,12 @@ const pt: typeof en = {
   promiseStrip: {
     eyebrow: "Como trabalhamos",
     title: "A nossa promessa: uma relação próxima e apoio verdadeiro.",
-    body: "Trabalhamos como um verdadeiro parceiro do seu salão, não como uma plataforma sem rosto. Tem uma linha direta connosco sempre que precisar, e mantemo-nos próximos para garantir que o seu sistema de reservas continua a trabalhar para si. Queremos o melhor para os nossos clientes, e medimos o nosso sucesso pelo seu.",
+    body: "Trabalhamos como um parceiro a sério do seu salão, não como uma plataforma sem rosto. Tem uma linha direta connosco sempre que precisar, e mantemo-nos próximos para que o seu sistema de reservas continue a trabalhar para si. Queremos o melhor para os nossos clientes, e medimos o nosso sucesso pelo seu.",
   },
   builtFor: {
     line: "Feito para negócios independentes que vivem de reservas.",
     credibility:
-      "Passámos anos a construir sites de alta conversão para negócios que vivem de reservas. O Guest Overflow é tudo o que os nossos clientes nos solicitavam.",
+      "Passámos anos a construir sites de alta conversão para negócios que vivem de reservas. O Guest Overflow é tudo o que os nossos clientes nos pediam.",
   },
   rateParity: {
     eyebrow: "Reserva direta",

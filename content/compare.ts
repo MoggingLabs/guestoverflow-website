@@ -100,7 +100,7 @@ const en: CompareContent = {
         "Guests book through a shared app rated 3.3/5 in which self-cancellation was removed, and true branding is a €29 add-on.",
       ],
       ourAnswer: [
-        "One published, all-in plan with no marketplace commission — WhatsApp reminders and client CRM are built in, never billed as add-ons.",
+        "One published, all-in plan with no marketplace commission. WhatsApp reminders and client CRM are built in, never billed as add-ons.",
         "Genuine no-show protection, with deposits and card guarantees through your own Stripe account.",
         "True white-label on your own custom domain (on Premium), and concierge setup that we handle for you.",
       ],
@@ -223,7 +223,7 @@ const pt: CompareContent = {
         "Os clientes reservam por uma app partilhada com 3,3/5 na qual o cancelamento foi removido, e a marca verdadeira é um extra de 29 €.",
       ],
       ourAnswer: [
-        "Um plano único e público, sem comissão de marketplace — lembretes por WhatsApp e CRM de clientes incluídos, nunca cobrados como extras.",
+        "Um plano único e público, sem comissão de marketplace. Lembretes por WhatsApp e CRM de clientes incluídos, nunca cobrados como extras.",
         "Proteção genuína contra faltas, com sinais e garantias de cartão pela sua própria conta Stripe.",
         "White-label verdadeiro no seu próprio domínio (no Premium), e instalação concierge que tratamos por si.",
       ],

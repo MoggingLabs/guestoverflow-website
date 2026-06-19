@@ -34,7 +34,7 @@ const en: PromisesContent = {
     },
     {
       title: "No surprise add-ons",
-      body: "The quoted price is the actual price. Essentials are included, not unlocked one fee at a time.",
+      body: "The quoted price is the actual price. Essentials are included, not charged one fee at a time.",
       vs: "A low headline price becomes far higher once marketing boosts, the branded app and payment fees are added on.",
     },
     {
@@ -76,7 +76,7 @@ const pt: PromisesContent = {
     },
     {
       title: "Sem extras-surpresa",
-      body: "O preço indicado é o preço efetivo. O essencial vem incluído, não desbloqueado taxa a taxa.",
+      body: "O preço indicado é o preço efetivo. O essencial vem incluído, não cobrado taxa a taxa.",
       vs: "Um preço anunciado baixo torna-se muito mais alto depois de se somarem os impulsos de marketing, a app de marca e as taxas de pagamento.",
     },
     {
