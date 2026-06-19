@@ -276,22 +276,32 @@ const pt: CompareContent = {
 export const compareContent: Record<Locale, CompareContent> = { en, pt };
 
 /**
- * Active competitor slugs only (those whose sector is live); used by
- * generateStaticParams and the sitemap. Stashed entries stay in the data but
- * are filtered by `isActiveSector` - see `lib/sectors.ts`.
+ * Competitor compare pages held back even when their sector is live.
+ * `thefork` (restaurants) is authored but kept stashed pending a copy/legal
+ * review of the comparison claims — delete it here to publish /compare/thefork.
+ */
+const STASHED_COMPETITORS = new Set<string>(["thefork"]);
+
+/** A compare entry is live when its sector is active and it isn't stashed. */
+function isActiveCompetitor(entry: { slug: string; sector: FeeSector }): boolean {
+  return isActiveSector(entry.sector) && !STASHED_COMPETITORS.has(entry.slug);
+}
+
+/**
+ * Active competitor slugs only (those whose sector is live and not stashed);
+ * used by generateStaticParams and the sitemap. Stashed entries stay in the
+ * data but are filtered out - see `isActiveCompetitor` / `lib/sectors.ts`.
  */
 export const competitorSlugs = en.entries
-  .filter((e) => isActiveSector(e.sector))
+  .filter(isActiveCompetitor)
   .map((e) => e.slug);
 
 /** Active compare entries for a locale, in order - used by the /compare hub. */
 export function getActiveCompareEntries(locale: Locale) {
-  return compareContent[locale].entries.filter((e) =>
-    isActiveSector(e.sector),
-  );
+  return compareContent[locale].entries.filter(isActiveCompetitor);
 }
 
 export function getCompareEntry(locale: Locale, slug: string) {
   const entry = compareContent[locale].entries.find((e) => e.slug === slug);
-  return entry && isActiveSector(entry.sector) ? entry : undefined;
+  return entry && isActiveCompetitor(entry) ? entry : undefined;
 }
