@@ -45,13 +45,17 @@ export async function Hero() {
         </Reveal>
         <Reveal
           stagger
-          className="mx-auto flex max-w-5xl flex-wrap justify-center gap-4"
+          className={`mx-auto grid w-full auto-rows-fr gap-4 ${
+            industries.length === 1
+              ? "max-w-sm grid-cols-1"
+              : "max-w-2xl grid-cols-1 sm:grid-cols-2"
+          }`}
         >
           {industries.map((industry) => (
             <Link
               key={industry.slug}
               href={`/industries/${publicSlugFor(industry.slug)}`}
-              className="group flex h-full w-full flex-col rounded-xl border border-white/20 bg-white/[0.07] p-6 text-left shadow-xl shadow-black/20 transition-colors hover:border-mint hover:bg-white/[0.11] sm:w-80"
+              className="group flex h-full flex-col rounded-xl border border-white/20 bg-white/[0.07] p-6 text-left shadow-xl shadow-black/20 transition-colors hover:border-mint hover:bg-white/[0.11]"
             >
               <span className="text-mint">
                 <Icon name={industry.icon} className="h-7 w-7" />
