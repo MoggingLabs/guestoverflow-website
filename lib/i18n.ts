@@ -8,9 +8,14 @@ export const LOCALE_COOKIE = "gf_locale";
 
 /**
  * Server-side locale. An explicit choice from the language toggle (the
- * `gf_locale` cookie) always wins. On a first visit with no cookie we fall
- * back to the visitor's Accept-Language header, so a Portuguese browser lands
- * in Portuguese instead of the English default.
+ * `gf_locale` cookie) always wins. With no cookie we fall back to the visitor's
+ * Accept-Language header.
+ *
+ * The market is Portugal-only, so the default is Portuguese: a visitor (or
+ * crawler) with no clear language preference lands in PT. Crucially, search
+ * crawlers like Googlebot send no Accept-Language, so this is what makes Google
+ * index the Portuguese content. Only an explicit English preference that
+ * outranks Portuguese yields English.
  */
 export async function getLocale(): Promise<Locale> {
   const store = await cookies();
@@ -18,11 +23,11 @@ export async function getLocale(): Promise<Locale> {
   if (chosen === "pt" || chosen === "en") return chosen;
 
   const accept = (await headers()).get("accept-language") ?? "";
-  return prefersPortuguese(accept) ? "pt" : "en";
+  return prefersEnglish(accept) ? "en" : "pt";
 }
 
-/** Whether Portuguese outranks English in an Accept-Language header. */
-function prefersPortuguese(accept: string): boolean {
+/** Whether English strictly outranks Portuguese in an Accept-Language header. */
+function prefersEnglish(accept: string): boolean {
   let ptQ = -1;
   let enQ = -1;
   for (const part of accept.toLowerCase().split(",")) {
@@ -35,5 +40,5 @@ function prefersPortuguese(accept: string): boolean {
     if (lang.startsWith("pt")) ptQ = Math.max(ptQ, weight);
     else if (lang.startsWith("en")) enQ = Math.max(enQ, weight);
   }
-  return ptQ > enQ;
+  return enQ > ptQ;
 }

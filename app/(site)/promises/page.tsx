@@ -5,13 +5,17 @@ import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { promisesContent } from "@/content/promises";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "Our promises",
-  description:
-    "Guest Overflow's contractual commitments: one-click data export, no commission, no surprise add-ons, no rate hikes, and public pricing.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.promises;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/promises" },
+  };
+}
 
 export default async function PromisesPage() {
   const locale = await getLocale();

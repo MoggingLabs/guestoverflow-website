@@ -6,12 +6,11 @@ type DemoContent = {
   subhead: string;
   expectations: { title: string; items: { title: string; body: string }[] };
   reassurance: string;
-  tryWidget: { title: string; body: string; caption: string };
 };
 
 const en: DemoContent = {
   eyebrow: "Book a demo",
-  headline: "See Guest Overflow on a site like your business's, in 20 minutes.",
+  headline: "See Guest Overflow built for a business like yours, in 20 minutes.",
   subhead:
     "A working session, not a sales pitch. We will show you the booking flow, the dashboard, and what your branded version would look like.",
   expectations: {
@@ -23,7 +22,7 @@ const en: DemoContent = {
       },
       {
         title: "Your setup, scoped",
-        body: "We will review your current website and explain precisely what launching your booking page would involve, and how quickly.",
+        body: "We will explain precisely what launching your branded booking page would involve, and how quickly, whether or not you have a website today.",
       },
       {
         title: "Straight answers",
@@ -33,16 +32,11 @@ const en: DemoContent = {
   },
   reassurance:
     "There is no pressure. We will confirm your slot within one business day.",
-  tryWidget: {
-    title: "Try it during your visit",
-    body: "This is the booking page we will build for your business. Make an appointment and see how it works.",
-    caption: "One booking engine, tailored to your business.",
-  },
 };
 
 const pt: DemoContent = {
   eyebrow: "Marcar demonstração",
-  headline: "Veja o Guest Overflow num site como o do seu negócio, em 20 minutos.",
+  headline: "Veja o Guest Overflow criado para um negócio como o seu, em 20 minutos.",
   subhead:
     "Uma sessão de trabalho, não um discurso de vendas. Mostramos-lhe o fluxo de reservas, o painel e como ficaria a sua versão com a sua marca.",
   expectations: {
@@ -54,7 +48,7 @@ const pt: DemoContent = {
       },
       {
         title: "A sua instalação, definida",
-        body: "Analisamos o seu site atual e indicamos-lhe com precisão o que o lançamento da sua página de reservas envolveria, e em quanto tempo.",
+        body: "Explicamos-lhe com precisão o que o lançamento da sua página de reservas com a sua marca envolveria, e em quanto tempo, quer tenha ou não um site hoje.",
       },
       {
         title: "Respostas diretas",
@@ -64,11 +58,6 @@ const pt: DemoContent = {
   },
   reassurance:
     "Não há pressão. Confirmamos o seu horário no prazo de um dia útil.",
-  tryWidget: {
-    title: "Experimente durante a sua visita",
-    body: "Esta é a página de reservas que vamos construir para o seu negócio. Faça uma marcação e veja como funciona.",
-    caption: "Um único motor de reservas, à medida do seu negócio.",
-  },
 };
 
 export const demoContent: Record<Locale, DemoContent> = { en, pt };

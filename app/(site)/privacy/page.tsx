@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalLayout } from "@/components/layout/LegalLayout";
 import { site } from "@/content/site";
+import { seoStrings } from "@/content/seo";
+import { getLocale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "Privacy policy",
-  description:
-    "How Guest Overflow collects, uses, and protects personal data, including our cookieless analytics and your rights under the GDPR.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.privacy;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/privacy" },
+  };
+}
 
 const UL = "list-disc space-y-1.5 pl-5";
 

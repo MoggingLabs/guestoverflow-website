@@ -11,6 +11,7 @@ import {
   industriesContent,
   industrySlugs,
 } from "@/content/industries";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 import { sectorForPublicSlug, publicSlugFor } from "@/lib/sectors";
 import { SHOW_CALCULATOR } from "@/lib/features";
@@ -29,12 +30,15 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const key = sectorForPublicSlug((await params).sector);
-  const industry = key ? getIndustry("en", key) : undefined;
+  const { sector } = await params;
+  const key = sectorForPublicSlug(sector);
+  const locale = await getLocale();
+  const industry = key ? getIndustry(locale, key) : undefined;
   if (!industry) return {};
   return {
-    title: `${industry.label} pricing`,
+    title: seoStrings[locale].pricingTitle(industry.label),
     description: industry.pricing.hero.subhead,
+    alternates: { canonical: `/pricing/${sector}` },
   };
 }
 

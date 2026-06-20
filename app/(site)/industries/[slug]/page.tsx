@@ -10,6 +10,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { getIndustry, industriesContent, industrySlugs } from "@/content/industries";
 import { getVenueTheme } from "@/content/widget-themes";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 import { publicSlugFor, sectorForPublicSlug } from "@/lib/sectors";
 import { SHOW_LIVE_DEMO } from "@/lib/features";
@@ -27,12 +28,15 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const key = sectorForPublicSlug((await params).slug);
-  const industry = key ? getIndustry("en", key) : undefined;
+  const { slug } = await params;
+  const key = sectorForPublicSlug(slug);
+  const locale = await getLocale();
+  const industry = key ? getIndustry(locale, key) : undefined;
   if (!industry) return {};
   return {
-    title: `Online booking for ${industry.label.toLowerCase()}`,
+    title: seoStrings[locale].industryTitle(industry.label),
     description: industry.metaDescription,
+    alternates: { canonical: `/industries/${slug}` },
   };
 }
 
