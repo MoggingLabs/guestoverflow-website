@@ -542,9 +542,9 @@ const en: IndustriesStrings = {
       cardBlurb:
         "Table reservations that function as a natural part of your dining room, not a marketplace tab.",
       hero: {
-        headline: "Take reservations on your own website.",
+        headline: "Take reservations on your own booking page.",
         subhead:
-          "Guest Overflow provides restaurants with a reservation flow that lives on their own site, carries their brand, and never charges per cover.",
+          "Guest Overflow gives every restaurant its own branded booking page, built around how it seats guests. No existing website required, no per-cover commission, and the guest relationship stays yours.",
       },
       painPoints: [
         {
@@ -791,9 +791,9 @@ const pt: IndustriesStrings = {
       cardBlurb:
         "Reservas de mesa que constituem uma parte natural da sua sala, não um separador de marketplace.",
       hero: {
-        headline: "Receba reservas no seu próprio site.",
+        headline: "Receba reservas na sua própria página de reservas.",
         subhead:
-          "O Guest Overflow disponibiliza aos restaurantes um fluxo de reservas que vive no seu próprio site, apresenta a sua marca e nunca cobra por reserva.",
+          "O Guest Overflow dá a cada restaurante a sua própria página de reservas com a sua marca, construída à volta de como recebe os clientes. Sem necessidade de um site próprio, sem comissão por reserva, e a relação com o cliente continua a ser sua.",
       },
       painPoints: [
         {
