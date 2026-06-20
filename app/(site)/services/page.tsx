@@ -32,6 +32,11 @@ export default async function ServicesPage() {
 
       <section className="pb-8">
         <Container>
+          <Reveal className="mx-auto mb-12 max-w-2xl text-center">
+            <p className="text-base leading-relaxed text-cream text-balance md:text-lg">
+              {t.servicesLead}
+            </p>
+          </Reveal>
           <Reveal
             stagger
             className="mx-auto grid max-w-4xl gap-5 md:grid-cols-2"
