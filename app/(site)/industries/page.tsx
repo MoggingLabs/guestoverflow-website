@@ -6,15 +6,19 @@ import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { industriesContent, getActiveIndustries } from "@/content/industries";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 import { publicSlugFor } from "@/lib/sectors";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Industries",
-  description:
-    "Guest Overflow powers custom online booking for salons and barbershops, with one system shaped to how your business runs.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.industries;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/industries" },
+  };
+}
 
 export default async function IndustriesPage() {
   const locale = await getLocale();

@@ -7,14 +7,18 @@ import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { productContent } from "@/content/product";
 import { faqContent } from "@/content/faq";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 import { SHOW_LIVE_DEMO } from "@/lib/features";
 
-export const metadata: Metadata = {
-  title: "Product",
-  description:
-    "The full reservation lifecycle: a branded booking page, real-time availability, guest CRM, deposits, reminders, and analytics, all on your own website.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.product;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/product" },
+  };
+}
 
 export default async function ProductPage() {
   const locale = await getLocale();

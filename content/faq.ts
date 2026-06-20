@@ -46,17 +46,17 @@ const en: FaqContent = {
     {
       question: "I do not have a website. Can I still use Guest Overflow?",
       answer:
-        "Yes. We begin by optimizing your Google Business Profile so that people can find and book you directly from Google. When you are ready for a website of your own, we design and build one with booking built in, though there is no obligation to start there.",
+        "Yes, and you do not need one. Your branded booking page lives at your own guestoverflow.com address (your own custom domain on Premium), so clients can find and book you from day one. We can also optimize your Google Business Profile, or build you a full website with booking built in, as optional add-on services, but neither is required to start.",
     },
     {
       question: "What if it does not work for us?",
       answer:
-        "We work closely with you and measure the results together: every month you see exactly what came through your website and your Google profile. If something is not working, we would rather fix it with you than let it slide, so you never have to rely on our word alone.",
+        "We work closely with you and measure the results together: every month you see exactly what came through your booking page and your Google profile. If something is not working, we would rather fix it with you than let it slide, so you never have to rely on our word alone.",
     },
     {
       question: "What happens after I book a demo?",
       answer:
-        "A 20-minute call in which we show Guest Overflow running on a site like yours and scope what your setup would involve. No pressure, and no discussion of setup fees unless you wish to have it.",
+        "A 20-minute call in which we show Guest Overflow built for a business like yours and scope what your setup would involve. No pressure, and no discussion of setup fees unless you wish to have it.",
     },
   ],
   product: [
@@ -115,7 +115,7 @@ const en: FaqContent = {
     {
       question: "I only have a Google Business Profile. Where do I start?",
       answer:
-        "There precisely. We optimize your profile so that people find and book you from Google. It is the affordable entry point. A full website with built-in booking is our higher-level offering, for when you are ready.",
+        "With your booking page. It lives at your own guestoverflow.com address, and we optimize your Google Business Profile so that people find and book you straight from Google, with no website required. A full website with booking built in is an optional add-on for when you are ready.",
     },
   ],
   demo: [
@@ -127,7 +127,7 @@ const en: FaqContent = {
     {
       question: "Do I need anything prepared?",
       answer:
-        "Only your website address. It is helpful to know approximately how you take bookings today (phone, email, another platform), but it is not required.",
+        "Nothing is required, and you do not need a website. It helps to know roughly how you take bookings today (phone, walk-ins, another platform) and your business name, but that is all.",
     },
     {
       question: "Is this a sales call?",
@@ -175,17 +175,17 @@ const pt: FaqContent = {
     {
       question: "Não tenho site. Ainda assim posso usar o Guest Overflow?",
       answer:
-        "Sim. Começamos por otimizar o seu Perfil de Empresa no Google para que as pessoas o encontrem e reservem diretamente a partir do Google. Quando pretender um site próprio, desenhamos e construímos um com reservas integradas, embora sem qualquer obrigação de começar por aí.",
+        "Sim, e não precisa de ter um. A sua página de reservas com a sua marca fica num endereço guestoverflow.com próprio (no seu próprio domínio no Premium), para que os clientes o encontrem e reservem desde o primeiro dia. Também podemos otimizar o seu Perfil de Empresa no Google ou construir-lhe um site completo com reservas integradas, como serviços adicionais opcionais, mas nenhum é necessário para começar.",
     },
     {
       question: "E se não resultar para nós?",
       answer:
-        "Trabalhamos de perto consigo e medimos os resultados em conjunto: todos os meses vê exatamente o que chegou através do seu site e do seu perfil no Google. Se algo não estiver a funcionar, preferimos resolvê-lo consigo a deixá-lo andar, por isso nunca terá de confiar apenas na nossa palavra.",
+        "Trabalhamos de perto consigo e medimos os resultados em conjunto: todos os meses vê exatamente o que chegou através da sua página de reservas e do seu perfil no Google. Se algo não estiver a funcionar, preferimos resolvê-lo consigo a deixá-lo andar, por isso nunca terá de confiar apenas na nossa palavra.",
     },
     {
       question: "O que acontece depois de marcar a demonstração?",
       answer:
-        "Uma chamada de 20 minutos em que mostramos o Guest Overflow a funcionar num site como o seu e definimos o que a sua instalação envolveria. Sem pressão, e sem discussão de custos de instalação a menos que a pretenda ter.",
+        "Uma chamada de 20 minutos em que mostramos o Guest Overflow criado para um negócio como o seu e definimos o que a sua instalação envolveria. Sem pressão, e sem discussão de custos de instalação a menos que a pretenda ter.",
     },
   ],
   product: [
@@ -244,7 +244,7 @@ const pt: FaqContent = {
     {
       question: "Só tenho um Perfil de Empresa no Google. Por onde começo?",
       answer:
-        "Precisamente por aí. Otimizamos o seu perfil para que as pessoas o encontrem e reservem a partir do Google. É a porta de entrada acessível. Um site completo com reservas integradas é a nossa oferta de nível superior, para quando estiver pronto.",
+        "Pela sua página de reservas. Fica num endereço guestoverflow.com próprio, e otimizamos o seu Perfil de Empresa no Google para que as pessoas o encontrem e reservem diretamente a partir do Google, sem precisar de site. Um site completo com reservas integradas é um extra opcional para quando estiver pronto.",
     },
   ],
   demo: [
@@ -256,7 +256,7 @@ const pt: FaqContent = {
     {
       question: "Preciso de preparar alguma coisa?",
       answer:
-        "Apenas o endereço do seu site. É útil saber, de forma aproximada, como recebe reservas atualmente (telefone, email, outra plataforma), mas não é obrigatório.",
+        "Nada é obrigatório, e não precisa de ter um site. É útil saber, de forma aproximada, como recebe reservas atualmente (telefone, walk-ins, outra plataforma) e o nome do seu negócio, mas é só isso.",
     },
     {
       question: "Isto é uma chamada de vendas?",

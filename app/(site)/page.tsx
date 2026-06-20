@@ -7,10 +7,21 @@ import { NoWebsitePath } from "@/components/sections/home/NoWebsitePath";
 import { PromiseStrip } from "@/components/sections/home/PromiseStrip";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { FooterCta } from "@/components/layout/FooterCta";
+import type { Metadata } from "next";
 import { homeContent } from "@/content/home";
 import { faqContent } from "@/content/faq";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 import { SHOW_FOUNDING_OFFER } from "@/lib/features";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()];
+  return {
+    title: t.home.title,
+    description: t.home.description,
+    alternates: { canonical: "/" },
+  };
+}
 
 /**
  * The brand hub. `/` introduces Guest Overflow and hands off to a per-sector

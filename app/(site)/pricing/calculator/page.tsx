@@ -6,15 +6,19 @@ import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { calculatorContent, type FeeSector } from "@/content/competitors";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 import { isActiveSector } from "@/lib/sectors";
 import { SHOW_CALCULATOR } from "@/lib/features";
 
-export const metadata: Metadata = {
-  title: "Commission savings calculator",
-  description:
-    "See how much commission a booking platform really costs you, and what you keep with Guest Overflow's flat price.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.calculator;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/pricing/calculator" },
+  };
+}
 
 export default async function CalculatorPage({
   searchParams,
