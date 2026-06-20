@@ -1,7 +1,7 @@
 -- Client tracker: roster, implementation log, health history,
 -- monthly figures, and touchpoints. Manual entry via the admin panel.
 
-create table public.clients (
+create table if not exists public.clients (
   id uuid primary key default gen_random_uuid(),
   created_at timestamptz not null default now(),
   name text not null,
@@ -20,7 +20,7 @@ create table public.clients (
   notes text
 );
 
-create table public.implementations (
+create table if not exists public.implementations (
   id uuid primary key default gen_random_uuid(),
   client_id uuid not null references public.clients(id) on delete cascade,
   title text not null,
@@ -33,10 +33,10 @@ create table public.implementations (
   outcome_notes text,
   created_at timestamptz not null default now()
 );
-create index implementations_client_idx on public.implementations (client_id);
+create index if not exists implementations_client_idx on public.implementations (client_id);
 
 -- Append-only: history shows the trajectory, not just the current state.
-create table public.health_assessments (
+create table if not exists public.health_assessments (
   id bigint generated always as identity primary key,
   client_id uuid not null references public.clients(id) on delete cascade,
   rag text not null check (rag in ('green', 'amber', 'red')),
@@ -48,9 +48,9 @@ create table public.health_assessments (
   assessed_at timestamptz not null default now(),
   check (rag = 'green' or reason is not null)
 );
-create index health_assessments_client_idx on public.health_assessments (client_id);
+create index if not exists health_assessments_client_idx on public.health_assessments (client_id);
 
-create table public.monthly_figures (
+create table if not exists public.monthly_figures (
   client_id uuid not null references public.clients(id) on delete cascade,
   month date not null,                            -- first of month
   bookings integer,
@@ -65,14 +65,14 @@ create table public.monthly_figures (
   primary key (client_id, month)
 );
 
-create table public.touchpoints (
+create table if not exists public.touchpoints (
   id bigint generated always as identity primary key,
   client_id uuid not null references public.clients(id) on delete cascade,
   kind text not null check (kind in ('call', 'email', 'visit', 'whatsapp', 'other')),
   summary text not null,
   occurred_at timestamptz not null default now()
 );
-create index touchpoints_client_idx on public.touchpoints (client_id);
+create index if not exists touchpoints_client_idx on public.touchpoints (client_id);
 
 alter table public.clients enable row level security;
 alter table public.implementations enable row level security;
@@ -90,6 +90,6 @@ begin
   return new;
 end $$;
 
-create trigger health_assessments_sync
+create or replace trigger health_assessments_sync
 after insert on public.health_assessments
 for each row execute function public.sync_client_health();

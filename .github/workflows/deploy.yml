@@ -86,7 +86,10 @@ jobs:
             echo "$GHCR_TOKEN" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             cd ${{ steps.vars.outputs.stack_dir }}
             docker compose pull web
+            # Apply pending DB migrations before swapping in the new version.
+            # Runs in a one-off web container against the same DATABASE_URL;
+            # `set -e` aborts the deploy if any migration fails.
+            docker compose run --rm web node scripts/migrate.mjs
             docker compose up -d
             docker logout ghcr.io
             docker image prune -f
-            # TODO: apply DB migrations here once the migration runner is wired.

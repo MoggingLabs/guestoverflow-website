@@ -43,6 +43,13 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# DB migrations + runner, applied on deploy via `node scripts/migrate.mjs`.
+# `postgres` is bundled into the standalone server chunks, so it is not present
+# as a top-level module; copy the (zero-dependency) package in for the runner.
+COPY --from=builder /app/db ./db
+COPY --from=builder /app/scripts/migrate.mjs ./scripts/migrate.mjs
+COPY --from=deps /app/node_modules/postgres ./node_modules/postgres
+
 USER nextjs
 EXPOSE 3000
 
