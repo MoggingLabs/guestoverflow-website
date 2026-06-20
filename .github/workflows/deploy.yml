@@ -3,15 +3,18 @@
 #   main        -> build :prod    image -> deploy /srv/website/production  (guestoverflow.com)
 #   development -> build :staging  image -> deploy /srv/website/staging     (staging.guestoverflow.com)
 #
-# Build happens here (not on the VPS); the server only pulls the image.
+# Build happens here (not on the VPS); the server only pulls the image. The
+# deploy connects via the existing Cloudflare Tunnel (cloudflared access ssh),
+# gated by a Cloudflare Access service token — NOT a direct public :22 hop,
+# which the provider edge was intermittently dropping.
 #
 # Required repo secrets (Settings -> Secrets and variables -> Actions):
-#   VPS_HOST    – VPS IP / hostname
-#   VPS_USER    – deploy
-#   VPS_SSH_KEY – PRIVATE half of the CI deploy key (public half is on the box)
+#   VPS_USER                 – deploy
+#   VPS_SSH_KEY              – PRIVATE half of the CI deploy key (public half on the box)
+#   CF_ACCESS_CLIENT_ID      – Cloudflare Access service token client id
+#   CF_ACCESS_CLIENT_SECRET  – Cloudflare Access service token client secret
 # GITHUB_TOKEN is provided automatically and is used to push/pull from GHCR.
-# NOTE: ensure the GHCR package is linked to this repo (or made public) so the
-# token can pull it on the server — otherwise the pull step needs a separate PAT.
+# (VPS_HOST is no longer used; the tunnel hostname ssh.guestoverflow.com is fixed.)
 
 name: Deploy
 
@@ -72,24 +75,41 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Deploy over SSH
-        uses: appleboy/ssh-action@v1
+      # Deploy over the existing Cloudflare Tunnel instead of a direct TCP
+      # connection to the VPS :22. The provider edge intermittently dropped
+      # SYNs from GitHub's rotating runner IPs (silent ~30s connect timeouts);
+      # routing through the tunnel + Cloudflare Access (service token) removes
+      # that whole failure class and keeps public SSH closed.
+      - name: Deploy over Cloudflare Tunnel
         env:
           GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          envs: GHCR_TOKEN
-          script: |
-            set -e
-            echo "$GHCR_TOKEN" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            cd ${{ steps.vars.outputs.stack_dir }}
-            docker compose pull web
-            # Apply pending DB migrations before swapping in the new version.
-            # Runs in a one-off web container against the same DATABASE_URL;
-            # `set -e` aborts the deploy if any migration fails.
-            docker compose run --rm web node scripts/migrate.mjs
-            docker compose up -d
-            docker logout ghcr.io
-            docker image prune -f
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          ACTOR: ${{ github.actor }}
+          STACK_DIR: ${{ steps.vars.outputs.stack_dir }}
+          SSH_HOST: ssh.guestoverflow.com
+          # cloudflared reads these for the Access service-token handshake.
+          TUNNEL_SERVICE_TOKEN_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+          TUNNEL_SERVICE_TOKEN_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
+        run: |
+          set -euo pipefail
+          sudo curl -fsSL https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o /usr/local/bin/cloudflared
+          sudo chmod +x /usr/local/bin/cloudflared
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$VPS_SSH_KEY" > ~/.ssh/deploy_key && chmod 600 ~/.ssh/deploy_key
+          # GHCR token piped to the remote `docker login --password-stdin`.
+          echo "$GHCR_TOKEN" | ssh \
+            -i ~/.ssh/deploy_key \
+            -o StrictHostKeyChecking=accept-new \
+            -o ConnectTimeout=30 \
+            -o "ProxyCommand=cloudflared access ssh --hostname %h" \
+            "$VPS_USER@$SSH_HOST" "
+              set -e
+              docker login ghcr.io -u $ACTOR --password-stdin
+              cd $STACK_DIR
+              docker compose pull web
+              docker compose run --rm web node scripts/migrate.mjs
+              docker compose up -d
+              docker logout ghcr.io
+              docker image prune -f
+            "
