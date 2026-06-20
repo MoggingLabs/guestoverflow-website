@@ -21,7 +21,7 @@ export default async function TermsPage() {
   const locale = await getLocale();
 
   return (
-    <LegalLayout title="Terms of service" updated="June 10, 2026">
+    <LegalLayout title="Terms of service" updated="June 20, 2026">
       {locale === "pt" && (
         <p className="rounded-md border border-amber-deep/50 bg-amber/10 px-4 py-3 text-xs leading-relaxed text-amber">
           Este documento legal é disponibilizado em inglês. Em caso de dúvida
@@ -32,11 +32,10 @@ export default async function TermsPage() {
       )}
       <h2>1. Who operates this website</h2>
       <p>
-        This website is operated by [LEGAL ENTITY NAME], a company registered
-        in Portugal, commercial registry and NIPC number [NUMBER], with
-        registered office at [REGISTERED ADDRESS] (&quot;we&quot;,
-        &quot;us&quot;). Guest Overflow is our trade name
-        for the services described on this website. Contact:{" "}
+        This website is operated under the trade name Guest Overflow
+        (&quot;we&quot;, &quot;us&quot;), the name for the services described on
+        this website. We are based in Portugal. For any question, or to request
+        our full business identification details, contact us at{" "}
         <a href={`mailto:${site.email}`} className="text-amber underline underline-offset-2">
           {site.email}
         </a>
