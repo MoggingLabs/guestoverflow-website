@@ -65,7 +65,7 @@ const en: SiteStrings = {
         { label: "Hotels", href: "/industries/hotels" },
         { label: "Spas & wellness", href: "/industries/spas" },
         { label: "Tours & experiences", href: "/industries/tours" },
-        { label: "Salons & barbers", href: "/industries/salons" },
+        { label: "Salons & barbers", href: "/industries/salons-barbers" },
       ],
     },
     {
@@ -128,7 +128,7 @@ const pt: SiteStrings = {
         { label: "Hotéis", href: "/industries/hotels" },
         { label: "Spas e bem-estar", href: "/industries/spas" },
         { label: "Tours e experiências", href: "/industries/tours" },
-        { label: "Cabeleireiros e barbearias", href: "/industries/salons" },
+        { label: "Cabeleireiros e barbearias", href: "/industries/salons-barbers" },
       ],
     },
     {
