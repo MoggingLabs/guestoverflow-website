@@ -11,7 +11,7 @@
  * To RESTORE a vertical: add its slug back (order controls display order), then
  * un-narrow that vertical's share of the shared marketing copy.
  */
-export const ACTIVE_SECTORS = ["salons-barbers", "restaurants"] as const;
+export const ACTIVE_SECTORS = ["restaurants", "salons-barbers"] as const;
 
 export type Sector =
   | "restaurants"
