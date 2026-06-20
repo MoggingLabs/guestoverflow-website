@@ -39,8 +39,8 @@ export default async function BookADemoPage() {
           </Reveal>
 
           <div className="mt-16 grid gap-14 lg:grid-cols-2 lg:gap-16">
-            {/* Left: what to expect */}
-            <div className="space-y-12">
+            {/* Right (desktop): what to expect. On mobile it stays first for context. */}
+            <div className="space-y-12 lg:order-2">
               <Reveal>
                 <h2 className="font-display text-xl font-medium text-cream">
                   {t.expectations.title}
@@ -66,8 +66,8 @@ export default async function BookADemoPage() {
               </Reveal>
             </div>
 
-            {/* Right: the form, vertical */}
-            <Reveal delay={0.15}>
+            {/* Left (desktop): the form, vertical */}
+            <Reveal delay={0.15} className="lg:order-1">
               <div className="rounded-lg border border-line bg-surface p-7 shadow-card md:p-9 lg:sticky lg:top-24">
                 <DemoForm />
               </div>
