@@ -1,6 +1,6 @@
 import type { IndustryContent, SectorPricing } from "@/types/content";
 import type { Locale } from "@/lib/i18n-shared";
-import { isActiveSector } from "@/lib/sectors";
+import { ACTIVE_SECTORS, isActiveSector } from "@/lib/sectors";
 
 /* ---------------------------------------------------------------------------
  * Per-sector pricing (PT-calibrated, ex-IVA). The shared tier ladder lives in
@@ -1034,18 +1034,20 @@ const pt: IndustriesStrings = {
 export const industriesContent: Record<Locale, IndustriesStrings> = { en, pt };
 
 /**
- * Active slugs only (locale-independent); used by generateStaticParams and the
- * sitemap. Stashed verticals stay in `industries` above but are filtered out by
- * `isActiveSector` - see `lib/sectors.ts`.
+ * Active slugs only (locale-independent), in `ACTIVE_SECTORS` order; used by
+ * generateStaticParams and the sitemap. Stashed verticals stay in `industries`
+ * above but are filtered out - see `lib/sectors.ts`. Order is driven by
+ * `ACTIVE_SECTORS`, so the array there is the single lever for display order.
  */
-export const industrySlugs = en.industries
-  .filter((i) => isActiveSector(i.slug))
-  .map((i) => i.slug);
+export const industrySlugs = ACTIVE_SECTORS.filter((slug) =>
+  en.industries.some((i) => i.slug === slug),
+);
 
-/** The active industries for a locale, in display order - used by the hubs. */
+/** The active industries for a locale, in `ACTIVE_SECTORS` display order - used by the hubs. */
 export function getActiveIndustries(locale: Locale): IndustryContent[] {
-  return industriesContent[locale].industries.filter((i) =>
-    isActiveSector(i.slug),
+  const all = industriesContent[locale].industries;
+  return ACTIVE_SECTORS.map((slug) => all.find((i) => i.slug === slug)).filter(
+    (i): i is IndustryContent => i !== undefined,
   );
 }
 
