@@ -11,7 +11,7 @@
  * To RESTORE a vertical: add its slug back (order controls display order), then
  * un-narrow that vertical's share of the shared marketing copy.
  */
-export const ACTIVE_SECTORS = ["salons-barbers", "restaurants"] as const;
+export const ACTIVE_SECTORS = ["restaurants", "salons-barbers"] as const;
 
 export type Sector =
   | "restaurants"
@@ -31,7 +31,7 @@ export function isActiveSector(slug: string): boolean {
  * data lookup and the calculator math (`?sector=` deep-links stay keyed on it).
  * The public slug is what appears in crawlable paths (`/industries/{slug}`,
  * `/pricing/{slug}`). The two are decoupled on purpose: we can ship a clean
- * `/industries/salons` without renaming `salons-barbers` across the content,
+ * `/industries/spas` without renaming `spas-wellness` across the content,
  * pricing, competitor and widget-theme files.
  *
  * Convention: a single short noun, plural where natural. New sectors that
@@ -41,7 +41,7 @@ export const SECTOR_PATHS: Record<Sector, string> = {
   restaurants: "restaurants",
   hotels: "hotels",
   "spas-wellness": "spas",
-  "salons-barbers": "salons",
+  "salons-barbers": "salons-barbers",
   "tours-experiences": "tours",
 };
 
