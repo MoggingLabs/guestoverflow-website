@@ -12,13 +12,16 @@ import {
   industrySlugs,
 } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
+import { sectorForPublicSlug, publicSlugFor } from "@/lib/sectors";
 import { SHOW_CALCULATOR } from "@/lib/features";
 import { cn } from "@/lib/utils";
 
+// `sector` is the public URL slug (e.g. "salons"); translate to the internal
+// key before content lookup.
 type Params = { sector: string };
 
 export function generateStaticParams(): Params[] {
-  return industrySlugs.map((sector) => ({ sector }));
+  return industrySlugs.map((sector) => ({ sector: publicSlugFor(sector) }));
 }
 
 export async function generateMetadata({
@@ -26,7 +29,8 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const industry = getIndustry("en", (await params).sector);
+  const key = sectorForPublicSlug((await params).sector);
+  const industry = key ? getIndustry("en", key) : undefined;
   if (!industry) return {};
   return {
     title: `${industry.label} pricing`,
@@ -40,7 +44,8 @@ export default async function SectorPricingPage({
   params: Promise<Params>;
 }) {
   const locale = await getLocale();
-  const industry = getIndustry(locale, (await params).sector);
+  const key = sectorForPublicSlug((await params).sector);
+  const industry = key ? getIndustry(locale, key) : undefined;
   if (!industry) notFound();
 
   const t = industriesContent[locale].detail;

@@ -5,7 +5,6 @@ import { FaqSection } from "@/components/sections/shared/FaqSection";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { CostCalculator } from "@/components/sections/pricing/CostCalculator";
 import { SHOW_CALCULATOR, SHOW_FOUNDING_OFFER } from "@/lib/features";
-import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -17,6 +16,7 @@ import { getActiveIndustries, sectorPrices } from "@/content/industries";
 import { faqContent } from "@/content/faq";
 import { siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
+import { publicSlugFor } from "@/lib/sectors";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -52,18 +52,13 @@ export default async function PricingPage() {
           </Reveal>
           <Reveal
             stagger
-            className={cn(
-              "mt-12 grid gap-5",
-              industries.length === 1
-                ? "max-w-sm mx-auto"
-                : "md:grid-cols-2 lg:grid-cols-3",
-            )}
+            className="mt-12 mx-auto flex max-w-5xl flex-wrap justify-center gap-5"
           >
             {industries.map((industry) => (
               <Link
                 key={industry.slug}
-                href={`/pricing/${industry.slug}`}
-                className="group"
+                href={`/pricing/${publicSlugFor(industry.slug)}`}
+                className="group w-full sm:w-80"
               >
                 <Card className="h-full transition-colors group-hover:border-amber-deep/60">
                   <div className="flex items-baseline justify-between gap-3">

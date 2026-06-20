@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { industrySlugs } from "@/content/industries";
 import { competitorSlugs } from "@/content/compare";
 import { site } from "@/content/site";
+import { publicSlugFor } from "@/lib/sectors";
 import { SHOW_CALCULATOR } from "@/lib/features";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -26,13 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const industryRoutes = industrySlugs.map((slug) => ({
-    url: `${site.url}/industries/${slug}`,
+    url: `${site.url}/industries/${publicSlugFor(slug)}`,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const sectorPricingRoutes = industrySlugs.map((slug) => ({
-    url: `${site.url}/pricing/${slug}`,
+    url: `${site.url}/pricing/${publicSlugFor(slug)}`,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

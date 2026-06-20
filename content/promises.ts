@@ -34,17 +34,17 @@ const en: PromisesContent = {
     },
     {
       title: "No surprise add-ons",
-      body: "The quoted price is the actual price. Essentials are included, not unlocked one fee at a time.",
+      body: "The quoted price is the actual price. Essentials are included, not charged one fee at a time.",
       vs: "A low headline price becomes far higher once marketing boosts, the branded app and payment fees are added on.",
     },
     {
       title: "We never increase your rate without notice",
-      body: "Your price is protected for as long as you remain a client. Increases never apply to existing salons.",
-      vs: "Salon marketplaces have repeatedly raised commission rates and payment fees with little notice to the salons on them.",
+      body: "Your price is protected for as long as you remain a client. Increases never apply to existing customers.",
+      vs: "Marketplaces have repeatedly raised commission rates and payment fees with little notice to the businesses on them.",
     },
     {
       title: "We never market to your clients",
-      body: "Your client list is for your salon alone. We will never email, advertise to, or sell your clients, and this is written into the agreement.",
+      body: "Your client list is for your business alone. We will never email, advertise to, or sell your clients, and this is written into the agreement.",
       vs: "Marketplaces market your own clients back to you, and to nearby competitors, using the list you built.",
     },
     {
@@ -76,17 +76,17 @@ const pt: PromisesContent = {
     },
     {
       title: "Sem extras-surpresa",
-      body: "O preço indicado é o preço efetivo. O essencial vem incluído, não desbloqueado taxa a taxa.",
+      body: "O preço indicado é o preço efetivo. O essencial vem incluído, não cobrado taxa a taxa.",
       vs: "Um preço anunciado baixo torna-se muito mais alto depois de se somarem os impulsos de marketing, a app de marca e as taxas de pagamento.",
     },
     {
       title: "Nunca aumentamos a sua tarifa sem aviso prévio",
-      body: "O seu preço fica garantido enquanto se mantiver cliente. Os aumentos nunca se aplicam a salões existentes.",
-      vs: "Os marketplaces de salões já aumentaram repetidamente as comissões e as taxas de pagamento com pouco aviso aos salões que neles estão.",
+      body: "O seu preço fica garantido enquanto se mantiver cliente. Os aumentos nunca se aplicam a clientes existentes.",
+      vs: "Os marketplaces já aumentaram repetidamente as comissões e as taxas de pagamento com pouco aviso aos negócios que neles estão.",
     },
     {
       title: "Nunca fazemos marketing aos seus clientes",
-      body: "A sua lista de clientes é só do seu salão. Nunca enviamos email, publicidade, nem vendemos os seus clientes, e isto está estipulado no contrato.",
+      body: "A sua lista de clientes é só do seu negócio. Nunca enviamos email, publicidade, nem vendemos os seus clientes, e isto está estipulado no contrato.",
       vs: "Os marketplaces fazem marketing dos seus próprios clientes de volta para si, e para concorrentes próximos, usando a lista que construiu.",
     },
     {

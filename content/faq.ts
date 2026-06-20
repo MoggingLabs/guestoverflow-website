@@ -16,17 +16,17 @@ const en: FaqContent = {
     {
       question: "How is Guest Overflow priced?",
       answer:
-        "A flat monthly subscription, with no per-appointment or per-booking commission, ever. Pricing depends on the plan and the level of customization your salon requires; see the pricing page for tiers, or book a demo for an exact quote.",
+        "A flat monthly subscription, with no per-appointment or per-booking commission, ever. Pricing depends on the plan and the level of customization your business requires; see the pricing page for tiers, or book a demo for an exact quote.",
     },
     {
       question: "How long does setup take?",
       answer:
-        "Most salons go live within days of kickoff. Our team designs and builds your booking system, branded with your name, logo, and colours on your own guestoverflow.com address (your own custom domain on Premium). You review and approve before it goes live.",
+        "Most businesses go live within days of kickoff. Our team designs and builds your booking system, branded with your name, logo, and colours on your own guestoverflow.com address (your own custom domain on Premium). You review and approve before it goes live.",
     },
     {
       question: "Do I need an existing website?",
       answer:
-        "No. We build your custom booking system, branded as yours, at your own guestoverflow.com address, and it is the destination clients reach. If you already have a site or social profiles, on any platform, including custom-built sites, WordPress, Squarespace, and Webflow, you simply point them to it, so clients move straight to your branded booking page. On Premium, it runs on your own custom domain.",
+        "No. We build your custom booking system, branded as yours, at your own guestoverflow.com address, and it is the destination clients reach. If you already have a site or social profiles, on any platform, including custom-built sites, WordPress, Squarespace, and Webflow, you point them to it, so clients move straight to your branded booking page. On Premium, it runs on your own custom domain.",
     },
     {
       question: "Who owns the client data?",
@@ -36,12 +36,12 @@ const en: FaqContent = {
     {
       question: "Can it match my brand exactly?",
       answer:
-        "Yes; that is the core of what we do. Colours, typography, copy, and flow are tailored to each salon, so your booking page looks like your studio, not a generic app. We show you exactly how it will look in your demo.",
+        "Yes; that is the core of what we do. Colours, typography, copy, and flow are tailored to each business, so your booking page looks like your brand, not a generic app. We show you exactly how it will look in your demo.",
     },
     {
       question: "Will Guest Overflow bring me new customers?",
       answer:
-        "Yes. We help the right clients find you and book you directly. Reserve with Google, your Google Business Profile, and a booking system built around your brand all bring people to you on your own terms, commission-free, and we set them up for you. And the clients you already have, the regulars, the direct traffic, and word of mouth, stop costing you a commission every time they come back.",
+        "Yes. We help the right clients find you and book you directly. Reserve with Google, your Google Business Profile, and a booking system built around your brand all bring people to you on your own terms, commission-free, and we set them up for you. And the clients you already have, the regulars, the direct traffic, the word of mouth, stop costing you a commission every time they come back.",
     },
     {
       question: "I do not have a website. Can I still use Guest Overflow?",
@@ -63,17 +63,17 @@ const en: FaqContent = {
     {
       question: "Does Guest Overflow handle deposits and no-shows?",
       answer:
-        "Yes. You can require card details or take deposits for specific services, stylists, or dates, with automated reminders that reduce no-shows considerably.",
+        "Yes. You can require card details or take deposits for specific services, staff, or dates, with automated reminders that reduce no-shows considerably.",
     },
     {
       question: "Can I manage availability myself?",
       answer:
-        "Fully. Open and close slots, set per-service durations, block dates, and adjust chair availability in a dashboard built for busy salons, and changes go live instantly.",
+        "Fully. Open and close slots, set per-service durations, block dates, and adjust team availability in a dashboard built for busy businesses, and changes go live instantly.",
     },
     {
       question: "Does it support multiple locations?",
       answer:
-        "Yes. Groups can run several salons from one dashboard with separate availability, branding, and client lists per location.",
+        "Yes. Groups can run several locations from one dashboard with separate availability, branding, and client lists per location.",
     },
     {
       question: "Which channels and integrations do you support?",
@@ -95,7 +95,7 @@ const en: FaqContent = {
     {
       question: "Is the booking page on my own domain?",
       answer:
-        "By default your booking page lives at a branded guestoverflow.com address (for example, yoursalon.guestoverflow.com), with your logo, colours, and name throughout. On Premium, it moves to your own custom domain as a true white-label, where clients never see our name.",
+        "By default your booking page lives at a branded guestoverflow.com address (for example, yourbusiness.guestoverflow.com), with your logo, colours, and name throughout. On Premium, it moves to your own custom domain as a true white-label, where clients never see our name.",
     },
     {
       question: "Is there a setup fee?",
@@ -132,7 +132,7 @@ const en: FaqContent = {
     {
       question: "Is this a sales call?",
       answer:
-        "It is a working session. If Guest Overflow is not the right fit for your salon, we will say so and direct you to a more suitable option.",
+        "It is a working session. If Guest Overflow is not the right fit for your business, we will say so and direct you to a more suitable option.",
     },
   ],
   productTitle: "Product questions",
@@ -145,12 +145,12 @@ const pt: FaqContent = {
     {
       question: "Como funciona o preço do Guest Overflow?",
       answer:
-        "Uma subscrição mensal fixa, sem comissão por marcação, nunca. O valor depende do plano e do nível de personalização de que o seu salão necessita; veja os planos na página de preços ou marque uma demonstração para um orçamento exato.",
+        "Uma subscrição mensal fixa, sem comissão por marcação, nunca. O valor depende do plano e do nível de personalização de que o seu negócio necessita; veja os planos na página de preços ou marque uma demonstração para um orçamento exato.",
     },
     {
       question: "Quanto tempo demora a instalação?",
       answer:
-        "A maioria dos salões fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas, com o seu nome, logótipo e cores, num endereço guestoverflow.com próprio (no seu próprio domínio no Premium). O cliente revê e aprova antes de ficar no ar.",
+        "A maioria dos negócios fica online poucos dias após o arranque. A nossa equipa desenha e constrói o seu sistema de reservas, com o seu nome, logótipo e cores, num endereço guestoverflow.com próprio (no seu próprio domínio no Premium). O cliente revê e aprova antes de ficar no ar.",
     },
     {
       question: "Preciso de ter um site?",
@@ -165,7 +165,7 @@ const pt: FaqContent = {
     {
       question: "Consegue ficar exatamente com a minha marca?",
       answer:
-        "Sim; é esse o centro do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada salão, para que a sua página de reservas se pareça com o seu estúdio e não com uma app genérica. Mostramos-lhe exatamente como ficará na sua demonstração.",
+        "Sim; é esse o centro do que fazemos. Cores, tipografia, textos e fluxo são feitos à medida de cada negócio, para que a sua página de reservas se pareça com a sua marca e não com uma app genérica. Mostramos-lhe exatamente como ficará na sua demonstração.",
     },
     {
       question: "O Guest Overflow traz-me novos clientes?",
@@ -192,17 +192,17 @@ const pt: FaqContent = {
     {
       question: "O Guest Overflow trata de sinais e faltas (no-shows)?",
       answer:
-        "Sim. Pode pedir dados de cartão ou cobrar sinais para serviços, profissionais ou datas específicos, com lembretes automáticos que reduzem consideravelmente as faltas.",
+        "Sim. Pode pedir dados de cartão ou cobrar sinais para serviços, equipa ou datas específicos, com lembretes automáticos que reduzem consideravelmente as faltas.",
     },
     {
       question: "Posso gerir a disponibilidade sozinho?",
       answer:
-        "Totalmente. Abra e feche horários, defina durações por serviço, bloqueie datas e ajuste a disponibilidade de cadeiras num painel concebido para salões com muito movimento, e as alterações ficam ativas de imediato.",
+        "Totalmente. Abra e feche horários, defina durações por serviço, bloqueie datas e ajuste a disponibilidade num painel concebido para negócios com muito movimento, e as alterações ficam ativas de imediato.",
     },
     {
-      question: "Suporta vários salões?",
+      question: "Suporta vários espaços?",
       answer:
-        "Sim. Grupos podem gerir vários salões a partir de um único painel, com disponibilidade, marca e listas de clientes separadas por localização.",
+        "Sim. Grupos podem gerir vários espaços a partir de um único painel, com disponibilidade, marca e listas de clientes separadas por localização.",
     },
     {
       question: "Que canais e integrações suportam?",
@@ -219,12 +219,12 @@ const pt: FaqContent = {
     {
       question: "Não há mesmo taxa por reserva?",
       answer:
-        "Não, de facto. A sua subscrição mantém-se fixa independentemente do número de reservas. Não consideramos que deva pagar mais por ter muito movimento.",
+        "Exato. A sua subscrição mantém-se fixa independentemente do número de reservas. Não achamos que deva pagar mais por ter muito movimento.",
     },
     {
       question: "A página de marcações fica no meu próprio domínio?",
       answer:
-        "Por defeito, a sua página de marcações fica num endereço guestoverflow.com com a sua marca (por exemplo, oseusalao.guestoverflow.com), com o seu logótipo, cores e nome em todo o lado. No Premium, passa para o seu próprio domínio como white-label completo, onde os clientes nunca veem o nosso nome.",
+        "Por defeito, a sua página de marcações fica num endereço guestoverflow.com com a sua marca (por exemplo, oseunegocio.guestoverflow.com), com o seu logótipo, cores e nome em todo o lado. No Premium, passa para o seu próprio domínio como white-label completo, onde os clientes nunca veem o nosso nome.",
     },
     {
       question: "Há custo de instalação?",
@@ -261,7 +261,7 @@ const pt: FaqContent = {
     {
       question: "Isto é uma chamada de vendas?",
       answer:
-        "É uma sessão de trabalho. Se o Guest Overflow não for adequado para o seu salão, dizemos-lho e indicamos-lhe uma opção mais apropriada.",
+        "É uma sessão de trabalho. Se o Guest Overflow não for adequado para o seu negócio, dizemos-lho e indicamos-lhe uma opção mais apropriada.",
     },
   ],
   productTitle: "Perguntas sobre o produto",

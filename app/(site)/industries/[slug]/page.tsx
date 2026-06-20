@@ -11,12 +11,15 @@ import { Reveal } from "@/components/ui/Reveal";
 import { getIndustry, industriesContent, industrySlugs } from "@/content/industries";
 import { getVenueTheme } from "@/content/widget-themes";
 import { getLocale } from "@/lib/i18n";
+import { publicSlugFor, sectorForPublicSlug } from "@/lib/sectors";
 import { SHOW_LIVE_DEMO } from "@/lib/features";
 
+// `slug` is the public URL slug (e.g. "salons"), not the internal sector key
+// (e.g. "salons-barbers"). Translate it before any content lookup.
 type Params = { slug: string };
 
 export function generateStaticParams(): Params[] {
-  return industrySlugs.map((slug) => ({ slug }));
+  return industrySlugs.map((slug) => ({ slug: publicSlugFor(slug) }));
 }
 
 export async function generateMetadata({
@@ -24,7 +27,8 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const industry = getIndustry("en", (await params).slug);
+  const key = sectorForPublicSlug((await params).slug);
+  const industry = key ? getIndustry("en", key) : undefined;
   if (!industry) return {};
   return {
     title: `Online booking for ${industry.label.toLowerCase()}`,
@@ -38,7 +42,8 @@ export default async function IndustryPage({
   params: Promise<Params>;
 }) {
   const locale = await getLocale();
-  const industry = getIndustry(locale, (await params).slug);
+  const key = sectorForPublicSlug((await params).slug);
+  const industry = key ? getIndustry(locale, key) : undefined;
   if (!industry) notFound();
 
   const t = industriesContent[locale].detail;

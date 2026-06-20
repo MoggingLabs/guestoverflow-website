@@ -3,13 +3,17 @@ import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { site, siteStrings } from "@/content/site";
 import { getLocale } from "@/lib/i18n";
-import { isActiveSector } from "@/lib/sectors";
+import { isActiveSector, sectorForPublicSlug } from "@/lib/sectors";
 import { SHOW_LIVE_DEMO, SHOW_CALCULATOR } from "@/lib/features";
 
 /** Hide footer links that point at stashed verticals, campaigns, or features. */
 function isStashedLink(href: string): boolean {
   const industry = href.match(/^\/industries\/(.+)$/);
-  if (industry) return !isActiveSector(industry[1]);
+  if (industry) {
+    // Footer hrefs carry the public URL slug; gate on the internal key.
+    const key = sectorForPublicSlug(industry[1]) ?? industry[1];
+    return !isActiveSector(key);
+  }
   if (href === "/quandoo") return true;
   if (href === "/#live-demo" && !SHOW_LIVE_DEMO) return true;
   if (href === "/pricing/calculator" && !SHOW_CALCULATOR) return true;

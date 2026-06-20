@@ -12,6 +12,7 @@ import {
   getCompareEntry,
 } from "@/content/compare";
 import { getLocale } from "@/lib/i18n";
+import { publicSlugFor } from "@/lib/sectors";
 
 type Params = { competitor: string };
 
@@ -98,7 +99,7 @@ export default async function CompareDetailPage({
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button
-                  href={`/pricing/${entry.sector}`}
+                  href={`/pricing/${publicSlugFor(entry.sector)}`}
                   analyticsLabel={`compare_${entry.slug}_pricing`}
                 >
                   {t.seePricing}

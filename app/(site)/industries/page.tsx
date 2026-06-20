@@ -7,6 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { FooterCta } from "@/components/layout/FooterCta";
 import { industriesContent, getActiveIndustries } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
+import { publicSlugFor } from "@/lib/sectors";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export default async function IndustriesPage() {
             {industries.map((industry) => (
               <Link
                 key={industry.slug}
-                href={`/industries/${industry.slug}`}
+                href={`/industries/${publicSlugFor(industry.slug)}`}
                 className="group flex h-full flex-col rounded-lg border border-line bg-surface p-8 shadow-card transition-colors hover:border-amber-deep"
               >
                 <span className="text-amber">

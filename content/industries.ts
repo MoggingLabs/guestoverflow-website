@@ -22,7 +22,15 @@ export const sectorPrices: Record<
     premiumSetup?: number;
   }
 > = {
-  restaurants: { starter: 39, essential: 89, premium: 199, customFrom: 349 },
+  restaurants: {
+    starter: 45,
+    essential: 85,
+    premium: 169,
+    customFrom: 329,
+    starterSetup: 299,
+    essentialSetup: 499,
+    premiumSetup: 999,
+  },
   hotels: { starter: 29, essential: 129, premium: 279, customFrom: 499 },
   "spas-wellness": { starter: 39, essential: 79, premium: 149, customFrom: 299 },
   "salons-barbers": {
@@ -164,6 +172,166 @@ const pricingLadder = {
   },
 } as const;
 
+type LadderTier = {
+  name: string;
+  note: string;
+  blurb: string;
+  features: readonly string[];
+};
+type LadderPremium = {
+  name: string;
+  note: string;
+  blurb: string;
+  lead: readonly string[];
+  tail: readonly string[];
+};
+type LadderShape = {
+  eyebrow: string;
+  starter: LadderTier;
+  essential: LadderTier;
+  premium: LadderPremium;
+  custom: LadderTier;
+  smsAddOn: { name: string; priceNote: string; included: string };
+};
+
+/**
+ * Per-sector overrides of the shared `pricingLadder`. A sector whose tiers need
+ * framing in its own language (restaurants think in covers and tables, not
+ * chairs and stylists) lives here; sectors absent from this map fall back to the
+ * shared salon-shaped ladder. `premiumFlow` (from sectorPriceCopy) is still
+ * injected into the Premium tier between its `lead` and `tail`.
+ */
+const sectorLadders: Partial<Record<Locale, Record<string, LadderShape>>> = {
+  en: {
+    restaurants: {
+      eyebrow: "Pricing",
+      starter: {
+        name: "Starter",
+        note: "For a single dining room taking its first online reservations",
+        blurb: "Your branded reservation page with WhatsApp reminders, built and launched by us.",
+        features: [
+          "Branded reservation page on your own guestoverflow.com address",
+          "One real-time book for online, phone & walk-in reservations",
+          "WhatsApp & email confirmations & reminders, 450/month included",
+          "One-tap confirm & cancel to cut no-shows",
+          "Deposits & card holds into your own Stripe",
+          "Guest list with full export; you are the data controller",
+          "Reserve with Google, commission-free",
+          "Floor map & walk-in waitlist",
+          "No commission, never per cover, never on regulars",
+          "Email support",
+        ],
+      },
+      essential: {
+        name: "Essential",
+        note: "For a busy full-service restaurant",
+        blurb: "Room to run a full book, with pacing, large parties and an ongoing partnership.",
+        features: [
+          "Everything in Starter",
+          "Multi-area floor: dining room, terrace, bar & private",
+          "Risk-scaled deposits by party size, day & time, with MB WAY",
+          "Guest CRM: visit history, allergies, notes & tags",
+          "Shift & service-window management",
+          "POS integration: covers flow to the final bill",
+          "Quarterly business review with us",
+          "Priority support",
+        ],
+      },
+      premium: {
+        name: "Premium",
+        note: "For venues that live by the reservation book",
+        blurb: "Everything in Essential, with analytics, marketing and a true white-label.",
+        lead: [
+          "Everything in Essential",
+          "Booking & demand analytics: covers, no-shows, sources & repeat guests",
+        ],
+        tail: [
+          "Duplicate-booking detection & no-show scoring",
+          "WhatsApp marketing to your own guest list",
+          "True on-domain white-label, none of our branding",
+          "Dedicated priority support",
+        ],
+      },
+      custom: {
+        name: "Custom",
+        note: "Groups & multiple locations",
+        blurb: "Multiple venues, custom integrations, or requirements we have not yet anticipated.",
+        features: [
+          "Everything in Premium",
+          "Multiple locations: flat per venue, no per-location penalty",
+          "Custom integrations (POS, PMS, CRM)",
+          "Dedicated account manager",
+        ],
+      },
+      smsAddOn: pricingLadder.en.smsAddOn,
+    },
+  },
+  pt: {
+    restaurants: {
+      eyebrow: "Preços",
+      starter: {
+        name: "Starter",
+        note: "Para uma sala que começa a receber reservas online",
+        blurb: "A sua página de reservas com a sua marca e lembretes por WhatsApp, criada e lançada por nós.",
+        features: [
+          "Página de reservas com a sua marca, num endereço guestoverflow.com",
+          "Um livro de reservas em tempo real para online, telefone e walk-in",
+          "Confirmações e lembretes por WhatsApp e email, 450/mês incluídos",
+          "Confirmar e cancelar num toque para reduzir as faltas",
+          "Sinais e cauções de cartão na sua própria conta Stripe",
+          "Lista de clientes com exportação completa; o responsável pelos dados é você",
+          "Reservar com o Google, sem comissão",
+          "Mapa de sala e lista de espera para walk-ins",
+          "Sem comissão, nunca por pessoa, nunca sobre os habituais",
+          "Suporte por email",
+        ],
+      },
+      essential: {
+        name: "Essential",
+        note: "Para um restaurante de serviço completo com movimento",
+        blurb: "Espaço para gerir um livro cheio, com ritmo, grupos grandes e uma parceria contínua.",
+        features: [
+          "Tudo o que está no Starter",
+          "Sala multi-área: sala, esplanada, bar e privados",
+          "Sinais ajustados ao risco por nº de pessoas, dia e hora, com MB WAY",
+          "CRM de clientes: histórico de visitas, alergias, notas e etiquetas",
+          "Gestão de turnos e janelas de serviço",
+          "Integração com POS: as reservas ligam-se à conta final",
+          "Revisão trimestral connosco",
+          "Suporte prioritário",
+        ],
+      },
+      premium: {
+        name: "Premium",
+        note: "Para espaços que vivem do livro de reservas",
+        blurb: "Tudo o que está no Essential, com análise de dados, marketing e white-label verdadeiro.",
+        lead: [
+          "Tudo o que está no Essential",
+          "Análise de reservas e procura: pessoas, faltas, origens e clientes habituais",
+        ],
+        tail: [
+          "Deteção de reservas duplicadas e classificação de risco de falta",
+          "Marketing por WhatsApp para a sua própria lista de clientes",
+          "White-label verdadeiro no seu domínio, sem a nossa marca",
+          "Suporte prioritário dedicado",
+        ],
+      },
+      custom: {
+        name: "À medida",
+        note: "Grupos e várias localizações",
+        blurb: "Vários espaços, integrações à medida, ou requisitos que ainda não antecipámos.",
+        features: [
+          "Tudo o que está no Premium",
+          "Várias localizações: preço fixo por espaço, sem penalização",
+          "Integrações à medida (POS, PMS, CRM)",
+          "Gestor de conta dedicado",
+        ],
+      },
+      smsAddOn: pricingLadder.pt.smsAddOn,
+    },
+  },
+};
+
 type SectorCopy = {
   valueUnit: string;
   heroHeadline: string;
@@ -215,11 +383,11 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
       valueUnit: "appointment",
       heroHeadline: "Pricing for salons & barbers. Published, flat, commission-free.",
       heroSubhead:
-        "Choose the plan that fits your team. No commission on a first visit, no per-booking fee, and no marketplace cut — just a flat monthly price you can see right here.",
+        "Choose the plan that fits your team. No commission on a first visit, no per-booking fee, and no marketplace cut, only a flat monthly price you can see right here.",
       premiumFlow: "Advanced per-stylist buffers & chair/resource management",
       comparison: {
         title: "The actual cost of per-chair pricing",
-        body: "A four-chair shop on Booksy pays approximately €80-110 a month in per-seat fees, plus 30% of every new client's first visit. Guest Overflow is a published flat plan with no commission on your bookings and no marketplace cut — you choose your plan, and your regulars never cost you a fee.",
+        body: "A four-chair shop on Booksy pays approximately €80-110 a month in per-seat fees, plus 30% of every new client's first visit. Guest Overflow is a published flat plan with no commission on your bookings and no marketplace cut. You choose your plan, and your regulars never cost you a fee.",
       },
     },
     "tours-experiences": {
@@ -274,11 +442,11 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
       valueUnit: "marcação",
       heroHeadline: "Preços para cabeleireiros e barbearias. Públicos, fixos e sem comissão.",
       heroSubhead:
-        "Escolha o plano à medida da sua equipa. Sem comissão na primeira visita, sem taxa por marcação e sem corte de marketplace — apenas uma mensalidade fixa que pode ver aqui mesmo.",
+        "Escolha o plano à medida da sua equipa. Sem comissão na primeira visita, sem taxa por marcação e sem corte de marketplace, apenas uma mensalidade fixa que pode ver aqui mesmo.",
       premiumFlow: "Gestão avançada de intervalos por profissional e de cadeiras/recursos",
       comparison: {
         title: "O custo real do preço por cadeira",
-        body: "Um espaço de quatro cadeiras na Booksy paga cerca de 80 a 110 € por mês em taxas por lugar, mais 30% da primeira visita de cada novo cliente. O Guest Overflow é um plano fixo e público, sem comissão nas suas marcações e sem corte de marketplace — escolhe o seu plano, e os seus clientes habituais nunca lhe custam uma taxa.",
+        body: "Um espaço de quatro cadeiras na Booksy paga cerca de 80 a 110 € por mês em taxas por lugar, mais 30% da primeira visita de cada novo cliente. O Guest Overflow é um plano fixo e público, sem comissão nas suas marcações e sem corte de marketplace. Escolhe o seu plano, e os seus clientes habituais nunca lhe custam uma taxa.",
       },
     },
     "tours-experiences": {
@@ -296,7 +464,7 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
 };
 
 function buildSectorPricing(locale: Locale, slug: string): SectorPricing {
-  const ui = pricingLadder[locale];
+  const ui: LadderShape = sectorLadders[locale]?.[slug] ?? pricingLadder[locale];
   const p = sectorPrices[slug];
   const c = sectorPriceCopy[locale][slug];
   return {
@@ -403,7 +571,7 @@ const en: IndustriesStrings = {
         },
         {
           title: "A guest book you own",
-          body: "Regular guests, allergies, anniversaries. All of it remains in your hands, and you may export it whenever you require.",
+          body: "Regular guests, allergies, anniversaries. It all stays in your hands, and you can export it any time.",
         },
       ],
       metaDescription:
@@ -521,7 +689,7 @@ const en: IndustriesStrings = {
         },
         {
           title: "Group bookings handled by email",
-          body: "Private tastings and group tours arranged over lengthy email threads consume hours and are overlooked more often than is generally acknowledged.",
+          body: "Private tastings and group tours arranged over long email threads eat up hours, and too many fall through the cracks.",
         },
       ],
       highlights: [
@@ -770,7 +938,7 @@ const pt: IndustriesStrings = {
         },
         {
           title: "Reservas de grupo geridas por email",
-          body: "Provas privadas e tours de grupo negociados em longas trocas de email consomem horas e são esquecidos mais vezes do que é reconhecido.",
+          body: "Provas privadas e tours de grupo negociados em longas trocas de email consomem horas, e muitos acabam por se perder.",
         },
       ],
       highlights: [

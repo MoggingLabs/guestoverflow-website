@@ -7,6 +7,7 @@ import {
   sectorPrices,
 } from "@/content/industries";
 import { getLocale } from "@/lib/i18n";
+import { publicSlugFor } from "@/lib/sectors";
 
 /**
  * Static "us vs the named rival" card for a sector page. Reuses the sector's
@@ -51,7 +52,7 @@ export async function ComparisonCallout({ slug }: { slug: string }) {
             <p className="mt-2 text-sm text-cream-dim">{t.comparisonFlat}</p>
             <div className="mt-auto flex flex-wrap gap-3 pt-8">
               <Button
-                href={`/pricing/${slug}`}
+                href={`/pricing/${publicSlugFor(slug)}`}
                 analyticsLabel={`comparison_${slug}_pricing`}
               >
                 {t.seePricing}
