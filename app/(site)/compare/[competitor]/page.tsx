@@ -25,9 +25,14 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const entry = getCompareEntry("en", (await params).competitor);
+  const { competitor } = await params;
+  const entry = getCompareEntry(await getLocale(), competitor);
   if (!entry) return {};
-  return { title: entry.headline, description: entry.subhead };
+  return {
+    title: entry.headline,
+    description: entry.subhead,
+    alternates: { canonical: `/compare/${competitor}` },
+  };
 }
 
 export default async function CompareDetailPage({

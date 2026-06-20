@@ -3,16 +3,19 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { DemoForm } from "@/components/sections/demo/DemoForm";
 import { FaqSection } from "@/components/sections/shared/FaqSection";
-import { BookingWidget } from "@/components/widget/BookingWidget";
 import { demoContent } from "@/content/demo";
 import { faqContent } from "@/content/faq";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "Book a demo",
-  description:
-    "A working session, not a sales pitch. We'll show you the booking flow, the dashboard, and what your branded version would look like.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.bookADemo;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/book-a-demo" },
+  };
+}
 
 export default async function BookADemoPage() {
   const locale = await getLocale();
@@ -36,7 +39,7 @@ export default async function BookADemoPage() {
           </Reveal>
 
           <div className="mt-16 grid gap-14 lg:grid-cols-2 lg:gap-16">
-            {/* Left: what to expect + the live booking page to play with */}
+            {/* Left: what to expect */}
             <div className="space-y-12">
               <Reveal>
                 <h2 className="font-display text-xl font-medium text-cream">
@@ -60,16 +63,6 @@ export default async function BookADemoPage() {
                 <p className="mt-8 border-l-2 border-amber-deep pl-4 text-sm text-cream-dim">
                   {t.reassurance}
                 </p>
-              </Reveal>
-
-              <Reveal delay={0.1}>
-                <h2 className="font-display text-xl font-medium text-cream">
-                  {t.tryWidget.title}
-                </h2>
-                <p className="mt-2 mb-6 text-sm text-cream-dim">
-                  {t.tryWidget.body}
-                </p>
-                <BookingWidget caption={t.tryWidget.caption} />
               </Reveal>
             </div>
 

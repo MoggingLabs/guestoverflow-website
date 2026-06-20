@@ -6,13 +6,17 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { aboutContent } from "@/content/about";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Guest Overflow is built by a team with years of experience crafting high-converting guest-facing websites.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.about;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/about" },
+  };
+}
 
 export default async function AboutPage() {
   const t = aboutContent[await getLocale()];

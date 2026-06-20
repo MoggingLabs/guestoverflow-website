@@ -6,11 +6,16 @@ import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { servicesContent } from "@/content/services";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = servicesContent[await getLocale()];
-  return { title: "Services", description: t.meta };
+  const locale = await getLocale();
+  return {
+    title: seoStrings[locale].servicesTitle,
+    description: servicesContent[locale].meta,
+    alternates: { canonical: "/services" },
+  };
 }
 
 export default async function ServicesPage() {

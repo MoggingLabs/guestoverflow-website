@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalLayout } from "@/components/layout/LegalLayout";
 import { site } from "@/content/site";
+import { seoStrings } from "@/content/seo";
+import { getLocale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "Terms of service",
-  description:
-    "The terms that govern the use of the Guest Overflow website, the interactive demo, and our promotional offers.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.terms;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/terms" },
+  };
+}
 
 const UL = "list-disc space-y-1.5 pl-5";
 

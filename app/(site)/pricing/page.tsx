@@ -15,14 +15,18 @@ import { pricingContent } from "@/content/pricing";
 import { getActiveIndustries, sectorPrices } from "@/content/industries";
 import { faqContent } from "@/content/faq";
 import { siteStrings } from "@/content/site";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 import { publicSlugFor } from "@/lib/sectors";
 
-export const metadata: Metadata = {
-  title: "Pricing",
-  description:
-    "Flat monthly pricing with no commission on your bookings, calibrated for salons and barbershops.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.pricing;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/pricing" },
+  };
+}
 
 export default async function PricingPage() {
   const locale = await getLocale();

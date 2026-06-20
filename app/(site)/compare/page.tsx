@@ -6,14 +6,18 @@ import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { compareContent, getActiveCompareEntries } from "@/content/compare";
+import { seoStrings } from "@/content/seo";
 import { getLocale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Compare Guest Overflow",
-  description:
-    "An honest side-by-side comparison of Guest Overflow against Fresha and the salon booking marketplaces.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = seoStrings[await getLocale()].pages.compare;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: "/compare" },
+  };
+}
 
 export default async function ComparePage() {
   const locale = await getLocale();
