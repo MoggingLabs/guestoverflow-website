@@ -21,7 +21,7 @@ export default async function PrivacyPage() {
   const locale = await getLocale();
 
   return (
-    <LegalLayout title="Privacy policy" updated="June 10, 2026">
+    <LegalLayout title="Privacy policy" updated="June 20, 2026">
       {locale === "pt" && (
         <p className="rounded-md border border-amber-deep/50 bg-amber/10 px-4 py-3 text-xs leading-relaxed text-amber">
           Este documento legal é disponibilizado em inglês. Em caso de dúvida
@@ -32,11 +32,11 @@ export default async function PrivacyPage() {
       )}
       <h2>1. Who we are</h2>
       <p>
-        Guest Overflow is a service operated by [LEGAL ENTITY NAME], a company
-        registered in Portugal with registered office at [REGISTERED ADDRESS]
-        and commercial registry / NIPC number [NUMBER] (&quot;we&quot;,
-        &quot;us&quot;). We are the controller of the personal data described
-        in this policy. You can reach us about anything in this policy at{" "}
+        Guest Overflow is the service described on this website, operated under
+        that trade name (&quot;we&quot;, &quot;us&quot;) from Portugal. We are
+        the controller of the personal data described in this policy. You can
+        reach us about anything in this policy, or request our full business
+        identification details, at{" "}
         <a href={`mailto:${site.email}`} className="text-amber underline underline-offset-2">
           {site.email}
         </a>
