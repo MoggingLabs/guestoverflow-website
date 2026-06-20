@@ -10,6 +10,7 @@ type Service = {
 type ServicesContent = {
   meta: string;
   hero: { eyebrow: string; headline: string; subhead: string };
+  servicesLead: string;
   services: Service[];
   included: { eyebrow: string; title: string; body: string };
 };
@@ -22,6 +23,8 @@ const en: ServicesContent = {
     subhead:
       "We bring the right clients straight to your own booking system, on your own terms, with no commission in between. Rather than renting visibility from a marketplace like Fresha or Booksy, you get found through Google, your brand, and word of mouth, and every client you win stays yours.",
   },
+  servicesLead:
+    "Your booking page is the core product, set up free with every plan. These two services are optional add-ons that simply bring more clients to it.",
   services: [
     {
       badge: "The starting point",
@@ -59,6 +62,8 @@ const pt: ServicesContent = {
     subhead:
       "Levamos os clientes certos diretamente para o seu próprio sistema de reservas, nos seus próprios termos e sem comissão pelo meio. Em vez de alugar visibilidade a um marketplace como a Fresha ou a Booksy, é encontrado através do Google, da sua marca e do passa-a-palavra, e cada cliente que conquista permanece seu.",
   },
+  servicesLead:
+    "A sua página de reservas é o produto principal, com instalação incluída em todos os planos. Estes dois serviços são extras opcionais que apenas trazem mais clientes até ela.",
   services: [
     {
       badge: "O ponto de partida",
