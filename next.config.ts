@@ -13,6 +13,14 @@ const sectorRedirects = Object.entries(SECTOR_PATHS)
     { source: `/pricing/${key}`, destination: `/pricing/${slug}`, permanent: true },
   ]);
 
+// Retired public slugs from earlier renames. Keep them as permanent redirects
+// so already-indexed URLs keep their SEO equity.
+// salons -> salons-barbers (so the URL/breadcrumb names barbers too).
+const legacyRedirects = [
+  { source: "/industries/salons", destination: "/industries/salons-barbers", permanent: true },
+  { source: "/pricing/salons", destination: "/pricing/salons-barbers", permanent: true },
+];
+
 const nextConfig: NextConfig = {
   // Self-contained server bundle for VPS deploys (.next/standalone).
   output: "standalone",
@@ -20,7 +28,7 @@ const nextConfig: NextConfig = {
   // when previewing the dev server from another origin than localhost.
   allowedDevOrigins: ["10.2.0.2"],
   async redirects() {
-    return sectorRedirects;
+    return [...sectorRedirects, ...legacyRedirects];
   },
 };
 
