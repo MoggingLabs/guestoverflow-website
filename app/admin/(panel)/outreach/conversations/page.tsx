@@ -98,22 +98,26 @@ export default async function ConversationsPage({
                     <span className="text-cream-faint">{fmt(m.at)}</span>
                   </div>
                   <p className="text-sm font-medium text-cream">{m.subject ?? "(no subject)"}</p>
-                  {m.body_text && (
-                    <pre className="mt-2 max-h-48 overflow-y-auto whitespace-pre-wrap text-sm text-cream-dim">
+                  {m.body_html ? (
+                    <div className="mt-2 overflow-hidden rounded-md border border-line bg-white">
+                      <iframe
+                        title={`message-${i}`}
+                        sandbox=""
+                        srcDoc={m.body_html}
+                        className="h-96 w-full border-0"
+                      />
+                    </div>
+                  ) : m.body_text ? (
+                    <pre className="mt-2 max-h-72 overflow-y-auto whitespace-pre-wrap text-sm text-cream-dim">
                       {m.body_text}
                     </pre>
-                  )}
-                  {m.body_html && (
+                  ) : null}
+                  {m.body_html && m.body_text && (
                     <details className="mt-2">
-                      <summary className="cursor-pointer text-xs text-cream-faint">View formatted</summary>
-                      <div className="mt-2 overflow-hidden rounded-md border border-line bg-white">
-                        <iframe
-                          title={`message-${i}`}
-                          sandbox=""
-                          srcDoc={m.body_html}
-                          className="h-80 w-full border-0"
-                        />
-                      </div>
+                      <summary className="cursor-pointer text-xs text-cream-faint">Plain-text version</summary>
+                      <pre className="mt-1 max-h-48 overflow-y-auto whitespace-pre-wrap text-sm text-cream-dim">
+                        {m.body_text}
+                      </pre>
                     </details>
                   )}
                 </div>

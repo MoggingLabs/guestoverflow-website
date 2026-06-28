@@ -20,14 +20,15 @@ function toHtml(text: string): string {
  */
 export function IndividualEmailComposer({
   action,
-  recipientValue,
+  hiddenFields,
   toEmail,
   fromLabel,
   initialSubject,
   initialBody,
 }: {
   action: (formData: FormData) => void | Promise<void>;
-  recipientValue: string;
+  /** Recipient identity carried to the send action (existing or manual). */
+  hiddenFields: Record<string, string>;
   toEmail: string;
   fromLabel: string;
   initialSubject: string;
@@ -51,7 +52,9 @@ export function IndividualEmailComposer({
       }}
       className="space-y-3"
     >
-      <input type="hidden" name="recipient" value={recipientValue} />
+      {Object.entries(hiddenFields).map(([k, v]) => (
+        <input key={k} type="hidden" name={k} value={v} />
+      ))}
 
       <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs text-cream-faint">
         <span>To: <span className="text-cream-dim">{toEmail}</span></span>

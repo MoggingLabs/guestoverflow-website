@@ -32,7 +32,31 @@ export async function createTemplate(formData: FormData): Promise<void> {
     insert into outreach_templates (name, subject, body_html, body_text)
     values (${name}, ${subject}, ${bodyHtml}, ${bodyText})
   `;
-  revalidatePath(OUTREACH);
+  revalidatePath(`${OUTREACH}/templates`);
+}
+
+/** Edit an existing template (any template — seeded or created). */
+export async function updateTemplate(
+  templateId: string,
+  formData: FormData,
+): Promise<void> {
+  await requireAdmin();
+  const sql = getDb();
+  if (!sql) return;
+  const name = str(formData, "name");
+  const subject = str(formData, "subject");
+  const bodyText = str(formData, "body_text");
+  const bodyHtml = str(formData, "body_html") || textToHtml(bodyText);
+  if (!name || !subject || !bodyText) {
+    redirect(`${OUTREACH}/templates/${templateId}?error=${encodeURIComponent("Name, subject and body are required.")}`);
+  }
+  await sql`
+    update outreach_templates
+    set name = ${name}, subject = ${subject}, body_text = ${bodyText}, body_html = ${bodyHtml}, updated_at = now()
+    where id = ${templateId}
+  `;
+  revalidatePath(`${OUTREACH}/templates`);
+  redirect(`${OUTREACH}/templates/${templateId}?saved=1`);
 }
 
 /** Naive text→HTML for templates authored as plain text (paragraph per blank line). */
@@ -309,37 +333,60 @@ export async function sendIndividualEmail(formData: FormData): Promise<void> {
   const recipient = str(formData, "recipient");
   const subject = str(formData, "subject");
   const body = str(formData, "body");
-  if (!recipient || !subject || !body) {
-    redirect(`${SEND}?error=${encodeURIComponent("Pick a recipient and fill the subject and body.")}`);
+  if (!subject || !body) {
+    redirect(`${SEND}?error=${encodeURIComponent("Fill the subject and body.")}`);
   }
 
-  // Resolve recipient → email + a tracked contact id (leads are upserted as contacts).
-  const sep = recipient.indexOf(":");
-  const type = recipient.slice(0, sep);
-  const rid = recipient.slice(sep + 1);
+  // Resolve recipient → email + a tracked contact id.
   let email = "";
   let contactId: string | null = null;
-  if (type === "lead") {
-    const [l] = await sql<
-      { id: number; email: string; name: string | null; business_name: string | null }[]
-    >`select id, email, name, business_name from leads where id = ${Number(rid)}`;
-    if (!l) redirect(`${SEND}?error=${encodeURIComponent("Lead not found.")}`);
-    const c = await repo.upsertContact(sql, {
-      email: l!.email,
-      name: l!.name,
-      business_name: l!.business_name,
-      source: "lead",
-      lead_id: l!.id,
-    });
+  if (recipient) {
+    const sep = recipient.indexOf(":");
+    const type = recipient.slice(0, sep);
+    const rid = recipient.slice(sep + 1);
+    if (type === "lead") {
+      const [l] = await sql<
+        { id: number; email: string; name: string | null; business_name: string | null }[]
+      >`select id, email, name, business_name from leads where id = ${Number(rid)}`;
+      if (!l) redirect(`${SEND}?error=${encodeURIComponent("Lead not found.")}`);
+      const c = await repo.upsertContact(sql, {
+        email: l!.email,
+        name: l!.name,
+        business_name: l!.business_name,
+        source: "lead",
+        lead_id: l!.id,
+      });
+      email = c.email;
+      contactId = c.id;
+    } else if (type === "contact") {
+      const c = await repo.getContact(sql, rid);
+      if (!c) redirect(`${SEND}?error=${encodeURIComponent("Contact not found.")}`);
+      email = c!.email;
+      contactId = c!.id;
+    } else {
+      redirect(`${SEND}?error=${encodeURIComponent("Invalid recipient.")}`);
+    }
+  } else {
+    // Manual recipient — save as a prospect, then send.
+    const mEmail = str(formData, "m_email");
+    if (!mEmail.includes("@")) {
+      redirect(`${SEND}?error=${encodeURIComponent("Choose a recipient or enter a valid email.")}`);
+    }
+    const first = str(formData, "m_first");
+    const business = str(formData, "m_business");
+    const fields: Record<string, string> = {};
+    if (first) fields.firstName = first;
+    if (business) {
+      fields.business = business;
+      fields.businessName = business;
+    }
+    for (const k of ["industry", "city", "channel", "hook"]) {
+      const v = str(formData, `m_${k}`);
+      if (v) fields[k] = v;
+    }
+    const c = await repo.upsertProspect(sql, { email: mEmail, firstName: first, business, fields });
     email = c.email;
     contactId = c.id;
-  } else if (type === "contact") {
-    const c = await repo.getContact(sql, rid);
-    if (!c) redirect(`${SEND}?error=${encodeURIComponent("Contact not found.")}`);
-    email = c!.email;
-    contactId = c!.id;
-  } else {
-    redirect(`${SEND}?error=${encodeURIComponent("Invalid recipient.")}`);
   }
 
   const contact = contactId ? await repo.getContact(sql, contactId) : null;

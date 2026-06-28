@@ -93,6 +93,29 @@ describe("sendIndividualEmail", () => {
     expect(c!.source).toBe("lead");
   });
 
+  it("sends to a manual recipient and saves them as a prospect", async () => {
+    const url = await redirectOf(
+      actions.sendIndividualEmail(
+        fd({
+          m_email: "new@example.com",
+          m_first: "Nova",
+          m_business: "Nova Co",
+          m_industry: "Restaurantes",
+          subject: "Olá Nova",
+          body: "Mensagem para a Nova Co.",
+        }),
+      ),
+    );
+    expect(url).toContain("sent=");
+    expect((await messagesFor("new@example.com")).length).toBeGreaterThanOrEqual(1);
+    const [c] = await sql<{ source: string; business_name: string; fields: Record<string, string> }[]>`
+      select source, business_name, fields from outreach_contacts where lower(email) = 'new@example.com'
+    `;
+    expect(c!.source).toBe("prospect");
+    expect(c!.business_name).toBe("Nova Co");
+    expect(c!.fields.industry).toBe("Restaurantes");
+  });
+
   it("refuses to send to a suppressed address", async () => {
     const c = await repo.upsertProspect(sql, { email: "sup@example.com", firstName: "S", business: "B", fields: {} });
     await repo.addSuppression(sql, "sup@example.com", "unsubscribe");
@@ -101,5 +124,28 @@ describe("sendIndividualEmail", () => {
     );
     expect(url).toContain("error=");
     expect(await messagesFor("sup@example.com")).toHaveLength(0);
+  });
+});
+
+describe("updateTemplate", () => {
+  it("edits an existing template (name/subject/body + regenerated html)", async () => {
+    const [t] = await sql<{ id: string }[]>`
+      insert into outreach_templates (name, subject, body_html, body_text)
+      values ('X', 'old subj', '<p>old</p>', 'old') returning id
+    `;
+    const url = await redirectOf(
+      actions.updateTemplate(
+        t!.id,
+        fd({ name: "Restaurantes · X", subject: "new {{business}}", body_text: "new body {{firstName}}" }),
+      ),
+    );
+    expect(url).toContain("saved=1");
+    const [u] = await sql<{ name: string; subject: string; body_text: string; body_html: string }[]>`
+      select name, subject, body_text, body_html from outreach_templates where id = ${t!.id}
+    `;
+    expect(u!.name).toBe("Restaurantes · X");
+    expect(u!.subject).toBe("new {{business}}");
+    expect(u!.body_text).toBe("new body {{firstName}}");
+    expect(u!.body_html).toContain("new body");
   });
 });
