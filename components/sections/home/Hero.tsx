@@ -48,7 +48,11 @@ export async function Hero() {
           className={`mx-auto grid w-full auto-rows-fr gap-4 ${
             industries.length === 1
               ? "max-w-sm grid-cols-1"
-              : "max-w-2xl grid-cols-1 sm:grid-cols-2"
+              : industries.length === 2
+                ? "max-w-2xl grid-cols-1 sm:grid-cols-2"
+                : industries.length === 3
+                  ? "max-w-4xl grid-cols-1 sm:grid-cols-3"
+                  : "max-w-2xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
           }`}
         >
           {industries.map((industry) => (

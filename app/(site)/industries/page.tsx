@@ -39,7 +39,10 @@ export default async function IndustriesPage() {
             stagger
             className={cn(
               "grid gap-5",
-              industries.length === 1 ? "max-w-md mx-auto" : "sm:grid-cols-2",
+              industries.length === 1 && "max-w-md mx-auto",
+              industries.length === 2 && "sm:grid-cols-2",
+              industries.length === 3 && "mx-auto max-w-5xl sm:grid-cols-3",
+              industries.length >= 4 && "sm:grid-cols-2 lg:grid-cols-4",
             )}
           >
             {industries.map((industry) => (

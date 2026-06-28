@@ -34,7 +34,7 @@ export const sectorPrices: Record<
     premiumSetup: 999,
   },
   hotels: {
-    starter: 29,
+    starter: 79,
     essential: 129,
     premium: 279,
     starterSetup: 399,

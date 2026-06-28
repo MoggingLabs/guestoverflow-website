@@ -75,7 +75,7 @@ Ex-IVA, monthly; annual ≈ −30%. **Hybrid ladder:** self-serve Starter for th
 | Sector | Starter (self-serve) | Essential (concierge) | Premium | Custom (from) | Value-unit |
 |---|---|---|---|---|---|
 | Restaurants | €39 | €89 | €199 | from €349 | covers/mo |
-| Hotels | €29 (AL) | €129 | €279 | from €499 | room-nights / Booking % saved |
+| Hotels | €79 | €129 | €279 | Custom (quoted) | room-nights / Booking % saved |
 | Spas & wellness | €39 | €79 | €149 | from €299 | first-visit commission + per-seat |
 | Salons & barbers | €25 | €59 | €119 | from €249 | per-chair fees + first-visit commission |
 | Tours & experiences | €39 | €99 | €189 | from €349 | per-ticket commission saved |
