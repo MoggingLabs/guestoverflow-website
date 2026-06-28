@@ -9,7 +9,7 @@ const LINKS = [
   { label: "Funnel", href: "/admin/funnel" },
   { label: "Friction", href: "/admin/friction" },
   { label: "Leads", href: "/admin/leads" },
-  { label: "Outbound", href: "/admin/outreach" },
+  { label: "Outreach", href: "/admin/outreach" },
   { label: "Clients", href: "/admin/clients" },
 ];
 

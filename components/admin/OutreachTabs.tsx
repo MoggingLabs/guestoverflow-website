@@ -28,7 +28,7 @@ export function OutreachTabs() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-1 border-b border-line" aria-label="Outbound sections">
+    <nav className="flex gap-1 border-b border-line" aria-label="Outreach sections">
       {TABS.map((tab) => {
         const active = tab.match(pathname);
         return (

@@ -9,7 +9,7 @@ export default function OutreachLayout({
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="font-display text-2xl font-medium text-cream">Outbound</h1>
+        <h1 className="font-display text-2xl font-medium text-cream">Outreach</h1>
         <p className="mt-1 max-w-2xl text-sm text-cream-faint">
           Cold &amp; warm email outreach to leads and prospects — sequences that
           send automatically, with a one-click unsubscribe on every email.
