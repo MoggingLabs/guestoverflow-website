@@ -15,12 +15,6 @@ export default async function SentEmailsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center gap-3">
-        <Link href="/admin/outreach" className="text-sm text-cream-faint hover:text-cream">
-          ← Outreach
-        </Link>
-        <h1 className="font-display text-2xl font-medium text-cream">Sent emails</h1>
-      </div>
       <p className="max-w-2xl text-sm text-cream-faint">
         Every email the system has sent — campaign sends and test sends. Click a
         row to see exactly what the recipient received.

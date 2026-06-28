@@ -25,6 +25,20 @@ function delayLabel(hours: number): string {
   return `+${hours}h`;
 }
 
+// Group the template picker by the "Indústria · …" name prefix.
+const TEMPLATE_INDUSTRIES = ["Restaurantes", "Hotéis", "Salões & Barbearias"];
+function groupTemplatesByIndustry<T extends { name: string }>(items: T[]) {
+  const map = new Map<string, T[]>();
+  for (const t of items) {
+    const prefix = t.name.split("·")[0]?.trim() ?? "";
+    const key = TEMPLATE_INDUSTRIES.includes(prefix) ? prefix : "Outros";
+    (map.get(key) ?? map.set(key, []).get(key)!).push(t);
+  }
+  return [...TEMPLATE_INDUSTRIES, "Outros"]
+    .filter((k) => map.has(k))
+    .map((industry) => ({ industry, items: map.get(industry)! }));
+}
+
 const ENROLL_STYLES: Record<string, string> = {
   active: "text-emerald-300",
   completed: "text-cream-dim",
@@ -116,10 +130,14 @@ export default async function CampaignPage({
             <option value="" disabled>
               Choose a template…
             </option>
-            {templates.map((t) => (
-              <option key={t.id} value={t.id}>
-                {t.name} — {t.subject}
-              </option>
+            {groupTemplatesByIndustry(templates).map((g) => (
+              <optgroup key={g.industry} label={g.industry}>
+                {g.items.map((t) => (
+                  <option key={t.id} value={t.id}>
+                    {t.name.replace(/^[^·]*·\s*/, "")} — {t.subject}
+                  </option>
+                ))}
+              </optgroup>
             ))}
           </AdminSelect>
           <AdminInput
