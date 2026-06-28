@@ -23,6 +23,8 @@ export interface OutreachConfig {
   siteUrl: string;
   /** HMAC key for stateless unsubscribe tokens. */
   secret: string;
+  /** Shared bearer token the inbound-email webhook requires. */
+  inboundSecret: string | undefined;
   /** Max messages a single worker tick claims+sends. */
   batchSize: number;
   /** Per-recipient max attempts before a message is marked failed. */
@@ -60,6 +62,7 @@ export function loadOutreachConfig(
       env.OUTREACH_SECRET ??
       env.ADMIN_SESSION_SECRET ??
       "guestoverflow-dev-secret",
+    inboundSecret: env.OUTREACH_INBOUND_SECRET,
     batchSize: Math.max(1, Number(env.OUTREACH_BATCH ?? 25)),
     maxAttempts: Math.max(1, Number(env.OUTREACH_MAX_ATTEMPTS ?? 5)),
   };
