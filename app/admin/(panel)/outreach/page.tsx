@@ -16,16 +16,10 @@ export default async function OutreachCampaignsPage() {
   const [campaigns, counts] = await Promise.all([listCampaigns(), outreachCounts()]);
 
   const cfg = loadOutreachConfig();
-  const fromSuggestions = uniq([
-    cfg.fromEmail,
-    "Guest Overflow <hello@guestoverflow.com>",
-    "Guest Overflow <sales@guestoverflow.com>",
-  ]);
-  const replySuggestions = uniq([
-    cfg.replyTo,
-    "sales@guestoverflow.com",
-    "hello@guestoverflow.com",
-  ]);
+  // From must be the reputation-isolated no-reply sender — NEVER the apex
+  // (sending from guestoverflow.com would damage the main domain's trust).
+  const fromSuggestions = uniq([cfg.fromEmail]);
+  const replySuggestions = uniq([cfg.replyTo, "hello@guestoverflow.com", "sales@guestoverflow.com"]);
 
   return (
     <div className="space-y-6">

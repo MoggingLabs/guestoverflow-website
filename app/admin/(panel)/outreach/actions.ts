@@ -10,7 +10,7 @@ import { buildProspectEmail } from "@/lib/outreach/prospect-email";
 import { missingRequired, parseProspectsCsv } from "@/lib/outreach/prospects";
 import * as repo from "@/lib/outreach/repo";
 import { enrollContact } from "@/lib/outreach/scheduler";
-import { contactMergeVars, renderEmail } from "@/lib/outreach/templates";
+import { contactMergeVars, renderEmail, textFooter, wrapHtml } from "@/lib/outreach/templates";
 import { buildUnsubscribeUrl } from "@/lib/outreach/unsubscribe";
 
 const OUTREACH = "/admin/outreach";
@@ -296,4 +296,93 @@ export async function sendProspectEmail(
   revalidatePath(PROSPECTS);
   revalidatePath(`${OUTREACH}/conversations`);
   redirect(`${PROSPECTS}?sent=${encodeURIComponent(contact!.email)}`);
+}
+
+const SEND = `${OUTREACH}/send`;
+
+/** Send a single, individually-edited email to a chosen lead or prospect. */
+export async function sendIndividualEmail(formData: FormData): Promise<void> {
+  await requireAdmin();
+  const sql = getDb();
+  if (!sql) return;
+
+  const recipient = str(formData, "recipient");
+  const subject = str(formData, "subject");
+  const body = str(formData, "body");
+  if (!recipient || !subject || !body) {
+    redirect(`${SEND}?error=${encodeURIComponent("Pick a recipient and fill the subject and body.")}`);
+  }
+
+  // Resolve recipient → email + a tracked contact id (leads are upserted as contacts).
+  const sep = recipient.indexOf(":");
+  const type = recipient.slice(0, sep);
+  const rid = recipient.slice(sep + 1);
+  let email = "";
+  let contactId: string | null = null;
+  if (type === "lead") {
+    const [l] = await sql<
+      { id: number; email: string; name: string | null; business_name: string | null }[]
+    >`select id, email, name, business_name from leads where id = ${Number(rid)}`;
+    if (!l) redirect(`${SEND}?error=${encodeURIComponent("Lead not found.")}`);
+    const c = await repo.upsertContact(sql, {
+      email: l!.email,
+      name: l!.name,
+      business_name: l!.business_name,
+      source: "lead",
+      lead_id: l!.id,
+    });
+    email = c.email;
+    contactId = c.id;
+  } else if (type === "contact") {
+    const c = await repo.getContact(sql, rid);
+    if (!c) redirect(`${SEND}?error=${encodeURIComponent("Contact not found.")}`);
+    email = c!.email;
+    contactId = c!.id;
+  } else {
+    redirect(`${SEND}?error=${encodeURIComponent("Invalid recipient.")}`);
+  }
+
+  const contact = contactId ? await repo.getContact(sql, contactId) : null;
+  if ((contact && contact.unsubscribed_at) || (await repo.isSuppressed(sql, email))) {
+    redirect(`${SEND}?error=${encodeURIComponent("That address is unsubscribed/suppressed.")}`);
+  }
+
+  const config = loadOutreachConfig();
+  const port = createEmailPort(config);
+  const unsubscribeUrl = buildUnsubscribeUrl(config.siteUrl, email, config.secret);
+  const html = wrapHtml(textToHtml(body), unsubscribeUrl);
+  const text = body + textFooter(unsubscribeUrl);
+
+  try {
+    const receipt = await port.send({
+      to: email,
+      from: config.fromEmail, // the no-reply sender — never the apex
+      replyTo: config.replyTo,
+      subject,
+      html,
+      text,
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+    });
+    await repo.recordSend(sql, {
+      messageId: null,
+      campaignId: null,
+      contactId,
+      toEmail: email,
+      subject,
+      providerMessageId: receipt.providerMessageId,
+      status: "sent",
+      bodyHtml: html,
+      bodyText: text,
+    });
+    if (contactId) await repo.markContactEmailed(sql, contactId);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    redirect(`${SEND}?error=${encodeURIComponent("Send failed: " + msg.slice(0, 140))}`);
+  }
+
+  revalidatePath(`${OUTREACH}/conversations`);
+  redirect(`${SEND}?sent=${encodeURIComponent(email)}`);
 }

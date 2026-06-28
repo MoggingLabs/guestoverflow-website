@@ -34,7 +34,7 @@ export interface ContactRow {
   email: string;
   name: string | null;
   business_name: string | null;
-  source: "lead" | "manual" | "csv" | "import";
+  source: "lead" | "manual" | "csv" | "import" | "prospect";
   lead_id: number | null;
   fields: Record<string, string>;
   unsubscribed_at: Date | null;

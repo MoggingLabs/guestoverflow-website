@@ -85,6 +85,21 @@ The worker ships as a **second container off the same image** (see
 Resend API (`web` network) and the DB (`internal` network); no public route.
 `OUTREACH_MAIL_DRIVER=resend` + a verified `guestoverflow.com` sender domain.
 
+## Conversations (two-way history)
+
+**Admin → Outreach → Conversations** shows the full email history per contact —
+**sent and received** — with search and advanced filters (type: client /
+prospect / lead; has-replies; period). Click a contact for the chronological
+thread (sent + received, with inline HTML preview).
+
+- **Sent** comes from `outreach_sends` (campaign sends, prospect sends, tests).
+- **Received** comes from `outreach_inbound`, populated by the secured webhook
+  `POST /api/outreach/inbound` (bearer `OUTREACH_INBOUND_SECRET`; parses From,
+  matches the contact by address, de-dupes on Message-ID).
+- The webhook is fed by a **Cloudflare Email Worker** bound to the reply
+  addresses (sales@/hello@) in Email Routing: it forwards each reply to the
+  human inbox *and* posts it here, so nothing is lost.
+
 ## Compliance notes (EU / Portugal)
 
 Cold B2B outreach here relies on legitimate interest with an always-present,
