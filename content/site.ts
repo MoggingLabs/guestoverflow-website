@@ -62,7 +62,7 @@ const en: SiteStrings = {
       heading: "Industries",
       links: [
         { label: "Restaurants", href: "/industries/restaurants" },
-        { label: "Hotels", href: "/industries/hotels" },
+        { label: "Hotels & hostels", href: "/industries/hotels" },
         { label: "Spas & wellness", href: "/industries/spas" },
         { label: "Tours & experiences", href: "/industries/tours" },
         { label: "Salons & barbers", href: "/industries/salons-barbers" },
@@ -125,7 +125,7 @@ const pt: SiteStrings = {
       heading: "Setores",
       links: [
         { label: "Restaurantes", href: "/industries/restaurants" },
-        { label: "Hotéis", href: "/industries/hotels" },
+        { label: "Hotéis e hostels", href: "/industries/hotels" },
         { label: "Spas e bem-estar", href: "/industries/spas" },
         { label: "Tours e experiências", href: "/industries/tours" },
         { label: "Cabeleireiros e barbearias", href: "/industries/salons-barbers" },

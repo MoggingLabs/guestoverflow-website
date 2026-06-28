@@ -16,7 +16,9 @@ export const sectorPrices: Record<
     starter: number;
     essential: number;
     premium: number;
-    customFrom: number;
+    /** A published "from €X/mo" for the custom tier. Omit it to render a
+     *  no-price "Let's talk" custom card instead. */
+    customFrom?: number;
     starterSetup?: number;
     essentialSetup?: number;
     premiumSetup?: number;
@@ -31,7 +33,14 @@ export const sectorPrices: Record<
     essentialSetup: 499,
     premiumSetup: 999,
   },
-  hotels: { starter: 29, essential: 129, premium: 279, customFrom: 499 },
+  hotels: {
+    starter: 29,
+    essential: 129,
+    premium: 279,
+    starterSetup: 399,
+    essentialSetup: 599,
+    premiumSetup: 999,
+  },
   "spas-wellness": { starter: 39, essential: 79, premium: 149, customFrom: 299 },
   "salons-barbers": {
     starter: 35,
@@ -265,6 +274,66 @@ const sectorLadders: Partial<Record<Locale, Record<string, LadderShape>>> = {
       },
       smsAddOn: pricingLadder.en.smsAddOn,
     },
+    hotels: {
+      eyebrow: "Pricing",
+      starter: {
+        name: "Starter",
+        note: "For a small guesthouse, AL or hostel finding its feet",
+        blurb: "Your branded direct-booking page for rooms or beds, built and launched by us.",
+        features: [
+          "Branded booking page on your own guestoverflow.com address",
+          "Private rooms and dorm beds, bookable in real time",
+          "WhatsApp and email confirmations and reminders, 450 a month included",
+          "Deposits and card holds into your own Stripe, with MB WAY and Multibanco",
+          "Guest list with full export, and you are the data controller",
+          "Reserve with Google, commission-free",
+          "Your direct rate is yours to set, including below the OTA",
+          "Email support",
+        ],
+      },
+      essential: {
+        name: "Essential",
+        note: "For a busy hotel or hostel taking bookings every day",
+        blurb: "Room to run a full house, with group requests, guest profiles and an ongoing partnership.",
+        features: [
+          "Everything in Starter",
+          "Room types, dorm layouts and occupancy rules that match your property",
+          "Group and private-room requests handled on the page, not over email",
+          "Risk-scaled deposits by stay length, season and room type, with MB WAY",
+          "Guest CRM: stay history, preferences, notes and tags",
+          "Direct-booking perks: member rates, longer-stay deals and add-ons",
+          "Quarterly business review with us",
+          "Priority support",
+        ],
+      },
+      premium: {
+        name: "Premium",
+        note: "For properties that live by direct bookings",
+        blurb: "Everything in Essential, with analytics, pre-arrival messaging and a true white-label.",
+        lead: [
+          "Everything in Essential",
+          "Booking and demand analytics: stays, sources, repeat guests and direct share",
+        ],
+        tail: [
+          "Pre-arrival messaging: arrival times, special requests and upsells",
+          "True on-domain white-label, none of our branding",
+          "Dedicated priority support",
+        ],
+      },
+      custom: {
+        name: "Custom",
+        note: "Groups and multiple properties",
+        blurb: "The only plan we quote, scoped to your group and shown in full before you commit.",
+        features: [
+          "Everything in Premium",
+          "Several properties from one place, flat per property, no per-location penalty",
+          "Custom integrations with your PMS or channel manager",
+          "Dedicated account manager",
+          "Setup quoted with your plan",
+        ],
+      },
+      smsAddOn: pricingLadder.en.smsAddOn,
+    },
   },
   pt: {
     restaurants: {
@@ -329,6 +398,66 @@ const sectorLadders: Partial<Record<Locale, Record<string, LadderShape>>> = {
       },
       smsAddOn: pricingLadder.pt.smsAddOn,
     },
+    hotels: {
+      eyebrow: "Preços",
+      starter: {
+        name: "Starter",
+        note: "Para uma pequena guesthouse, AL ou hostel a começar",
+        blurb: "A sua página de reserva direta com a sua marca, para quartos ou camas, criada e lançada por nós.",
+        features: [
+          "Página de reservas com a sua marca, num endereço guestoverflow.com",
+          "Quartos privados e camas de dormitório, reserváveis em tempo real",
+          "Confirmações e lembretes por WhatsApp e email, 450 por mês incluídos",
+          "Sinais e cauções de cartão na sua própria conta Stripe, com MB WAY e Multibanco",
+          "Lista de clientes com exportação completa, e o responsável pelos dados é você",
+          "Reservar com o Google, sem comissão",
+          "A sua tarifa direta é sua para definir, incluindo abaixo da OTA",
+          "Suporte por email",
+        ],
+      },
+      essential: {
+        name: "Essential",
+        note: "Para um hotel ou hostel com reservas todos os dias",
+        blurb: "Espaço para gerir uma casa cheia, com pedidos de grupo, perfis de hóspede e uma parceria contínua.",
+        features: [
+          "Tudo o que está no Starter",
+          "Tipos de quarto, layouts de dormitório e regras de ocupação à medida da sua propriedade",
+          "Pedidos de grupo e de quarto privado tratados na página, não por email",
+          "Sinais ajustados ao risco por duração da estadia, época e tipo de quarto, com MB WAY",
+          "CRM de hóspedes: histórico de estadias, preferências, notas e etiquetas",
+          "Vantagens da reserva direta: tarifas de membro, ofertas de estadia longa e extras",
+          "Revisão trimestral connosco",
+          "Suporte prioritário",
+        ],
+      },
+      premium: {
+        name: "Premium",
+        note: "Para propriedades que vivem das reservas diretas",
+        blurb: "Tudo o que está no Essential, com análise de dados, mensagens antes da chegada e white-label verdadeiro.",
+        lead: [
+          "Tudo o que está no Essential",
+          "Análise de reservas e procura: estadias, origens, hóspedes habituais e peso do direto",
+        ],
+        tail: [
+          "Mensagens antes da chegada: horas de chegada, pedidos especiais e upsells",
+          "White-label verdadeiro no seu domínio, sem a nossa marca",
+          "Suporte prioritário dedicado",
+        ],
+      },
+      custom: {
+        name: "À medida",
+        note: "Grupos e várias propriedades",
+        blurb: "O único plano que orçamentamos, à medida do seu grupo e apresentado por inteiro antes de avançar.",
+        features: [
+          "Tudo o que está no Premium",
+          "Várias propriedades a partir de um só lugar, preço fixo por propriedade, sem penalização",
+          "Integrações à medida com o seu PMS ou channel manager",
+          "Gestor de conta dedicado",
+          "Instalação orçamentada com o seu plano",
+        ],
+      },
+      smsAddOn: pricingLadder.pt.smsAddOn,
+    },
   },
 };
 
@@ -357,16 +486,16 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
     },
     hotels: {
       valueUnit: "room-night",
-      heroHeadline: "Pricing for hotels. Flat, and you retain the OTA cut.",
+      heroHeadline: "Pricing for hotels and hostels. Flat, and the OTA cut stays with you.",
       heroSubhead:
-        "Booking.com takes 15-18% of every stay. Recover a small number of direct bookings each month and Guest Overflow has already paid for itself. In Portugal, you are permitted by law to price your own site below Booking.",
-      premiumFlow: "Room types, occupancy rules & seasonal rates",
+        "Booking.com takes 15-18% of every stay, and Hostelworld takes its own cut of every bed. Win back a handful of direct bookings each month and Guest Overflow has already paid for itself. In Portugal, the law lets you price your own page below the OTA.",
+      premiumFlow: "Room types, dorm beds, occupancy rules and seasonal rates",
       comparison: {
         title: "The actual cost of OTA commission",
-        body: "A 20-room hotel at €120 a night pays Booking €50,000-63,000 a year in commission. Move even a fifth of those stays to direct booking and you retain over €10,000, all for a flat fee that never moves and runs on your own Stripe, with no payment take-rate.",
+        body: "A 20-room hotel at €120 a night hands Booking.com €50,000-63,000 a year in commission, and a busy hostel gives Hostelworld a cut of every bed it sells. Move even a fifth of those stays to direct booking and you keep thousands, all for a flat fee that never moves and runs on your own Stripe, with no payment take-rate.",
       },
-      starterNote: "For Alojamento Local, 1-3 units",
-      starterBlurb: "A branded direct-booking page for your AL, so that guests book with you, not the OTA.",
+      starterNote: "For a small guesthouse, AL or hostel finding its feet",
+      starterBlurb: "A branded direct-booking page for your rooms or beds, so that guests book with you, not the OTA.",
     },
     "spas-wellness": {
       valueUnit: "treatment",
@@ -416,16 +545,16 @@ const sectorPriceCopy: Record<Locale, Record<string, SectorCopy>> = {
     },
     hotels: {
       valueUnit: "dormida",
-      heroHeadline: "Preços para hotéis. Fixo, e a comissão das OTAs fica consigo.",
+      heroHeadline: "Preços para hotéis e hostels. Fixo, e a comissão das OTAs fica consigo.",
       heroSubhead:
-        "A Booking leva 15 a 18% de cada estadia. Recupere um pequeno número de reservas diretas por mês e o Guest Overflow já se terá pago. Em Portugal, por lei, pode colocar o seu site abaixo da Booking.",
-      premiumFlow: "Tipos de quarto, regras de ocupação e tarifas sazonais",
+        "A Booking leva 15 a 18% de cada estadia, e o Hostelworld leva o seu corte de cada cama. Recupere algumas reservas diretas por mês e o Guest Overflow já se terá pago. Em Portugal, por lei, pode colocar a sua própria página abaixo da OTA.",
+      premiumFlow: "Tipos de quarto, camas de dormitório, regras de ocupação e tarifas sazonais",
       comparison: {
         title: "O custo real da comissão das OTAs",
-        body: "Um hotel de 20 quartos a 120 € por noite entrega à Booking 50.000 a 63.000 € por ano em comissão. Transfira apenas um quinto dessas estadias para reserva direta e ficará com mais de 10.000 €. É um valor fixo que não se altera e corre no seu próprio Stripe, sem margem nos pagamentos.",
+        body: "Um hotel de 20 quartos a 120 € por noite entrega à Booking 50.000 a 63.000 € por ano em comissão, e um hostel com movimento dá ao Hostelworld um corte de cada cama que vende. Transfira apenas um quinto dessas estadias para reserva direta e fica com milhares de euros, tudo por um valor fixo que não se altera e corre no seu próprio Stripe, sem margem nos pagamentos.",
       },
-      starterNote: "Para Alojamento Local, 1 a 3 unidades",
-      starterBlurb: "Uma página de reservas direta com a sua marca para o seu AL, para que os hóspedes reservem consigo, não na OTA.",
+      starterNote: "Para uma pequena guesthouse, AL ou hostel a começar",
+      starterBlurb: "Uma página de reserva direta com a sua marca para os seus quartos ou camas, para que os hóspedes reservem consigo, não na OTA.",
     },
     "spas-wellness": {
       valueUnit: "tratamento",
@@ -580,46 +709,46 @@ const en: IndustriesStrings = {
     },
     {
       slug: "hotels",
-      label: "Hotels",
+      label: "Hotels & hostels",
       themeId: "hotel",
       icon: "bed",
       cardBlurb:
-        "Direct bookings for boutique hotels, so you retain the OTA commission and own the guest relationship.",
+        "Direct bookings for hotels and hostels, so you keep the OTA and Hostelworld commission and own the guest relationship.",
       hero: {
         headline: "Make direct booking the obvious choice.",
         subhead:
-          "Boutique hotels lose 15-25% of every OTA stay. Guest Overflow places a polished, brand-true booking flow on your own site so that guests book direct.",
+          "Hotels and hostels lose 15-25% of every stay booked through an OTA. Guest Overflow puts a polished, brand-true booking page on your own address, so guests and groups book with you direct.",
       },
       painPoints: [
         {
-          title: "OTAs take a fifth of every stay",
-          body: "Online travel agencies charge commissions that far exceed any software cost, and they retain the guest's email permanently.",
+          title: "OTAs and Hostelworld take a cut of every stay",
+          body: "Booking.com and Hostelworld charge commission on every reservation, far beyond any software cost, and they keep the guest's contact details for themselves.",
         },
         {
-          title: "Cumbersome booking engines lose guests",
-          body: "Most hotel booking engines resemble airline checkouts, so guests abandon the process partway and book through the OTA instead.",
+          title: "Clunky booking engines lose the booking",
+          body: "Most lodging booking engines feel like an airline checkout, so guests give up halfway and book through the OTA instead.",
         },
         {
           title: "No relationship before arrival",
-          body: "When the OTA owns the booking, your first genuine contact with a guest occurs at the front desk.",
+          body: "When the OTA owns the booking, your first real contact with a guest is at the front desk or the dorm check-in.",
         },
       ],
       highlights: [
         {
-          title: "Room & rate aware",
-          body: "Room types, occupancy rules, and seasonal rates presented in a flow that reflects your hotel, not a portal.",
+          title: "Rooms and dorm beds, both",
+          body: "Private rooms, family rooms, and dorm beds, each bookable in real time, in a flow that matches how your property fills.",
         },
         {
-          title: "Direct-booking incentives",
-          body: "Present member rates, perks, or packages that make booking direct visibly preferable to the OTA price.",
+          title: "Direct booking worth choosing",
+          body: "Show member rates, longer-stay deals, or breakfast and tour add-ons that make booking with you plainly better than the OTA price.",
         },
         {
-          title: "Pre-arrival guest profile",
-          body: "Preferences and special requests collected at booking, so that the welcome begins before check-in.",
+          title: "Group and pre-arrival details",
+          body: "Take group and private-room requests without the email back-and-forth, and collect preferences and arrival times before the guest arrives.",
         },
       ],
       metaDescription:
-        "Direct hotel bookings on your own website. A brand-true booking flow that beats OTA commissions and keeps the guest relationship yours.",
+        "Direct booking for hotels and hostels on your own page. A brand-true flow for rooms and dorm beds that beats OTA and Hostelworld commission and keeps the guest relationship yours.",
       pricing: buildSectorPricing("en", "hotels"),
     },
     {
@@ -757,9 +886,9 @@ const en: IndustriesStrings = {
   ],
   index: {
     eyebrow: "Industries",
-    title: "Built for the way your salon runs.",
+    title: "Built around the way your business runs.",
     subhead:
-      "One booking system, built around how your salon or barbershop operates, with a live demo you can try.",
+      "One booking system, built around how your business takes bookings, with a live demo you can try.",
     seeBooking: (label) => `See ${label.toLowerCase()} booking →`,
   },
   detail: {
@@ -768,7 +897,7 @@ const en: IndustriesStrings = {
     liveDemoEyebrow: "Live demo",
     liveDemoTitle: (venue) => `Try a booking at ${venue}.`,
     liveDemoSubhead:
-      "The salon is fictional, but the booking page is real. This is how Guest Overflow would perform once tailored to your business.",
+      "The venue is fictional, but the booking page is real. This is how Guest Overflow would perform once tailored to your business.",
     builtInEyebrow: "Built in",
     builtInTitle: (label) => `Guest Overflow for ${label.toLowerCase()}`,
     pricingEyebrow: "Pricing",
@@ -777,7 +906,7 @@ const en: IndustriesStrings = {
     comparisonFlat: "Flat, with no commission, ever.",
     seePricing: "See pricing",
     footerHeadline: "Set up a booking system of your own.",
-    footerSubhead: "See Guest Overflow themed for a salon like yours in a 20-minute demo.",
+    footerSubhead: "See Guest Overflow themed for a business like yours in a 20-minute demo.",
   },
 };
 
@@ -829,46 +958,46 @@ const pt: IndustriesStrings = {
     },
     {
       slug: "hotels",
-      label: "Hotéis",
+      label: "Hotéis e hostels",
       themeId: "hotel",
       icon: "bed",
       cardBlurb:
-        "Reservas diretas para hotéis boutique: fica com a comissão das OTAs e com a relação com o hóspede.",
+        "Reservas diretas para hotéis e hostels: fica com a comissão das OTAs e do Hostelworld e com a relação com o hóspede.",
       hero: {
         headline: "Faça da reserva direta a escolha óbvia.",
         subhead:
-          "Os hotéis boutique perdem 15 a 25% de cada estadia vendida por OTA. O Guest Overflow coloca um fluxo de reserva cuidado e fiel à marca no seu próprio site, para que os hóspedes reservem diretamente.",
+          "Hotéis e hostels perdem 15 a 25% de cada estadia reservada por OTA. O Guest Overflow coloca uma página de reservas cuidada e fiel à marca no seu próprio endereço, para que hóspedes e grupos reservem consigo diretamente.",
       },
       painPoints: [
         {
-          title: "As OTAs levam um quinto de cada estadia",
-          body: "As agências de viagens online cobram comissões que ultrapassam largamente qualquer custo de software, e ficam permanentemente com o email do hóspede.",
+          title: "As OTAs e o Hostelworld levam um corte de cada estadia",
+          body: "A Booking e o Hostelworld cobram comissão sobre cada reserva, muito acima de qualquer custo de software, e ficam com os contactos do hóspede para si.",
         },
         {
-          title: "Motores de reserva pesados afastam hóspedes",
-          body: "A maioria dos motores de reserva de hotel assemelha-se a um checkout de companhia aérea, pelo que os hóspedes desistem a meio e acabam por reservar na OTA.",
+          title: "Motores de reserva pesados perdem a reserva",
+          body: "A maioria dos motores de reserva de alojamento parece um checkout de companhia aérea, pelo que os hóspedes desistem a meio e acabam por reservar na OTA.",
         },
         {
           title: "Nenhuma relação antes da chegada",
-          body: "Quando a reserva pertence à OTA, o primeiro contacto real com o hóspede ocorre na receção.",
+          body: "Quando a reserva pertence à OTA, o primeiro contacto real com o hóspede é na receção ou no check-in do dormitório.",
         },
       ],
       highlights: [
         {
-          title: "A pensar em quartos e tarifas",
-          body: "Tipos de quarto, regras de ocupação e tarifas sazonais apresentados num fluxo que reflete o seu hotel, não um portal.",
+          title: "Quartos e camas de dormitório, ambos",
+          body: "Quartos privados, quartos familiares e camas de dormitório, cada um reservável em tempo real, num fluxo à medida de como a sua propriedade enche.",
         },
         {
-          title: "Incentivos à reserva direta",
-          body: "Destaque tarifas de membro, vantagens ou pacotes que tornem a reserva direta visivelmente preferível ao preço da OTA.",
+          title: "Reserva direta que vale a pena escolher",
+          body: "Mostre tarifas de membro, ofertas de estadia longa, ou pequeno-almoço e extras de tours que tornam reservar consigo claramente melhor do que o preço da OTA.",
         },
         {
-          title: "Perfil do hóspede antes da chegada",
-          body: "Preferências e pedidos especiais recolhidos na reserva, para que o acolhimento comece antes do check-in.",
+          title: "Detalhes de grupo e de antes da chegada",
+          body: "Receba pedidos de grupo e de quarto privado sem a troca de emails, e recolha preferências e horas de chegada antes de o hóspede chegar.",
         },
       ],
       metaDescription:
-        "Reservas diretas de hotel no seu próprio site. Um fluxo fiel à marca que vence as comissões das OTAs e mantém a relação com o hóspede.",
+        "Reserva direta para hotéis e hostels no seu próprio site. Um fluxo fiel à marca para quartos e camas que vence as comissões das OTAs e do Hostelworld e mantém a relação com o hóspede.",
       pricing: buildSectorPricing("pt", "hotels"),
     },
     {
@@ -1006,9 +1135,9 @@ const pt: IndustriesStrings = {
   ],
   index: {
     eyebrow: "Setores",
-    title: "Feito para a forma como o seu salão trabalha.",
+    title: "Feito para a forma como o seu negócio trabalha.",
     subhead:
-      "Um único sistema de reservas, à medida de como o seu salão ou barbearia funciona, com uma demonstração ao vivo que pode experimentar.",
+      "Um único sistema de reservas, à medida de como o seu negócio recebe reservas, com uma demonstração ao vivo que pode experimentar.",
     seeBooking: (label) => `Ver reservas para ${label.toLowerCase()} →`,
   },
   detail: {
@@ -1017,7 +1146,7 @@ const pt: IndustriesStrings = {
     liveDemoEyebrow: "Demo ao vivo",
     liveDemoTitle: (venue) => `Experimente reservar no ${venue}.`,
     liveDemoSubhead:
-      "O salão é fictício, mas a página de reservas é real. É assim que o Guest Overflow funcionaria depois de adaptado ao seu negócio.",
+      "O espaço é fictício, mas a página de reservas é real. É assim que o Guest Overflow funcionaria depois de adaptado ao seu negócio.",
     builtInEyebrow: "Incluído",
     builtInTitle: (label) => `Guest Overflow para ${label.toLowerCase()}`,
     pricingEyebrow: "Preços",
@@ -1027,7 +1156,7 @@ const pt: IndustriesStrings = {
     seePricing: "Ver preços",
     footerHeadline: "Monte o seu próprio sistema de reservas.",
     footerSubhead:
-      "Veja o Guest Overflow com o tema de um salão como o seu numa demonstração de 20 minutos.",
+      "Veja o Guest Overflow com o tema de um negócio como o seu numa demonstração de 20 minutos.",
   },
 };
 
