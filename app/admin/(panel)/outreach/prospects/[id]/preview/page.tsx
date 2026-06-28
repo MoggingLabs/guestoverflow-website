@@ -11,6 +11,7 @@ import { sendProspectEmail } from "../../../actions";
 export const dynamic = "force-dynamic";
 
 const INDUSTRIES = ["Restaurantes", "Hotéis", "Salões & Barbearias"];
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 export default async function ProspectPreviewPage({
   params,
@@ -20,6 +21,7 @@ export default async function ProspectPreviewPage({
   searchParams: Promise<{ template?: string }>;
 }) {
   const [{ id }, { template }] = await Promise.all([params, searchParams]);
+  if (!UUID_RE.test(id)) notFound();
   const sql = getDb();
   const contact = sql ? await repo.getContact(sql, id) : null;
   if (!contact) notFound();
