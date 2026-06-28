@@ -6,6 +6,8 @@ import { requireAdmin } from "@/lib/admin/auth";
 import { getDb } from "@/lib/db";
 import { loadOutreachConfig } from "@/lib/outreach/config";
 import { createEmailPort } from "@/lib/outreach/email";
+import { buildProspectEmail } from "@/lib/outreach/prospect-email";
+import { missingRequired, parseProspectsCsv } from "@/lib/outreach/prospects";
 import * as repo from "@/lib/outreach/repo";
 import { enrollContact } from "@/lib/outreach/scheduler";
 import { contactMergeVars, renderEmail } from "@/lib/outreach/templates";
@@ -197,4 +199,101 @@ export async function sendTest(
 
   revalidatePath(`${OUTREACH}/${campaignId}`);
   revalidatePath(`${OUTREACH}/sent`);
+}
+
+const PROSPECTS = `${OUTREACH}/prospects`;
+
+/** Import prospects from a pasted CSV or uploaded file (source='prospect'). */
+export async function importProspects(formData: FormData): Promise<void> {
+  await requireAdmin();
+  const sql = getDb();
+  if (!sql) return;
+
+  const file = formData.get("file");
+  let text = "";
+  if (file && typeof file !== "string" && file.size > 0) text = await file.text();
+  if (!text.trim()) text = str(formData, "csv");
+  if (!text.trim()) return;
+
+  const { prospects } = parseProspectsCsv(text);
+  let imported = 0;
+  let skipped = 0;
+  for (const p of prospects) {
+    if (!p.email.includes("@")) {
+      skipped += 1;
+      continue;
+    }
+    await repo.upsertProspect(sql, {
+      email: p.email,
+      firstName: p.firstName,
+      business: p.business,
+      fields: p.fields,
+    });
+    imported += 1;
+  }
+  revalidatePath(PROSPECTS);
+  redirect(`${PROSPECTS}?imported=${imported}&skipped=${skipped}`);
+}
+
+/** Send a one-off cold email to a single prospect (suppression-checked, logged). */
+export async function sendProspectEmail(
+  contactId: string,
+  templateId: string | null,
+): Promise<void> {
+  await requireAdmin();
+  const sql = getDb();
+  if (!sql) return;
+
+  const contact = await repo.getContact(sql, contactId);
+  if (!contact) redirect(`${PROSPECTS}?error=${encodeURIComponent("Prospect not found.")}`);
+
+  // Compliance + uniform-info gates (mirrors the table's send-enabled rule).
+  if (contact!.unsubscribed_at || (await repo.isSuppressed(sql, contact!.email))) {
+    redirect(`${PROSPECTS}?error=${encodeURIComponent("That address is unsubscribed/suppressed.")}`);
+  }
+  const missing = missingRequired(contact!);
+  if (missing.length > 0) {
+    redirect(`${PROSPECTS}?error=${encodeURIComponent(`Missing required: ${missing.join(", ")}`)}`);
+  }
+
+  const built = await buildProspectEmail(sql, contact!, templateId);
+  if (!built.ok) {
+    redirect(`${PROSPECTS}?error=${encodeURIComponent(built.reason ?? "Could not build email.")}`);
+  }
+
+  const config = loadOutreachConfig();
+  const email = createEmailPort(config);
+  try {
+    const receipt = await email.send({
+      to: contact!.email,
+      from: config.fromEmail,
+      replyTo: config.replyTo,
+      subject: built.subject!,
+      html: built.html!,
+      text: built.text!,
+      headers: {
+        "List-Unsubscribe": `<${built.unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+    });
+    await repo.recordSend(sql, {
+      messageId: null,
+      campaignId: null,
+      contactId: contact!.id,
+      toEmail: contact!.email,
+      subject: built.subject!,
+      providerMessageId: receipt.providerMessageId,
+      status: "sent",
+      bodyHtml: built.html,
+      bodyText: built.text,
+    });
+    await repo.markContactEmailed(sql, contact!.id);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    redirect(`${PROSPECTS}?error=${encodeURIComponent(`Send failed: ${msg.slice(0, 120)}`)}`);
+  }
+
+  revalidatePath(PROSPECTS);
+  revalidatePath(`${OUTREACH}/sent`);
+  redirect(`${PROSPECTS}?sent=${encodeURIComponent(contact!.email)}`);
 }

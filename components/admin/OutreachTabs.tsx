@@ -9,8 +9,14 @@ const TABS = [
     label: "Campaigns",
     href: "/admin/outreach",
     match: (p: string) =>
+      !p.startsWith("/admin/outreach/prospects") &&
       !p.startsWith("/admin/outreach/templates") &&
       !p.startsWith("/admin/outreach/sent"),
+  },
+  {
+    label: "Prospects",
+    href: "/admin/outreach/prospects",
+    match: (p: string) => p.startsWith("/admin/outreach/prospects"),
   },
   {
     label: "Templates",
