@@ -1,0 +1,37 @@
+# Local dev + integration-test infrastructure for the website app:
+# Postgres (leads/events/clients/outreach live here) + mailpit (captures
+# outbound email so the outreach engine can be tested end-to-end with no
+# real Resend calls). Production runs deploy/website/production/docker-compose.yml.
+#
+#   docker compose up -d                 # start postgres + mailpit
+#   mailpit UI: http://localhost:8025
+#
+# The outreach worker runs as its own process; locally use `pnpm worker`,
+# in production the dedicated container in the deploy compose.
+name: guestoverflow-website-dev
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: guestoverflow
+    ports:
+      - "${WEBSITE_PG_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d guestoverflow"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "${WEBSITE_SMTP_PORT:-1025}:1025"
+      - "${WEBSITE_MAILPIT_UI_PORT:-8025}:8025"
+
+volumes:
+  pgdata:
