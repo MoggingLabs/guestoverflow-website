@@ -138,6 +138,77 @@ export interface SendDetail {
   body_text: string | null;
 }
 
+export interface SendRecipientOption {
+  value: string; // "lead:<id>" | "contact:<uuid>"
+  email: string;
+  name: string | null;
+  business: string | null;
+  group: "Prospects" | "Leads";
+}
+
+/** Leads + prospects, for the Send Email recipient picker. */
+export async function listSendRecipients(): Promise<SendRecipientOption[]> {
+  const sql = getDb();
+  if (!sql) return [];
+  const prospects = await sql<
+    { id: string; email: string; name: string | null; business_name: string | null }[]
+  >`select id, email, name, business_name from outreach_contacts where source = 'prospect' order by created_at desc limit 500`;
+  const leads = await sql<
+    { id: number; email: string; name: string | null; business_name: string | null }[]
+  >`select id, email, name, business_name from leads order by created_at desc limit 500`;
+  return [
+    ...prospects.map((p) => ({
+      value: `contact:${p.id}`,
+      email: p.email,
+      name: p.name,
+      business: p.business_name,
+      group: "Prospects" as const,
+    })),
+    ...leads.map((l) => ({
+      value: `lead:${l.id}`,
+      email: l.email,
+      name: l.name,
+      business: l.business_name,
+      group: "Leads" as const,
+    })),
+  ];
+}
+
+export interface LoadedRecipient {
+  type: "lead" | "contact";
+  id: string;
+  email: string;
+  name: string | null;
+  business_name: string | null;
+  fields: Record<string, string>;
+}
+
+export async function getRecipient(value: string): Promise<LoadedRecipient | null> {
+  const sql = getDb();
+  if (!sql) return null;
+  const sep = value.indexOf(":");
+  if (sep < 0) return null;
+  const type = value.slice(0, sep);
+  const id = value.slice(sep + 1);
+  if (type === "lead") {
+    const [l] = await sql<{ id: number; email: string; name: string | null; business_name: string | null }[]>`
+      select id, email, name, business_name from leads where id = ${Number(id)}
+    `;
+    return l
+      ? { type: "lead", id: String(l.id), email: l.email, name: l.name, business_name: l.business_name, fields: {} }
+      : null;
+  }
+  if (type === "contact") {
+    const [c] = await sql<{ id: string; email: string; name: string | null; business_name: string | null; fields: Record<string, string> }[]>`
+      select id, email, name, business_name, fields from outreach_contacts where id = ${id}
+    `;
+    return c
+      ? { type: "contact", id: c.id, email: c.email, name: c.name, business_name: c.business_name, fields: c.fields ?? {} }
+      : null;
+  }
+  return null;
+}
+
 export interface ConversationRow {
   email: string;
   raw_email: string;
