@@ -388,6 +388,41 @@ export async function recordSend(sql: Sql, s: RecordSendInput): Promise<void> {
   `;
 }
 
+export interface InboundEmailInput {
+  fromEmail: string;
+  fromName?: string | null;
+  toEmail?: string | null;
+  subject?: string | null;
+  bodyText?: string | null;
+  bodyHtml?: string | null;
+  messageId?: string | null;
+  inReplyTo?: string | null;
+  receivedAt?: Date | null;
+}
+
+/** Store a received email, matching it to a contact by sender address. Deduped on Message-ID. */
+export async function insertInbound(
+  sql: Sql,
+  m: InboundEmailInput,
+): Promise<{ stored: boolean }> {
+  const from = m.fromEmail.trim().toLowerCase();
+  const received = m.receivedAt ?? null;
+  const rows = await sql<{ id: number }[]>`
+    insert into outreach_inbound
+      (from_email, from_name, to_email, subject, body_text, body_html,
+       message_id, in_reply_to, contact_id, received_at)
+    values (
+      ${from}, ${m.fromName ?? null}, ${m.toEmail ?? null}, ${m.subject ?? null},
+      ${m.bodyText ?? null}, ${m.bodyHtml ?? null}, ${m.messageId ?? null}, ${m.inReplyTo ?? null},
+      (select id from outreach_contacts where lower(email) = ${from} limit 1),
+      coalesce(${received}, now())
+    )
+    on conflict (message_id) where message_id is not null do nothing
+    returning id
+  `;
+  return { stored: rows.length > 0 };
+}
+
 /**
  * Claim up to `limit` due messages atomically (FOR UPDATE SKIP LOCKED), plus
  * any 'claimed' rows whose lease expired (a crashed worker). Concurrency-safe

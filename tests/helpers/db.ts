@@ -15,6 +15,7 @@ export function testSql(): Sql {
 }
 
 const OUTREACH_TABLES = [
+  "outreach_inbound",
   "outreach_sends",
   "outreach_messages",
   "outreach_enrollments",

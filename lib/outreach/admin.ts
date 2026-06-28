@@ -138,6 +138,95 @@ export interface SendDetail {
   body_text: string | null;
 }
 
+export interface ConversationRow {
+  email: string;
+  raw_email: string;
+  last_at: string;
+  msg_count: number;
+  sent_count: number;
+  received_count: number;
+  last_subject: string | null;
+  last_dir: "sent" | "received";
+  business_name: string | null;
+  contact_name: string | null;
+  source: string | null;
+  is_client: boolean;
+}
+
+/** One row per external address that has any email activity (sent or received).
+ *  `sinceDays` of 0 means all time. */
+export async function listConversations(sinceDays = 0): Promise<ConversationRow[]> {
+  const sql = getDb();
+  if (!sql) return [];
+  return sql<ConversationRow[]>`
+    with msgs as (
+      select lower(s.to_email) as email, s.to_email as raw, 'sent' as dir, s.subject, s.sent_at as at
+        from outreach_sends s where s.to_email is not null
+      union all
+      select lower(i.from_email), i.from_email, 'received', i.subject, i.received_at
+        from outreach_inbound i
+    )
+    select
+      m.email,
+      max(m.raw) as raw_email,
+      max(m.at) as last_at,
+      count(*)::int as msg_count,
+      count(*) filter (where m.dir = 'sent')::int as sent_count,
+      count(*) filter (where m.dir = 'received')::int as received_count,
+      (array_agg(m.subject order by m.at desc))[1] as last_subject,
+      (array_agg(m.dir order by m.at desc))[1] as last_dir,
+      c.business_name, c.name as contact_name, c.source,
+      exists(select 1 from public.clients cl where lower(cl.primary_contact) = m.email) as is_client
+    from msgs m
+    left join outreach_contacts c on lower(c.email) = m.email
+    group by m.email, c.business_name, c.name, c.source
+    having (${sinceDays}::int = 0 or max(m.at) >= now() - make_interval(days => ${sinceDays}::int))
+    order by last_at desc
+    limit 1000
+  `;
+}
+
+export interface ThreadMessage {
+  direction: "sent" | "received";
+  subject: string | null;
+  status: string | null;
+  at: string;
+  body_html: string | null;
+  body_text: string | null;
+  party: string;
+}
+
+export async function getThread(email: string): Promise<ThreadMessage[]> {
+  const sql = getDb();
+  if (!sql) return [];
+  return sql<ThreadMessage[]>`
+    select 'sent' as direction, s.subject, s.status, s.sent_at as at, s.body_html, s.body_text, s.to_email as party
+      from outreach_sends s where lower(s.to_email) = lower(${email})
+    union all
+    select 'received', i.subject, null, i.received_at, i.body_html, i.body_text, i.from_email
+      from outreach_inbound i where lower(i.from_email) = lower(${email})
+    order by at asc
+  `;
+}
+
+export interface ConversationMeta {
+  business_name: string | null;
+  contact_name: string | null;
+  source: string | null;
+  is_client: boolean;
+}
+
+export async function getConversationMeta(email: string): Promise<ConversationMeta> {
+  const sql = getDb();
+  if (!sql) return { business_name: null, contact_name: null, source: null, is_client: false };
+  const [row] = await sql<ConversationMeta[]>`
+    select c.business_name, c.name as contact_name, c.source,
+      exists(select 1 from public.clients cl where lower(cl.primary_contact) = lower(${email})) as is_client
+    from outreach_contacts c where lower(c.email) = lower(${email}) limit 1
+  `;
+  return row ?? { business_name: null, contact_name: null, source: null, is_client: false };
+}
+
 export async function getSend(id: number): Promise<SendDetail | null> {
   const sql = getDb();
   if (!sql) return null;

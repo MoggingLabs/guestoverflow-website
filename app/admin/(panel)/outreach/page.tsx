@@ -32,7 +32,7 @@ export default async function OutreachCampaignsPage() {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Stat label="Campaigns" value={campaigns.length} />
         <Stat label="Contacts" value={counts.contacts} />
-        <Stat label="Sent" value={counts.sends} href="/admin/outreach/sent" />
+        <Stat label="Sent" value={counts.sends} href="/admin/outreach/conversations?dir=sent" />
         <Stat label="Unsubscribed" value={counts.suppressions} />
       </div>
 

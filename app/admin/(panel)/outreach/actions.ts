@@ -198,7 +198,7 @@ export async function sendTest(
   });
 
   revalidatePath(`${OUTREACH}/${campaignId}`);
-  revalidatePath(`${OUTREACH}/sent`);
+  revalidatePath(`${OUTREACH}/conversations`);
 }
 
 const PROSPECTS = `${OUTREACH}/prospects`;
@@ -294,6 +294,6 @@ export async function sendProspectEmail(
   }
 
   revalidatePath(PROSPECTS);
-  revalidatePath(`${OUTREACH}/sent`);
+  revalidatePath(`${OUTREACH}/conversations`);
   redirect(`${PROSPECTS}?sent=${encodeURIComponent(contact!.email)}`);
 }
