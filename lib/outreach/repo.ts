@@ -100,6 +100,51 @@ export async function upsertContact(
   return rows[0]!;
 }
 
+export interface NewProspect {
+  email: string;
+  firstName: string;
+  business: string;
+  fields: Record<string, string>;
+}
+
+/** Upsert a CSV-imported prospect (source='prospect'); fields are replaced. */
+export async function upsertProspect(
+  sql: Sql,
+  p: NewProspect,
+): Promise<ContactRow> {
+  const rows = await sql<ContactRow[]>`
+    insert into outreach_contacts (email, name, business_name, source, fields)
+    values (${p.email.trim()}, ${p.firstName || null}, ${p.business || null}, 'prospect', ${sql.json(p.fields)})
+    on conflict (lower(email)) do update set
+      name = coalesce(excluded.name, outreach_contacts.name),
+      business_name = coalesce(excluded.business_name, outreach_contacts.business_name),
+      source = 'prospect',
+      fields = excluded.fields,
+      updated_at = now()
+    returning *
+  `;
+  return rows[0]!;
+}
+
+export async function markContactEmailed(sql: Sql, id: string): Promise<void> {
+  await sql`
+    update outreach_contacts set last_emailed_at = now(), updated_at = now() where id = ${id}
+  `;
+}
+
+/** The "· 1. Apresentação" intro template for an industry label, if present. */
+export async function getIntroTemplateForIndustry(
+  sql: Sql,
+  industry: string,
+): Promise<TemplateRow | null> {
+  const rows = await sql<TemplateRow[]>`
+    select id, name, subject, body_html, body_text
+    from outreach_templates where name like ${`${industry} · 1.%`}
+    order by name limit 1
+  `;
+  return rows[0] ?? null;
+}
+
 export async function getCampaign(
   sql: Sql,
   id: string,

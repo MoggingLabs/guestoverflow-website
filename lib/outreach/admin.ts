@@ -68,6 +68,41 @@ export async function outreachCounts(): Promise<OutreachCounts> {
   return row ?? { suppressions: 0, contacts: 0, leads: 0, sends: 0 };
 }
 
+export interface ProspectRow {
+  id: string;
+  email: string;
+  name: string | null;
+  business_name: string | null;
+  fields: Record<string, string>;
+  last_emailed_at: string | null;
+  unsubscribed_at: string | null;
+  suppressed: boolean;
+}
+
+export async function listProspects(): Promise<ProspectRow[]> {
+  const sql = getDb();
+  if (!sql) return [];
+  return sql<ProspectRow[]>`
+    select c.id, c.email, c.name, c.business_name, c.fields, c.last_emailed_at, c.unsubscribed_at,
+      exists(select 1 from outreach_suppressions s where s.email = lower(c.email)) as suppressed
+    from outreach_contacts c
+    where c.source = 'prospect'
+    order by c.created_at desc limit 500
+  `;
+}
+
+export async function getProspect(id: string): Promise<ProspectRow | null> {
+  const sql = getDb();
+  if (!sql) return null;
+  const [row] = await sql<ProspectRow[]>`
+    select c.id, c.email, c.name, c.business_name, c.fields, c.last_emailed_at, c.unsubscribed_at,
+      exists(select 1 from outreach_suppressions s where s.email = lower(c.email)) as suppressed
+    from outreach_contacts c
+    where c.id = ${id} and c.source = 'prospect'
+  `;
+  return row ?? null;
+}
+
 export interface SendListItem {
   id: number;
   to_email: string;
