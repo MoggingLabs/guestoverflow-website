@@ -326,15 +326,20 @@ export interface RecordSendInput {
   providerMessageId: string | null;
   status: "sent" | "failed" | "skipped";
   error?: string | null;
+  /** Exact rendered email (stored on sent rows for the admin preview). */
+  bodyHtml?: string | null;
+  bodyText?: string | null;
 }
 
 export async function recordSend(sql: Sql, s: RecordSendInput): Promise<void> {
   await sql`
     insert into outreach_sends
-      (message_id, campaign_id, contact_id, to_email, subject, provider_message_id, status, error)
+      (message_id, campaign_id, contact_id, to_email, subject,
+       provider_message_id, status, error, body_html, body_text)
     values
       (${s.messageId}, ${s.campaignId}, ${s.contactId}, ${s.toEmail},
-       ${s.subject ?? null}, ${s.providerMessageId ?? null}, ${s.status}, ${s.error ?? null})
+       ${s.subject ?? null}, ${s.providerMessageId ?? null}, ${s.status}, ${s.error ?? null},
+       ${s.bodyHtml ?? null}, ${s.bodyText ?? null})
   `;
 }
 

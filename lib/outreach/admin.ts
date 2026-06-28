@@ -52,18 +52,68 @@ export interface OutreachCounts {
   suppressions: number;
   contacts: number;
   leads: number;
+  sends: number;
 }
 
 export async function outreachCounts(): Promise<OutreachCounts> {
   const sql = getDb();
-  if (!sql) return { suppressions: 0, contacts: 0, leads: 0 };
+  if (!sql) return { suppressions: 0, contacts: 0, leads: 0, sends: 0 };
   const [row] = await sql<OutreachCounts[]>`
     select
       (select count(*) from outreach_suppressions)::int as suppressions,
       (select count(*) from outreach_contacts)::int as contacts,
-      (select count(*) from leads)::int as leads
+      (select count(*) from leads)::int as leads,
+      (select count(*) from outreach_sends where status = 'sent')::int as sends
   `;
-  return row ?? { suppressions: 0, contacts: 0, leads: 0 };
+  return row ?? { suppressions: 0, contacts: 0, leads: 0, sends: 0 };
+}
+
+export interface SendListItem {
+  id: number;
+  to_email: string;
+  subject: string | null;
+  status: string;
+  campaign_name: string | null;
+  sent_at: string;
+  is_test: boolean;
+}
+
+export async function listSends(limit = 300): Promise<SendListItem[]> {
+  const sql = getDb();
+  if (!sql) return [];
+  return sql<SendListItem[]>`
+    select s.id, s.to_email, s.subject, s.status, c.name as campaign_name, s.sent_at,
+      (s.subject like '[TEST]%') as is_test
+    from outreach_sends s
+    left join outreach_campaigns c on c.id = s.campaign_id
+    order by s.sent_at desc limit ${limit}
+  `;
+}
+
+export interface SendDetail {
+  id: number;
+  to_email: string;
+  subject: string | null;
+  status: string;
+  error: string | null;
+  provider_message_id: string | null;
+  campaign_name: string | null;
+  sent_at: string;
+  body_html: string | null;
+  body_text: string | null;
+}
+
+export async function getSend(id: number): Promise<SendDetail | null> {
+  const sql = getDb();
+  if (!sql) return null;
+  const [row] = await sql<SendDetail[]>`
+    select s.id, s.to_email, s.subject, s.status, s.error, s.provider_message_id,
+      c.name as campaign_name, s.sent_at, s.body_html, s.body_text
+    from outreach_sends s
+    left join outreach_campaigns c on c.id = s.campaign_id
+    where s.id = ${id}
+  `;
+  return row ?? null;
 }
 
 export interface CampaignDetail {

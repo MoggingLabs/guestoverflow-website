@@ -2,10 +2,16 @@ import Link from "next/link";
 import { AdminInput, AdminSubmit, AdminTextarea } from "@/components/admin/AdminField";
 import { StatusBadge } from "@/components/admin/OutreachStatus";
 import { cn } from "@/lib/utils";
+import { loadOutreachConfig } from "@/lib/outreach/config";
 import { listCampaigns, listTemplates, outreachCounts } from "@/lib/outreach/admin";
 import { createCampaign, createTemplate } from "./actions";
 
 export const dynamic = "force-dynamic";
+
+/** Unique, defined suggestions for the optional sender fields. */
+function uniq(values: (string | undefined)[]): string[] {
+  return [...new Set(values.filter((v): v is string => Boolean(v)))];
+}
 
 export default async function OutreachPage() {
   const [campaigns, templates, counts] = await Promise.all([
@@ -14,20 +20,43 @@ export default async function OutreachPage() {
     outreachCounts(),
   ]);
 
+  // Suggestions for the optional From / Reply-to fields, seeded from the live
+  // outreach config (verified sender) plus the common addresses.
+  const cfg = loadOutreachConfig();
+  const fromSuggestions = uniq([
+    cfg.fromEmail,
+    "Guest Overflow <hello@guestoverflow.com>",
+    "Guest Overflow <sales@guestoverflow.com>",
+  ]);
+  const replySuggestions = uniq([
+    cfg.replyTo,
+    "sales@guestoverflow.com",
+    "hello@guestoverflow.com",
+  ]);
+
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="font-display text-2xl font-medium text-cream">Outreach</h1>
-        <p className="mt-1 max-w-2xl text-sm text-cream-faint">
-          Draft email sequences and send them automatically to leads and cold
-          prospects. Every email carries a one-click unsubscribe; opted-out and
-          suppressed addresses are never contacted again.
-        </p>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="font-display text-2xl font-medium text-cream">Outreach</h1>
+          <p className="mt-1 max-w-2xl text-sm text-cream-faint">
+            Draft email sequences and send them automatically to leads and cold
+            prospects. Every email carries a one-click unsubscribe; opted-out and
+            suppressed addresses are never contacted again.
+          </p>
+        </div>
+        <Link
+          href="/admin/outreach/sent"
+          className="shrink-0 rounded-md border border-line bg-surface px-3 py-2 text-sm text-cream-dim transition-colors hover:text-cream"
+        >
+          Sent emails →
+        </Link>
       </div>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Stat label="Campaigns" value={campaigns.length} />
         <Stat label="Contacts" value={counts.contacts} />
+        <Stat label="Sent" value={counts.sends} href="/admin/outreach/sent" />
         <Stat label="Unsubscribed" value={counts.suppressions} />
       </div>
 
@@ -41,10 +70,32 @@ export default async function OutreachPage() {
           action={createCampaign}
           className="grid grid-cols-1 gap-3 rounded-lg border border-line bg-surface p-4 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end"
         >
-          <AdminInput label="Campaign name" name="name" placeholder="Garagem 33 outreach" required />
-          <AdminInput label="From (optional)" name="from_email" placeholder="Guest Overflow <hello@guestoverflow.com>" />
-          <AdminInput label="Reply-to (optional)" name="reply_to" placeholder="sales@guestoverflow.com" />
+          <AdminInput label="Campaign name" name="name" placeholder="Restaurantes · Lisboa" required />
+          <AdminInput
+            label="From (optional)"
+            name="from_email"
+            list="from-suggestions"
+            defaultValue={fromSuggestions[0]}
+            placeholder={fromSuggestions[0]}
+          />
+          <AdminInput
+            label="Reply-to (optional)"
+            name="reply_to"
+            list="replyto-suggestions"
+            defaultValue={replySuggestions[0]}
+            placeholder={replySuggestions[0]}
+          />
           <AdminSubmit>Create</AdminSubmit>
+          <datalist id="from-suggestions">
+            {fromSuggestions.map((s) => (
+              <option key={s} value={s} />
+            ))}
+          </datalist>
+          <datalist id="replyto-suggestions">
+            {replySuggestions.map((s) => (
+              <option key={s} value={s} />
+            ))}
+          </datalist>
         </form>
 
         <div className="overflow-hidden rounded-lg border border-line bg-surface shadow-card">
@@ -141,11 +192,27 @@ export default async function OutreachPage() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: number }) {
-  return (
-    <div className="rounded-lg border border-line bg-surface px-4 py-3">
+function Stat({
+  label,
+  value,
+  href,
+}: {
+  label: string;
+  value: number;
+  href?: string;
+}) {
+  const inner = (
+    <>
       <p className="text-xs uppercase tracking-wider text-cream-faint">{label}</p>
       <p className="mt-1 font-display text-2xl text-cream">{value}</p>
-    </div>
+    </>
+  );
+  const className = "block rounded-lg border border-line bg-surface px-4 py-3";
+  return href ? (
+    <Link href={href} className={cn(className, "transition-colors hover:border-amber-deep/60")}>
+      {inner}
+    </Link>
+  ) : (
+    <div className={className}>{inner}</div>
   );
 }

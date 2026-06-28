@@ -108,6 +108,14 @@ describe("outreach engine", () => {
     expect(detail.HTML).toContain("Ana");
     expect(detail.HTML).toContain("/api/outreach/unsubscribe");
 
+    // The exact rendered body is stored on the send row (for the admin preview).
+    const [send] = await sql<{ status: string; body_html: string; body_text: string }[]>`
+      select status, body_html, body_text from outreach_sends where to_email = 'ana@example.com'
+    `;
+    expect(send!.status).toBe("sent");
+    expect(send!.body_html).toContain("/api/outreach/unsubscribe");
+    expect(send!.body_text).toContain("Ana");
+
     // Step 1 is due in 24h — a second tick sends nothing and never duplicates.
     const r2 = await tick({ sql, email, config });
     expect(r2.sent).toBe(0);

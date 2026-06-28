@@ -147,6 +147,8 @@ export async function tick(deps: TickDeps): Promise<TickResult> {
         subject: rendered.subject,
         providerMessageId: receipt.providerMessageId,
         status: "sent",
+        bodyHtml: rendered.html,
+        bodyText: rendered.text,
       });
 
       const enrollment = await repo.getEnrollment(sql, msg.enrollment_id);

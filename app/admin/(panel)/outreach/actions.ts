@@ -169,7 +169,7 @@ export async function sendTest(
     unsubscribeUrl,
   );
 
-  await email.send({
+  const receipt = await email.send({
     to,
     from: campaign?.from_email ?? config.fromEmail,
     replyTo: campaign?.reply_to ?? config.replyTo,
@@ -182,5 +182,19 @@ export async function sendTest(
     },
   });
 
+  // Log the test send so it appears in the Sent view with its rendered body.
+  await repo.recordSend(sql, {
+    messageId: null,
+    campaignId,
+    contactId: null,
+    toEmail: to,
+    subject: `[TEST] ${rendered.subject}`,
+    providerMessageId: receipt.providerMessageId,
+    status: "sent",
+    bodyHtml: rendered.html,
+    bodyText: rendered.text,
+  });
+
   revalidatePath(`${OUTREACH}/${campaignId}`);
+  revalidatePath(`${OUTREACH}/sent`);
 }
