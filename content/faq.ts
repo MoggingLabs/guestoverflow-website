@@ -100,7 +100,7 @@ const en: FaqContent = {
     {
       question: "Is there a setup fee?",
       answer:
-        "Yes. Every plan includes a one-time setup fee, because our team builds and configures everything for you before launch: €299 on Starter, €499 on Essential, and €999 on Premium (Custom is quoted). The fee is published up front, so you know it before you commit.",
+        "Yes. Every plan includes a one-time setup fee, because our team builds and configures everything for you before launch. The amount depends on your plan and your sector, and it is published on the pricing page for each plan, with Custom quoted to scope. You always see it before you commit.",
     },
     {
       question: "Is there a discount for paying annually?",
@@ -229,7 +229,7 @@ const pt: FaqContent = {
     {
       question: "Há custo de instalação?",
       answer:
-        "Sim. Todos os planos incluem um custo único de instalação, porque a nossa equipa constrói e configura tudo por si antes do lançamento: 299 € no Starter, 499 € no Essential e 999 € no Premium (o À medida é orçamentado). O valor é publicado à partida, para que o conheça antes de se comprometer.",
+        "Sim. Todos os planos incluem um custo único de instalação, porque a nossa equipa constrói e configura tudo por si antes do lançamento. O valor depende do plano e do setor, e está publicado na página de preços de cada plano, sendo o À medida orçamentado caso a caso. Conhece-o sempre antes de se comprometer.",
     },
     {
       question: "Há desconto por pagamento anual?",
