@@ -21,6 +21,7 @@ Saas module is documented separately later.
 | `ADMIN_USER` / `ADMIN_PASSWORD` | `lib/admin/auth.ts`, login | Prod yes (defaults `admin`/`admin`) |
 | `RESEND_API_KEY` | `/api/demo-request` | Optional |
 | `LEAD_NOTIFY_EMAIL` / `LEAD_FROM_EMAIL` | `/api/demo-request` | Optional (with Resend) |
+| `OUTREACH_MAIL_DRIVER` / `OUTREACH_FROM_EMAIL` / `OUTREACH_REPLY_TO` / `OUTREACH_SECRET` / `OUTREACH_SMTP_*` / `OUTREACH_POLL_MS` / `OUTREACH_BATCH` / `OUTREACH_MAX_ATTEMPTS` | `lib/outreach/*`, `scripts/outreach-worker.ts`, admin Outreach | Optional (fall back to RESEND/LEAD/ADMIN vars). See `docs/OUTREACH.md` |
 | `NEXT_PUBLIC_SITE_URL` | metadata/sitemap | Build-time (baked per image) |
 
 ---

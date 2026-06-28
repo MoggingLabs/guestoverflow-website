@@ -25,6 +25,10 @@ ARG NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
+# Bundle the standalone outreach worker (dist/outreach-worker.mjs) into a
+# single self-contained ESM file so the runner image can run it with plain
+# node as a second service, with no node_modules of its own.
+RUN npm run build:worker
 
 # ---- runner: lean production image ----
 FROM node:24-alpine AS runner
@@ -49,6 +53,10 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder /app/db ./db
 COPY --from=builder /app/scripts/migrate.mjs ./scripts/migrate.mjs
 COPY --from=deps /app/node_modules/postgres ./node_modules/postgres
+
+# Self-contained outreach worker bundle, run by the outreach-worker service
+# (same image, different command). Carries its own deps — no node_modules.
+COPY --from=builder --chown=nextjs:nodejs /app/dist/outreach-worker.mjs ./outreach-worker.mjs
 
 USER nextjs
 EXPOSE 3000
